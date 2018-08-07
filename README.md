@@ -12,6 +12,8 @@
 
 ---
 
+<p align="center"><a href="https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md">Hier geht es direkt zur Checkliste!</a></p>
+
 Diese **Datenschutz-Checkliste** soll zur allgemeinen Orientierung für Webdesigner und -entwickler sowie natürlich auch für jeden interessierten Webseitenbetreiber dienen, um Webseiten und Auftragswerke nach aktuell gültigem deutschen und europäischen Recht anzufertigen.
 
 Peter und ich haben dazu unser anlässlich der DSGVO über mehrere Monate zusammen gesammeltes Wissen in einen Topf geworfen und daraus diese Liste entwickelt. Sie ist noch »Work-in-Progress« - aktuell bin ich z.B. dabei, die entsprechenden Rechtsgrundlagen, Urteile und Aussagen/ Artikel von Anwälten heraus zu suchen. Außerdem laden wie jeden herzlich dazu ein, daran über dieses Github-Repository [mitzuwirken](https://github.com/mirkoschubert/datenschutz-checkliste#du-möchtest-gerne-mitwirken).
