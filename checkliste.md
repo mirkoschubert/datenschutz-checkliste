@@ -2,6 +2,46 @@
 
 *Open Source Checkliste für Webdesigner und -entwickler, um datenschutz-relevante Aufgaben nach aktuell geltendem Recht umzusetzen.*
 
+## Inhaltsverzeichnis
+
+* [Sicherheit](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#sicherheit)
+  * [SSL/TLS-Transportverschlüsselung Webseite](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#ssltls-transportverschlüsselung-webseite)
+  * [SSL/TLS-Transportverschlüsselung E-Mail](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#ssltls-transportverschlüsselung-e-mail)
+  * [Sicherheitskonzept des CMS](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#sicherheitskonzept-des-cms-zb-wordpress)
+  * [Sicherheitskonzept des Servers](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#sicherheitskonzept-des-servers)
+  * [Optional: Signatur und/ oder Inhaltsverschlüsselung bei E-Mails](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#optional-signatur-und-oder-inhaltsverschlüsselung-bei-e-mails)
+* [Webhoster](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#webhoster)
+  * [Access Logs](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#access-logs)
+  * [Weitere Server Logs](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#weitere-server-logs)
+  * [Webseiten-Installation](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#webseiten-installation)
+* [Externe Dienste](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#externe-dienste)
+  * [Analyse-Tools](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#analysetools-zb-google-analytics-matomo-piwik-wordpress-stats-jetpack)
+  * [Marketing-Tools](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#marketing-tools-zb-google-adsense-adwords-affiliate-netzwerke)
+  * [Newsletter-Tools](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#newsletter-tools-zb-mailchimp-clicktipp-newsletter2go-jetpack-abonnement)
+  * [Social Plugins](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#social-plugins-zb-facebook-instagram-twitter-google)
+  * [Content Delivery Networks](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#content-delivery-networks-cdn)
+  * [Webfonts](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#webfonts-zb-google-fonts-adobe-typekit-fontawesome)
+  * [Profile bzw. Profilbilder](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#profile-bzw-profilbilder-zb-gravatar-aboutme)
+  * [Emojis/ Emoticons](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#emojis-emoticons-zb-wp-emojis)
+  * [DNS-Prefetching](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#dns-prefetching)
+  * [WP-Embeds/ oEmbeds](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#wp-embeds-oembeds)
+  * [Video- und Musikdienste](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#video--und-musikdienste-zb-youtube-vimeo-soundcloud)
+  * [Kartendienste](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#kartendienste-zb-google-maps-open-street-maps-mapbox-leaflet)
+* [Weitere Aspekte](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#weitere-aspekte)
+  * [Kommentarfunktion](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#kommentarfunktion)
+  * [Weblinks](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#weblinks)
+  * [Plugins/ Erweiterungen/ Module](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#plugins-erweiterungen--module)
+  * [Webshop](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#webshop)
+* [Rechtsdokumente/ Pflichtangaben](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#rechtsdokumente-pflichtangaben)
+  * [Allgemein](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#allgemein)
+  * [Impressum](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#impressum)
+  * [Datenschutzerklärung](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#datenschutzerklärung)
+  * [Impressum & Datenschutzerklärung bei sozialen Medien](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#impressum--datenschutzerklärung-bei-sozialen-medien)
+  * [Urheberrecht/ Bildnachweise](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#urheberrecht--bildnachweise)
+
+
+
+
 ## Sicherheit
 
 *Rechtsgrundlage*: Art. 32 Abs. 1 DSGVO
@@ -78,7 +118,7 @@
 * Für die Signatur braucht nur der Absender die Einrichtung, für die Verschlüsselung sowohl Absender als auch Empfänger.
 
 
----
+
 
 ## Webhoster
 
@@ -109,13 +149,14 @@
 
 * [ ] Alle auf dem Server gespeicherten personenbezogenen Daten gelten auch als »Verarbeitung« - Auftragsverarbeitungsvertrag (AVV) mit Webhoster abschließen!
 
----
+
+
 
 ## Externe Dienste
 
 *Rechtsgrundlage*: Art. 6 Abs. 1, 7, 28, 44 ff. DSGVO
 
-### Analysetools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)
+### Analyse-Tools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)
 
 * [ ] Abwägen, welches Analysetool unter der Berücksichtigung des Datensparsamkeits-Prinzips geeignet erscheint.
 * [ ] Abwägen, ob ein Verarbeitungsgrund nach Art. 6 Abs. 1 lit. b) - f) DSGVO vorliegt oder nach Art. 6 Abs. 1 lit. a) ein vorheriges Einverständnis eingeholt werden sollte.
@@ -286,7 +327,8 @@
 * Derzeit keine eigenständigen Plugins mit 2-Klick-Lösung vorhanden.
 * 2-Klick-Lösung für **alle** Dienste mit [Borlabs Cookie](https://de.borlabs.io/borlabs-cookie/) (kostenpflichtig)
 
----
+
+
 
 ## Weitere Aspekte
 
@@ -316,7 +358,8 @@
 * [ ] Bei externen Shop-Lösungen und/ oder externen Zahlungsanbietern sollte **immer** ein Auftragsverarbeitungsvertrag (AVV) abgeschlossen werden.
 * [ ] Auch die statistische Erhebung des Kaufverhaltens sollte vertraglich geregelt sein (vgl. Analysetools & Marketingtools)
 
----
+
+
 
 ## Rechtsdokumente/ Pflichtangaben
 
