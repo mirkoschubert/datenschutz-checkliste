@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">Open Source Checkliste für Webdesigner und -entwickler, um datenschutz-relevante Aufgaben nach aktuell geltendem Recht umzusetzen.</p>
-<p align "center"><em>Initiiert von Peter Haurand und Mirko Schubert</em></p>
+<p align="center"><em>Initiiert von Peter Haurand und Mirko Schubert</em></p>
 
 ---
 
