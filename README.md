@@ -34,5 +34,5 @@ Wir freuen uns auf Deine Mitwirkung! Sofern Du eigene Änderungen und Ergänzung
 
 ### Mitwirkende
 
-* Peter Haurand
+* [Peter Haurand](https://github.com/peterhaurand)
 * [Mirko Schubert](https://github.com/mirkoschubert)

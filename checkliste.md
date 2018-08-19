@@ -44,9 +44,9 @@
 
 ## Sicherheit
 
-*Rechtsgrundlage*: Art. 32 Abs. 1 DSGVO
-
 ### SSL/TLS-Transportverschlüsselung Webseite
+
+*Rechtsgrundlage*: [Art. 32 Abs. 1 Lit. a DSGVO](https://dsgvo-gesetz.de/art-32-dsgvo/), [§64 Abs. 2, Abs. 3 Nr. 8 BDSG](https://dsgvo-gesetz.de/bdsg/64-bdsg/)
 
 * [ ] Transportverschlüsselung sollte immer dann verwendet werden, wenn personenbezogene Daten übertragen werden, insbesondere bei sämtlichen Formulardaten.
 * [ ] Viele Browser warnen bei unverschlüsselten Verbindungen - besser wäre also eine durchgängige Transportverschlüsselung, egal, ob Formulare verwendet werden oder nicht.
@@ -66,10 +66,13 @@
 
 ### SSL/TLS-Transportverschlüsselung E-Mail
 
+*Rechtsgrundlage*: [Art. 32 Abs. 1 Lit. a DSGVO](https://dsgvo-gesetz.de/art-32-dsgvo/), [§64 Abs. 2, Abs. 3 Nr. 8 BDSG](https://dsgvo-gesetz.de/bdsg/64-bdsg/)<br>
+*Legitimierungsgrund E-Mails*: [Art. 6 Abs. 1 Lit. b & f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+
 * [ ] Auch beim Versand von E-Mails (auch über ein Kontaktformular) sollte Transportverschlüsselung eingesetzt werden. Sie ist dreigeteilt:
-  1. SSL/TLS-Verschlüsselung der Webseite (siehe oben)
-  2. SSL/TLS-Verschlüsselung des E-Mail-Postausgangs (SMTP) vom Absender (im Falle eines Formulars ist der Absender auch der Empfänger)
-  3. SSL/TLS-Verschlüsselung des E-Mail-Posteingangs (POP3/ IMAP4) vom Empfänger
+  * SSL/TLS-Verschlüsselung der Webseite (siehe oben)
+  * SSL/TLS-Verschlüsselung des E-Mail-Postausgangs (SMTP) vom Absender (im Falle eines Formulars ist der Absender auch der Empfänger)
+  * SSL/TLS-Verschlüsselung des E-Mail-Posteingangs (POP3/ IMAP4) vom Empfänger
 * [ ] Geschäftlichen E-Mail-Verkehr über private Drittanbieter-Konten (z.B. Gmail, GMX, Web.de usw.) vermeiden (da meistens kein AVV möglich)!
 
 #### Tipps zur Umsetzung
@@ -82,6 +85,8 @@
 
 
 ### Sicherheitskonzept des CMS (z.B. WordPress)
+
+*Rechtsgrundlage*: [Art. 32 DSGVO](https://dsgvo-gesetz.de/art-32-dsgvo/)
 
 * [ ] Für den Schutz vor Brute-Force- und Wörterbuch-Attacken reicht ein einfacher Schutz, der die Anzahl der falschen Eingaben begrenzt.
 * [ ] Für den Schutz vor Kommentar-SPAM reicht ein einfacher Schutz, vorzugsweise per Honeypot-Methode (reCaptcha nicht DSGVO-konform!).
@@ -98,11 +103,15 @@
 
 ### Sicherheitskonzept des Servers
 
+*Rechtsgrundlage*: [Art. 28 Abs. 3 Lit. c DSGVO](https://dsgvo-gesetz.de/art-28-dsgvo/), [Art. 29 DSGVO](https://dsgvo-gesetz.de/art-29-dsgvo/), [Art. 32 DSGVO](https://dsgvo-gesetz.de/art-32-dsgvo/)
+
 * [ ] Bei Shared Hosting oder Managed Servern liegt die Verantwortung voll beim Webhoster (Auskunft anfordern/ AVV lesen).
 * [ ] Bei VPS und dedizierten Servern liegt die Verantwortung teilweise auch beim Inhaber (Auskunft anfordern).
 
 
 ### OPTIONAL: Signatur und/ oder Inhaltsverschlüsselung bei E-Mails
+
+*Rechtsgrundlage*: [Art. 32 DSGVO](https://dsgvo-gesetz.de/art-32-dsgvo/)
 
 * [ ] Eine elektronische Signatur fördert die Nachweisbarkeit des Absenders.
 * [ ] Eine Inhaltsverschlüsselung verhindert das Lesen des Inhalts der E-Mail bei einer MitM-Attacke (»Man in the Middle«).
@@ -110,8 +119,8 @@
 #### Tipps zur Umsetzung
 
 * Im wesentlichen gibt es zwei populäre Signatur- und Verschlüsselungsverfahren:
-  1. S/MIME - über ein E-Mail-Zertifikat
-  2. PGP (kostenplichtig) bzw. GnuPGP (Open Source) - über ein Schlüsselpaar
+  * S/MIME - über ein E-Mail-Zertifikat
+  * PGP (kostenplichtig) bzw. GnuPGP (Open Source) - über ein Schlüsselpaar
 * PGP/ GPG ist immer den Vorzug zu geben!
 * Kostenlose S/MIME-E-Mail-Zertifikate gibt es bei [Comodo](https://www.comodo.com/home/email-security/free-email-certificate.php) für jeweils ein Jahr.
 * Für das kostenlose GPG gibt es verschiedene Lösungen, die auf der offiziellen [Webseite](https://gnupg.org) erhältlich sind.
@@ -122,9 +131,10 @@
 
 ## Webhoster
 
-*Rechtsgrundlage*: Art. 28 DSGVO
-
 ### Access Logs
+
+*Rechtsgrundlage*: [Art. 28 DSGVO](https://dsgvo-gesetz.de/art-28-dsgvo/), [Art. 29 DSGVO](https://dsgvo-gesetz.de/art-29-dsgvo/), [Art. 32 Abs. 1 Lit. a DSGVO](https://dsgvo-gesetz.de/art-32-dsgvo/)<br>
+*Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
 
 * [ ] In den Access Logs des Servers gespeicherte personenbezogene Daten (insbes. die IP-Adresse) sollten nach Möglichkeit pseudonymisiert werden.
 * [ ] Alternativ kann natürlich im Zuge der Datensparsamkeit komplett auf die Speicherung der IP-Adresse (sofern vom Webhoster zugelassen) verzichtet werden.
@@ -137,6 +147,9 @@
 
 
 ### Weitere Server Logs
+
+*Rechtsgrundlage*: [Art. 28 DSGVO](https://dsgvo-gesetz.de/art-28-dsgvo/), [Art. 29 DSGVO](https://dsgvo-gesetz.de/art-29-dsgvo/)<br>
+*Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. c DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
 
 * [ ] Der Webhoster ist auch immer dazu verpflichtet, weitere Server Logs zu (insbes. zur Früherkennung von nicht authorisierten Zugriffen, Schadcode und allgemeinen Fehlermeldungen) führen, die ebenfalls IP-Adressen speichern. Hier ist eine Kürzung nicht vorgesehen.
 
@@ -154,9 +167,10 @@
 
 ## Externe Dienste
 
-*Rechtsgrundlage*: Art. 6 Abs. 1, 7, 28, 44 ff. DSGVO
-
 ### Analyse-Tools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)
+
+*Rechtsgrundlage*: [Art. 7 DSGVO](https://dsgvo-gesetz.de/art-7-dsgvo/), [Art. 28 DSGVO](https://dsgvo-gesetz.de/art-28-dsgvo/), [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
+*Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. a oder f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
 
 * [ ] Abwägen, welches Analysetool unter der Berücksichtigung des Datensparsamkeits-Prinzips geeignet erscheint.
 * [ ] Abwägen, ob ein Verarbeitungsgrund nach Art. 6 Abs. 1 lit. b) - f) DSGVO vorliegt oder nach Art. 6 Abs. 1 lit. a) ein vorheriges Einverständnis eingeholt werden sollte.
@@ -178,10 +192,14 @@
 
 ### Marketing-Tools (z.B. Google AdSense/ AdWords, Affiliate-Netzwerke)
 
+*Rechtsgrundlage*: [Art. 7 DSGVO](https://dsgvo-gesetz.de/art-7-dsgvo/), [Art. 28 DSGVO](https://dsgvo-gesetz.de/art-28-dsgvo/), [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/), [§6 TMG](https://dejure.org/gesetze/TMG/6.html), [§ 58 RStV](http://www.gesetze-bayern.de/Content/Document/RFunkStVertr-58)<br>
+*Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. a oder f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+
 * [ ] Google AdSense verlangt derzeit das vorherige Einverständnis (Opt-In) lt. [Programmrichtlinien](https://support.google.com/adsense/answer/48182?hl=de), nicht nur für die Cookies und Beacons (Zählpixel), sondern auch für die Übertragung jeglicher personenbezogenen Daten.
 * [ ] Funktionen wie Remarketing oder die Auslieferung von personenbezogener Werbung sind derzeit fraglich und sollten - zumindest vorübergehend - abgeschaltet werden.
 * [ ] Richtlinien bzw. AGBs bei sämtlichen Affiliate-Netzwerken beachten!
 * [ ] Widgets, grafische Einbettungen oder JavaScript-Einbettungen von Werbemitteln von Affiliate-Netzwerken mindestens in der DSE erwähnen (sicherer: 2-Klick-Lösung)
+* [ ] Werbemittel in jeglicher Form sollten als »Werbung« oder »Anzeige« gekennzeichnet werden!
 
 #### Tipps zur Umsetzung
 
@@ -190,6 +208,9 @@
 
 
 ### Newsletter-Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go, Jetpack Abonnement)
+
+*Rechtsgrundlage*: [Art. 7 DSGVO](https://dsgvo-gesetz.de/art-7-dsgvo/), [Art. 28 DSGVO](https://dsgvo-gesetz.de/art-28-dsgvo/), [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
+*Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. a DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
 
 * [ ] Newsletter-Formulare sollten mit einem adäquaten Hinweistext versehen und in der E-Mail beim Double-Opt-In-Verfahren wiederholt werden.
 * [ ] Drittanbieter nicht-europäischen Ländern sollten auf die Mitgliedschaft beim [Privacy Shield](https://www.privacyshield.gov/list) überprüft oder ggf. gemieden werden.
@@ -205,10 +226,14 @@
 
 ### Social Plugins (z.B. Facebook, Instagram, Twitter, Google+)
 
+*Rechtsgrundlage*: [Art. 7 DSGVO](https://dsgvo-gesetz.de/art-7-dsgvo/), [Art. 22 DSGVO](https://dsgvo-gesetz.de/art-22-dsgvo/), [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
+*Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. a oder f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)<br>
+*Urteile*: [LG Düsseldorf, Az. 12 O 151/15](https://dejure.org/dienste/vernetzung/rechtsprechung?Text=12%20O%20151/15)
+
 * [ ] Sämtliche eingebundene Social Plugins laden personenbezogene Daten bereits beim Besuch der Webseite. Sofern der Nutzer im sozialen Netzwerk eingeloggt ist, erfolgt eine genaue Zuordnung sowie eine Art »Bewegungsprofil« über alle mit Social Plugins versehenen Webseiten.
 * [ ] Bei Login-Verfahren (z.B. Facebook Connect) und Kommentarfunktionen mit Verknüpfung zu sozialen Netzen wird ebenso verfahren.
 * [ ] Sharing-Buttons, die die Anzahl der Shares anzeigen, haben das gleiche Problem.
-* [ ] Einzig reine Links (Text oder Grafik) sind DSGVO-sicher.
+* [ ] Einzig reine Links (Text oder Grafik) sind DSGVO-konform.
 * [ ] Beacons (Zählpixel) für Statistik-Zwecke sind ebenfalls sehr kritisch zu bewerten.
 
 #### Tipps zur Umsetzung
@@ -221,11 +246,17 @@
 
 ### Verwertungsgesellschaften (z.B. VG-Wort)
 
+*Rechtsgrundlage*: [Art. 32 Abs. 1 Lit. a DSGVO](https://dsgvo-gesetz.de/art-32-dsgvo/)<br>
+*Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. b DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/), [Art. 6 Abs. 1 Lit. c DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/) im Einklang mit [§32 UrgH](https://dejure.org/gesetze/UrhG/32.html)
+
 * [ ] Der Zählpixel der VG-Wort sollte auf HTTPS umgestellt werden, um »mixed Content« zu vermeiden.
 * [ ] Der Zählpixel der VG-WOrt sollte in der Datenschutzerklärung erwähnt werden.
 
 
 ### Content Delivery Networks (CDN)
+
+*Rechtsgrundlage*: [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
+*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
 
 * [ ] CDNs (z.B. Google Fonts, Adobe Typekit, Bootstrap/ Fontawesome, CDNJS/ Cloudflare, Jetpack usw.) können durchaus als kritisch betrachtet werden, da die Inhalte auf Server der ganzen Welt verteilt werden und potentiell beim Abruf mindestens die IP-Adresse gespeichert wird.
 * [ ] Bei CDNs sollte abgewogen werden, ob diese überhaupt notwendig sind (z.B. Zielgruppe ausschließlich D-A-CH).
@@ -241,6 +272,9 @@
 
 ### Webfonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)
 
+*Rechtsgrundlage*: [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
+*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+
 * [ ] Google Fonts, Adobe Typekit- und Fontaweome-Fonts (BootstrapCDN) sollten **immer** lokalisiert werden (siehe CDNs)!
 * [ ] Fonts könnten unter Umständen auch gegen andere lokale Open-Source-Fonts oder sogar dem CSS Font Stack ersetzt werden.
 
@@ -253,6 +287,9 @@
 
 ### Profile bzw. Profilbilder (z.B. Gravatar, About.me)
 
+*Rechtsgrundlage*: [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/), [§22 KunstUrhG](https://dejure.org/gesetze/KunstUrhG/22.html)<br>
+*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+
 * [ ] Profile und/ oder Avatarbilder sollten nach Möglichkeit lokalisiert oder abgeschaltet werden, da sie mit Sicherheit personenbezogene Daten enthalten.
 * [ ] Die in WordPress fest integrierte Gravatar-Funktion sollte nicht nur wegen den Bildern, sondern auch in den im Bild-Link als Hash abgelegten E-Mail-Adressen komplett abgeschaltet werden.
 
@@ -262,6 +299,9 @@
  
 
 ### Emojis/ Emoticons (z.B. WP-Emojis)
+
+*Rechtsgrundlage*: [Art. 22 DSGVO](https://dsgvo-gesetz.de/art-22-dsgvo/), [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
+*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
 
 * [ ] Wenn Emojis extern von einem CDN geladen werden, werden für gewöhnlich IP-Adressen beim Abruf abgerufen.
 * [ ] Speziell bei den **WP-Emojis** wird zusätzlich [Canvas Fingerprinting](https://de.wikipedia.org/wiki/Canvas_Fingerprinting) eingesetzt, was eine Zuordnung des Rechners ohne Speicherung von Cookies ermöglicht (auch, wenn keine Emojis angezeigt werden).
@@ -276,6 +316,9 @@
 
 ### DNS-Prefetching
 
+*Rechtsgrundlage*: [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
+*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+
 * [ ] Beim DNS-Prefetching wird bereits beim Laden der Webseite der Browser angewiesen, beim Name Server weitere Domains aufzulösen. Dies zieht natürlich auch die Speicherung der IP-Adresse beim Name Server nach sich. Da diese Anfragen häufig nicht zwingend erforderlich sind, **könnte** auch hier ein Verstoß gegen die DSGVO vorliegen.
 * [ ] Bei WordPress werden die meisten Prefetching-Tags bereits mit dem Entfernen der entsprechenden Funktion (z.B. Google Fonts, WP-Emojis, Jetpack) entfernt.
 * [ ] Mindestens ein Eintrag (von WordPress selbst) bleibt aber erhalten und muss manuell entfernt werden.
@@ -287,6 +330,9 @@
 
 
 ### WP-Embeds/ oEmbeds
+
+*Rechtsgrundlage*: [Art. 22 DSGVO](https://dsgvo-gesetz.de/art-22-dsgvo/), [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
+*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
 
 * [ ] Wenn man bestimmte Links aus derzeit 34 Quellen (z.B. WordPress-Blogs, YouTube-Videos usw.) in den visuellen Editor in WordPress einfügt, werden sie automatisch in so genannte oEmbeds umgewandelt. Dabei werden Teile der Zielwebseite per `iframe` in die Webseite grafisch aufgearbeitet geladen. Beim Laden der Webseite werden damit automatisch alle Inhalte des iFrames mitgeladen (z.B. Analytics-Tools, Zählpixel).
 * [ ] Sofern in den Posts, Seiten oder Kommentaren solche oEmbeds auftauchen, sollte die Funktion vollständig deaktiviert werden.
@@ -302,6 +348,9 @@
 
 
 ### Video- und Musikdienste (z.B. YouTube, Vimeo, Soundcloud)
+
+*Rechtsgrundlage*: [Art. 22 DSGVO](https://dsgvo-gesetz.de/art-22-dsgvo/), [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
+*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
 
 * [ ] Einbettungen von sämtlichen Video- und Musikdiensten übertragen bereits beim Laden der Webseite personenbezogene Daten und müssen deshalb über eine 2-Klick-Lösung verfügen. Zudem werden häufig auch Cookies gespeichert.
 * [ ] YouTube-Videos können in einen »Erweiterten Datenschutzmodus« geschaltet werden, was aber nur die Speicherung von Cookies verhindert.
@@ -319,6 +368,9 @@
 
 ### Kartendienste (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)
 
+*Rechtsgrundlage*: [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
+*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+
 * [ ] Ebenso wie Video- und Musikdienste werden auch bei Kartendiensten bereits beim Laden der Webseite personenbezogene Daten erhoben. Auch hier bleibt derzeit nur eine 2-Klick-Lösung.
 
 #### Tipps zur Umsetzung
@@ -333,6 +385,9 @@
 ## Weitere Aspekte
 
 ### Kommentarfunktion
+
+*Rechtsgrundlage*: [Art. 32 Abs. 1 Lit. a DSGVO](https://dsgvo-gesetz.de/art-32-dsgvo/)<br>
+*Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. b oder f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
 
 * [ ] Die Speicherung von IP-Adressen in der Kommentarfunktion sollte auf einen minimalen Zeitraum begrenzt (z.B. bis zur Freischaltung zur rechtlichen Absicherung) oder alternativ deaktiviert werden.
 * [ ] Vor dem Absenden eines Kommentars (oder jedes anderen Formulars) sollte auf die Speicherung personenbezogenen Daten hingewiesen werden (Opt-In kritisch!).
@@ -354,6 +409,9 @@
 
 ### Webshop
 
+*Rechtsgrundlage*: [Art. 7 DSGVO](https://dsgvo-gesetz.de/art-7-dsgvo/), [Art. 22 DSGVO](https://dsgvo-gesetz.de/art-22-dsgvo/), [Art. 28 DSGVO](https://dsgvo-gesetz.de/art-28-dsgvo/), [Art. 32 DSGVO](https://dsgvo-gesetz.de/art-32-dsgvo/), [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
+*Legitimierungsgrund*: [Art. 6 Abs. a DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+
 * [ ] Bei Webshops macht es Sinn, sich das Einverständnis zur Datenerhebung bzw. -verarbeitung zu holen. Es dürfte aber ausreichen, wie bisher ein gemeinsames Häkchen für »ich habe die Allgemeinen Geschäftsbedingungen, die Widerrufsbelehrung und die Datenschutzerklärung gelesen« inkl. entsprechender Verlinkung vor dem »kostenpflichtig kaufen«-Button einzurichten.
 * [ ] Bei externen Shop-Lösungen und/ oder externen Zahlungsanbietern sollte **immer** ein Auftragsverarbeitungsvertrag (AVV) abgeschlossen werden.
 * [ ] Auch die statistische Erhebung des Kaufverhaltens sollte vertraglich geregelt sein (vgl. Analysetools & Marketingtools)
@@ -365,7 +423,7 @@
 
 ### Allgemein
 
-* [ ] Impressum und Datenschutzerklärung sollten gut sichtbar von jeder Unterseite der Webseite mit maximal 2 Klicks erreichbar sein!
+* [ ] Impressum und Datenschutzerklärung sollten gut sichtbar von jeder Unterseite der Webseite erreichbar sein (gängige Praxis: im Footer-Menü)!
 * [ ] Impressum und Datenschutzerklärung sollten auf zwei Unterseiten getrennt zugänglich sein.
 * [ ] Sobald Pflichtangaben (z.B. durch einen Cookie-Banner) verdeckt werden, werden sie als »nicht existent« behandelt.
 * [ ] Auch eine »weiße Seite« bzw. Baustellen-Seite erfordert in aller Regel diese Pflichtangaben!
@@ -374,6 +432,10 @@
 
 ### Impressum
 
+*Rechtsgrundlage*: [§5 TMG](https://dejure.org/gesetze/TMG/5.html), [§55 RStV](http://www.gesetze-bayern.de/Content/Document/RFunkStVertr-55), [EU-VO Nr. 524/2013](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2013:165:FULL:DE:PDF)<br>
+*Urteile*: [OLG München, Az. 29 U 2681/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20M%FCnchen&Datum=11.09.2003&Aktenzeichen=29%20U%202681%2F03), [BGH, Az. I ZR 228/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=BGH&Datum=20.07.2006&Aktenzeichen=I%20ZR%20228%2F03), [EuGH, Az. C-298/07](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.10.2008&Aktenzeichen=C-298/07)
+
+* [ ] Das Impressum sollte von jeder Unterseite der Webseite aus über maximal 2 Klicks (z.B. »Kontakt« - »Impressum«) erreichbar sein.
 * [ ] Das Impressum sollte alle Pflichtangaben gemäß §5 TMG enthalten, dazu gehören (nicht abschließend):
   * Vor- und Zuname oder Firmenname und Geschäftsform sowie ggf. Inhaber
   * Anschrift
@@ -383,6 +445,7 @@
   * Aktuelles Eigenkapital (bei GmbH)
   * Eintrag des Handelsregisters (wenn vorhanden)
 * [ ] Sollte die Webseite journalistisch-redaktionelle Inhalte enthalten (z.B. bei einem Weblog), muss auch nach §55 Abs. 2 RStV ein inhaltlich Veranwortlicher mit Name und Adresse angegeben werden.
+* [ ] Online-Händler müssen zwingend einen Link zur Streitschlichtungsstelle der EU setzen
 * [ ] Das Impressum muss barrierefrei sein! Anschrift, Telefonnummer oder Mail-Adresse als Bild oder in kodierter Form sind **nicht** zulässig!
 * [ ] Haftungsausschlüsse/ Disclaimer zu Links und Inhalt gehören **nicht** (in verallgemeinerter Form) ins Impressum!
 * [ ] Wer es noch nicht verstanden hat: »Das LG Hamburg hat 1998 entschieden...« ist Blödsinn und kann sogar zu Abmahnungen führen!
@@ -394,10 +457,15 @@
 
 ### Datenschutzerklärung
 
-* [ ] Die Datenschutzerklärung (DSE) sollte ausführlich, aber verständlich und durch Rechtsgrundlagen der DSGVO und des BDSG-neu belegt sein.
+*Rechtsgrundlage*: [Art. 12 DSGVO](https://dsgvo-gesetz.de/art-12-dsgvo/), [Art. 13 DSGVO](https://dsgvo-gesetz.de/art-13-dsgvo/), [Art. 14 DSGVO](https://dsgvo-gesetz.de/art-14-dsgvo/), [Art. 85 DSGVO](https://dsgvo-gesetz.de/art-85-dsgvo/), [§13 TMG](https://dejure.org/gesetze/TMG/13.html), [§57 RStV](http://www.gesetze-bayern.de/Content/Document/RFunkStVertr-57)<br>
+*Urteile*: evtl. Erreichbarkeit im Einklang mit [OLG München, Az. 29 U 2681/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20M%FCnchen&Datum=11.09.2003&Aktenzeichen=29%20U%202681%2F03)
+
+* [ ] Die Datenschutzerklärung (DSE) sollte von jeder Unterseite aus in einem Klick (evtl. auch in 2 Klicks, vgl. Impressum) erreichbar sein.
+* [ ] Die DSE sollte ausführlich, aber verständlich und durch Rechtsgrundlagen der DSGVO und des BDSG-neu belegt sein.
 * [ ] Doppelte DSEs (einmal kurz & verständlich, einmal lang & ausführlich) werden i.d.R. anerkannt (nicht mehr als 2 Klicks!)
 * [ ] Die DSE sollte einen Gültigkeitsbereich (z.B. auch andere benannte Webseiten und soziale Medien) sowie ein Aktualisierungdatum enthalten.
 * [ ] Die DSE kann durch einen (kostenlosen oder kostenpflichtigen) Generator oder direkt durch einen Anwalt oder Datenschutzbeauftragten erstellt werden.
+* [ ] Für Presseerzeugnisse/ journalistische Zwecke weichen die Vorgaben zur Datenverarbeitung sowie die Informationspflichten lt. §57 RStV (des Bundeslandes) im Einlklang mit Art. 85 DSGVO ab (»Medienprivileg«).
 
 #### Tipps zur Umsetzung
 
@@ -407,6 +475,9 @@
 
 ### Impressum & Datenschutzerklärung bei sozialen Medien
 
+*Rechtsgrundlage*: siehe [Impressum](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#impressum) & [Datenschutzerklärung](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#datenschutzerklärung)<br>
+*Urteile*: [LG Aschaffenburg, Az. 2 HK O 54/11](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20Aschaffenburg&Datum=19.08.2011&Aktenzeichen=2%20HKO%2054/11), [OLG Düsseldorf, Az. I-20 U 17/07](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20Düsseldorf&Datum=18.12.2007&Aktenzeichen=20%20U%2017%2F07), [EuGH, Az. C-210/16](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=2222-12-31&Aktenzeichen=C-210%2F16)
+
 * [ ] Auch in den sozialen Medien ist Impressum & Datenschutzerklärung anzugeben.
 * [ ] Zudem ist in der DSE die DSE des Drittanbieters zu nennen.
 * [ ] Bei Facebook-Seiten gibt  mittlerweise zwei Einträge, die man mit Links zum Impressum & der DSE der eigenen Webseite füllen kann.
@@ -415,9 +486,13 @@
 
 ### Urheberrecht / Bildnachweise
 
+*Rechtsgrundlage*: [§§ 12, 13, 19a, 23, 31, 32, 39, 51, 57 uvm. UrhG](https://dejure.org/gesetze/UrhG)<br>
+*Urteile*: [LG Köln Az. 6 U 25/14](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20K%F6ln&Datum=31.12.1111&Aktenzeichen=6%20U%2025/14), [LG Bochum, Az. 9 S 17/16](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20Bochum&Datum=16.08.2016&Aktenzeichen=9%20S%2017/16), [BGH, Az. I ZR 69/08](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=BGH&Datum=29.04.2010&Aktenzeichen=I%20ZR%2069/08)
+
 * [ ] Beim Verwenden fremder Werke (Bilder, Grafiken, Musik, Videos, Texte, Software, Code) **immer** die dazu gehörigen Lizenzbestimmungen lesen und ggf. laut Vorgaben entsprechende Angaben zum Urheber machen!
 * [ ] Egal ob Groß- oder Kleinzitat: Werke sind nur dann Zitate, wenn man sie damit auch inhaltlich detailliert auseinander setzt. Für schmückende Beigaben nur Werke mit einer entsprechenden Lizenz (z.B. Creative Commons oder CC0/ Public Domain) nutzen!
 * [ ] Der Bildnachweis gehört **immer** direkt unter das Bild! Manche Stock-Agenturen verlagen sogar, den Bildnachweis **im** Bild anzubringen. Einzige Ausnahme (weil gängige Praxis): Bilder, die unter der entsprechenden freien Lizenz (z.B. CC0) **ohne Namensnennung** auskommen und sich über die gesamte Webseite erstrecken, können auch einmalig im Impressum benannt werden.
+* [ ] Webdesigner/ -entwickler sollten das vom Kunden zur Verfügung gestellte Bildmaterial auf Urheberrechtsverstöße überprüfen (vgl. LG Bochum, Az. 9 S 17/16)
 * [ ] Bilder (und andere fremde Werke) dürfen ohne entsprechenden Verwertungsrechten auch nicht bearbeitet werden!
 * [ ] Metadaten (EXIF, IPTC, Wasserzeichen) dürfen aus **fremden** Bildern ohne entsprechende Einwilligung des Urhebers **nicht** entfernt werden (Bildbearbeitung & Aberkennung der Urheberschaft)!
 
