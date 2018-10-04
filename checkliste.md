@@ -4,9 +4,9 @@
 
 ## Inhaltsverzeichnis
 
-* [Sicherheit](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#sicherheit)
-  * [SSL/TLS-Transportverschlüsselung Webseite](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#ssltls-transportverschlüsselung-webseite)
-  * [SSL/TLS-Transportverschlüsselung E-Mail](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#ssltls-transportverschlüsselung-e-mail)
+* [Sicherheit](#sicherheit)
+  * [SSL/TLS-Transportverschlüsselung Webseite](#ssltls-transportverschlüsselung-webseite)
+  * [SSL/TLS-Transportverschlüsselung E-Mail](#ssltls-transportverschlüsselung-e-mail)
   * [Sicherheitskonzept des CMS](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#sicherheitskonzept-des-cms-zb-wordpress)
   * [Sicherheitskonzept des Servers](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#sicherheitskonzept-des-servers)
   * [Optional: Signatur und/ oder Inhaltsverschlüsselung bei E-Mails](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md#optional-signatur-und-oder-inhaltsverschlüsselung-bei-e-mails)
