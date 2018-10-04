@@ -1,69 +1,44 @@
-# Datenschutz-Checkliste (DSGVO)
+# Datenschutz-Checkliste (DSGVO) <!-- omit in toc -->
 
 *Open Source Checkliste für Webdesigner und -entwickler, um datenschutz-relevante Aufgaben nach aktuell geltendem Recht umzusetzen.*
 
-## Inhaltsverzeichnis
+## Inhaltsverzeichnis <!-- omit in toc -->
 
-* [Datenschutz-Checkliste (DSGVO)](#datenschutz-checkliste-dsgvo)
-  * [Inhaltsverzeichnis](#inhaltsverzeichnis)
-  * [Sicherheit](#sicherheit)
-    * [SSL/TLS-Transportverschlüsselung Webseite](#ssltls-transportverschlüsselung-webseite)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung)
-    * [SSL/TLS-Transportverschlüsselung E-Mail](#ssltls-transportverschlüsselung-e-mail)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-1)
-    * [Sicherheitskonzept des CMS (z.B. WordPress)](#sicherheitskonzept-des-cms-zb-wordpress)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-2)
-    * [Sicherheitskonzept des Servers](#sicherheitskonzept-des-servers)
-    * [OPTIONAL: Signatur und/ oder Inhaltsverschlüsselung bei E-Mails](#optional-signatur-und-oder-inhaltsverschlüsselung-bei-e-mails)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-3)
-  * [Webhoster](#webhoster)
-    * [Access Logs](#access-logs)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-4)
-    * [Weitere Server Logs](#weitere-server-logs)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-5)
-    * [Webseiten-Installation](#webseiten-installation)
-  * [Externe Dienste](#externe-dienste)
-    * [Analyse-Tools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)](#analyse-tools-zb-google-analytics-matomo-piwik-wordpress-stats-jetpack)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-6)
-    * [Marketing-Tools (z.B. Google AdSense/ AdWords, Affiliate-Netzwerke)](#marketing-tools-zb-google-adsense-adwords-affiliate-netzwerke)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-7)
-    * [Newsletter-Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go, Jetpack Abonnement)](#newsletter-tools-zb-mailchimp-clicktipp-newsletter2go-jetpack-abonnement)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-8)
-    * [Social Plugins (z.B. Facebook, Instagram, Twitter, Google+)](#social-plugins-zb-facebook-instagram-twitter-google)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-9)
-    * [Verwertungsgesellschaften (z.B. VG-Wort)](#verwertungsgesellschaften-zb-vg-wort)
-    * [Content Delivery Networks (CDN)](#content-delivery-networks-cdn)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-10)
-    * [Webfonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)](#webfonts-zb-google-fonts-adobe-typekit-fontawesome)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-11)
-    * [Profile bzw. Profilbilder (z.B. Gravatar, About.me)](#profile-bzw-profilbilder-zb-gravatar-aboutme)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-12)
-    * [Emojis/ Emoticons (z.B. WP-Emojis)](#emojis-emoticons-zb-wp-emojis)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-13)
-    * [DNS-Prefetching](#dns-prefetching)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-14)
-    * [WP-Embeds/ oEmbeds](#wp-embeds-oembeds)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-15)
-    * [Video- und Musikdienste (z.B. YouTube, Vimeo, Soundcloud)](#video--und-musikdienste-zb-youtube-vimeo-soundcloud)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-16)
-    * [Kartendienste (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)](#kartendienste-zb-google-maps-open-street-maps-mapbox-leaflet)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-17)
-  * [Weitere Aspekte](#weitere-aspekte)
-    * [Kommentarfunktion](#kommentarfunktion)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-18)
-    * [Weblinks](#weblinks)
-    * [Plugins/ Erweiterungen / Module](#plugins-erweiterungen--module)
-    * [Webshop](#webshop)
-  * [Rechtsdokumente/ Pflichtangaben](#rechtsdokumente-pflichtangaben)
-    * [Allgemein](#allgemein)
-    * [Impressum](#impressum)
-    * [Datenschutzerklärung](#datenschutzerklärung)
-      * [Tipps zur Umsetzung](#tipps-zur-umsetzung-19)
-    * [Impressum & Datenschutzerklärung bei sozialen Medien](#impressum--datenschutzerklärung-bei-sozialen-medien)
-    * [Urheberrecht / Bildnachweise](#urheberrecht--bildnachweise)
-
-
-
+* [Sicherheit](#sicherheit)
+  * [SSL/TLS-Transportverschlüsselung Webseite](#ssltls-transportverschlüsselung-webseite)
+  * [SSL/TLS-Transportverschlüsselung E-Mail](#ssltls-transportverschlüsselung-e-mail)
+  * [Sicherheitskonzept des CMS (z.B. WordPress)](#sicherheitskonzept-des-cms-zb-wordpress)
+  * [Sicherheitskonzept des Servers](#sicherheitskonzept-des-servers)
+  * [OPTIONAL: Signatur und/ oder Inhaltsverschlüsselung bei E-Mails](#optional-signatur-und-oder-inhaltsverschlüsselung-bei-e-mails)
+* [Webhoster](#webhoster)
+  * [Access Logs](#access-logs)
+  * [Weitere Server Logs](#weitere-server-logs)
+  * [Webseiten-Installation](#webseiten-installation)
+* [Externe Dienste](#externe-dienste)
+  * [Analyse-Tools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)](#analyse-tools-zb-google-analytics-matomo-piwik-wordpress-stats-jetpack)
+  * [Marketing-Tools (z.B. Google AdSense/ AdWords, Affiliate-Netzwerke)](#marketing-tools-zb-google-adsense-adwords-affiliate-netzwerke)
+  * [Newsletter-Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go, Jetpack Abonnement)](#newsletter-tools-zb-mailchimp-clicktipp-newsletter2go-jetpack-abonnement)
+  * [Social Plugins (z.B. Facebook, Instagram, Twitter, Google+)](#social-plugins-zb-facebook-instagram-twitter-google)
+  * [Verwertungsgesellschaften (z.B. VG-Wort)](#verwertungsgesellschaften-zb-vg-wort)
+  * [Content Delivery Networks (CDN)](#content-delivery-networks-cdn)
+  * [Webfonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)](#webfonts-zb-google-fonts-adobe-typekit-fontawesome)
+  * [Profile bzw. Profilbilder (z.B. Gravatar, About.me)](#profile-bzw-profilbilder-zb-gravatar-aboutme)
+  * [Emojis/ Emoticons (z.B. WP-Emojis)](#emojis-emoticons-zb-wp-emojis)
+  * [DNS-Prefetching](#dns-prefetching)
+  * [WP-Embeds/ oEmbeds](#wp-embeds-oembeds)
+  * [Video- und Musikdienste (z.B. YouTube, Vimeo, Soundcloud)](#video--und-musikdienste-zb-youtube-vimeo-soundcloud)
+  * [Kartendienste (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)](#kartendienste-zb-google-maps-open-street-maps-mapbox-leaflet)
+* [Weitere Aspekte](#weitere-aspekte)
+  * [Kommentarfunktion](#kommentarfunktion)
+  * [Weblinks](#weblinks)
+  * [Plugins/ Erweiterungen / Module](#plugins-erweiterungen--module)
+  * [Webshop](#webshop)
+* [Rechtsdokumente/ Pflichtangaben](#rechtsdokumente-pflichtangaben)
+  * [Allgemein](#allgemein)
+  * [Impressum](#impressum)
+  * [Datenschutzerklärung](#datenschutzerklärung)
+  * [Impressum & Datenschutzerklärung bei sozialen Medien](#impressum--datenschutzerklärung-bei-sozialen-medien)
+  * [Urheberrecht / Bildnachweise](#urheberrecht--bildnachweise)
 
 ## Sicherheit
 
@@ -78,14 +53,13 @@
 * [ ] Es sollte eine 301-Weiterleitung eingerichtet werden, damit die Webseite nicht über eine verschlüsselte **und** unverschlüsselte Verbindung erreichbar ist.
 * [ ] **OPTIONAL**: Es kann HSTS (»HTTP Strict Transport Security«) eingesetzt werden, um Angreifern die Möglichkeit zum »HTTP Downgrading« zu nehmen. Allerdings sollte man darauf hinweisen, dass dies eine **dauerhafte** Einstellung ist und es beim Abschalten dieser Funktion zu massiven Einschränkungen in der Erreichbarkeit führt.
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Sofern es der Webhoster (mit automatischer Verlängerung) zulässt, auf »Let's Encrypt«-Zertifikate setzen (kostenlos).
 * Für große Firmen mit vielen Subdomains: Lieber kostenpflichtig auf Zertifikate für Wildcard-Domains setzen.
 * **WP-Plugin**: Für die Überprüfung und Umstellung der internen Links [Better Search Replace](https://wordpress.org/plugins/better-search-replace/) verwenden.
 * Für die (regelmäßige) Überprüfung externer Links (Broken Link Checker) **kein** WP-Plugin verwenden, weil es die Performance stark belastet.
 * Weiterleitungen von HTTP auf HTTPS wahlweise per »Force SSL«-Funktion des Hosters (wenn angeboten) oder per `.htaccess` konfigurieren.
-
 
 ### SSL/TLS-Transportverschlüsselung E-Mail
 
@@ -98,14 +72,13 @@
   * SSL/TLS-Verschlüsselung des E-Mail-Posteingangs (POP3/ IMAP4) vom Empfänger
 * [ ] Geschäftlichen E-Mail-Verkehr über private Drittanbieter-Konten (z.B. Gmail, GMX, Web.de usw.) vermeiden (da meistens kein AVV möglich)!
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Darauf achten, dass E-Mails beim Formular-Versand **nicht** mit der `mail()`-Funktion von PHP versendet werden!
 * Darauf achten, dass ein mgl. Plugin die SMTP-Verschlüsselung überhaupt vorsieht.
 * **OPTIONAL**: Auch für einen geeigneten SPAM-Schutz (vorzugsweise Honeypot-Methode, reCaptchas sind **nicht** DSGVO-konform!) sorgen.
 * **WP-Plugin**: Wenn es nur um ein einzelnes Kontaktformular geht, **nicht** große Formbuilder wie CF7 einsetzen (Performance). Hier empfehle ich mein eigenes: [Minimal Contact Form](https://wordpress.org/plugins/minimal-contact-form/) (SSL-Verschlüsselung noch in Arbeit)
 * Ggf. E-Mail-Konto auf eigenen Hoster legen.
-
 
 ### Sicherheitskonzept des CMS (z.B. WordPress)
 
@@ -117,12 +90,11 @@
 * [ ] Für den Schutz vor Sicherheitslücken CMS-Installation, Plugins, Module und Themes (auch nicht aktivierte) **immer** aktuell halten!
 * [ ] Für den Schutz vor Sicherheitslücken **so wenig** Plugins/ Themes wie nur möglich installieren!
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * **WP-Plugin**: Brute-Force-Attacken - [Limit Login Attempts Reloaded](https://wordpress.org/plugins/limit-login-attempts-reloaded/)
 * **WP-Plugin**: Kommentar-SPAM - [Antispam Bee](https://wordpress.org/plugins/antispam-bee/)
 * **WP-spezifisch**: Infos zu Sicherheitslücken im WordPress Core, Plugins und Themes gibt es [hier](https://www.wpvulndb.com)
-
 
 ### Sicherheitskonzept des Servers
 
@@ -131,7 +103,6 @@
 * [ ] Bei Shared Hosting oder Managed Servern liegt die Verantwortung voll beim Webhoster (Auskunft anfordern/ AVV lesen).
 * [ ] Bei VPS und dedizierten Servern liegt die Verantwortung teilweise auch beim Inhaber (Auskunft anfordern).
 
-
 ### OPTIONAL: Signatur und/ oder Inhaltsverschlüsselung bei E-Mails
 
 *Rechtsgrundlage*: [Art. 32 DSGVO](https://dsgvo-gesetz.de/art-32-dsgvo/)
@@ -139,7 +110,7 @@
 * [ ] Eine elektronische Signatur fördert die Nachweisbarkeit des Absenders.
 * [ ] Eine Inhaltsverschlüsselung verhindert das Lesen des Inhalts der E-Mail bei einer MitM-Attacke (»Man in the Middle«).
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Im wesentlichen gibt es zwei populäre Signatur- und Verschlüsselungsverfahren:
   * S/MIME - über ein E-Mail-Zertifikat
@@ -148,9 +119,6 @@
 * Kostenlose S/MIME-E-Mail-Zertifikate gibt es bei [Comodo](https://www.comodo.com/home/email-security/free-email-certificate.php) für jeweils ein Jahr.
 * Für das kostenlose GPG gibt es verschiedene Lösungen, die auf der offiziellen [Webseite](https://gnupg.org) erhältlich sind.
 * Für die Signatur braucht nur der Absender die Einrichtung, für die Verschlüsselung sowohl Absender als auch Empfänger.
-
-
-
 
 ## Webhoster
 
@@ -163,11 +131,10 @@
 * [ ] Alternativ kann natürlich im Zuge der Datensparsamkeit komplett auf die Speicherung der IP-Adresse (sofern vom Webhoster zugelassen) verzichtet werden.
 * [ ] Auch die Speicherdauer sollte wenn möglich auf 7 - 14 Tage verkürzt werden.
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Fast jeder Hoster bietet inzwischen die Pseudonymisierung von IP-Adressen (Kürzung des letzten Bytes, z.B. 192.168.10.X) an.
 * Bei vielen Hostern ist auch die Speicherdauer einzuschränken - oder sie wurde zur DSGVO-Umstellung automatisch verkürzt (im Zweifelsfall beim Webhoster anfragen).
-
 
 ### Weitere Server Logs
 
@@ -176,17 +143,13 @@
 
 * [ ] Der Webhoster ist auch immer dazu verpflichtet, weitere Server Logs zu (insbes. zur Früherkennung von nicht authorisierten Zugriffen, Schadcode und allgemeinen Fehlermeldungen) führen, die ebenfalls IP-Adressen speichern. Hier ist eine Kürzung nicht vorgesehen.
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Auskunft über die Speicherung und Speicherdauer beim Hoster einholen (oder im AVV nachschlagen).
-
 
 ### Webseiten-Installation
 
 * [ ] Alle auf dem Server gespeicherten personenbezogenen Daten gelten auch als »Verarbeitung« - Auftragsverarbeitungsvertrag (AVV) mit Webhoster abschließen!
-
-
-
 
 ## Externe Dienste
 
@@ -204,14 +167,13 @@
 * [ ] **Webalizer**: AVV mit Webhoster abschließen, IP-Adressen in den Server Logs pseudonymisieren
 * [ ] **WP Stats/ Jetpack**: Da es derzeit keinen AVV für Jetpack gibt, das Plugin vollkommen abschalten!
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * AVV bei Google Analytics braucht **nicht mehr** schriftlich erfolgen - mit wenigen Klicks abschließbar
 * Einbindung von GA oder Matomo nach Möglichkeit per Plugin, um Fehler zu vermeiden
 * Beim Cookie-Banner reicht derzeit die Opt-Out-Methode, da die DSGVO nicht explizit Cookies regelt. Das Opt-In wird derzeit im Allgemeinen recht kritisch betrachtet.
 * **WP-Plugin**: [Borlabs Cookie](https://de.borlabs.io/borlabs-cookie/) (Cookie-Banner & 2-Klick-Lösungen, kostenpflichtig) oder [Google Analytics Germanized](https://wordpress.org/plugins/ga-germanized/) (GA-Einbindung, Cookie-Banner & DNT, kostenlos)
 * **WP-Plugin**: Alternativ [Statify](https://wordpress.org/plugins/statify/) einsetzen - trackt nur Page Impressions und ist vollkommen DSGVO-konform.
-
 
 ### Marketing-Tools (z.B. Google AdSense/ AdWords, Affiliate-Netzwerke)
 
@@ -224,11 +186,10 @@
 * [ ] Widgets, grafische Einbettungen oder JavaScript-Einbettungen von Werbemitteln von Affiliate-Netzwerken mindestens in der DSE erwähnen (sicherer: 2-Klick-Lösung)
 * [ ] Werbemittel in jeglicher Form sollten als »Werbung« oder »Anzeige« gekennzeichnet werden!
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * **WP-Plugin**: Für Google AdSense [Advanced Ads](https://wordpress.org/plugins/advanced-ads/) mit GDPR-Funktion (2-Klick-Lösung) einsetzen.
 * Bei Affiliate-Netzwerken vorübergehend nur auf (für die DSGVO nicht relevante) Text-Links setzen.
-
 
 ### Newsletter-Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go, Jetpack Abonnement)
 
@@ -238,14 +199,13 @@
 * [ ] Newsletter-Formulare sollten mit einem adäquaten Hinweistext versehen und in der E-Mail beim Double-Opt-In-Verfahren wiederholt werden.
 * [ ] Drittanbieter nicht-europäischen Ländern sollten auf die Mitgliedschaft beim [Privacy Shield](https://www.privacyshield.gov/list) überprüft oder ggf. gemieden werden.
 * [ ] Ein Newsletter-Eintrag sollte nicht an eine (kostenlosen oder kostenpflichtigen) Dienstleistung gekoppelt werden (»Kopplungsverbot«)
-* [ ] Das Einverständnis für Newsletter-Einträge muss dokumentiert (Hinweistext, Zeitpunkt) und es muss ein Opt-Out bereit gestellt werden. 
+* [ ] Das Einverständnis für Newsletter-Einträge muss dokumentiert (Hinweistext, Zeitpunkt) und es muss ein Opt-Out bereit gestellt werden.
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * **Kopplungsverbot**: Ein angebotenes Freebie darf **nicht** von der Zustimmung zur Erhebung personenbezogener Daten abhängig gemacht werden. »Als Dankeschön erhalten Sie [...]« wäre aber machbar.
 * AVV mit dem Drittanbieter abschließen
 * **Sicherste Methode**: Auf Drittanbieter verzichten und auf stationäre Lösungen wie dem **WP-Plugin** [Newsletter](https://wordpress.org/plugins/newsletter/) setzen.
-
 
 ### Social Plugins (z.B. Facebook, Instagram, Twitter, Google+)
 
@@ -259,13 +219,12 @@
 * [ ] Einzig reine Links (Text oder Grafik) sind DSGVO-konform.
 * [ ] Beacons (Zählpixel) für Statistik-Zwecke sind ebenfalls sehr kritisch zu bewerten.
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Vor dem Laden des Social Plugins über die Datenverarbeitung informieren (2-Klick-Lösung) oder Social Plugins komplett abschalten.
 * Facebook Connect, Jetpack Kommentarfunktion (und ähnliche) komplett abschalten.
 * Sharing-Buttons entweder ohne Kennzahlen anzeigen oder das **WP-Plugin** [Shariff](https://wordpress.org/plugins/shariff/) verwenden.
 * Beacons (Zählpixel) komplett entfernen.
-
 
 ### Verwertungsgesellschaften (z.B. VG-Wort)
 
@@ -274,7 +233,6 @@
 
 * [ ] Der Zählpixel der VG-Wort sollte auf HTTPS umgestellt werden, um »mixed Content« zu vermeiden.
 * [ ] Der Zählpixel der VG-WOrt sollte in der Datenschutzerklärung erwähnt werden.
-
 
 ### Content Delivery Networks (CDN)
 
@@ -285,13 +243,12 @@
 * [ ] Bei CDNs sollte abgewogen werden, ob diese überhaupt notwendig sind (z.B. Zielgruppe ausschließlich D-A-CH).
 * [ ] Inhalte von CDNs (z.B. Bilder, Fonts, CSS- oder JS- Dateien) sollten nach Möglichkeit lokalisiert werden.
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Von CDNs geladene Dateien (Fonts, CSS, JS usw.) insbesondere bei rein deutschsprachigen Seiten **immer** lokalisieren. Diese können direkt im (Child-)Theme abgelegt werden.
 * Auch prüfen, ob es nicht WordPress-eigene Alternativen gibt (z.B. jQuery).
 * Auch Drittanbieter-Plugins auf CDNs prüfen.
 * Abwägung zwischen Notwendigkeit und Risiko im besonderen Fall (z.B. Instagram-Widget bei Fotografen)
-
 
 ### Webfonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)
 
@@ -301,12 +258,11 @@
 * [ ] Google Fonts, Adobe Typekit- und Fontaweome-Fonts (BootstrapCDN) sollten **immer** lokalisiert werden (siehe CDNs)!
 * [ ] Fonts könnten unter Umständen auch gegen andere lokale Open-Source-Fonts oder sogar dem CSS Font Stack ersetzt werden.
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Google Fonts über den [Google Webfonts Helper](https://google-webfonts-helper.herokuapp.com/fonts) im (Child-)Theme lokalisieren.
 * Wenn nötig, [CSS Font Stack](https://www.cssfontstack.com) einsetzen.
 * Wer das **WP-Plugin** [Autoptimize](https://wordpress.org/plugins/autoptimize/) einsetzt, kann auch dort Google Fonts abschalten (funktioniert allerdings nicht immer).
-
 
 ### Profile bzw. Profilbilder (z.B. Gravatar, About.me)
 
@@ -316,10 +272,9 @@
 * [ ] Profile und/ oder Avatarbilder sollten nach Möglichkeit lokalisiert oder abgeschaltet werden, da sie mit Sicherheit personenbezogene Daten enthalten.
 * [ ] Die in WordPress fest integrierte Gravatar-Funktion sollte nicht nur wegen den Bildern, sondern auch in den im Bild-Link als Hash abgelegten E-Mail-Adressen komplett abgeschaltet werden.
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Die Gravatarfunktion lässt sich direkt in WordPress unter »Einstellungen > Diskussion > Avatare anzeigen« abschalten.
- 
 
 ### Emojis/ Emoticons (z.B. WP-Emojis)
 
@@ -330,12 +285,11 @@
 * [ ] Speziell bei den **WP-Emojis** wird zusätzlich [Canvas Fingerprinting](https://de.wikipedia.org/wiki/Canvas_Fingerprinting) eingesetzt, was eine Zuordnung des Rechners ohne Speicherung von Cookies ermöglicht (auch, wenn keine Emojis angezeigt werden).
 * [ ] **WP-Emojis** sollte daher immer abgeschaltet werden! Jeder moderne Browser zeigt trotzdem weiter Emojis und Emoticons an.
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Sofern der Webseitenbetreiber WordPress bereits **vor** Version 4.4 installiert hat, gibt es unter »Einstellungen > Diskussion« die Möglichkeit, die WP-Emojis direkt abzuschalten.
 * Jüngere Webseiten haben diese Funktion nicht - hier sollten die Emojis (zzgl. DNS-Prefetching) über die `functions.php` des (Child-)Themes abgeschaltet werden.
 * Wer das **WP-Plugin** [Autoptimize](https://wordpress.org/plugins/autoptimize/) einsetzt, kann auch dort die Emojis abschalten (funktioniert allerdings nicht immer).
-
 
 ### DNS-Prefetching
 
@@ -346,11 +300,10 @@
 * [ ] Bei WordPress werden die meisten Prefetching-Tags bereits mit dem Entfernen der entsprechenden Funktion (z.B. Google Fonts, WP-Emojis, Jetpack) entfernt.
 * [ ] Mindestens ein Eintrag (von WordPress selbst) bleibt aber erhalten und muss manuell entfernt werden.
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Darauf achten, dass beim Entfernen von WP-Emojis auch das Prefetching entfernt wird.
 * Den WordPress-eigenen Eintrag über die `functions.php` des (Child-)Themes entfernen.
-
 
 ### WP-Embeds/ oEmbeds
 
@@ -361,14 +314,13 @@
 * [ ] Sofern in den Posts, Seiten oder Kommentaren solche oEmbeds auftauchen, sollte die Funktion vollständig deaktiviert werden.
 * [ ] Alte Einträge werden **nicht** vollständig entfernt und müssen händisch gelöscht werden.
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Nähere Informationen zu den WP-Embeds gibt es [hier](https://codex.wordpress.org/Embeds).
 * oEmbeds kann man vermeiden, indem man Links in den Text-Editor von WordPress eingibt oder eigene Shortcodes verwendet.
 * Die gesamte Webseite (jede Unterseite) sollte auf iFrames getestet werden.
 * Bei positiven Ergebnissen sollte die oEmbed-Funktion über die `functions.php` des Child Themes komplett entfernt werden.
 * Alte Einträge müssen danach noch händisch gelöscht bzw. wieder zu normalen Links konvertiert werden.
-
 
 ### Video- und Musikdienste (z.B. YouTube, Vimeo, Soundcloud)
 
@@ -380,14 +332,13 @@
 * [ ] Vimeo hingegen ist noch nicht einmal im *Privacy Shield* eingetragen.
 * [ ] SoundCloud hat zwar ihre Datenschutz-Einstellungen verbessert, erfordert aber dennoch eine 2-Klick-Lösung.
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * YouTube-Videos sollten nur im »Erweiterten Datenschutzmodus« erfolgen.
 * **Einfachste Lösung**: Video-Vorschauen manuell als Bild einbetten und auf die jeweiligen Plattformen verlinken
 * 2-Klick-Lösung für YouTube-Videos mit [WP YouTube Lyte](https://wordpress.org/plugins/wp-youtube-lyte/)
 * 2-Klick-Lösung für YouTube- und Vimeo-Videos als Lightbox mit [Responsive YouTube & Vimeo Video Popup](https://wordpress.org/plugins/responsive-youtube-vimeo-popup/)
 * 2-Klick-Lösung für **alle** Dienste mit [Borlabs Cookie](https://de.borlabs.io/borlabs-cookie/) (kostenpflichtig)
-
 
 ### Kartendienste (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)
 
@@ -396,14 +347,11 @@
 
 * [ ] Ebenso wie Video- und Musikdienste werden auch bei Kartendiensten bereits beim Laden der Webseite personenbezogene Daten erhoben. Auch hier bleibt derzeit nur eine 2-Klick-Lösung.
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * **Einfachste Lösung**: Kartenausschnitt manuell als Bild einbetten und auf die jeweilige Plattform verlinken.
 * Derzeit keine eigenständigen Plugins mit 2-Klick-Lösung vorhanden.
 * 2-Klick-Lösung für **alle** Dienste mit [Borlabs Cookie](https://de.borlabs.io/borlabs-cookie/) (kostenpflichtig)
-
-
-
 
 ## Weitere Aspekte
 
@@ -416,11 +364,10 @@
 * [ ] Vor dem Absenden eines Kommentars (oder jedes anderen Formulars) sollte auf die Speicherung personenbezogenen Daten hingewiesen werden (Opt-In kritisch!).
 * [ ] Die Option zum Speichern eines Cookies für das Merken von Name und E-Mail-Adresse sollte abgeschaltet werden (bei WordPress in Arbeit, vgl. [#44373](https://core.trac.wordpress.org/ticket/44373)).
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * IP-Adressen vor Freischaltung händisch löschen oder per die Speicherung im (Child-)Theme via `functions.php` ausschließen.
 * Hinweistext einfügen - am besten im (Child-)Theme in der `comments.php` oder als Option.
-
 
 ### Weblinks
 
@@ -439,9 +386,6 @@
 * [ ] Bei externen Shop-Lösungen und/ oder externen Zahlungsanbietern sollte **immer** ein Auftragsverarbeitungsvertrag (AVV) abgeschlossen werden.
 * [ ] Auch die statistische Erhebung des Kaufverhaltens sollte vertraglich geregelt sein (vgl. Analysetools & Marketingtools)
 
-
-
-
 ## Rechtsdokumente/ Pflichtangaben
 
 ### Allgemein
@@ -451,7 +395,6 @@
 * [ ] Sobald Pflichtangaben (z.B. durch einen Cookie-Banner) verdeckt werden, werden sie als »nicht existent« behandelt.
 * [ ] Auch eine »weiße Seite« bzw. Baustellen-Seite erfordert in aller Regel diese Pflichtangaben!
 * [ ] Auch **frei zugängliche** Login- und Registrierungs-Seiten müssen diese Pflichtangaben enthalten.
-
 
 ### Impressum
 
@@ -477,7 +420,6 @@
 * [ ] Das Impressum ist auch ein schöner Ort, um auf Miturheber wie den Designer, Webentwickler, Font-Ersteller usw. hinzuweisen.
 * [ ] Bildnachweise gehören nur dann ins Impressum, wenn sie allgemeingültig für die ganze Webseite sind! (»Sofern nicht anders angegeben...«)
 
-
 ### Datenschutzerklärung
 
 *Rechtsgrundlage*: [Art. 12 DSGVO](https://dsgvo-gesetz.de/art-12-dsgvo/), [Art. 13 DSGVO](https://dsgvo-gesetz.de/art-13-dsgvo/), [Art. 14 DSGVO](https://dsgvo-gesetz.de/art-14-dsgvo/), [Art. 85 DSGVO](https://dsgvo-gesetz.de/art-85-dsgvo/), [§13 TMG](https://dejure.org/gesetze/TMG/13.html), [§57 RStV](http://www.gesetze-bayern.de/Content/Document/RFunkStVertr-57)<br>
@@ -490,11 +432,10 @@
 * [ ] Die DSE kann durch einen (kostenlosen oder kostenpflichtigen) Generator oder direkt durch einen Anwalt oder Datenschutzbeauftragten erstellt werden.
 * [ ] Für Presseerzeugnisse/ journalistische Zwecke weichen die Vorgaben zur Datenverarbeitung sowie die Informationspflichten lt. §57 RStV (des Bundeslandes) im Einlklang mit Art. 85 DSGVO ab (»Medienprivileg«).
 
-#### Tipps zur Umsetzung
+#### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Kostenlos für Privatpersonen und Kleinunternehmer ist der [Datenschutz-Generator des RA Dr. Schwenke](https://datenschutz-generator.de) zu empfehlen.
 * Darüber hinaus kann der gleich DSG ebenfalls - allerdings kostenpflichtig - genommen werden. Oder aber man nutzt das Abo [...]
-
 
 ### Impressum & Datenschutzerklärung bei sozialen Medien
 
@@ -504,8 +445,7 @@
 * [ ] Auch in den sozialen Medien ist Impressum & Datenschutzerklärung anzugeben.
 * [ ] Zudem ist in der DSE die DSE des Drittanbieters zu nennen.
 * [ ] Bei Facebook-Seiten gibt  mittlerweise zwei Einträge, die man mit Links zum Impressum & der DSE der eigenen Webseite füllen kann.
-* [ ] Wo keine direkte Möglichkeit ist, die entsprechenden Links einzutragen, kann mit Short-URLs (**ohne** Tracking!) in den jeweiligen Beschreibungen gearbeitet werden. 
-
+* [ ] Wo keine direkte Möglichkeit ist, die entsprechenden Links einzutragen, kann mit Short-URLs (**ohne** Tracking!) in den jeweiligen Beschreibungen gearbeitet werden.
 
 ### Urheberrecht / Bildnachweise
 
@@ -518,4 +458,3 @@
 * [ ] Webdesigner/ -entwickler sollten das vom Kunden zur Verfügung gestellte Bildmaterial auf Urheberrechtsverstöße überprüfen (vgl. LG Bochum, Az. 9 S 17/16)
 * [ ] Bilder (und andere fremde Werke) dürfen ohne entsprechenden Verwertungsrechten auch nicht bearbeitet werden!
 * [ ] Metadaten (EXIF, IPTC, Wasserzeichen) dürfen aus **fremden** Bildern ohne entsprechende Einwilligung des Urhebers **nicht** entfernt werden (Bildbearbeitung & Aberkennung der Urheberschaft)!
-
