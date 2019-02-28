@@ -305,7 +305,7 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 #### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Darauf achten, dass beim Entfernen von WP-Emojis auch das Prefetching entfernt wird.
-* Den WordPress-eigenen Eintrag über die `functions.php` des (Child-)Themes entfernen.
+* Den WordPress-eigenen Eintrag durch einfügen von `add_filter( 'emoji_svg_url', '__return_false' );` in die `functions.php` des (Child-)Themes entfernen.
 
 ### WP-Embeds/ oEmbeds
 
