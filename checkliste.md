@@ -400,20 +400,28 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 
 ### Impressum
 
-*Rechtsgrundlage*: [§5 TMG](https://dejure.org/gesetze/TMG/5.html), [§55 RStV](http://www.gesetze-bayern.de/Content/Document/RFunkStVertr-55), [EU-VO Nr. 524/2013](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2013:165:FULL:DE:PDF)<br>
+*Rechtsgrundlage*: [§5 TMG](https://dejure.org/gesetze/TMG/5.html), [§55 RStV](http://www.gesetze-bayern.de/Content/Document/RFunkStVertr-55), [EU-VO Nr. 524/2013](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2013:165:FULL:DE:PDF), [§2 DL-InfoV](https://www.gesetze-im-internet.de/dlinfov/__2.html)<br>
 *Urteile*: [OLG München, Az. 29 U 2681/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20M%FCnchen&Datum=11.09.2003&Aktenzeichen=29%20U%202681%2F03), [BGH, Az. I ZR 228/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=BGH&Datum=20.07.2006&Aktenzeichen=I%20ZR%20228%2F03), [EuGH, Az. C-298/07](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.10.2008&Aktenzeichen=C-298/07)
 
 * [ ] Das Impressum sollte von jeder Unterseite der Webseite aus über maximal 2 Klicks (z.B. »Kontakt« - »Impressum«) erreichbar sein.
-* [ ] Das Impressum sollte alle Pflichtangaben gemäß §5 TMG enthalten, dazu gehören (nicht abschließend):
+* [ ] Das Impressum sollte alle Pflichtangaben gemäß §5 TMG enthalten, dazu gehören:
   * Vor- und Zuname oder Firmenname und Geschäftsform sowie ggf. Inhaber
-  * Anschrift
+  * Ladungsfähige Anschrift bzw. Adresse der Niederlassung
   * Telefonnummer (oder Kontaktformular, wenn Reaktionszeit binnen 30 - 60 min.)
   * E-Mail-Adresse
-  * USt-ID (oder Hinweis auf Befreiung)
-  * Aktuelles Eigenkapital (bei GmbH)
-  * Eintrag des Handelsregisters (wenn vorhanden)
-* [ ] Sollte die Webseite journalistisch-redaktionelle Inhalte enthalten (z.B. bei einem Weblog), muss auch nach §55 Abs. 2 RStV ein inhaltlich Veranwortlicher mit Name und Adresse angegeben werden.
-* [ ] Online-Händler müssen zwingend einen Link zur Streitschlichtungsstelle der EU setzen
+  * USt-ID (oder Hinweis auf Befreiung) oder Wirtschafts-ID
+  * Eintrag des Handelsregisters, Vereinsregisters, Genossenschaftsregisters oder Partnerschaftsregisters (wenn vorhanden)
+  * Behördliche Zulassung mit Angaben zur Aufsichtsbehörde, sofern der Beruf zulassungspflichtig ist
+  * Zuständige Kammer (Anschrift, Telefonnummer, Webseite) bei kammergebundenen Berufen (z.B. Rechtsanwälte, Steuerberater, Ärzte)
+  * Entsprechende Kennzeichnung, wenn sich die Gesellschaft in Abwicklung oder Liquidation befindet (nur AG, KGaA und GmbH)
+  * Wenn das Stamm- oder Grundkapital (GmbH, freiwillig) angegeben wird, muss dies korrekt erfolgen.
+* [ ] Sofern auf der Webseite Dienstleistungen angeboten werden, gelten Informationspflichten gemäß §2 Abs. 1 DL-InfoV vor Vertragsschluss oder Erbringung der Leistungen. Diese **können** auch an zentraler Stelle ins Impressum geschrieben werden. Zusätzlich zu den obigen Angaben wären dann noch folgende Punkte notwendig:
+  * Angaben zur Berufshaftpflichtversicherung (wenn vorhanden)
+  * Geltende Allgemeine Geschäftsbedingungen (AGB)
+  * Anwendbares Recht und Gerichtsstand
+  * Bestehende Garantien (sofern vorhanden)
+* [ ] Sollte die Webseite journalistisch-redaktionelle Inhalte enthalten (z.B. bei einem Weblog), muss auch nach §55 Abs. 2 RStV ein inhaltlich Veranwortlicher mit Name und Adresse angegeben werden (Achtung, siehe Anmerkungen!).
+* [ ] Online-Händler, die Waren an Verbraucher verkaufen, müssen zwingend einen Link zur Streitschlichtungsstelle der EU setzen
 * [ ] Das Impressum muss barrierefrei sein! Anschrift, Telefonnummer oder Mail-Adresse als Bild oder in kodierter Form sind **nicht** zulässig!
 * [ ] Haftungsausschlüsse/ Disclaimer zu Links und Inhalt gehören **nicht** (in verallgemeinerter Form) ins Impressum!
 * [ ] Wer es noch nicht verstanden hat: »Das LG Hamburg hat 1998 entschieden...« ist Blödsinn und kann sogar zu Abmahnungen führen!
