@@ -422,6 +422,11 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 * [ ] Das Impressum ist auch ein schöner Ort, um auf Miturheber wie den Designer, Webentwickler, Font-Ersteller usw. hinzuweisen.
 * [ ] Bildnachweise gehören nur dann ins Impressum, wenn sie allgemeingültig für die ganze Webseite sind! (»Sofern nicht anders angegeben...«)
 
+#### Anmerkungen <!-- omit in toc -->
+
+* Mit dem Inkrafttreten des Medienstaatsvertrags (MStV) im September 2020 ändern sich die Angaben zum inhaltlichen Verantwortlichen voraussichtlich zu [§18 Abs. 2 MStV](https://www.rlp.de/fileadmin/rlp-stk/pdf-Dateien/Medienpolitik/ModStV_MStV_und_JMStV_2019-12-05_MPK.pdf) (vorläufig).
+* Des weiteren könnten in zukünftigen Rechtssprechungen Angaben zur (freiwilligen) Selbstkontrolle zwecks Qualitätssicherung sowie zur entsprechenden Beschwerdestelle (vgl. §19 MStV) notwendig werden.
+
 ### Datenschutzerklärung
 
 *Rechtsgrundlage*: [Art. 12 DSGVO](https://dsgvo-gesetz.de/art-12-dsgvo/), [Art. 13 DSGVO](https://dsgvo-gesetz.de/art-13-dsgvo/), [Art. 14 DSGVO](https://dsgvo-gesetz.de/art-14-dsgvo/), [Art. 85 DSGVO](https://dsgvo-gesetz.de/art-85-dsgvo/), [§13 TMG](https://dejure.org/gesetze/TMG/13.html), [§57 RStV](http://www.gesetze-bayern.de/Content/Document/RFunkStVertr-57)<br>
@@ -432,12 +437,16 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 * [ ] Doppelte DSEs (einmal kurz & verständlich, einmal lang & ausführlich) werden i.d.R. anerkannt (nicht mehr als 2 Klicks!)
 * [ ] Die DSE sollte einen Gültigkeitsbereich (z.B. auch andere benannte Webseiten und soziale Medien) sowie ein Aktualisierungdatum enthalten.
 * [ ] Die DSE kann durch einen (kostenlosen oder kostenpflichtigen) Generator oder direkt durch einen Anwalt oder Datenschutzbeauftragten erstellt werden.
-* [ ] Für Presseerzeugnisse/ journalistische Zwecke weichen die Vorgaben zur Datenverarbeitung sowie die Informationspflichten lt. §57 RStV (des Bundeslandes) im Einlklang mit Art. 85 DSGVO ab (»Medienprivileg«).
+* [ ] Für Presseerzeugnisse/ journalistische Zwecke weichen die Vorgaben zur Datenverarbeitung sowie die Informationspflichten lt. §57 RStV (des Bundeslandes) im Einklang mit Art. 85 DSGVO ab (»Medienprivileg«).
 
 #### Tipps zur Umsetzung <!-- omit in toc -->
 
 * Kostenlos für Privatpersonen und Kleinunternehmer ist der [Datenschutz-Generator des RA Dr. Schwenke](https://datenschutz-generator.de) zu empfehlen.
 * Darüber hinaus kann der gleich DSG ebenfalls - allerdings kostenpflichtig - genommen werden. Oder aber man nutzt das Abo [...]
+
+#### Anmerkungen <!-- omit in toc -->
+
+* Mit dem Inkrafttreten des Medienstaatsvertrags (MStV) im September 2020 ändern sich die datenschutzrechtlichen Vorgaben zum »Medienprivileg« bei journalistisch redaktionellen Inhalten, siehe [§23 MStV](https://www.rlp.de/fileadmin/rlp-stk/pdf-Dateien/Medienpolitik/ModStV_MStV_und_JMStV_2019-12-05_MPK.pdf) (vorläufig).
 
 ### Impressum & Datenschutzerklärung bei sozialen Medien
 
@@ -448,6 +457,10 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 * [ ] Zudem ist in der DSE die DSE des Drittanbieters zu nennen.
 * [ ] Bei Facebook-Seiten gibt  mittlerweise zwei Einträge, die man mit Links zum Impressum & der DSE der eigenen Webseite füllen kann.
 * [ ] Wo keine direkte Möglichkeit ist, die entsprechenden Links einzutragen, kann mit Short-URLs (**ohne** Tracking!) in den jeweiligen Beschreibungen gearbeitet werden.
+
+#### Anmerkungen <!-- omit in toc -->
+
+* Mit Inkrafttreten des neuen Medienstaatsvertrags (MStV) im September 2020 müssen automatisiert veröffentlichte journalistisch redaktionelle Inhalte (z.B. durch einen Bot) als solche gekennzeichnet werden. Je nach Auslegung könnte dies auch automatische Crosspostings betreffen. Grundlage dafür ist [§18 Abs. 3 MStV](https://www.rlp.de/fileadmin/rlp-stk/pdf-Dateien/Medienpolitik/ModStV_MStV_und_JMStV_2019-12-05_MPK.pdf) (vorläufig).
 
 ### Urheberrecht / Bildnachweise
 
