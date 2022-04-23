@@ -28,7 +28,7 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
   - [Emojis/ Emoticons (z.B. WP-Emojis)](#emojis-emoticons-zb-wp-emojis)
   - [DNS-Prefetching](#dns-prefetching)
   - [WP-Embeds/ oEmbeds](#wp-embeds-oembeds)
-  - [Video- und Musikdienste (z.B. YouTube, Vimeo, Soundcloud)](#video--und-musikdienste-zb-youtube-vimeo-soundcloud)
+  - [Video- und Musikdienste (z.B. YouTube, Vimeo, Spotify, Soundcloud)](#video--und-musikdienste-zb-youtube-vimeo-spotify-soundcloud)
   - [Kartendienste (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)](#kartendienste-zb-google-maps-open-street-maps-mapbox-leaflet)
 - [Weitere Aspekte](#weitere-aspekte)
   - [Kommentarfunktion](#kommentarfunktion)
@@ -324,8 +324,10 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 ### WP-Embeds/ oEmbeds
 
 *Rechtsgrundlage*: [Art. 22 DSGVO](https://dsgvo-gesetz.de/art-22-dsgvo/), [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
-*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)<br>
+*Urteile*: [LG München, Az. 3 O 17493/20](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20M%C3%BCnchen%20I&Datum=20.01.2022&Aktenzeichen=3%20O%2017493%2F20)
 
+* [ ] **Wichtig**: Die meisten oEmbeds speichern personenbezogene Daten in den USA und sind seit 2020 nach dem Schrems-II-Urteil nicht mehr  DSGVO-konform!
 * [ ] Wenn man bestimmte Links aus derzeit 34 Quellen (z.B. WordPress-Blogs, YouTube-Videos usw.) in den visuellen Editor in WordPress einfügt, werden sie automatisch in so genannte oEmbeds umgewandelt. Dabei werden Teile der Zielwebseite per `iframe` in die Webseite grafisch aufgearbeitet geladen. Beim Laden der Webseite werden damit automatisch alle Inhalte des iFrames mitgeladen (z.B. Analytics-Tools, Zählpixel).
 * [ ] Sofern in den Posts, Seiten oder Kommentaren solche oEmbeds auftauchen, sollte die Funktion vollständig deaktiviert werden.
 * [ ] Alte Einträge werden **nicht** vollständig entfernt und müssen händisch gelöscht werden.
@@ -338,35 +340,35 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 * Bei positiven Ergebnissen sollte die oEmbed-Funktion über die `functions.php` des Child Themes komplett entfernt werden.
 * Alte Einträge müssen danach noch händisch gelöscht bzw. wieder zu normalen Links konvertiert werden.
 
-### Video- und Musikdienste (z.B. YouTube, Vimeo, Soundcloud)
+### Video- und Musikdienste (z.B. YouTube, Vimeo, Spotify, Soundcloud)
 
 *Rechtsgrundlage*: [Art. 22 DSGVO](https://dsgvo-gesetz.de/art-22-dsgvo/), [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
-*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)<br>
+*Urteile*: [LG München, Az. 3 O 17493/20](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20M%C3%BCnchen%20I&Datum=20.01.2022&Aktenzeichen=3%20O%2017493%2F20)
 
+* [ ] **Wichtig**: Video- und Musikdienste, die personenbezogene Daten in den USA speichern, sind seit 2020 nach dem Schrems-II-Urteil nicht DSGVO-konform! Dies betrifft u.a. **YouTube**, **Vimeo**, **Spotify** und **Soundcloud**.
 * [ ] Einbettungen von sämtlichen Video- und Musikdiensten übertragen bereits beim Laden der Webseite personenbezogene Daten und müssen deshalb über eine 2-Klick-Lösung verfügen. Zudem werden häufig auch Cookies gespeichert.
 * [ ] YouTube-Videos können in einen »Erweiterten Datenschutzmodus« geschaltet werden, was aber nur die Speicherung von Cookies verhindert.
-* [ ] Vimeo hingegen ist noch nicht einmal im *Privacy Shield* eingetragen.
 * [ ] SoundCloud hat zwar ihre Datenschutz-Einstellungen verbessert, erfordert aber dennoch eine 2-Klick-Lösung.
 
 #### Tipps zur Umsetzung <!-- omit in toc -->
 
 * YouTube-Videos sollten nur im »Erweiterten Datenschutzmodus« erfolgen.
 * **Einfachste Lösung**: Video-Vorschauen manuell als Bild einbetten und auf die jeweiligen Plattformen verlinken
-* 2-Klick-Lösung für YouTube-Videos mit [WP YouTube Lyte](https://wordpress.org/plugins/wp-youtube-lyte/)
-* 2-Klick-Lösung für YouTube- und Vimeo-Videos als Lightbox mit [Responsive YouTube & Vimeo Video Popup](https://wordpress.org/plugins/responsive-youtube-vimeo-popup/)
 * 2-Klick-Lösung für **alle** Dienste mit [Borlabs Cookie](https://de.borlabs.io/borlabs-cookie/) (kostenpflichtig)
 
 ### Kartendienste (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)
 
 *Rechtsgrundlage*: [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
-*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)<br>
+*Urteile*: [LG München, Az. 3 O 17493/20](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20M%C3%BCnchen%20I&Datum=20.01.2022&Aktenzeichen=3%20O%2017493%2F20)
 
-* [ ] Ebenso wie Video- und Musikdienste werden auch bei Kartendiensten bereits beim Laden der Webseite personenbezogene Daten erhoben. Auch hier bleibt derzeit nur eine 2-Klick-Lösung.
+* [ ] Ebenso wie Video- und Musikdienste werden auch bei Kartendiensten bereits beim Laden der Webseite personenbezogene Daten erhoben und zumeist in den USA gespeichert. Auch hier bleibt derzeit nur eine 2-Klick-Lösung.
 
 #### Tipps zur Umsetzung <!-- omit in toc -->
 
 * **Einfachste Lösung**: Kartenausschnitt manuell als Bild einbetten und auf die jeweilige Plattform verlinken.
-* Derzeit keine eigenständigen Plugins mit 2-Klick-Lösung vorhanden.
+* Bei der Einbettung als Bild sollten Urheberrechts-Angaben direkt unter dem Bild angebracht werden. Screenshots von Google Mags können aus urheberrechtlichen Gründen **nicht** verwendet werden!
 * 2-Klick-Lösung für **alle** Dienste mit [Borlabs Cookie](https://de.borlabs.io/borlabs-cookie/) (kostenpflichtig)
 
 ## Weitere Aspekte
