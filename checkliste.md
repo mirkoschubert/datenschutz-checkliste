@@ -246,9 +246,11 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 ### Content Delivery Networks (CDN)
 
 *Rechtsgrundlage*: [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
-*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+*Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. a und f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)<br>
+*Urteile*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
 * [ ] CDNs (z.B. Google Fonts, Adobe Typekit, Bootstrap/ Fontawesome, CDNJS/ Cloudflare, Jetpack usw.) können durchaus als kritisch betrachtet werden, da die Inhalte auf Server der ganzen Welt verteilt werden und potentiell beim Abruf mindestens die IP-Adresse gespeichert wird.
+* [ ] Da CDNs auch Daten in den USA speichern, könnte seit 2020 möglicherweise auch die Speicherung von personenbezogenen Daten (z.B. IP & Bilder) nicht mehr DSGVO-konform sein.
 * [ ] Bei CDNs sollte abgewogen werden, ob diese überhaupt notwendig sind (z.B. Zielgruppe ausschließlich D-A-CH).
 * [ ] Inhalte von CDNs (z.B. Bilder, Fonts, CSS- oder JS- Dateien) sollten nach Möglichkeit lokalisiert werden.
 
@@ -262,9 +264,11 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 ### Webfonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)
 
 *Rechtsgrundlage*: [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
-*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+*Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. a DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)<br>
+*Urteile*: [LG München, Az. 3 O 17493/20](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20M%C3%BCnchen%20I&Datum=20.01.2022&Aktenzeichen=3%20O%2017493%2F20)
 
-* [ ] Google Fonts, Adobe Typekit- und Fontaweome-Fonts (BootstrapCDN) sollten **immer** lokalisiert werden (siehe CDNs)!
+* [ ] Für den Einsatz von Webfonts ist **immer** eine Einwilligung erforderlich!
+* [ ] Alternativ können Google Fonts, Adobe Typekit- und Fontaweome-Fonts (BootstrapCDN) lokalisiert werden (siehe CDNs)!
 * [ ] Fonts könnten unter Umständen auch gegen andere lokale Open-Source-Fonts oder sogar dem CSS Font Stack ersetzt werden.
 
 #### Tipps zur Umsetzung <!-- omit in toc -->
