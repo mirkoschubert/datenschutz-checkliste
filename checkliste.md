@@ -6,41 +6,41 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 
 ## Inhaltsverzeichnis <!-- omit in toc -->
 
-* [Sicherheit](#sicherheit)
-  * [SSL/TLS-Transportverschlüsselung Webseite](#ssltls-transportverschlüsselung-webseite)
-  * [SSL/TLS-Transportverschlüsselung E-Mail](#ssltls-transportverschlüsselung-e-mail)
-  * [Sicherheitskonzept des CMS (z.B. WordPress)](#sicherheitskonzept-des-cms-zb-wordpress)
-  * [Sicherheitskonzept des Servers](#sicherheitskonzept-des-servers)
-  * [OPTIONAL: Signatur und/ oder Inhaltsverschlüsselung bei E-Mails](#optional-signatur-und-oder-inhaltsverschlüsselung-bei-e-mails)
-* [Webhoster](#webhoster)
-  * [Access Logs](#access-logs)
-  * [Weitere Server Logs](#weitere-server-logs)
-  * [Webseiten-Installation](#webseiten-installation)
-* [Externe Dienste](#externe-dienste)
-  * [Analyse-Tools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)](#analyse-tools-zb-google-analytics-matomo-piwik-wordpress-stats-jetpack)
-  * [Marketing-Tools (z.B. Google AdSense/ AdWords, Affiliate-Netzwerke)](#marketing-tools-zb-google-adsense-adwords-affiliate-netzwerke)
-  * [Newsletter-Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go, Jetpack Abonnement)](#newsletter-tools-zb-mailchimp-clicktipp-newsletter2go-jetpack-abonnement)
-  * [Social Plugins (z.B. Facebook, Instagram, Twitter, Google+)](#social-plugins-zb-facebook-instagram-twitter-google)
-  * [Verwertungsgesellschaften (z.B. VG-Wort)](#verwertungsgesellschaften-zb-vg-wort)
-  * [Content Delivery Networks (CDN)](#content-delivery-networks-cdn)
-  * [Webfonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)](#webfonts-zb-google-fonts-adobe-typekit-fontawesome)
-  * [Profile bzw. Profilbilder (z.B. Gravatar, About.me)](#profile-bzw-profilbilder-zb-gravatar-aboutme)
-  * [Emojis/ Emoticons (z.B. WP-Emojis)](#emojis-emoticons-zb-wp-emojis)
-  * [DNS-Prefetching](#dns-prefetching)
-  * [WP-Embeds/ oEmbeds](#wp-embeds-oembeds)
-  * [Video- und Musikdienste (z.B. YouTube, Vimeo, Soundcloud)](#video--und-musikdienste-zb-youtube-vimeo-soundcloud)
-  * [Kartendienste (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)](#kartendienste-zb-google-maps-open-street-maps-mapbox-leaflet)
-* [Weitere Aspekte](#weitere-aspekte)
-  * [Kommentarfunktion](#kommentarfunktion)
-  * [Weblinks](#weblinks)
-  * [Plugins/ Erweiterungen / Module](#plugins-erweiterungen--module)
-  * [Webshop](#webshop)
-* [Rechtsdokumente/ Pflichtangaben](#rechtsdokumente-pflichtangaben)
-  * [Allgemein](#allgemein)
-  * [Impressum](#impressum)
-  * [Datenschutzerklärung](#datenschutzerklärung)
-  * [Impressum & Datenschutzerklärung bei sozialen Medien](#impressum--datenschutzerklärung-bei-sozialen-medien)
-  * [Urheberrecht / Bildnachweise](#urheberrecht--bildnachweise)
+- [Sicherheit](#sicherheit)
+  - [SSL/TLS-Transportverschlüsselung Webseite](#ssltls-transportverschlüsselung-webseite)
+  - [SSL/TLS-Transportverschlüsselung E-Mail](#ssltls-transportverschlüsselung-e-mail)
+  - [Sicherheitskonzept des CMS (z.B. WordPress)](#sicherheitskonzept-des-cms-zb-wordpress)
+  - [Sicherheitskonzept des Servers](#sicherheitskonzept-des-servers)
+  - [OPTIONAL: Signatur und/ oder Inhaltsverschlüsselung bei E-Mails](#optional-signatur-und-oder-inhaltsverschlüsselung-bei-e-mails)
+- [Webhoster](#webhoster)
+  - [Access Logs](#access-logs)
+  - [Weitere Server Logs](#weitere-server-logs)
+  - [Webseiten-Installation](#webseiten-installation)
+- [Externe Dienste](#externe-dienste)
+  - [Analyse-Tools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)](#analyse-tools-zb-google-analytics-matomo-piwik-wordpress-stats-jetpack)
+  - [Marketing-Tools (z.B. Google AdSense/ AdWords, Affiliate-Netzwerke)](#marketing-tools-zb-google-adsense-adwords-affiliate-netzwerke)
+  - [Newsletter-Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go, Jetpack Abonnement)](#newsletter-tools-zb-mailchimp-clicktipp-newsletter2go-jetpack-abonnement)
+  - [Social Plugins (z.B. Facebook, Instagram, Twitter, Google+)](#social-plugins-zb-facebook-instagram-twitter-google)
+  - [Verwertungsgesellschaften (z.B. VG-Wort)](#verwertungsgesellschaften-zb-vg-wort)
+  - [Content Delivery Networks (CDN)](#content-delivery-networks-cdn)
+  - [Webfonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)](#webfonts-zb-google-fonts-adobe-typekit-fontawesome)
+  - [Profile bzw. Profilbilder (z.B. Gravatar, About.me)](#profile-bzw-profilbilder-zb-gravatar-aboutme)
+  - [Emojis/ Emoticons (z.B. WP-Emojis)](#emojis-emoticons-zb-wp-emojis)
+  - [DNS-Prefetching](#dns-prefetching)
+  - [WP-Embeds/ oEmbeds](#wp-embeds-oembeds)
+  - [Video- und Musikdienste (z.B. YouTube, Vimeo, Soundcloud)](#video--und-musikdienste-zb-youtube-vimeo-soundcloud)
+  - [Kartendienste (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)](#kartendienste-zb-google-maps-open-street-maps-mapbox-leaflet)
+- [Weitere Aspekte](#weitere-aspekte)
+  - [Kommentarfunktion](#kommentarfunktion)
+  - [Weblinks](#weblinks)
+  - [Plugins/ Erweiterungen / Module](#plugins-erweiterungen--module)
+  - [Webshop](#webshop)
+- [Rechtsdokumente/ Pflichtangaben](#rechtsdokumente-pflichtangaben)
+  - [Allgemein](#allgemein)
+  - [Impressum](#impressum)
+  - [Datenschutzerklärung](#datenschutzerklärung)
+  - [Impressum & Datenschutzerklärung bei sozialen Medien](#impressum--datenschutzerklärung-bei-sozialen-medien)
+  - [Urheberrecht / Bildnachweise](#urheberrecht--bildnachweise)
 
 ## Sicherheit
 
@@ -107,10 +107,11 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 
 ### OPTIONAL: Signatur und/ oder Inhaltsverschlüsselung bei E-Mails
 
-*Rechtsgrundlage*: [Art. 32 DSGVO](https://dsgvo-gesetz.de/art-32-dsgvo/)
+*Rechtsgrundlage*: [Art. 32 DSGVO](https://dsgvo-gesetz.de/art-32-dsgvo/), [eIDAS/ EU 910/2014](https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:32014R0910), [§2 Nr. 2 SigG](https://dejure.org/gesetze/SigG/2.html)
 
 * [ ] Eine elektronische Signatur fördert die Nachweisbarkeit des Absenders.
 * [ ] Eine Inhaltsverschlüsselung verhindert das Lesen des Inhalts der E-Mail bei einer MitM-Attacke (»Man in the Middle«).
+* [ ] **Tipp**: Die gängigen Signaturen S/MIME und PGP gelten als »fortgeschrittene elektronische Signatur« und können somit auch für Rechtsgeschäfte genutzt werden (siehe [Bundesnotarkammer](https://zertifizierungsstelle.bnotk.de/elektronische-signatur/)).
 
 #### Tipps zur Umsetzung <!-- omit in toc -->
 
