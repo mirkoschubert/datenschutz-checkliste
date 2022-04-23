@@ -159,8 +159,10 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 ### Analyse-Tools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)
 
 *Rechtsgrundlage*: [Art. 7 DSGVO](https://dsgvo-gesetz.de/art-7-dsgvo/), [Art. 28 DSGVO](https://dsgvo-gesetz.de/art-28-dsgvo/), [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
-*Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. a oder f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+*Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. a oder f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)<br>
+*Urteile*: [LG Dresden, Az. 1 a O 1582/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20Dresden&Datum=11.01.2019&Aktenzeichen=1a%20O%201582%2F18), [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
+* [ ] **Wichtig**: Analyse-Tools, die personenbezogene Daten in den USA speichern, sind seit 2020 nach dem Schrems-II-Urteil nicht DSGVO-konform! Darunter fallen u.a. **Google Analytics** und **Jetpack**.
 * [ ] Abwägen, welches Analysetool unter der Berücksichtigung des Datensparsamkeits-Prinzips geeignet erscheint.
 * [ ] Abwägen, ob ein Verarbeitungsgrund nach Art. 6 Abs. 1 lit. b) - f) DSGVO vorliegt oder nach Art. 6 Abs. 1 lit. a) ein vorheriges Einverständnis eingeholt werden sollte.
 * [ ] Sofern Cookies gespeichert werden, über einen Cookie-Banner darüber informieren und Opt-Out-Funktion bereit stellen.
@@ -172,11 +174,11 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 
 #### Tipps zur Umsetzung <!-- omit in toc -->
 
+* Datenschutz-konforme Alternativen sind u.a. [Fathom](https://usefathom.com/) und [Plausible](https://plausible.io/) (beide kostenpflichtig, kostenlos zum selbst Hosten). Beide speichern gar keine personenbezogene Daten und setzen auch keine Cookies. Plausible bietet für die Einbindung auch ein [WordPress-Plugin](https://github.com/plausible/wordpress).
 * AVV bei Google Analytics braucht **nicht mehr** schriftlich erfolgen - mit wenigen Klicks abschließbar
 * Einbindung von GA oder Matomo nach Möglichkeit per Plugin, um Fehler zu vermeiden
 * Beim Cookie-Banner reicht derzeit die Opt-Out-Methode, da die DSGVO nicht explizit Cookies regelt. Das Opt-In wird derzeit im Allgemeinen recht kritisch betrachtet.
-* **WP-Plugin**: [Borlabs Cookie](https://de.borlabs.io/borlabs-cookie/) (Cookie-Banner & 2-Klick-Lösungen, kostenpflichtig) oder [Google Analytics Germanized](https://wordpress.org/plugins/ga-germanized/) (GA-Einbindung, Cookie-Banner & DNT, kostenlos)
-* **WP-Plugin**: Alternativ [Statify](https://wordpress.org/plugins/statify/) einsetzen - trackt nur Page Impressions und ist vollkommen DSGVO-konform.
+* **WP-Plugin**: [Borlabs Cookie](https://de.borlabs.io/borlabs-cookie/) (Cookie-Banner & 2-Klick-Lösungen, kostenpflichtig)
 
 ### Marketing-Tools (z.B. Google AdSense/ AdWords, Affiliate-Netzwerke)
 
