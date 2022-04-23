@@ -20,7 +20,7 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
   - [Analyse-Tools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)](#analyse-tools-zb-google-analytics-matomo-piwik-wordpress-stats-jetpack)
   - [Marketing-Tools (z.B. Google Ads, Affiliate-Netzwerke)](#marketing-tools-zb-google-ads-affiliate-netzwerke)
   - [Newsletter-Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go/ Sendinblue, Jetpack Abonnement)](#newsletter-tools-zb-mailchimp-clicktipp-newsletter2go-sendinblue-jetpack-abonnement)
-  - [Social Plugins (z.B. Facebook, Instagram, Twitter, Google+)](#social-plugins-zb-facebook-instagram-twitter-google)
+  - [Social Plugins (z.B. Facebook, Instagram, Twitter)](#social-plugins-zb-facebook-instagram-twitter)
   - [Verwertungsgesellschaften (z.B. VG-Wort)](#verwertungsgesellschaften-zb-vg-wort)
   - [Content Delivery Networks (CDN)](#content-delivery-networks-cdn)
   - [Webfonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)](#webfonts-zb-google-fonts-adobe-typekit-fontawesome)
@@ -215,12 +215,13 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 * AVV mit dem Drittanbieter abschließen
 * **Sicherste Methode**: Auf Drittanbieter verzichten und auf stationäre Lösungen wie dem **WP-Plugin** [Newsletter](https://wordpress.org/plugins/newsletter/) setzen.
 
-### Social Plugins (z.B. Facebook, Instagram, Twitter, Google+)
+### Social Plugins (z.B. Facebook, Instagram, Twitter)
 
 *Rechtsgrundlage*: [Art. 7 DSGVO](https://dsgvo-gesetz.de/art-7-dsgvo/), [Art. 22 DSGVO](https://dsgvo-gesetz.de/art-22-dsgvo/), [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
 *Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. a oder f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)<br>
-*Urteile*: [LG Düsseldorf, Az. 12 O 151/15](https://dejure.org/dienste/vernetzung/rechtsprechung?Text=12%20O%20151/15)
+*Urteile*: [LG Düsseldorf, Az. 12 O 151/15](https://dejure.org/dienste/vernetzung/rechtsprechung?Text=12%20O%20151/15), [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
+* [ ] **Wichtig**: Social Plugins, die personenbezogene Daten in den USA speichern, sind seit 2020 nach dem Schrems-II-Urteil nicht DSGVO-konform! Dies betrifft u.a. **Facebook**, **Instagram** und **Twitter**.
 * [ ] Sämtliche eingebundene Social Plugins laden personenbezogene Daten bereits beim Besuch der Webseite. Sofern der Nutzer im sozialen Netzwerk eingeloggt ist, erfolgt eine genaue Zuordnung sowie eine Art »Bewegungsprofil« über alle mit Social Plugins versehenen Webseiten.
 * [ ] Bei Login-Verfahren (z.B. Facebook Connect) und Kommentarfunktionen mit Verknüpfung zu sozialen Netzen wird ebenso verfahren.
 * [ ] Sharing-Buttons, die die Anzahl der Shares anzeigen, haben das gleiche Problem.
