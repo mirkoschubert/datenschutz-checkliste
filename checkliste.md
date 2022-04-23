@@ -280,8 +280,10 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 ### Profile bzw. Profilbilder (z.B. Gravatar, About.me)
 
 *Rechtsgrundlage*: [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/), [§22 KunstUrhG](https://dejure.org/gesetze/KunstUrhG/22.html)<br>
-*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)<br>
+*Urteile*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
+* [ ] **Wichtig**: Profile, die personenbezogene Daten (z.B. Bilder) in den USA speichern, sind seit 2020 nach dem Schrems-II-Urteil nicht DSGVO-konform! Dies betrifft u.a. **Gravatar** und **About.me**.
 * [ ] Profile und/ oder Avatarbilder sollten nach Möglichkeit lokalisiert oder abgeschaltet werden, da sie mit Sicherheit personenbezogene Daten enthalten.
 * [ ] Die in WordPress fest integrierte Gravatar-Funktion sollte nicht nur wegen den Bildern, sondern auch in den im Bild-Link als Hash abgelegten E-Mail-Adressen komplett abgeschaltet werden.
 
@@ -292,11 +294,12 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 ### Emojis/ Emoticons (z.B. WP-Emojis)
 
 *Rechtsgrundlage*: [Art. 22 DSGVO](https://dsgvo-gesetz.de/art-22-dsgvo/), [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/)<br>
-*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+*Legitimierungsgrund*: evtl. [Art. 6 Abs. 1 Lit. f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)<br>
+*Urteile*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
 * [ ] Wenn Emojis extern von einem CDN geladen werden, werden für gewöhnlich IP-Adressen beim Abruf abgerufen.
-* [ ] Speziell bei den **WP-Emojis** wird zusätzlich [Canvas Fingerprinting](https://de.wikipedia.org/wiki/Canvas_Fingerprinting) eingesetzt, was eine Zuordnung des Rechners ohne Speicherung von Cookies ermöglicht (auch, wenn keine Emojis angezeigt werden).
-* [ ] **WP-Emojis** sollte daher immer abgeschaltet werden! Jeder moderne Browser zeigt trotzdem weiter Emojis und Emoticons an.
+* [ ] Speziell bei den **WP-Emojis** wird zusätzlich [Canvas Fingerprinting](https://de.wikipedia.org/wiki/Canvas_Fingerprinting) eingesetzt, was eine Zuordnung des Rechners ohne Speicherung von Cookies ermöglicht (auch, wenn keine Emojis angezeigt werden). Da diese Daten in den USA gespeichert werden, sind solche Emojis seit 2020 grundsätzlich nicht DSGVO-konform.
+* [ ] **WP-Emojis** sollte daher immer abgeschaltet werden! Jeder moderne Browser zeigt trotzdem weiterhin Emojis und Emoticons an.
 
 #### Tipps zur Umsetzung <!-- omit in toc -->
 
