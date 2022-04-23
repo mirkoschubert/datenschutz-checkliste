@@ -18,7 +18,7 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
   - [Webseiten-Installation](#webseiten-installation)
 - [Externe Dienste](#externe-dienste)
   - [Analyse-Tools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)](#analyse-tools-zb-google-analytics-matomo-piwik-wordpress-stats-jetpack)
-  - [Marketing-Tools (z.B. Google AdSense/ AdWords, Affiliate-Netzwerke)](#marketing-tools-zb-google-adsense-adwords-affiliate-netzwerke)
+  - [Marketing-Tools (z.B. Google Ads, Affiliate-Netzwerke)](#marketing-tools-zb-google-ads-affiliate-netzwerke)
   - [Newsletter-Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go, Jetpack Abonnement)](#newsletter-tools-zb-mailchimp-clicktipp-newsletter2go-jetpack-abonnement)
   - [Social Plugins (z.B. Facebook, Instagram, Twitter, Google+)](#social-plugins-zb-facebook-instagram-twitter-google)
   - [Verwertungsgesellschaften (z.B. VG-Wort)](#verwertungsgesellschaften-zb-vg-wort)
@@ -180,12 +180,14 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 * Beim Cookie-Banner reicht derzeit die Opt-Out-Methode, da die DSGVO nicht explizit Cookies regelt. Das Opt-In wird derzeit im Allgemeinen recht kritisch betrachtet.
 * **WP-Plugin**: [Borlabs Cookie](https://de.borlabs.io/borlabs-cookie/) (Cookie-Banner & 2-Klick-Lösungen, kostenpflichtig)
 
-### Marketing-Tools (z.B. Google AdSense/ AdWords, Affiliate-Netzwerke)
+### Marketing-Tools (z.B. Google Ads, Affiliate-Netzwerke)
 
 *Rechtsgrundlage*: [Art. 7 DSGVO](https://dsgvo-gesetz.de/art-7-dsgvo/), [Art. 28 DSGVO](https://dsgvo-gesetz.de/art-28-dsgvo/), [Art. 44 ff. DSGVO](https://dsgvo-gesetz.de/art-44-dsgvo/), [§6 TMG](https://dejure.org/gesetze/TMG/6.html), [§ 58 RStV](http://www.gesetze-bayern.de/Content/Document/RFunkStVertr-58)<br>
-*Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. a oder f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)
+*Legitimierungsgrund*: [Art. 6 Abs. 1 Lit. a oder f DSGVO](https://dsgvo-gesetz.de/art-6-dsgvo/)<br>
+*Urteile*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
-* [ ] Google AdSense verlangt derzeit das vorherige Einverständnis (Opt-In) lt. [Programmrichtlinien](https://support.google.com/adsense/answer/48182?hl=de), nicht nur für die Cookies und Beacons (Zählpixel), sondern auch für die Übertragung jeglicher personenbezogenen Daten.
+* [ ] **Wichtig**: Analyse-Tools, die personenbezogene Daten in den USA speichern, sind seit 2020 nach dem Schrems-II-Urteil nicht DSGVO-konform! Darunter fallen u.a. **Google Ads** (insbes. die Remarketing-Funktion) und diverse Affiliate-Netzwerke.
+* [ ] Google Ads verlangt derzeit das vorherige Einverständnis (Opt-In) lt. [Programmrichtlinien](https://support.google.com/adsense/answer/48182?hl=de), nicht nur für die Cookies und Beacons (Zählpixel), sondern auch für die Übertragung jeglicher personenbezogenen Daten.
 * [ ] Funktionen wie Remarketing oder die Auslieferung von personenbezogener Werbung sind derzeit fraglich und sollten - zumindest vorübergehend - abgeschaltet werden.
 * [ ] Richtlinien bzw. AGBs bei sämtlichen Affiliate-Netzwerken beachten!
 * [ ] Widgets, grafische Einbettungen oder JavaScript-Einbettungen von Werbemitteln von Affiliate-Netzwerken mindestens in der DSE erwähnen (sicherer: 2-Klick-Lösung)
@@ -194,7 +196,7 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 #### Tipps zur Umsetzung <!-- omit in toc -->
 
 * **WP-Plugin**: Für Google AdSense [Advanced Ads](https://wordpress.org/plugins/advanced-ads/) mit GDPR-Funktion (2-Klick-Lösung) einsetzen.
-* Bei Affiliate-Netzwerken vorübergehend nur auf (für die DSGVO nicht relevante) Text-Links setzen.
+* Bei Affiliate-Netzwerken vorübergehend nur auf (für die DSGVO nicht relevante) Text-Links setzen. Links am besten mit `rel="noreferrer noopener"` versehen.
 
 ### Newsletter-Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go, Jetpack Abonnement)
 
