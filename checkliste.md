@@ -380,11 +380,11 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 
 * [ ] Die Speicherung von IP-Adressen in der Kommentarfunktion sollte auf einen minimalen Zeitraum begrenzt (z.B. bis zur Freischaltung zur rechtlichen Absicherung) oder alternativ deaktiviert werden.
 * [ ] Vor dem Absenden eines Kommentars (oder jedes anderen Formulars) sollte auf die Speicherung personenbezogenen Daten hingewiesen werden (Opt-In kritisch!).
-* [ ] Die Option zum Speichern eines Cookies für das Merken von Name und E-Mail-Adresse sollte abgeschaltet werden (bei WordPress in Arbeit, vgl. [#44373](https://core.trac.wordpress.org/ticket/44373)).
+* [ ] Die Option zum Speichern eines Cookies für das Merken von Name und E-Mail-Adresse sollte unter »Einstellungen > Diskussion > Weitere Kommentareinstellungen > Das Opt-In-Kontrollkästchen...« abgeschaltet werden.
 
 #### Tipps zur Umsetzung <!-- omit in toc -->
 
-* IP-Adressen vor Freischaltung händisch löschen oder per die Speicherung im (Child-)Theme via `functions.php` ausschließen.
+* IP-Adressen vor Freischaltung händisch löschen oder die Speicherung im (Child-)Theme via `functions.php` ausschließen.
 * Hinweistext einfügen - am besten im (Child-)Theme in der `comments.php` oder als Option.
 
 ### Weblinks
