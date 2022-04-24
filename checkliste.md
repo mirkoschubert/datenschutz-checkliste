@@ -6,41 +6,41 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 
 ## Inhaltsverzeichnis <!-- omit in toc -->
 
-- [Sicherheit](#sicherheit)
-  - [SSL/TLS-Transportverschlüsselung Webseite](#ssltls-transportverschlüsselung-webseite)
-  - [SSL/TLS-Transportverschlüsselung E-Mail](#ssltls-transportverschlüsselung-e-mail)
-  - [Sicherheitskonzept des CMS (z.B. WordPress)](#sicherheitskonzept-des-cms-zb-wordpress)
-  - [Sicherheitskonzept des Servers](#sicherheitskonzept-des-servers)
-  - [OPTIONAL: Signatur und/ oder Inhaltsverschlüsselung bei E-Mails](#optional-signatur-und-oder-inhaltsverschlüsselung-bei-e-mails)
-- [Webhoster](#webhoster)
-  - [Access Logs](#access-logs)
-  - [Weitere Server Logs](#weitere-server-logs)
-  - [Webseiten-Installation](#webseiten-installation)
-- [Externe Dienste](#externe-dienste)
-  - [Analyse-Tools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)](#analyse-tools-zb-google-analytics-matomo-piwik-wordpress-stats-jetpack)
-  - [Marketing-Tools (z.B. Google Ads, Affiliate-Netzwerke)](#marketing-tools-zb-google-ads-affiliate-netzwerke)
-  - [Newsletter-Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go/ Sendinblue, Jetpack Abonnement)](#newsletter-tools-zb-mailchimp-clicktipp-newsletter2go-sendinblue-jetpack-abonnement)
-  - [Social Plugins (z.B. Facebook, Instagram, Twitter)](#social-plugins-zb-facebook-instagram-twitter)
-  - [Verwertungsgesellschaften (z.B. VG-Wort)](#verwertungsgesellschaften-zb-vg-wort)
-  - [Content Delivery Networks (CDN)](#content-delivery-networks-cdn)
-  - [Webfonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)](#webfonts-zb-google-fonts-adobe-typekit-fontawesome)
-  - [Profile bzw. Profilbilder (z.B. Gravatar, About.me)](#profile-bzw-profilbilder-zb-gravatar-aboutme)
-  - [Emojis/ Emoticons (z.B. WP-Emojis)](#emojis-emoticons-zb-wp-emojis)
-  - [DNS-Prefetching](#dns-prefetching)
-  - [WP-Embeds/ oEmbeds](#wp-embeds-oembeds)
-  - [Video- und Musikdienste (z.B. YouTube, Vimeo, Spotify, Soundcloud)](#video--und-musikdienste-zb-youtube-vimeo-spotify-soundcloud)
-  - [Kartendienste (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)](#kartendienste-zb-google-maps-open-street-maps-mapbox-leaflet)
-- [Weitere Aspekte](#weitere-aspekte)
-  - [Kommentarfunktion](#kommentarfunktion)
-  - [Weblinks](#weblinks)
-  - [Plugins/ Erweiterungen / Module](#plugins-erweiterungen--module)
-  - [Webshop](#webshop)
-- [Rechtsdokumente/ Pflichtangaben](#rechtsdokumente-pflichtangaben)
-  - [Allgemein](#allgemein)
-  - [Impressum](#impressum)
-  - [Datenschutzerklärung](#datenschutzerklärung)
-  - [Impressum & Datenschutzerklärung bei sozialen Medien](#impressum--datenschutzerklärung-bei-sozialen-medien)
-  - [Urheberrecht / Bildnachweise](#urheberrecht--bildnachweise)
+* [Sicherheit](#sicherheit)
+  * [SSL/TLS-Transportverschlüsselung Webseite](#ssltls-transportverschlüsselung-webseite)
+  * [SSL/TLS-Transportverschlüsselung E-Mail](#ssltls-transportverschlüsselung-e-mail)
+  * [Sicherheitskonzept des CMS (z.B. WordPress)](#sicherheitskonzept-des-cms-zb-wordpress)
+  * [Sicherheitskonzept des Servers](#sicherheitskonzept-des-servers)
+  * [OPTIONAL: Signatur und/ oder Inhaltsverschlüsselung bei E-Mails](#optional-signatur-und-oder-inhaltsverschlüsselung-bei-e-mails)
+* [Webhoster](#webhoster)
+  * [Access Logs](#access-logs)
+  * [Weitere Server Logs](#weitere-server-logs)
+  * [Webseiten-Installation](#webseiten-installation)
+* [Externe Dienste](#externe-dienste)
+  * [Analyse-Tools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)](#analyse-tools-zb-google-analytics-matomo-piwik-wordpress-stats-jetpack)
+  * [Marketing-Tools (z.B. Google Ads, Affiliate-Netzwerke)](#marketing-tools-zb-google-ads-affiliate-netzwerke)
+  * [Newsletter-Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go/ Sendinblue, Jetpack Abonnement)](#newsletter-tools-zb-mailchimp-clicktipp-newsletter2go-sendinblue-jetpack-abonnement)
+  * [Social Plugins (z.B. Facebook, Instagram, Twitter)](#social-plugins-zb-facebook-instagram-twitter)
+  * [Verwertungsgesellschaften (z.B. VG-Wort)](#verwertungsgesellschaften-zb-vg-wort)
+  * [Content Delivery Networks (CDN)](#content-delivery-networks-cdn)
+  * [Webfonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)](#webfonts-zb-google-fonts-adobe-typekit-fontawesome)
+  * [Profile bzw. Profilbilder (z.B. Gravatar, About.me)](#profile-bzw-profilbilder-zb-gravatar-aboutme)
+  * [Emojis/ Emoticons (z.B. WP-Emojis)](#emojis-emoticons-zb-wp-emojis)
+  * [DNS-Prefetching](#dns-prefetching)
+  * [WP-Embeds/ oEmbeds](#wp-embeds-oembeds)
+  * [Video- und Musikdienste (z.B. YouTube, Vimeo, Spotify, Soundcloud)](#video--und-musikdienste-zb-youtube-vimeo-spotify-soundcloud)
+  * [Kartendienste (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)](#kartendienste-zb-google-maps-open-street-maps-mapbox-leaflet)
+* [Weitere Aspekte](#weitere-aspekte)
+  * [Kommentarfunktion](#kommentarfunktion)
+  * [Weblinks](#weblinks)
+  * [Plugins/ Erweiterungen / Module](#plugins-erweiterungen--module)
+  * [Webshop](#webshop)
+* [Rechtsdokumente/ Pflichtangaben](#rechtsdokumente-pflichtangaben)
+  * [Allgemein](#allgemein)
+  * [Impressum](#impressum)
+  * [Datenschutzerklärung](#datenschutzerklärung)
+  * [Impressum & Datenschutzerklärung bei sozialen Medien](#impressum--datenschutzerklärung-bei-sozialen-medien)
+  * [Urheberrecht / Bildnachweise](#urheberrecht--bildnachweise)
 
 ## Sicherheit
 
@@ -411,13 +411,13 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 
 * [ ] Impressum und Datenschutzerklärung sollten gut sichtbar von jeder Unterseite der Webseite erreichbar sein (gängige Praxis: im Footer-Menü)!
 * [ ] Impressum und Datenschutzerklärung sollten auf zwei Unterseiten getrennt zugänglich sein.
-* [ ] Sobald Pflichtangaben (z.B. durch einen Cookie-Banner) verdeckt werden, werden sie als »nicht existent« behandelt.
+* [ ] Sobald Pflichtangaben (z.B. durch einen Cookie-Banner) verdeckt werden, werden sie als »nicht existent« behandelt, es sei denn, beide Links werden im Cookie-Banner zugänglich gemacht.
 * [ ] Auch eine »weiße Seite« bzw. Baustellen-Seite erfordert in aller Regel diese Pflichtangaben!
 * [ ] Auch **frei zugängliche** Login- und Registrierungs-Seiten müssen diese Pflichtangaben enthalten.
 
 ### Impressum
 
-*Rechtsgrundlage*: [§5 TMG](https://dejure.org/gesetze/TMG/5.html), [§55 RStV](http://www.gesetze-bayern.de/Content/Document/RFunkStVertr-55), [EU-VO Nr. 524/2013](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2013:165:FULL:DE:PDF), [§2 DL-InfoV](https://www.gesetze-im-internet.de/dlinfov/__2.html)<br>
+*Rechtsgrundlage*: [§5 TMG](https://dejure.org/gesetze/TMG/5.html), [EU-VO Nr. 524/2013](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2013:165:FULL:DE:PDF), [§2 DL-InfoV](https://www.gesetze-im-internet.de/dlinfov/__2.html), [§18 Abs. 2 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Rechtsgrundlagen/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf)<br>
 *Urteile*: [OLG München, Az. 29 U 2681/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20M%FCnchen&Datum=11.09.2003&Aktenzeichen=29%20U%202681%2F03), [BGH, Az. I ZR 228/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=BGH&Datum=20.07.2006&Aktenzeichen=I%20ZR%20228%2F03), [EuGH, Az. C-298/07](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.10.2008&Aktenzeichen=C-298/07)
 
 * [ ] Das Impressum sollte von jeder Unterseite der Webseite aus über maximal 2 Klicks (z.B. »Kontakt« - »Impressum«) erreichbar sein.
@@ -426,7 +426,7 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
   * Ladungsfähige Anschrift bzw. Adresse der Niederlassung
   * Telefonnummer (oder Kontaktformular, wenn Reaktionszeit binnen 30 - 60 min.)
   * E-Mail-Adresse
-  * USt-ID (oder Hinweis auf Befreiung) oder Wirtschafts-ID
+  * USt-ID (oder Hinweis auf Befreiung) oder Wirtschafts-ID (**keine Steuernummer!**)
   * Eintrag des Handelsregisters, Vereinsregisters, Genossenschaftsregisters oder Partnerschaftsregisters (wenn vorhanden)
   * Behördliche Zulassung mit Angaben zur Aufsichtsbehörde, sofern der Beruf zulassungspflichtig ist
   * Zuständige Kammer (Anschrift, Telefonnummer, Webseite) bei kammergebundenen Berufen (z.B. Rechtsanwälte, Steuerberater, Ärzte)
@@ -437,7 +437,7 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
   * Geltende Allgemeine Geschäftsbedingungen (AGB)
   * Anwendbares Recht und Gerichtsstand
   * Bestehende Garantien (sofern vorhanden)
-* [ ] Sollte die Webseite journalistisch-redaktionelle Inhalte enthalten (z.B. bei einem Weblog), muss auch nach §55 Abs. 2 RStV ein inhaltlich Veranwortlicher mit Name und Adresse angegeben werden (Achtung, siehe Anmerkungen!).
+* [ ] Sollte die Webseite journalistisch-redaktionelle Inhalte enthalten (z.B. bei einem Blog), muss auch nach **§18 Abs. 2 MStV** ein inhaltlich Veranwortlicher mit Name und Adresse angegeben werden (Achtung, siehe Anmerkungen!).
 * [ ] Online-Händler, die Waren an Verbraucher verkaufen, müssen zwingend einen Link zur Streitschlichtungsstelle der EU setzen
 * [ ] Das Impressum muss barrierefrei sein! Anschrift, Telefonnummer oder Mail-Adresse als Bild oder in kodierter Form sind **nicht** zulässig!
 * [ ] Haftungsausschlüsse/ Disclaimer zu Links und Inhalt gehören **nicht** (in verallgemeinerter Form) ins Impressum!
@@ -449,8 +449,12 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 
 #### Anmerkungen <!-- omit in toc -->
 
-* Mit dem Inkrafttreten des Medienstaatsvertrags (MStV) im September 2020 ändern sich die Angaben zum inhaltlichen Verantwortlichen voraussichtlich zu [§18 Abs. 2 MStV](https://www.rlp.de/fileadmin/rlp-stk/pdf-Dateien/Medienpolitik/ModStV_MStV_und_JMStV_2019-12-05_MPK.pdf) (vorläufig).
+* Seit November 2020 hat der Medienstaatsvertrag (MStV) den Rundfunkstaatsvertrag (RStV) abgelöst. Dementsprechend ändern sich die Angaben zum inhaltlichen Verantwortlichen von §55 Abs. 2 RStV zu [§18 Abs. 2 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Rechtsgrundlagen/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf). Nicht vergessen, diese Pflichtangaben bei journalistisch-redaktionellen Inhalten (z.B. bei einem Blog) umzustellen!
 * Des weiteren könnten in zukünftigen Rechtssprechungen Angaben zur (freiwilligen) Selbstkontrolle zwecks Qualitätssicherung sowie zur entsprechenden Beschwerdestelle (vgl. §19 MStV) notwendig werden.
+
+#### Tipps zur Umsetzung <!-- omit in toc -->
+
+* Für die Erstellung der Rechtsdokumente empfiehlt es sich, eine Mitgliedschaft mit [e-recht24.de](https://www.e-recht24.de/mitglieder/) abzuschließen und deren Generatoren zu nutzen.
 
 ### Datenschutzerklärung
 
