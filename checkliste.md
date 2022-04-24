@@ -390,6 +390,7 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 ### Weblinks
 
 * [ ] Weblinks zu externen Webseiten sind erst einmal unkritisch. Dennoch sollte in der Datenschutzerklärung darauf hingewiesen werden, dass beim Verlassen der Webseite über einen Link auf der Zielwebseite weitere personenbezogene Daten erhoben werden können.
+* [ ] Am besten alle Weblinks, sofern möglich, mit `rel="noreferrer noopener"` kennzeichnen. WordPress macht das größtenteils automatisch, allerdings sollte dies bei Buildern von Drittanbietern überprüft werden.
 
 ### Plugins/ Erweiterungen / Module
 
