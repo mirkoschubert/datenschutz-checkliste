@@ -37,6 +37,7 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
   * [Webshop](#webshop)
 * [Rechtsdokumente/ Pflichtangaben](#rechtsdokumente-pflichtangaben)
   * [Allgemein](#allgemein)
+  * [Cookies & Tracking-Dienste](#cookies--tracking-dienste)
   * [Impressum](#impressum)
   * [Datenschutzerklärung](#datenschutzerklärung)
   * [Impressum & Datenschutzerklärung bei sozialen Medien](#impressum--datenschutzerklärung-bei-sozialen-medien)
@@ -414,6 +415,34 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 * [ ] Sobald Pflichtangaben (z.B. durch einen Cookie-Banner) verdeckt werden, werden sie als »nicht existent« behandelt, es sei denn, beide Links werden im Cookie-Banner zugänglich gemacht.
 * [ ] Auch eine »weiße Seite« bzw. Baustellen-Seite erfordert in aller Regel diese Pflichtangaben!
 * [ ] Auch **frei zugängliche** Login- und Registrierungs-Seiten müssen diese Pflichtangaben enthalten.
+
+### Cookies & Tracking-Dienste
+
+*Rechtsgrundlage*: [§20, 25, 26 TTDSG](https://dsgvo-gesetz.de/ttdsg/)<br>
+*Urteile*: [BGH, I ZR 7/16](https://juris.bundesgerichtshof.de/cgi-bin/rechtsprechung/document.py?Gericht=bgh&Art=en&Datum=Aktuell&nr=107623&pos=6&anz=672)<br>
+*Weitere Informationen*: [Orientierungshilfe der DSK](https://www.datenschutzkonferenz-online.de/media/oh/20211220_oh_telemedien.pdf)
+
+* [ ] Jedes Cookie, das auf einem Endgerät (z.B. dem Rechner) des Nutzers gespeichert wird, bedarf der Zustimmung des Nutzers!
+* [ ] **Ausnahme**: Nur technisch notwendige Cookies benötigen keinerlei Zustimmung.
+* [ ] Dies betrifft auch verwandte Technologien wie etwa Fingerprinting (und möglicherweise auch Local bzw. Session Storage), unabhängig davon, ob diese Informationen personenbezogene Daten enthalten oder nicht.
+* [ ] Daten, die von Minderjährigen erhoben wurden, dürfen nicht für kommerzielle Zwecke eingesetzt werden!
+* [ ] Cookies dürfen nicht vor der Einwilligung gespeichert werden (ausgenommen technisch notwendige).
+* [ ] Der Nutzer muss die Einwilligung **aktiv** setzen, Checkboxen dürfen nicht vorausgewählt sein.
+* [ ] Es muss einen »Zustimmen«- und »Ablehnen«-Button geben, die gleichwertig dargestellt werden müssen. Der »Zustimmen«-Button darf nicht grafisch hervorgehoben werden!
+* [ ] Der Nutzer muss vor der Zustimmung umfangreich über folgende Punkte informiert werden:
+  * Zwecke der einzelnen Cookies
+  * Anzahl der Anbieter und Cookies
+  * Sitz des Anbieters, sofern er außerhalb der EU liegt
+* [ ] Cookie-Banner dürfen auch mehrschichtig inklusive der Informationspflichten gestaltet sein.
+* [ ] Zukünftig sollen webseiten-übergreifende Single-Sign-On-Lösungen zertifiziert werden.
+
+#### Anmerkungen <!-- omit in toc -->
+
+* Mit dem Inkrafttreten des Telekommunikations-Telemedien-Datenschutz-Gesetz (TTDSG) im Dezember 2021 wurde u.a. die Reguliergung von Cookies und anderen Tracking-Mechanismen noch einmal etwas verschärft. Bei Verstößen können zusätzlichen Bußgeldern (neben den DSGVO-Bußgeldern) von bis zu 300.000 Euro verhängt werden.
+
+#### Tipps zur Umsetzung <!-- omit in toc -->
+
+* Die beste Möglichkeit, in WordPress Cookie-Banner umzusetzen, 2-Klick-Lösungen einzustellen und Skripte vor dem Einverständnis zu blockieren, ist [Borlabs Cookie](https://de.borlabs.io/borlabs-cookie/) (kostenpflichtig).
 
 ### Impressum
 
