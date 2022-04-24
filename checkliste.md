@@ -458,7 +458,7 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 
 ### Datenschutzerklärung
 
-*Rechtsgrundlage*: [Art. 12 DSGVO](https://dsgvo-gesetz.de/art-12-dsgvo/), [Art. 13 DSGVO](https://dsgvo-gesetz.de/art-13-dsgvo/), [Art. 14 DSGVO](https://dsgvo-gesetz.de/art-14-dsgvo/), [Art. 85 DSGVO](https://dsgvo-gesetz.de/art-85-dsgvo/), [§13 TMG](https://dejure.org/gesetze/TMG/13.html), [§57 RStV](http://www.gesetze-bayern.de/Content/Document/RFunkStVertr-57)<br>
+*Rechtsgrundlage*: [Art. 12 DSGVO](https://dsgvo-gesetz.de/art-12-dsgvo/), [Art. 13 DSGVO](https://dsgvo-gesetz.de/art-13-dsgvo/), [Art. 14 DSGVO](https://dsgvo-gesetz.de/art-14-dsgvo/), [Art. 85 DSGVO](https://dsgvo-gesetz.de/art-85-dsgvo/), [§13 TMG](https://dejure.org/gesetze/TMG/13.html), [§23 Abs. 2 & 3 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Rechtsgrundlagen/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf)<br>
 *Urteile*: evtl. Erreichbarkeit im Einklang mit [OLG München, Az. 29 U 2681/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20M%FCnchen&Datum=11.09.2003&Aktenzeichen=29%20U%202681%2F03)
 
 * [ ] Die Datenschutzerklärung (DSE) sollte von jeder Unterseite aus in einem Klick (evtl. auch in 2 Klicks, vgl. Impressum) erreichbar sein.
@@ -466,16 +466,15 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 * [ ] Doppelte DSEs (einmal kurz & verständlich, einmal lang & ausführlich) werden i.d.R. anerkannt (nicht mehr als 2 Klicks!)
 * [ ] Die DSE sollte einen Gültigkeitsbereich (z.B. auch andere benannte Webseiten und soziale Medien) sowie ein Aktualisierungdatum enthalten.
 * [ ] Die DSE kann durch einen (kostenlosen oder kostenpflichtigen) Generator oder direkt durch einen Anwalt oder Datenschutzbeauftragten erstellt werden.
-* [ ] Für Presseerzeugnisse/ journalistische Zwecke weichen die Vorgaben zur Datenverarbeitung sowie die Informationspflichten lt. §57 RStV (des Bundeslandes) im Einklang mit Art. 85 DSGVO ab (»Medienprivileg«).
-
-#### Tipps zur Umsetzung <!-- omit in toc -->
-
-* Kostenlos für Privatpersonen und Kleinunternehmer ist der [Datenschutz-Generator des RA Dr. Schwenke](https://datenschutz-generator.de) zu empfehlen.
-* Darüber hinaus kann der gleich DSG ebenfalls - allerdings kostenpflichtig - genommen werden. Oder aber man nutzt das Abo [...]
+* [ ] Für Presseerzeugnisse/ journalistische Zwecke weichen die Vorgaben zur Datenverarbeitung sowie die Informationspflichten nach §23 Abs. 2 & 3 MStV (des Bundeslandes) im Einklang mit Art. 85 DSGVO ab (»Medienprivileg«).
 
 #### Anmerkungen <!-- omit in toc -->
 
-* Mit dem Inkrafttreten des Medienstaatsvertrags (MStV) im September 2020 ändern sich die datenschutzrechtlichen Vorgaben zum »Medienprivileg« bei journalistisch redaktionellen Inhalten, siehe [§23 MStV](https://www.rlp.de/fileadmin/rlp-stk/pdf-Dateien/Medienpolitik/ModStV_MStV_und_JMStV_2019-12-05_MPK.pdf) (vorläufig).
+* Seit dem Inkrafttreten des Medienstaatsvertrags (MStV) im November 2020 haben sich die datenschutzrechtlichen Vorgaben zum »Medienprivileg« bei journalistisch redaktionellen Inhalten geändert, siehe [§23 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Rechtsgrundlagen/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf).
+
+#### Tipps zur Umsetzung <!-- omit in toc -->
+
+* Für die Erstellung der Rechtsdokumente empfiehlt es sich, eine Mitgliedschaft mit [e-recht24.de](https://www.e-recht24.de/mitglieder/) abzuschließen und deren Generatoren zu nutzen.
 
 ### Impressum & Datenschutzerklärung bei sozialen Medien
 
@@ -485,11 +484,11 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 * [ ] Auch in den sozialen Medien ist Impressum & Datenschutzerklärung anzugeben.
 * [ ] Zudem ist in der DSE die DSE des Drittanbieters zu nennen.
 * [ ] Bei Facebook-Seiten gibt  mittlerweise zwei Einträge, die man mit Links zum Impressum & der DSE der eigenen Webseite füllen kann.
-* [ ] Wo keine direkte Möglichkeit ist, die entsprechenden Links einzutragen, kann mit Short-URLs (**ohne** Tracking!) in den jeweiligen Beschreibungen gearbeitet werden.
+* [ ] Wo keine direkte Möglichkeit ist, die entsprechenden Links einzutragen, kann mit Short-URLs (**ohne Tracking!**) in den jeweiligen Beschreibungen gearbeitet werden.
 
 #### Anmerkungen <!-- omit in toc -->
 
-* Mit Inkrafttreten des neuen Medienstaatsvertrags (MStV) im September 2020 müssen automatisiert veröffentlichte journalistisch redaktionelle Inhalte (z.B. durch einen Bot) als solche gekennzeichnet werden. Je nach Auslegung könnte dies auch automatische Crosspostings betreffen. Grundlage dafür ist [§18 Abs. 3 MStV](https://www.rlp.de/fileadmin/rlp-stk/pdf-Dateien/Medienpolitik/ModStV_MStV_und_JMStV_2019-12-05_MPK.pdf) (vorläufig).
+* Seit dem Inkrafttreten des neuen Medienstaatsvertrags (MStV) im November 2020 müssen automatisiert veröffentlichte journalistisch redaktionelle Inhalte (z.B. durch einen Bot) als solche gekennzeichnet werden. Je nach Auslegung könnte dies auch automatische Crosspostings betreffen. Grundlage dafür ist [§18 Abs. 3 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Rechtsgrundlagen/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf).
 
 ### Urheberrecht / Bildnachweise
 
@@ -499,6 +498,7 @@ Diese **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt
 * [ ] Beim Verwenden fremder Werke (Bilder, Grafiken, Musik, Videos, Texte, Software, Code) **immer** die dazu gehörigen Lizenzbestimmungen lesen und ggf. laut Vorgaben entsprechende Angaben zum Urheber machen!
 * [ ] Egal ob Groß- oder Kleinzitat: Werke sind nur dann Zitate, wenn man sie damit auch inhaltlich detailliert auseinander setzt. Für schmückende Beigaben nur Werke mit einer entsprechenden Lizenz (z.B. Creative Commons oder CC0/ Public Domain) nutzen!
 * [ ] Der Bildnachweis gehört **immer** direkt unter das Bild! Manche Stock-Agenturen verlagen sogar, den Bildnachweis **im** Bild anzubringen. Einzige Ausnahme (weil gängige Praxis): Bilder, die unter der entsprechenden freien Lizenz (z.B. CC0) **ohne Namensnennung** auskommen und sich über die gesamte Webseite erstrecken, können auch einmalig im Impressum benannt werden.
+* [ ] Es ist allerdings umstritten, ob der **Verzicht auf Namensnennung des Urhebers** überhaupt möglich ist, deshalb am besten zur Sicherheit **immer** den Namen des Urhebers angeben!
 * [ ] Webdesigner/ -entwickler sollten das vom Kunden zur Verfügung gestellte Bildmaterial auf Urheberrechtsverstöße überprüfen (vgl. LG Bochum, Az. 9 S 17/16)
 * [ ] Bilder (und andere fremde Werke) dürfen ohne entsprechenden Verwertungsrechten auch nicht bearbeitet werden!
 * [ ] Metadaten (EXIF, IPTC, Wasserzeichen) dürfen aus **fremden** Bildern ohne entsprechende Einwilligung des Urhebers **nicht** entfernt werden (Bildbearbeitung & Aberkennung der Urheberschaft)!
