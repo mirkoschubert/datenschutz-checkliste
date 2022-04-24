@@ -14,10 +14,10 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
   * [Security Concept of the CMS (e.g. WordPress)](#security-concept-of-the-cms-eg-wordpress)
   * [Security Concept of the Server](#security-concept-of-the-server)
   * [OPTIONAL: Signature and/or Content Encryption for Emails](#optional-signature-andor-content-encryption-for-emails)
-* [Webhoster](#webhoster)
+* [Web Hosts](#web-hosts)
   * [Access Logs](#access-logs)
-  * [Weitere Server Logs](#weitere-server-logs)
-  * [Webseiten-Installation](#webseiten-installation)
+  * [Other Server Logs](#other-server-logs)
+  * [Website Installation](#website-installation)
 * [Externe Dienste](#externe-dienste)
   * [Analyse-Tools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)](#analyse-tools-zb-google-analytics-matomo-piwik-wordpress-stats-jetpack)
   * [Marketing-Tools (z.B. Google Ads, Affiliate-Netzwerke)](#marketing-tools-zb-google-ads-affiliate-netzwerke)
@@ -126,36 +126,36 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 * For the free GPG there are several solutions available on the official [website](https://gnupg.org).
 * For the signature only the sender needs the setup, for the encryption both sender and recipient.
 
-## Webhoster
+## Web Hosts
 
 ### Access Logs
 
 *Legal basis*: [Art. 28 GDPR](https://GDPR-gesetz.de/art-28-GDPR/), [Art. 29 GDPR](https://GDPR-gesetz.de/art-29-GDPR/), [Art. 32 para. 1 lit. a GDPR](https://GDPR-gesetz.de/art-32-GDPR/)<br>
 *Legitimation reason*: [Art. 6 para. 1 lit. f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)
 
-* [ ] In den Access Logs des Servers gespeicherte personenbezogene Daten (insbes. die IP-Adresse) sollten nach Möglichkeit pseudonymisiert werden.
-* [ ] Alternativ kann natürlich im Zuge der Datensparsamkeit komplett auf die Speicherung der IP-Adresse (sofern vom Webhoster zugelassen) verzichtet werden.
-* [ ] Auch die Speicherdauer sollte wenn möglich auf 7 - 14 Tage verkürzt werden.
+* [ ] Personal data stored in the server's access logs (especially the IP address) should be pseudonymized if possible.
+* [ ] Alternatively, of course, in the course of data economy, the storage of the IP address (if permitted by the web host) can be dispensed with completely.
+* [ ] The storage period should also be reduced to 7 - 14 days if possible.
 
 #### Implementation Advice <!-- omit in toc -->
 
-* Fast jeder Hoster bietet inzwischen die Pseudonymisierung von IP-Adressen (Kürzung des letzten Bytes, z.B. 192.168.10.X) an.
-* Bei vielen Hostern ist auch die Speicherdauer einzuschränken - oder sie wurde zur GDPR-Umstellung automatisch verkürzt (im Zweifelsfall beim Webhoster anfragen).
+* Almost every hoster now offers pseudonymization of IP addresses (shortening of the last byte, e.g. 192.168.10.X).
+* With many hosters, the storage period can also be limited - or it was automatically shortened for the GDPR conversion (if in doubt, ask the web hoster).
 
-### Weitere Server Logs
+### Other Server Logs
 
 *Legal basis*: [Art. 28 GDPR](https://GDPR-gesetz.de/art-28-GDPR/), [Art. 29 GDPR](https://GDPR-gesetz.de/art-29-GDPR/)<br>
 *Legitimation reason*: [Art. 6 para. 1 lit. c GDPR](https://GDPR-gesetz.de/art-6-GDPR/)
 
-* [ ] Der Webhoster ist auch immer dazu verpflichtet, weitere Server Logs zu (insbes. zur Früherkennung von nicht authorisierten Zugriffen, Schadcode und allgemeinen Fehlermeldungen) führen, die ebenfalls IP-Adressen speichern. Hier ist eine Kürzung nicht vorgesehen.
+* [ ] The web host is also always obliged to keep additional server logs (especially for early detection of unauthorized access, malicious code and general error messages), which also store IP addresses. Here a shortening is not provided.
 
 #### Implementation Advice <!-- omit in toc -->
 
-* Auskunft über die Speicherung und Speicherdauer beim Hoster einholen (oder im AVV nachschlagen).
+* Obtain information about storage and storage duration from the hoster (or look it up in the DPA).
 
-### Webseiten-Installation
+### Website Installation
 
-* [ ] Alle auf dem Server gespeicherten personenbezogenen Daten gelten auch als »Verarbeitung« - Auftragsverarbeitungsvertrag (AVV) mit Webhoster abschließen!
+* [ ] All personal data stored on the server is also considered "processing" - conclude data processing order (DPA) with your web host!
 
 ## Externe Dienste
 
