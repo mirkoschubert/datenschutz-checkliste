@@ -18,20 +18,20 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
   * [Access Logs](#access-logs)
   * [Other Server Logs](#other-server-logs)
   * [Website Installation](#website-installation)
-* [Externe Dienste](#externe-dienste)
-  * [Analyse-Tools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)](#analyse-tools-zb-google-analytics-matomo-piwik-wordpress-stats-jetpack)
-  * [Marketing-Tools (z.B. Google Ads, Affiliate-Netzwerke)](#marketing-tools-zb-google-ads-affiliate-netzwerke)
-  * [Newsletter-Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go/ Sendinblue, Jetpack Abonnement)](#newsletter-tools-zb-mailchimp-clicktipp-newsletter2go-sendinblue-jetpack-abonnement)
+* [External Services](#external-services)
+  * [Analytics Tools (e.g. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)](#analytics-tools-eg-google-analytics-matomo-piwik-wordpress-stats-jetpack)
+  * [Marketing Tools (e.g. Google Ads, Affiliate Networks)](#marketing-tools-eg-google-ads-affiliate-networks)
+  * [Newsletter Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go/ Sendinblue, Jetpack Subscription)](#newsletter-tools-zb-mailchimp-clicktipp-newsletter2go-sendinblue-jetpack-subscription)
   * [Social Plugins (z.B. Facebook, Instagram, Twitter)](#social-plugins-zb-facebook-instagram-twitter)
   * [Verwertungsgesellschaften (z.B. VG-Wort)](#verwertungsgesellschaften-zb-vg-wort)
   * [Content Delivery Networks (CDN)](#content-delivery-networks-cdn)
-  * [Webfonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)](#webfonts-zb-google-fonts-adobe-typekit-fontawesome)
+  * [Web Fonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)](#web-fonts-zb-google-fonts-adobe-typekit-fontawesome)
   * [Profile bzw. Profilbilder (z.B. Gravatar, About.me)](#profile-bzw-profilbilder-zb-gravatar-aboutme)
-  * [Emojis/ Emoticons (z.B. WP-Emojis)](#emojis-emoticons-zb-wp-emojis)
-  * [DNS-Prefetching](#dns-prefetching)
-  * [WP-Embeds/ oEmbeds](#wp-embeds-oembeds)
-  * [Video- und Musikdienste (z.B. YouTube, Vimeo, Spotify, Soundcloud)](#video--und-musikdienste-zb-youtube-vimeo-spotify-soundcloud)
-  * [Kartendienste (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)](#kartendienste-zb-google-maps-open-street-maps-mapbox-leaflet)
+  * [Emojis/ Emoticons (z.B. WP Emojis)](#emojis-emoticons-zb-wp-emojis)
+  * [DNS Prefetching](#dns-prefetching)
+  * [WP Embeds/ oEmbeds](#wp-embeds-oembeds)
+  * [Video and Music Services (z.B. YouTube, Vimeo, Spotify, Soundcloud)](#video-and-music-services-zb-youtube-vimeo-spotify-soundcloud)
+  * [Map Services (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)](#map-services-zb-google-maps-open-street-maps-mapbox-leaflet)
 * [Weitere Aspekte](#weitere-aspekte)
   * [Kommentarfunktion](#kommentarfunktion)
   * [Weblinks](#weblinks)
@@ -120,7 +120,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 
 * There are essentially two popular signature and encryption methods:
   * S/MIME - via an email certificate.
-  * PGP (fee required) or GnuPGP (Open Source) - via a key pair
+  * PGP (paid) or GnuPGP (Open Source) - via a key pair
 * PGP/ GPG should always be given preference!
 * Free S/MIME email certificates are available from [Comodo](https://www.comodo.com/home/email-security/free-email-certificate.php) for one year each.
 * For the free GPG there are several solutions available on the official [website](https://gnupg.org).
@@ -155,224 +155,224 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 
 ### Website Installation
 
-* [ ] All personal data stored on the server is also considered "processing" - conclude data processing order (DPA) with your web host!
+* [ ] All personal data stored on the server is also considered "processing" - please conclude a data processing agreement (DPA) with your web host!
 
-## Externe Dienste
+## External Services
 
-### Analyse-Tools (z.B. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)
+### Analytics Tools (e.g. Google Analytics, Matomo/ Piwik, WordPress Stats/ Jetpack)
 
 *Legal basis*: [Art. 7 GDPR](https://GDPR-gesetz.de/art-7-GDPR/), [Art. 28 GDPR](https://GDPR-gesetz.de/art-28-GDPR/), [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/)<br>
-*Legitimation reason*: [Art. 6 para. 1 lit. a oder f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
-*Urteile*: [LG Dresden, Az. 1 a O 1582/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20Dresden&Datum=11.01.2019&Aktenzeichen=1a%20O%201582%2F18), [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
+*Legitimation reason*: [Art. 6 para. 1 lit. a or f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
+*Verdicts*: [LG Dresden, Az. 1 a O 1582/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20Dresden&Datum=11.01.2019&Aktenzeichen=1a%20O%201582%2F18), [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
-* [ ] **Wichtig**: Analyse-Tools, die personenbezogene Daten in den USA speichern, sind seit 2020 nach dem Schrems-II-Urteil nicht GDPR-konform! Darunter fallen u.a. **Google Analytics** und **Jetpack**.
-* [ ] Abwägen, welches Analysetool unter der Berücksichtigung des Datensparsamkeits-Prinzips geeignet erscheint.
-* [ ] Abwägen, ob ein Verarbeitungsgrund nach Art. 6 para. 1 lit. b) - f) GDPR vorliegt oder nach Art. 6 para. 1 lit. a) ein vorheriges Einverständnis eingeholt werden sollte.
-* [ ] Sofern Cookies gespeichert werden, über einen Cookie-Banner darüber informieren und Opt-Out-Funktion bereit stellen.
-* [ ] Altdaten, die die maximale Verarbeitungszeit überschreiten, müssen händisch gelöscht werden.
-* [ ] **Google Analytics**: AVV abschließen, minimale Verarbeitungszeit (14 Monate) einstellen, Targeting-Funktionen ausstellen, IP-Adressen pseudonymisieren
-* [ ] **Matomo/ Piwik**: AVV mit Webhoster abschließen, IP-Adressen pseudonymisieren, Speicherdauer einstellen
-* [ ] **Webalizer**: AVV mit Webhoster abschließen, IP-Adressen in den Server Logs pseudonymisieren
-* [ ] **WP Stats/ Jetpack**: Da es derzeit keinen AVV für Jetpack gibt, das Plugin vollkommen abschalten!
+* [ ] **Important**: Analytics tools that store personal data in the USA are not GDPR compliant since 2020 after the Schrems II ruling! This includes, among others, **Google Analytics** and **Jetpack**.
+* [ ] Weigh up which analytics tool appears suitable in consideration of the data economy principle.
+* [ ] Weigh up whether there is a processing reason according to Art. 6 para. 1 lit. b - f GDPR or whether prior consent should be obtained according to Art. 6 para. 1 lit. a.
+* [ ] If cookies are stored, inform about it via a cookie banner and provide opt-out function.
+* [ ] Legacy data that exceeds the maximum processing time must be deleted manually.
+* [ ] **Google Analytics**: Complete DPA, set minimum processing time (14 months), turn off targeting features, pseudonymize IP addresses.
+* [ ] **Matomo/ Piwik**: Conclude DPA with web hoster, pseudonymize IP addresses, set retention period.
+* [ ] **Webalizer**: Complete DPA with web hoster, pseudonymize IP addresses in server logs.
+* [ ] **WP Stats/ Jetpack**: Since there is currently no DPA for Jetpack, disable the plugin completely!
 
 #### Implementation Advice <!-- omit in toc -->
 
-* Datenschutz-konforme Alternativen sind u.a. [Fathom](https://usefathom.com/) und [Plausible](https://plausible.io/) (beide kostenpflichtig, kostenlos zum selbst Hosten). Beide speichern gar keine personenbezogene Daten und setzen auch keine Cookies. Plausible bietet für die Einbindung auch ein [WordPress-Plugin](https://github.com/plausible/wordpress).
-* AVV bei Google Analytics braucht **nicht mehr** schriftlich erfolgen - mit wenigen Klicks abschließbar
-* Einbindung von GA oder Matomo nach Möglichkeit per Plugin, um Fehler zu vermeiden
-* Beim Cookie-Banner reicht derzeit die Opt-Out-Methode, da die GDPR nicht explizit Cookies regelt. Das Opt-In wird derzeit im Allgemeinen recht kritisch betrachtet.
-* **WP-Plugin**: [Borlabs Cookie](https://de.borlpara.io/borlabs-cookie/) (Cookie-Banner & 2-Klick-Lösungen, kostenpflichtig)
+* Privacy-compliant alternatives include [Fathom](https://usefathom.com/) and [Plausible](https://plausible.io/) (both paid, free for self-hosting). Both do not store any personal data and do not set any cookies. Plausible also offers a [WordPress plugin](https://github.com/plausible/wordpress) for integration.
+* DPA with Google Analytics does **no longer** need to be in writing - can be concluded with a few clicks.
+* Integration of GA or Matomo if possible by plugin, to avoid errors.
+* For the cookie banner, the opt-out method is currently sufficient, as the GDPR does not explicitly regulate cookies. The opt-in is generally viewed quite critically at the moment.
+* **WP Plugin**: [Borlabs Cookie](https://de.borlpara.io/borlabs-cookie/) (cookie banner & 2-click solutions, paid).
 
-### Marketing-Tools (z.B. Google Ads, Affiliate-Netzwerke)
+### Marketing Tools (e.g. Google Ads, Affiliate Networks)
 
 *Legal basis*: [Art. 7 GDPR](https://GDPR-gesetz.de/art-7-GDPR/), [Art. 28 GDPR](https://GDPR-gesetz.de/art-28-GDPR/), [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/), [§6 TMG](https://dejure.org/gesetze/TMG/6.html), [§ 58 RStV](http://www.gesetze-bayern.de/Content/Document/RFunkStVertr-58)<br>
 *Legitimation reason*: [Art. 6 para. 1 lit. a oder f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
-*Urteile*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
+*Verdicts*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
-* [ ] **Wichtig**: Marketing-Tools, die personenbezogene Daten in den USA speichern, sind seit 2020 nach dem Schrems-II-Urteil nicht GDPR-konform! Darunter fallen u.a. **Google Ads** (insbes. die Remarketing-Funktion) und diverse Affiliate-Netzwerke.
-* [ ] Google Ads verlangt derzeit das vorherige Einverständnis (Opt-In) lt. [Programmrichtlinien](https://support.google.com/adsense/answer/48182?hl=de), nicht nur für die Cookies und Beacons (Zählpixel), sondern auch für die Übertragung jeglicher personenbezogenen Daten.
-* [ ] Funktionen wie Remarketing oder die Auslieferung von personenbezogener Werbung sind derzeit fraglich und sollten - zumindest vorübergehend - abgeschaltet werden.
-* [ ] Richtlinien bzw. AGBs bei sämtlichen Affiliate-Netzwerken beachten!
-* [ ] Widgets, grafische Einbettungen oder JavaScript-Einbettungen von Werbemitteln von Affiliate-Netzwerken mindestens in der DSE erwähnen (sicherer: 2-Klick-Lösung)
-* [ ] Werbemittel in jeglicher Form sollten als »Werbung« oder »Anzeige« gekennzeichnet werden!
+* [ ] **Important**: Marketing tools that store personal data in the USA are not GDPR-compliant since 2020 after the Schrems II ruling! This includes **Google Ads** (esp. the remarketing function) and various affiliate networks.
+* [ ] Google Ads currently requires prior consent (opt-in) according to [program guidelines](https://support.google.com/adsense/answer/48182?hl=de), not only for cookies and beacons (tracking pixels), but also for the transmission of any personal data.
+* [ ] Functions such as remarketing or the delivery of personal advertising are currently questionable and should - at least temporarily - be disabled.
+* [ ] Observe the guidelines and terms and conditions of all affiliate networks!
+* [ ] Mention widgets, graphical embeddings or JavaScript embeddings of advertising media of affiliate networks at least in the privacy policy (safer: 2-click solution).
+* [ ] Advertising media in any form should be marked as "advertising" or "advertisement"!
 
 #### Implementation Advice <!-- omit in toc -->
 
-* **WP-Plugin**: Für Google AdSense [Advanced Ads](https://wordpress.org/plugins/advanced-ads/) mit GDPR-Funktion (2-Klick-Lösung) einsetzen.
-* Bei Affiliate-Netzwerken vorübergehend nur auf (für die GDPR nicht relevante) Text-Links setzen. Links am besten mit `rel="noreferrer noopener"` versehen.
+* **WP Plugin**: Use for Google Ads [Advanced Ads](https://wordpress.org/plugins/advanced-ads/) with GDPR function (2-click solution).
+* For affiliate networks temporarily set only to text links (not relevant for GDPR). Links best provided with `rel="noreferrer noopener"`.
 
-### Newsletter-Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go/ Sendinblue, Jetpack Abonnement)
+### Newsletter Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go/ Sendinblue, Jetpack Subscription)
 
 *Legal basis*: [Art. 7 GDPR](https://GDPR-gesetz.de/art-7-GDPR/), [Art. 28 GDPR](https://GDPR-gesetz.de/art-28-GDPR/), [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/)<br>
 *Legitimation reason*: [Art. 6 para. 1 lit. a GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
-*Urteile*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
+*Verdicts*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
-* [ ] **Wichtig**: Newsletter-Tools, die personenbezogene Daten in den USA speichern, sind seit 2020 nach dem Schrems-II-Urteil nicht GDPR-konform! Darunter fallen u.a. **Mailchimp** und **Jetpack**.
-* [ ] Newsletter-Formulare sollten mit einem adäquaten Hinweistext versehen und in der E-Mail beim Double-Opt-In-Verfahren wiederholt werden.
-* [ ] Ein Newsletter-Eintrag sollte nicht an eine (kostenlosen oder kostenpflichtigen) Dienstleistung gekoppelt werden (»Kopplungsverbot«)
-* [ ] Das Einverständnis für Newsletter-Einträge muss dokumentiert (Hinweistext, Zeitpunkt) und es muss ein Opt-Out bereit gestellt werden.
+* [ ] **Important**: Newsletter tools that store personal data in the USA are not GDPR-compliant since 2020 after the Schrems II ruling! This includes **Mailchimp** and **Jetpack**, among others.
+* [ ] Newsletter forms should be provided with an adequate notice text and repeated in the email during the double opt-in process.
+* [ ] A newsletter entry should not be linked to a (free or paid) service ("tie-in ban").
+* [ ] The consent for newsletter entries must be documented (notice text, time) and an opt-out must be provided.
 
 #### Implementation Advice <!-- omit in toc -->
 
-* **Kopplungsverbot**: Ein angebotenes Freebie darf **nicht** von der Zustimmung zur Erhebung personenbezogener Daten abhängig gemacht werden. »Als Dankeschön erhalten Sie [...]« wäre aber machbar.
-* AVV mit dem Drittanbieter abschließen
-* **Sicherste Methode**: Auf Drittanbieter verzichten und auf stationäre Lösungen wie dem **WP-Plugin** [Newsletter](https://wordpress.org/plugins/newsletter/) setzen.
+* **Tie-in ban**: An offered freebie may **not** be made dependent on consent to the collection of personal data. However, "As a thank you, you will receive [...]" would be feasible.
+* Enter into DPA with the third party provider.
+* **Safest method**: Do without third-party providers and rely on stationary solutions like the **WP plugin** [Newsletter](https://wordpress.org/plugins/newsletter/).
 
 ### Social Plugins (z.B. Facebook, Instagram, Twitter)
 
 *Legal basis*: [Art. 7 GDPR](https://GDPR-gesetz.de/art-7-GDPR/), [Art. 22 GDPR](https://GDPR-gesetz.de/art-22-GDPR/), [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/)<br>
 *Legitimation reason*: [Art. 6 para. 1 lit. a oder f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
-*Urteile*: [LG Düsseldorf, Az. 12 O 151/15](https://dejure.org/dienste/vernetzung/rechtsprechung?Text=12%20O%20151/15), [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
+*Verdicts*: [LG Düsseldorf, Az. 12 O 151/15](https://dejure.org/dienste/vernetzung/rechtsprechung?Text=12%20O%20151/15), [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
-* [ ] **Wichtig**: Social Plugins, die personenbezogene Daten in den USA speichern, sind seit 2020 nach dem Schrems-II-Urteil nicht GDPR-konform! Dies betrifft u.a. **Facebook**, **Instagram** und **Twitter**.
-* [ ] Sämtliche eingebundene Social Plugins laden personenbezogene Daten bereits beim Besuch der Webseite. Sofern der Nutzer im sozialen Netzwerk eingeloggt ist, erfolgt eine genaue Zuordnung sowie eine Art »Bewegungsprofil« über alle mit Social Plugins versehenen Webseiten.
-* [ ] Bei Login-Verfahren (z.B. Facebook Connect) und Kommentarfunktionen mit Verknüpfung zu sozialen Netzen wird ebenso verfahren.
-* [ ] Sharing-Buttons, die die Anzahl der Shares anzeigen, haben das gleiche Problem.
-* [ ] Einzig reine Links (Text oder Grafik) sind GDPR-konform.
-* [ ] Beacons (Zählpixel) für Statistik-Zwecke sind ebenfalls sehr kritisch zu bewerten.
+* [ ] **Important**: Social plugins that store personal data in the USA are not GDPR-compliant since 2020 after the Schrems II ruling! This affects, among others, **Facebook**, **Instagram** and **Twitter**.
+* [ ] All integrated social plugins already load personal data when visiting the website. Provided that the user is logged into the social network, an exact allocation as well as a kind of "movement profile" takes place via all websites provided with social plugins.
+* [ ] Login procedures (e.g. Facebook Connect) and comment functions with links to social networks are handled in the same way.
+* [ ] Sharing buttons that display the number of shares have the same problem.
+* [ ] Only pure links (text or graphic) are GDPR compliant.
+* [ ] Beacons (tracking pixels) for statistical purposes are also very critical.
 
 #### Implementation Advice <!-- omit in toc -->
 
-* Vor dem Laden des Social Plugins über die Datenverarbeitung informieren (2-Klick-Lösung) oder Social Plugins komplett abschalten.
-* Facebook Connect, Jetpack Kommentarfunktion (und ähnliche) komplett abschalten.
-* Sharing-Buttons entweder ohne Kennzahlen anzeigen oder das **WP-Plugin** [Shariff](https://wordpress.org/plugins/shariff/) verwenden.
-* Beacons (Zählpixel) komplett entfernen.
+* Inform about data processing before loading the social plugin (2-click solution) or disable social plugins completely.
+* Turn off Facebook Connect, Jetpack comment function (and similar) completely.
+* Show sharing buttons either without metrics or use the **WP plugin** [Shariff](https://wordpress.org/plugins/shariff/).
+* Remove beacons (tracking pixels) completely.
 
 ### Verwertungsgesellschaften (z.B. VG-Wort)
 
 *Legal basis*: [Art. 32 para. 1 lit. a GDPR](https://GDPR-gesetz.de/art-32-GDPR/)<br>
-*Legitimation reason*: [Art. 6 para. 1 lit. b GDPR](https://GDPR-gesetz.de/art-6-GDPR/), [Art. 6 para. 1 lit. c GDPR](https://GDPR-gesetz.de/art-6-GDPR/) im Einklang mit [§32 UrgH](https://dejure.org/gesetze/UrhG/32.html)
+*Legitimation reason*: [Art. 6 para. 1 lit. b GDPR](https://GDPR-gesetz.de/art-6-GDPR/), [Art. 6 para. 1 lit. c GDPR](https://GDPR-gesetz.de/art-6-GDPR/) in accordance with [§32 UrgH](https://dejure.org/gesetze/UrhG/32.html)
 
-* [ ] Der Zählpixel der VG-Wort sollte auf HTTPS umgestellt werden, um »mixed Content« zu vermeiden.
-* [ ] Der Zählpixel der VG-WOrt sollte in der Datenschutzerklärung erwähnt werden.
+* [ ] The tracking pixel of VG-Wort should be switched to HTTPS to avoid "mixed content".
+* [ ] The tracking pixel of VG-Wort should be mentioned in the privacy policy.
 
 ### Content Delivery Networks (CDN)
 
 *Legal basis*: [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/)<br>
 *Legitimation reason*: [Art. 6 para. 1 lit. a und f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
-*Urteile*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
+*Verdicts*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
-* [ ] CDNs (z.B. Google Fonts, Adobe Typekit, Bootstrap/ Fontawesome, CDNJS/ Cloudflare, Jetpack usw.) können durchaus als kritisch betrachtet werden, da die Inhalte auf Server der ganzen Welt verteilt werden und potentiell beim Abruf mindestens die IP-Adresse gespeichert wird.
-* [ ] Da CDNs auch Daten in den USA speichern, könnte seit 2020 möglicherweise auch die Speicherung von personenbezogenen Daten (z.B. IP & Bilder) nicht mehr GDPR-konform sein.
-* [ ] Bei CDNs sollte abgewogen werden, ob diese überhaupt notwendig sind (z.B. Zielgruppe ausschließlich D-A-CH).
-* [ ] Inhalte von CDNs (z.B. Bilder, Fonts, CSS- oder JS- Dateien) sollten nach Möglichkeit lokalisiert werden.
+* [ ] CDNs (e.g. Google Fonts, Adobe Typekit, Bootstrap/ Fontawesome, CDNJS/ Cloudflare, Jetpack, etc.) may well be considered critical, as the content is distributed to servers all over the world and potentially at least the IP address is stored upon retrieval.
+* [ ] Since CDNs also store data in the USA, the storage of personal data (e.g. IP & images) could possibly also no longer be GDPR compliant since 2020.
+* [ ] In the case of CDNs, it should be weighed up whether they are necessary at all (e.g. target group exclusively D-A-CH).
+* [ ] Contents of CDNs (e.g. images, fonts, CSS or JS files) should be localized if possible.
 
 #### Implementation Advice <!-- omit in toc -->
 
-* Von CDNs geladene Dateien (Fonts, CSS, JS usw.) insbesondere bei rein deutschsprachigen Seiten **immer** lokalisieren. Diese können direkt im (Child-)Theme abgelegt werden.
-* Auch prüfen, ob es nicht WordPress-eigene Alternativen gibt (z.B. jQuery).
-* Auch Drittanbieter-Plugins auf CDNs prüfen.
-* Abwägung zwischen Notwendigkeit und Risiko im besonderen Fall (z.B. Instagram-Widget bei Fotografen)
+* **Always** Localize files (fonts, CSS, JS, etc.) loaded from CDNs, especially for purely German-language sites. These can be stored directly in the (child) theme.
+* Also check if there are alternatives inside WordPress (e.g. jQuery).
+* Also check third-party plugins on CDNs.
+* Weighing between necessity and risk in special cases (e.g. Instagram widget for photographers).
 
-### Webfonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)
+### Web Fonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)
 
 *Legal basis*: [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/)<br>
 *Legitimation reason*: [Art. 6 para. 1 lit. a GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
-*Urteile*: [LG München, Az. 3 O 17493/20](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20M%C3%BCnchen%20I&Datum=20.01.2022&Aktenzeichen=3%20O%2017493%2F20)
+*Verdicts*: [LG München, Az. 3 O 17493/20](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20M%C3%BCnchen%20I&Datum=20.01.2022&Aktenzeichen=3%20O%2017493%2F20)
 
-* [ ] Für den Einsatz von Webfonts ist **immer** eine Einwilligung erforderlich!
-* [ ] Alternativ können Google Fonts, Adobe Typekit- und Fontaweome-Fonts (BootstrapCDN) lokalisiert werden (siehe CDNs)!
-* [ ] Fonts könnten unter Umständen auch gegen andere lokale Open-Source-Fonts oder sogar dem CSS Font Stack ersetzt werden.
+* [ ] Consent is **always** required for the use of web fonts!
+* [ ] Alternatively Google Fonts, Adobe Typekit and Fontaweome Fonts (BootstrapCDN) can be localized (see CDNs)!
+* [ ] Fonts could possibly also be replaced against other local open source fonts or even the CSS Font Stack.
 
 #### Implementation Advice <!-- omit in toc -->
 
-* Google Fonts über den [Google Webfonts Helper](https://google-webfonts-helper.herokuapp.com/fonts) im (Child-)Theme lokalisieren.
-* Wenn nötig, [CSS Font Stack](https://www.cssfontstack.com) einsetzen.
-* Wer das **WP-Plugin** [Autoptimize](https://wordpress.org/plugins/autoptimize/) einsetzt, kann auch dort Google Fonts abschalten (funktioniert allerdings nicht immer).
+* Localize Google Fonts via [Google Webfonts Helper](https://google-webfonts-helper.herokuapp.com/fonts) in the (child) theme.
+* If necessary, use the [CSS Font Stack](https://www.cssfontstack.com).
+* If you use the **WP-Plugin** [Autoptimize](https://wordpress.org/plugins/autoptimize/), you can also disable Google Fonts there (but it does not always work).
 
 ### Profile bzw. Profilbilder (z.B. Gravatar, About.me)
 
 *Legal basis*: [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/), [§22 KunstUrhG](https://dejure.org/gesetze/KunstUrhG/22.html)<br>
-*Legitimation reason*: evtl. [Art. 6 para. 1 lit. f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
-*Urteile*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
+*Legitimation reason*: poss. [Art. 6 para. 1 lit. f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
+*Verdicts*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
-* [ ] **Wichtig**: Profile, die personenbezogene Daten (z.B. Bilder) in den USA speichern, sind seit 2020 nach dem Schrems-II-Urteil nicht GDPR-konform! Dies betrifft u.a. **Gravatar** und **About.me**.
-* [ ] Profile und/ oder Avatarbilder sollten nach Möglichkeit lokalisiert oder abgeschaltet werden, da sie mit Sicherheit personenbezogene Daten enthalten.
-* [ ] Die in WordPress fest integrierte Gravatar-Funktion sollte nicht nur wegen den Bildern, sondern auch in den im Bild-Link als Hash abgelegten E-Mail-Adressen komplett abgeschaltet werden.
+* [ ] **Important**: Profiles that store personal data (e.g. images) in the USA are not GDPR-compliant since 2020 after the Schrems II ruling! This concerns **Gravatar** and **About.me**, among others.
+* [ ] Profiles and/ or avatar images should be localized or disabled if possible, as they certainly contain personal data.
+* [ ] The Gravatar functionality is permanently integrated in WordPress and should be completely disabled not only because of the images but also in the email addresses stored as hash in the image link.
 
 #### Implementation Advice <!-- omit in toc -->
 
-* Die Gravatarfunktion lässt sich direkt in WordPress unter »Einstellungen > Diskussion > Avatare anzeigen« abschalten.
+* The Gravatar functionality can be disabled directly in WordPress under "Settings > Discussion > Show Avatars".
 
-### Emojis/ Emoticons (z.B. WP-Emojis)
+### Emojis/ Emoticons (z.B. WP Emojis)
 
 *Legal basis*: [Art. 22 GDPR](https://GDPR-gesetz.de/art-22-GDPR/), [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/)<br>
-*Legitimation reason*: evtl. [Art. 6 para. 1 lit. f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
-*Urteile*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
+*Legitimation reason*: poss. [Art. 6 para. 1 lit. f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
+*Verdicts*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
-* [ ] Wenn Emojis extern von einem CDN geladen werden, werden für gewöhnlich IP-Adressen beim Abruf abgerufen.
-* [ ] Speziell bei den **WP-Emojis** wird zusätzlich [Canvas Fingerprinting](https://de.wikipedia.org/wiki/Canvas_Fingerprinting) eingesetzt, was eine Zuordnung des Rechners ohne Speicherung von Cookies ermöglicht (auch, wenn keine Emojis angezeigt werden). Da diese Daten in den USA gespeichert werden, sind solche Emojis seit 2020 grundsätzlich nicht GDPR-konform.
-* [ ] **WP-Emojis** sollte daher immer abgeschaltet werden! Jeder moderne Browser zeigt trotzdem weiterhin Emojis und Emoticons an.
+* [ ] If emojis are loaded externally from a CDN, IP addresses are usually saved on retrieval.
+* [ ] Especially for **WP emojis**, additional [Canvas Fingerprinting](https://de.wikipedia.org/wiki/Canvas_Fingerprinting) is used, which allows an assignment of the computer without storing cookies (even if no emojis are displayed). Since this data is stored in the USA, such emojis are basically not GDPR compliant since 2020.
+* [ ] **WP Emojis** should therefore always be turned off! Any modern browser will nevertheless continue to display emojis and emoticons.
 
 #### Implementation Advice <!-- omit in toc -->
 
-* Sofern der Webseitenbetreiber WordPress bereits **vor** Version 4.4 installiert hat, gibt es unter »Einstellungen > Diskussion« die Möglichkeit, die WP-Emojis direkt abzuschalten.
-* Jüngere Webseiten haben diese Funktion nicht - hier sollten die Emojis (zzgl. DNS-Prefetching) über die `functions.php` des (Child-)Themes abgeschaltet werden.
-* Wer das **WP-Plugin** [Autoptimize](https://wordpress.org/plugins/autoptimize/) einsetzt, kann auch dort die Emojis abschalten (funktioniert allerdings nicht immer).
+* If the website owner has already installed WordPress **before** version 4.4, there is the possibility to disable the WP emojis directly under `settings > discussion`.
+* Newer websites do not have this function - here the emojis (plus DNS prefetching) should be turned off via the `functions.php` of the (child) theme.
+* If you use the **WP-Plugin** [Autoptimize](https://wordpress.org/plugins/autoptimize/), you can also disable the emojis there (but it does not always work).
 
-### DNS-Prefetching
+### DNS Prefetching
 
 *Legal basis*: [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/)<br>
-*Legitimation reason*: evtl. [Art. 6 para. 1 lit. f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)
+*Legitimation reason*: poss. [Art. 6 para. 1 lit. f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)
 
-* [ ] Beim DNS-Prefetching wird bereits beim Laden der Webseite der Browser angewiesen, beim Name Server weitere Domains aufzulösen. Dies zieht natürlich auch die Speicherung der IP-Adresse beim Name Server nach sich. Da diese Anfragen häufig nicht zwingend erforderlich sind, **könnte** auch hier ein Verstoß gegen die GDPR vorliegen.
-* [ ] Bei WordPress werden die meisten Prefetching-Tags bereits mit dem Entfernen der entsprechenden Funktion (z.B. Google Fonts, WP-Emojis, Jetpack) entfernt.
-* [ ] Mindestens ein Eintrag (von WordPress selbst) bleibt aber erhalten und muss manuell entfernt werden.
+* With DNS prefetching, the browser is instructed to resolve additional domains at the name server when the web page is loaded. Of course, this also results in the storage of the IP address at the name server. Since these requests are often not mandatory, **there could** also be a violation of the GDPR here.
+* [ ] With WordPress, most prefetching tags are already removed with the removal of the corresponding function (e.g. Google Fonts, WP-Emojis, Jetpack).
+* [ ] However, at least one entry (from WordPress itself) remains and must be removed manually.
 
 #### Implementation Advice <!-- omit in toc -->
 
-* Darauf achten, dass beim Entfernen von WP-Emojis auch das Prefetching entfernt wird.
-* Den WordPress-eigenen Eintrag durch einfügen von `add_filter( 'emoji_svg_url', '__return_false' );` in die `functions.php` des (Child-)Themes entfernen.
+* Make sure that when removing WP emojis, prefetching is also removed.
+* Remove the WordPress own entry by inserting `add_filter( 'emoji_svg_url', '__return_false' );` into the `functions.php` of the (child-)theme.
 
-### WP-Embeds/ oEmbeds
+### WP Embeds/ oEmbeds
 
 *Legal basis*: [Art. 22 GDPR](https://GDPR-gesetz.de/art-22-GDPR/), [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/)<br>
-*Legitimation reason*: evtl. [Art. 6 para. 1 lit. f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
-*Urteile*: [LG München, Az. 3 O 17493/20](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20M%C3%BCnchen%20I&Datum=20.01.2022&Aktenzeichen=3%20O%2017493%2F20)
+*Legitimation reason*: poss. [Art. 6 para. 1 lit. f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
+*Verdicts*: [LG München, Az. 3 O 17493/20](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20M%C3%BCnchen%20I&Datum=20.01.2022&Aktenzeichen=3%20O%2017493%2F20)
 
-* [ ] **Wichtig**: Die meisten oEmbeds speichern personenbezogene Daten in den USA und sind seit 2020 nach dem Schrems-II-Urteil nicht mehr  GDPR-konform!
-* [ ] Wenn man bestimmte Links aus derzeit 34 Quellen (z.B. WordPress-Blogs, YouTube-Videos usw.) in den visuellen Editor in WordPress einfügt, werden sie automatisch in so genannte oEmbeds umgewandelt. Dabei werden Teile der Zielwebseite per `iframe` in die Webseite grafisch aufgearbeitet geladen. Beim Laden der Webseite werden damit automatisch alle Inhalte des iFrames mitgeladen (z.B. Analytics-Tools, Zählpixel).
-* [ ] Sofern in den Posts, Seiten oder Kommentaren solche oEmbeds auftauchen, sollte die Funktion vollständig deaktiviert werden.
-* [ ] Alte Einträge werden **nicht** vollständig entfernt und müssen händisch gelöscht werden.
+* [ ] **Important**: Most oEmbeds store personal data in the USA and are not GDPR compliant since 2020 after the Schrems II ruling!
+* [ ] If you paste certain links from currently 34 sources (e.g. WordPress blogs, YouTube videos, etc.) into the visual editor in WordPress, they are automatically converted into so-called oEmbeds. In doing so, parts of the target website are loaded into the website graphically via `iframe`. When loading the website, all contents of the iFrame are automatically loaded (e.g. analytics tools, tracking pixels).
+* [ ] If such oEmbeds appear in posts, pages or comments, the function should be completely disabled.
+* [ ] Old entries will be **not** completely removed and must be deleted manually.
 
 #### Implementation Advice <!-- omit in toc -->
 
-* Nähere Informationen zu den WP-Embeds gibt es [hier](https://codex.wordpress.org/Embeds).
-* oEmbeds kann man vermeiden, indem man Links in den Text-Editor von WordPress eingibt oder eigene Shortcodes verwendet.
-* Die gesamte Webseite (jede Unterseite) sollte auf iFrames getestet werden.
-* Bei positiven Ergebnissen sollte die oEmbed-Funktion über die `functions.php` des Child Themes komplett entfernt werden.
-* Alte Einträge müssen danach noch händisch gelöscht bzw. wieder zu normalen Links konvertiert werden.
+* More information about WP-Embeds can be found [here](https://codex.wordpress.org/Embeds).
+* oEmbeds can be avoided by entering links in the WordPress text editor or using your own shortcodes.
+* The entire website (each subpage) should be tested for iFrames.
+* If the results are positive, the oEmbed function should be removed completely via the `functions.php` of the child theme.
+* Old entries still have to be deleted manually afterwards or converted back to normal links.
 
-### Video- und Musikdienste (z.B. YouTube, Vimeo, Spotify, Soundcloud)
+### Video and Music Services (z.B. YouTube, Vimeo, Spotify, Soundcloud)
 
 *Legal basis*: [Art. 22 GDPR](https://GDPR-gesetz.de/art-22-GDPR/), [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/)<br>
-*Legitimation reason*: evtl. [Art. 6 para. 1 lit. f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
-*Urteile*: [LG München, Az. 3 O 17493/20](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20M%C3%BCnchen%20I&Datum=20.01.2022&Aktenzeichen=3%20O%2017493%2F20)
+*Legitimation reason*: poss. [Art. 6 para. 1 lit. f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
+*Verdicts*: [LG München, Az. 3 O 17493/20](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20M%C3%BCnchen%20I&Datum=20.01.2022&Aktenzeichen=3%20O%2017493%2F20)
 
-* [ ] **Wichtig**: Video- und Musikdienste, die personenbezogene Daten in den USA speichern, sind seit 2020 nach dem Schrems-II-Urteil nicht GDPR-konform! Dies betrifft u.a. **YouTube**, **Vimeo**, **Spotify** und **Soundcloud**.
-* [ ] Einbettungen von sämtlichen Video- und Musikdiensten übertragen bereits beim Laden der Webseite personenbezogene Daten und müssen deshalb über eine 2-Klick-Lösung verfügen. Zudem werden häufig auch Cookies gespeichert.
-* [ ] YouTube-Videos können in einen »Erweiterten Datenschutzmodus« geschaltet werden, was aber nur die Speicherung von Cookies verhindert.
-* [ ] SoundCloud hat zwar ihre Datenschutz-Einstellungen verbessert, erfordert aber dennoch eine 2-Klick-Lösung.
+* [ ] **Important**: Video and music services that store personal data in the USA are not GDPR compliant since 2020 after the Schrems II ruling! This affects **YouTube**, **Vimeo**, **Spotify** and **Soundcloud**, among others.
+* [ ] Embeddings of all video and music services already transfer personal data when loading the website and must therefore have a 2-click solution. In addition, cookies are also often stored.
+* [ ] YouTube videos can be switched to an "Enhanced Privacy Mode", but this only prevents cookies from being stored.
+* [ ] SoundCloud has improved their privacy settings, but still requires a 2-click solution.
 
 #### Implementation Advice <!-- omit in toc -->
 
-* YouTube-Videos sollten nur im »Erweiterten Datenschutzmodus« erfolgen.
-* **Einfachste Lösung**: Video-Vorschauen manuell als Bild einbetten und auf die jeweiligen Plattformen verlinken
-* 2-Klick-Lösung für **alle** Dienste mit [Borlabs Cookie](https://de.borlpara.io/borlabs-cookie/) (kostenpflichtig)
+* YouTube videos should only be in "Enhanced Privacy Mode".
+* **Easiest solution**: Manually embed video previews as an image and link to the respective platforms.
+* 2-click solution for **all** services with [Borlabs Cookie](https://de.borlpara.io/borlabs-cookie/) (paid).
 
-### Kartendienste (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)
+### Map Services (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)
 
 *Legal basis*: [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/)<br>
-*Legitimation reason*: evtl. [Art. 6 para. 1 lit. f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
-*Urteile*: [LG München, Az. 3 O 17493/20](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20M%C3%BCnchen%20I&Datum=20.01.2022&Aktenzeichen=3%20O%2017493%2F20)
+*Legitimation reason*: poss. [Art. 6 para. 1 lit. f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
+*Verdicts*: [LG München, Az. 3 O 17493/20](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20M%C3%BCnchen%20I&Datum=20.01.2022&Aktenzeichen=3%20O%2017493%2F20)
 
-* [ ] Ebenso wie Video- und Musikdienste werden auch bei Kartendiensten bereits beim Laden der Webseite personenbezogene Daten erhoben und zumeist in den USA gespeichert. Auch hier bleibt derzeit nur eine 2-Klick-Lösung.
+* [ ] Like video and music services, map services also collect personal data when the website is loaded and mostly store this data in the USA. Currently, only a 2-click solution remains here as well.
 
 #### Implementation Advice <!-- omit in toc -->
 
-* **Einfachste Lösung**: Kartenausschnitt manuell als Bild einbetten und auf die jeweilige Plattform verlinken.
-* Bei der Einbettung als Bild sollten Urheberrechts-Angaben direkt unter dem Bild angebracht werden. Screenshots von Google Mags können aus urheberrechtlichen Gründen **nicht** verwendet werden!
-* 2-Klick-Lösung für **alle** Dienste mit [Borlabs Cookie](https://de.borlpara.io/borlabs-cookie/) (kostenpflichtig)
+* **Simplest solution**: Manually embed map section as an image and link to the respective platform.
+* When embedding as an image, copyright information should be placed directly below the image. Screenshots from Google Mags can **not** be used for copyright reasons!
+* 2-click solution for **all** services with [Borlabs Cookie](https://de.borlpara.io/borlabs-cookie/) (paid)
 
 ## Weitere Aspekte
 
@@ -421,7 +421,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 ### Cookies & Tracking-Dienste
 
 *Legal basis*: [§20, 25, 26 TTDSG](https://GDPR-gesetz.de/ttdsg/)<br>
-*Urteile*: [BGH, I ZR 7/16](https://juris.bundesgerichtshof.de/cgi-bin/rechtsprechung/document.py?Gericht=bgh&Art=en&Datum=Aktuell&nr=107623&pos=6&anz=672)<br>
+*Verdicts*: [BGH, I ZR 7/16](https://juris.bundesgerichtshof.de/cgi-bin/rechtsprechung/document.py?Gericht=bgh&Art=en&Datum=Aktuell&nr=107623&pos=6&anz=672)<br>
 *Weitere Informationen*: [Orientierungshilfe der DSK](https://www.datenschutzkonferenz-online.de/media/oh/20211220_oh_telemedien.pdf)
 
 * [ ] Jedes Cookie, das auf einem Endgerät (z.B. dem Rechner) des Nutzers gespeichert wird, bedarf der Zustimmung des Nutzers!
@@ -449,7 +449,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 ### Impressum
 
 *Legal basis*: [§5 TMG](https://dejure.org/gesetze/TMG/5.html), [EU-VO no. 524/2013](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2013:165:FULL:DE:PDF), [§2 DL-InfoV](https://www.gesetze-im-internet.de/dlinfov/__2.html), [§18 para. 2 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Legal basisn/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf)<br>
-*Urteile*: [OLG München, Az. 29 U 2681/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20M%FCnchen&Datum=11.09.2003&Aktenzeichen=29%20U%202681%2F03), [BGH, Az. I ZR 228/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=BGH&Datum=20.07.2006&Aktenzeichen=I%20ZR%20228%2F03), [EuGH, Az. C-298/07](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.10.2008&Aktenzeichen=C-298/07)
+*Verdicts*: [OLG München, Az. 29 U 2681/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20M%FCnchen&Datum=11.09.2003&Aktenzeichen=29%20U%202681%2F03), [BGH, Az. I ZR 228/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=BGH&Datum=20.07.2006&Aktenzeichen=I%20ZR%20228%2F03), [EuGH, Az. C-298/07](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.10.2008&Aktenzeichen=C-298/07)
 
 * [ ] Das Impressum sollte von jeder Unterseite der Webseite aus über maximal 2 Klicks (z.B. »Kontakt« - »Impressum«) erreichbar sein.
 * [ ] Das Impressum sollte alle Pflichtangaben gemäß §5 TMG enthalten, dazu gehören:
@@ -490,7 +490,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 ### Datenschutzerklärung
 
 *Legal basis*: [Art. 12 GDPR](https://GDPR-gesetz.de/art-12-GDPR/), [Art. 13 GDPR](https://GDPR-gesetz.de/art-13-GDPR/), [Art. 14 GDPR](https://GDPR-gesetz.de/art-14-GDPR/), [Art. 85 GDPR](https://GDPR-gesetz.de/art-85-GDPR/), [§13 TMG](https://dejure.org/gesetze/TMG/13.html), [§23 para. 2 & 3 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Legal basisn/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf)<br>
-*Urteile*: evtl. Erreichbarkeit im Einklang mit [OLG München, Az. 29 U 2681/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20M%FCnchen&Datum=11.09.2003&Aktenzeichen=29%20U%202681%2F03)
+*Verdicts*: evtl. Erreichbarkeit im Einklang mit [OLG München, Az. 29 U 2681/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20M%FCnchen&Datum=11.09.2003&Aktenzeichen=29%20U%202681%2F03)
 
 * [ ] Die Datenschutzerklärung (DSE) sollte von jeder Unterseite aus in einem Klick (evtl. auch in 2 Klicks, vgl. Impressum) erreichbar sein.
 * [ ] Die DSE sollte ausführlich, aber verständlich und durch Legal basisn der GDPR und des BDSG-neu belegt sein.
@@ -510,7 +510,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 ### Impressum & Datenschutzerklärung bei sozialen Medien
 
 *Legal basis*: siehe [Impressum](#impressum) & [Datenschutzerklärung](#datenschutzerklärung)<br>
-*Urteile*: [LG Aschaffenburg, Az. 2 HK O 54/11](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20Aschaffenburg&Datum=19.08.2011&Aktenzeichen=2%20HKO%2054/11), [OLG Düsseldorf, Az. I-20 U 17/07](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20Düsseldorf&Datum=18.12.2007&Aktenzeichen=20%20U%2017%2F07), [EuGH, Az. C-210/16](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=2222-12-31&Aktenzeichen=C-210%2F16)
+*Verdicts*: [LG Aschaffenburg, Az. 2 HK O 54/11](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20Aschaffenburg&Datum=19.08.2011&Aktenzeichen=2%20HKO%2054/11), [OLG Düsseldorf, Az. I-20 U 17/07](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20Düsseldorf&Datum=18.12.2007&Aktenzeichen=20%20U%2017%2F07), [EuGH, Az. C-210/16](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=2222-12-31&Aktenzeichen=C-210%2F16)
 
 * [ ] Auch in den sozialen Medien ist Impressum & Datenschutzerklärung anzugeben.
 * [ ] Zudem ist in der DSE die DSE des Drittanbieters zu nennen.
@@ -524,7 +524,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 ### Urheberrecht / Bildnachweise
 
 *Legal basis*: [§§ 12, 13, 19a, 23, 31, 32, 39, 51, 57 uvm. UrhG](https://dejure.org/gesetze/UrhG)<br>
-*Urteile*: [LG Köln Az. 6 U 25/14](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20K%F6ln&Datum=31.12.1111&Aktenzeichen=6%20U%2025/14), [LG Bochum, Az. 9 S 17/16](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20Bochum&Datum=16.08.2016&Aktenzeichen=9%20S%2017/16), [BGH, Az. I ZR 69/08](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=BGH&Datum=29.04.2010&Aktenzeichen=I%20ZR%2069/08)
+*Verdicts*: [LG Köln Az. 6 U 25/14](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20K%F6ln&Datum=31.12.1111&Aktenzeichen=6%20U%2025/14), [LG Bochum, Az. 9 S 17/16](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20Bochum&Datum=16.08.2016&Aktenzeichen=9%20S%2017/16), [BGH, Az. I ZR 69/08](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=BGH&Datum=29.04.2010&Aktenzeichen=I%20ZR%2069/08)
 
 * [ ] Beim Verwenden fremder Werke (Bilder, Grafiken, Musik, Videos, Texte, Software, Code) **immer** die dazu gehörigen Lizenzbestimmungen lesen und ggf. laut Vorgaben entsprechende Angaben zum Urheber machen!
 * [ ] Egal ob Groß- oder Kleinzitat: Werke sind nur dann Zitate, wenn man sie damit auch inhaltlich detailliert auseinander setzt. Für schmückende Beigaben nur Werke mit einer entsprechenden Lizenz (z.B. Creative Commons oder CC0/ Public Domain) nutzen!
