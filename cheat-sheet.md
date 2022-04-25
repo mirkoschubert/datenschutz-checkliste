@@ -32,11 +32,11 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
   * [WP Embeds/ oEmbeds](#wp-embeds-oembeds)
   * [Video and Music Services (z.B. YouTube, Vimeo, Spotify, Soundcloud)](#video-and-music-services-zb-youtube-vimeo-spotify-soundcloud)
   * [Map Services (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)](#map-services-zb-google-maps-open-street-maps-mapbox-leaflet)
-* [Weitere Aspekte](#weitere-aspekte)
-  * [Kommentarfunktion](#kommentarfunktion)
-  * [Weblinks](#weblinks)
-  * [Plugins/ Erweiterungen / Module](#plugins-erweiterungen--module)
-  * [Webshop](#webshop)
+* [Other Aspects](#other-aspects)
+  * [Comments](#comments)
+  * [Web Links](#web-links)
+  * [Plugins/ Extensions / Modules](#plugins-extensions--modules)
+  * [Web Shop](#web-shop)
 * [Rechtsdokumente/ Pflichtangaben](#rechtsdokumente-pflichtangaben)
   * [Allgemein](#allgemein)
   * [Cookies & Tracking-Dienste](#cookies--tracking-dienste)
@@ -374,39 +374,39 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 * When embedding as an image, copyright information should be placed directly below the image. Screenshots from Google Mags can **not** be used for copyright reasons!
 * 2-click solution for **all** services with [Borlabs Cookie](https://de.borlpara.io/borlabs-cookie/) (paid)
 
-## Weitere Aspekte
+## Other Aspects
 
-### Kommentarfunktion
+### Comments
 
 *Legal basis*: [Art. 32 para. 1 lit. a GDPR](https://GDPR-gesetz.de/art-32-GDPR/)<br>
-*Legitimation reason*: [Art. 6 para. 1 lit. b oder f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)
+*Legitimation reason*: [Art. 6 para. 1 lit. b or f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)
 
-* [ ] Die Speicherung von IP-Adressen in der Kommentarfunktion sollte auf einen minimalen Zeitraum begrenzt (z.B. bis zur Freischaltung zur rechtlichen Absicherung) oder alternativ deaktiviert werden.
-* [ ] Vor dem Absenden eines Kommentars (oder jedes anderen Formulars) sollte auf die Speicherung personenbezogenen Daten hingewiesen werden (Opt-In kritisch!).
-* [ ] Die Option zum Speichern eines Cookies für das Merken von Name und E-Mail-Adresse sollte unter »Einstellungen > Diskussion > Weitere Kommentareinstellungen > Das Opt-In-Kontrollkästchen...« abgeschaltet werden.
+* [ ] The storage of IP addresses in the comment function should be limited to a minimum period of time (e.g. until activation for legal protection) or alternatively deactivated.
+* [ ] Before submitting a comment (or any other form), the storage of personal data should be pointed out (opt-in critical!).
+* [ ] The option to save a cookie for remembering name and email address should be disabled at "Settings > Discussion > Other comment settings > The opt-in checkbox...".
 
 #### Implementation Advice <!-- omit in toc -->
 
-* IP-Adressen vor Freischaltung händisch löschen oder die Speicherung im (Child-)Theme via `functions.php` ausschließen.
-* Hinweistext einfügen - am besten im (Child-)Theme in der `comments.php` oder als Option.
+* Delete IP addresses manually before activation or exclude storage in the (child) theme via `functions.php`.
+* Insert notice text - best in the (child) theme in `comments.php` or as an option.
 
-### Weblinks
+### Web Links
 
-* [ ] Weblinks zu externen Webseiten sind erst einmal unkritisch. Dennoch sollte in der Datenschutzerklärung darauf hingewiesen werden, dass beim Verlassen der Webseite über einen Link auf der Zielwebseite weitere personenbezogene Daten erhoben werden können.
-* [ ] Am besten alle Weblinks, sofern möglich, mit `rel="noreferrer noopener"` kennzeichnen. WordPress macht das größtenteils automatisch, allerdings sollte dies bei Buildern von Drittanbietern überprüft werden.
+* [ ] Web links to external websites are not critical for the time being. Nevertheless, it should be pointed out in the privacy policy that further personal data may be collected when leaving the website via a link on the target website.
+* [ ] It is best to mark all web links with `rel="noreferrer noopener"` if possible. WordPress does this automatically for the most part, however this should be checked with third party builders.
 
-### Plugins/ Erweiterungen / Module
+### Plugins/ Extensions / Modules
 
-* [ ] Plugins sollte genaustens überprüft werden, ob und wie personenbezogene Daten erhoben werden (für WordPress vgl. auch [Blogmojo](https://www.blogmojo.de/wordpress-plugins-GDPR/)).
+* [ ] Plugins should be carefully checked whether and how personal data is collected (for WordPress see also [Blogmojo](https://www.blogmojo.de/wordpress-plugins-GDPR/)).
 
-### Webshop
+### Web Shop
 
 *Legal basis*: [Art. 7 GDPR](https://GDPR-gesetz.de/art-7-GDPR/), [Art. 22 GDPR](https://GDPR-gesetz.de/art-22-GDPR/), [Art. 28 GDPR](https://GDPR-gesetz.de/art-28-GDPR/), [Art. 32 GDPR](https://GDPR-gesetz.de/art-32-GDPR/), [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/)<br>
 *Legitimation reason*: [Art. 6 para. a GDPR](https://GDPR-gesetz.de/art-6-GDPR/)
 
-* [ ] Bei Webshops macht es Sinn, sich das Einverständnis zur Datenerhebung bzw. -verarbeitung zu holen. Es dürfte aber ausreichen, wie bisher ein gemeinsames Häkchen für »ich habe die Allgemeinen Geschäftsbedingungen, die Widerrufsbelehrung und die Datenschutzerklärung gelesen« inkl. entsprechender Verlinkung vor dem »kostenpflichtig kaufen«-Button einzurichten.
-* [ ] Bei externen Shop-Lösungen und/ oder externen Zahlungsanbietern sollte **immer** ein Auftragsverarbeitungsvertrag (AVV) abgeschlossen werden.
-* [ ] Auch die statistische Erhebung des Kaufverhaltens sollte vertraglich geregelt sein (vgl. Analysetools & Marketingtools)
+* [ ] For web shops, it makes sense to obtain consent for data collection or processing. However, it should be sufficient to set up a common checkmark for "I have read the General Terms and Conditions, the Cancellation Policy and the Privacy Policy" incl. the corresponding link before the "Order with payment" button, as has been done so far.
+* [ ] In the case of external store solutions and/ or external payment providers, an data processing agreement (DPA) should **always** be concluded.
+* [ ] The statistical collection of purchasing behavior should also be contractually regulated (cf. analytics & marketing tools).
 
 ## Rechtsdokumente/ Pflichtangaben
 
