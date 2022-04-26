@@ -1,4 +1,4 @@
-<h1 align="center">Datenschutz-Checkliste</h1>
+<h1 align="center">Data Protection Cheat Sheet (GDPR)</h1>
 
 <p align="center">
   <a href="https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/LICENSE.md">
@@ -8,34 +8,34 @@
   <img src="https://img.shields.io/github/forks/mirkoschubert/datenschutz-checkliste" />
 </p>
 
-<p align="center">Open Source Checkliste für Webdesigner und -entwickler, um datenschutz-relevante Aufgaben nach aktuell geltendem Recht umzusetzen.</p>
-<p align="center"><em>Initiiert von Peter Haurand und Mirko Schubert</em></p>
+<p align="center">Open source cheat sheet for web designers and developers to implement data protection relevant tasks according to current law (GDPR).</p>
+<p align="center"><em>Initiated by Peter Haurand and Mirko Schubert</em></p>
 
 ---
 
 <p align="center"><strong>Deutsch:</strong> <a href="https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md">Hier geht es direkt zur Checkliste!</a></p>
 
-<p align="center"><strong>English:</strong> <a href="https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/cheat-sheet.md">Click here to go directly to the checklist!</a></p>
+<p align="center"><strong>English:</strong> <a href="https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/cheat-sheet.md">Click here to go directly to the cheat sheet!</a></p>
 
-Diese **Datenschutz-Checkliste** soll zur allgemeinen Orientierung für Webdesigner und -entwickler sowie natürlich auch für jeden interessierten Webseitenbetreiber dienen, um Webseiten und Auftragswerke nach aktuell gültigem deutschen und europäischen Recht anzufertigen.
+This **Data Protection Cheat Sheet** is intended to serve as a general orientation for web designers and developers as well as, of course, for every interested website operator in order to prepare websites and commissioned works in accordance with currently valid German and European law.
 
-Peter und ich haben dazu unser anlässlich der DSGVO über mehrere Monate zusammen gesammeltes Wissen in einen Topf geworfen und daraus diese Liste entwickelt. Sie ist noch »Work-in-Progress« - aktuell bin ich z.B. dabei, die entsprechenden Rechtsgrundlagen, Urteile und Aussagen/ Artikel von Anwälten heraus zu suchen. Außerdem laden wie jeden herzlich dazu ein, daran über dieses Github-Repository [mitzuwirken](https://github.com/mirkoschubert/datenschutz-checkliste#du-möchtest-gerne-mitwirken).
+Peter and I have taken the knowledge we have gathered over the past few months on the occasion of the GDPR and developed this list. It is still "work-in-progress" - currently I am, for example, searching for the relevant legal bases, judgments and statements / articles of lawyers. We also invite everyone to [contribute](https://github.com/mirkoschubert/datenschutz-checkliste#du-möchtest-gerne-mitwirken) via this Github repository .
 
 ### Disclaimer
 
-Die **Datenschutz-Checkliste** kann nicht auf Einzelfälle eingehen und stellt **keine Rechtsberatung** dar, sondern ist lediglich eine Wissenssammlung, die aus umfangreicher Recherche, eigener Erfahrung und »best practices« verschiedener Entwickler zusammengetragen wurde und beständig weiter entwickelt wird. Wir übernehmen **keine Haftung** und empfehlen, in jedem Fall für rechtliche Fragen einen Rechtsanwalt zu konsultieren.
+The **Data Protection Checklist** cannot address individual cases and does **not constitute legal advice**, but is merely a collection of knowledge that has been compiled from extensive research, our own experience and "best practices" of various developers and is constantly being further developed. We assume **no liability** and recommend to consult a lawyer for legal questions in any case.
 
-### Du möchtest gerne mitwirken?
+### Would you like to get involved?
 
-Dieses Repository lebt davon, korrigiert und ergänzt zu werden - deshalb freuen wir uns, wenn Du Dein Wissen in unsere Checkliste einfließen lassen möchtest. Je nach Erfahrungsstand und technischem Wissen gibt es da verschiedene Möglichkeiten:
+This repository lives on being corrected and supplemented - therefore we would be happy if you would like to add your knowledge to our cheat sheet. Depending on your level of experience and technical knowledge, there are several possibilities:
 
-* Du kannst unter [Issues](https://github.com/mirkoschubert/datenschutz-checkliste/issues) ein Ticket hinterlassen, um Fehler zu diskutieren, Ergänzungen zu besprechen oder Vorschläge für neue Features zu machen.
-* Du kannst dieses Repository auf Deinen eigenen Rechner herunterladen, selbst Änderungen vornehmen und per Pull Request diese Änderungen dann für unsere Liste vorzuschlagen.
-* Wenn Du Dich nicht so sehr mit Github auskennst, kannst Du natürlich auch [Pull Requests](https://help.github.com/articles/about-pull-requests/) direkt über diese Webseite einreichen.
+* You can leave a ticket at [Issues](https://github.com/mirkoschubert/datenschutz-checkliste/issues) to discuss bugs, additions or make suggestions for new features.
+* You can download this repository to your own machine, make changes yourself, and then submit those changes to our list via pull request.
+* If you are not so familiar with Github, you can of course also submit [Pull Requests](https://help.github.com/articles/about-pull-requests/) directly through this website.
 
-Wir freuen uns auf Deine Mitwirkung! Sofern Du eigene Änderungen und Ergänzungen einreichst, wirst Du natürlich in dieser Readme als Mitwirkender benannt.
+We are looking forward to your participation! If you submit your own changes and additions, you will of course be named as a contributor in this readme.
 
-### Mitwirkende
+### Contributors
 
 * [Peter Haurand](https://github.com/peterhaurand)
 * [Mirko Schubert](https://github.com/mirkoschubert)
