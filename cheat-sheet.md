@@ -6,7 +6,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 
 **Please note that some of the laws mentioned apply only in Germany. However, the GDPR applies not only within the EU, but also in third countries that conduct their business within the EU.**
 
-## Inhaltsverzeichnis <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 
 * [Security](#security)
   * [SSL/TLS Transport Encryption for Websites](#ssltls-transport-encryption-for-websites)
