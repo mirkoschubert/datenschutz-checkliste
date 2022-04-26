@@ -12,7 +12,9 @@
 
 ---
 
-<p align="center"><a href="https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md">Hier geht es direkt zur Checkliste!</a></p>
+<p align="center"><strong>Deutsch:</strong> <a href="https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md">Hier geht es direkt zur Checkliste!</a></p>
+
+<p align="center"><strong>English:</strong> <a href="https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/cheat-sheet.md">Click here to go directly to the checklist!</a></p>
 
 Diese **Datenschutz-Checkliste** soll zur allgemeinen Orientierung für Webdesigner und -entwickler sowie natürlich auch für jeden interessierten Webseitenbetreiber dienen, um Webseiten und Auftragswerke nach aktuell gültigem deutschen und europäischen Recht anzufertigen.
 
