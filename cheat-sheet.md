@@ -23,10 +23,10 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
   * [Marketing Tools (e.g. Google Ads, Affiliate Networks)](#marketing-tools-eg-google-ads-affiliate-networks)
   * [Newsletter Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go/ Sendinblue, Jetpack Subscription)](#newsletter-tools-zb-mailchimp-clicktipp-newsletter2go-sendinblue-jetpack-subscription)
   * [Social Plugins (z.B. Facebook, Instagram, Twitter)](#social-plugins-zb-facebook-instagram-twitter)
-  * [Verwertungsgesellschaften (z.B. VG-Wort)](#verwertungsgesellschaften-zb-vg-wort)
+  * [Collecting Societies (z.B. VG-Wort)](#collecting-societies-zb-vg-wort)
   * [Content Delivery Networks (CDN)](#content-delivery-networks-cdn)
   * [Web Fonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)](#web-fonts-zb-google-fonts-adobe-typekit-fontawesome)
-  * [Profile bzw. Profilbilder (z.B. Gravatar, About.me)](#profile-bzw-profilbilder-zb-gravatar-aboutme)
+  * [Profiles & Profile Pictures (z.B. Gravatar, About.me)](#profiles--profile-pictures-zb-gravatar-aboutme)
   * [Emojis/ Emoticons (z.B. WP Emojis)](#emojis-emoticons-zb-wp-emojis)
   * [DNS Prefetching](#dns-prefetching)
   * [WP Embeds/ oEmbeds](#wp-embeds-oembeds)
@@ -37,13 +37,13 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
   * [Web Links](#web-links)
   * [Plugins/ Extensions / Modules](#plugins-extensions--modules)
   * [Web Shop](#web-shop)
-* [Rechtsdokumente/ Pflichtangaben](#rechtsdokumente-pflichtangaben)
-  * [Allgemein](#allgemein)
-  * [Cookies & Tracking-Dienste](#cookies--tracking-dienste)
-  * [Impressum](#impressum)
-  * [Datenschutzerklärung](#datenschutzerklärung)
-  * [Impressum & Datenschutzerklärung bei sozialen Medien](#impressum--datenschutzerklärung-bei-sozialen-medien)
-  * [Urheberrecht / Bildnachweise](#urheberrecht--bildnachweise)
+* [Legal Documents/ Mandatory Information](#legal-documents-mandatory-information)
+  * [General](#general)
+  * [Cookies & Tracking Services](#cookies--tracking-services)
+  * [Imprint](#imprint)
+  * [Privacy Policy](#privacy-policy)
+  * [Imprint & Privacy Policy on Social Media](#imprint--privacy-policy-on-social-media)
+  * [Copyright / Image Credits](#copyright--image-credits)
 
 ## Security
 
@@ -186,7 +186,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 ### Marketing Tools (e.g. Google Ads, Affiliate Networks)
 
 *Legal basis*: [Art. 7 GDPR](https://GDPR-gesetz.de/art-7-GDPR/), [Art. 28 GDPR](https://GDPR-gesetz.de/art-28-GDPR/), [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/), [§6 TMG](https://dejure.org/gesetze/TMG/6.html), [§ 58 RStV](http://www.gesetze-bayern.de/Content/Document/RFunkStVertr-58)<br>
-*Legitimation reason*: [Art. 6 para. 1 lit. a oder f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
+*Legitimation reason*: [Art. 6 para. 1 lit. a or f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
 *Verdicts*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
 * [ ] **Important**: Marketing tools that store personal data in the USA are not GDPR-compliant since 2020 after the Schrems II ruling! This includes **Google Ads** (esp. the remarketing function) and various affiliate networks.
@@ -221,7 +221,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 ### Social Plugins (z.B. Facebook, Instagram, Twitter)
 
 *Legal basis*: [Art. 7 GDPR](https://GDPR-gesetz.de/art-7-GDPR/), [Art. 22 GDPR](https://GDPR-gesetz.de/art-22-GDPR/), [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/)<br>
-*Legitimation reason*: [Art. 6 para. 1 lit. a oder f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
+*Legitimation reason*: [Art. 6 para. 1 lit. a or f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
 *Verdicts*: [LG Düsseldorf, Az. 12 O 151/15](https://dejure.org/dienste/vernetzung/rechtsprechung?Text=12%20O%20151/15), [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
 * [ ] **Important**: Social plugins that store personal data in the USA are not GDPR-compliant since 2020 after the Schrems II ruling! This affects, among others, **Facebook**, **Instagram** and **Twitter**.
@@ -238,7 +238,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 * Show sharing buttons either without metrics or use the **WP plugin** [Shariff](https://wordpress.org/plugins/shariff/).
 * Remove beacons (tracking pixels) completely.
 
-### Verwertungsgesellschaften (z.B. VG-Wort)
+### Collecting Societies (z.B. VG-Wort)
 
 *Legal basis*: [Art. 32 para. 1 lit. a GDPR](https://GDPR-gesetz.de/art-32-GDPR/)<br>
 *Legitimation reason*: [Art. 6 para. 1 lit. b GDPR](https://GDPR-gesetz.de/art-6-GDPR/), [Art. 6 para. 1 lit. c GDPR](https://GDPR-gesetz.de/art-6-GDPR/) in accordance with [§32 UrgH](https://dejure.org/gesetze/UrhG/32.html)
@@ -249,7 +249,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 ### Content Delivery Networks (CDN)
 
 *Legal basis*: [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/)<br>
-*Legitimation reason*: [Art. 6 para. 1 lit. a und f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
+*Legitimation reason*: [Art. 6 para. 1 lit. a & f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
 *Verdicts*: [EuGH, Az. C-311/18](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.07.2020&Aktenzeichen=C-311/18)
 
 * [ ] CDNs (e.g. Google Fonts, Adobe Typekit, Bootstrap/ Fontawesome, CDNJS/ Cloudflare, Jetpack, etc.) may well be considered critical, as the content is distributed to servers all over the world and potentially at least the IP address is stored upon retrieval.
@@ -280,7 +280,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 * If necessary, use the [CSS Font Stack](https://www.cssfontstack.com).
 * If you use the **WP-Plugin** [Autoptimize](https://wordpress.org/plugins/autoptimize/), you can also disable Google Fonts there (but it does not always work).
 
-### Profile bzw. Profilbilder (z.B. Gravatar, About.me)
+### Profiles & Profile Pictures (z.B. Gravatar, About.me)
 
 *Legal basis*: [Art. 44 ff. GDPR](https://GDPR-gesetz.de/art-44-GDPR/), [§22 KunstUrhG](https://dejure.org/gesetze/KunstUrhG/22.html)<br>
 *Legitimation reason*: poss. [Art. 6 para. 1 lit. f GDPR](https://GDPR-gesetz.de/art-6-GDPR/)<br>
@@ -408,128 +408,132 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 * [ ] In the case of external store solutions and/ or external payment providers, an data processing agreement (DPA) should **always** be concluded.
 * [ ] The statistical collection of purchasing behavior should also be contractually regulated (cf. analytics & marketing tools).
 
-## Rechtsdokumente/ Pflichtangaben
+## Legal Documents/ Mandatory Information
 
-### Allgemein
+### General
 
-* [ ] Impressum und Datenschutzerklärung sollten gut sichtbar von jeder Unterseite der Webseite erreichbar sein (gängige Praxis: im Footer-Menü)!
-* [ ] Impressum und Datenschutzerklärung sollten auf zwei Unterseiten getrennt zugänglich sein.
-* [ ] Sobald Pflichtangaben (z.B. durch einen Cookie-Banner) verdeckt werden, werden sie als »nicht existent« behandelt, es sei denn, beide Links werden im Cookie-Banner zugänglich gemacht.
-* [ ] Auch eine »weiße Seite« bzw. Baustellen-Seite erfordert in aller Regel diese Pflichtangaben!
-* [ ] Auch **frei zugängliche** Login- und Registrierungs-Seiten müssen diese Pflichtangaben enthalten.
+* [ ] Imprint and privacy policy should be easily accessible from every subpage of the website (common practice: in the footer menu)!
+* [ ] Imprint and privacy policy should be accessible separately on two subpages.
+* [ ] As soon as mandatory information is covered (e.g. by a cookie banner), it is treated as "non-existent", unless both links are made accessible in the cookie banner.
+* [ ] Even a "white page" or construction site page usually requires this mandatory information!
+* [ ] Even **freely accessible** login and registration pages must contain this mandatory information.
 
-### Cookies & Tracking-Dienste
+### Cookies & Tracking Services
 
+**Partially valid only under German law!**
 *Legal basis*: [§20, 25, 26 TTDSG](https://GDPR-gesetz.de/ttdsg/)<br>
 *Verdicts*: [BGH, I ZR 7/16](https://juris.bundesgerichtshof.de/cgi-bin/rechtsprechung/document.py?Gericht=bgh&Art=en&Datum=Aktuell&nr=107623&pos=6&anz=672)<br>
-*Weitere Informationen*: [Orientierungshilfe der DSK](https://www.datenschutzkonferenz-online.de/media/oh/20211220_oh_telemedien.pdf)
+*More Information*: [Guidance of the DSK](https://www.datenschutzkonferenz-online.de/media/oh/20211220_oh_telemedien.pdf)
 
-* [ ] Jedes Cookie, das auf einem Endgerät (z.B. dem Rechner) des Nutzers gespeichert wird, bedarf der Zustimmung des Nutzers!
-* [ ] **Ausnahme**: Nur technisch notwendige Cookies benötigen keinerlei Zustimmung.
-* [ ] Dies betrifft auch verwandte Technologien wie etwa Fingerprinting (und möglicherweise auch Local bzw. Session Storage), unabhängig davon, ob diese Informationen personenbezogene Daten enthalten oder nicht.
-* [ ] Daten, die von Minderjährigen erhoben wurden, dürfen nicht für kommerzielle Zwecke eingesetzt werden!
-* [ ] Cookies dürfen nicht vor der Einwilligung gespeichert werden (ausgenommen technisch notwendige).
-* [ ] Der Nutzer muss die Einwilligung **aktiv** setzen, Checkboxen dürfen nicht vorausgewählt sein.
-* [ ] Es muss einen »Zustimmen«- und »Ablehnen«-Button geben, die gleichwertig dargestellt werden müssen. Der »Zustimmen«-Button darf nicht grafisch hervorgehoben werden!
-* [ ] Der Nutzer muss vor der Zustimmung umfangreich über folgende Punkte informiert werden:
-  * Zwecke der einzelnen Cookies
-  * Anzahl der Anbieter und Cookies
-  * Sitz des Anbieters, sofern er außerhalb der EU liegt
-* [ ] Cookie-Banner dürfen auch mehrschichtig inklusive der Informationspflichten gestaltet sein.
-* [ ] Zukünftig sollen webseiten-übergreifende Single-Sign-On-Lösungen zertifiziert werden.
+* [ ] Each cookie that is stored on a device (e.g. the computer) of the user requires the consent of the user!
+* [ ] **Exception**: Only technically necessary cookies do not require any consent.
+* [ ] This also applies to related technologies such as fingerprinting (and possibly local or session storage as well), regardless of whether this information contains personal data or not.
+* [ ] Data collected from minors must not be used for commercial purposes!
+* [ ] Cookies may not be stored prior to consent (except technically necessary).
+* [ ] The user must set the consent **active**, checkboxes must not be preselected.
+* [ ] There must be an "Agree" and "Decline" button, which must be presented equally. The "Agree" button must not be graphically highlighted!
+* [ ] The user must be informed extensively about the following points before consenting:
+  * Purposes of the individual cookies
+  * Number of providers and cookies
+  * Headquarters of the provider, if it is outside the EU
+* [ ] Cookie banners may also be designed in multiple layers including the information requirements.
+* [ ] In the future, cross-website single sign-on solutions are to be certified.
 
-#### Anmerkungen <!-- omit in toc -->
+#### Notes <!-- omit in toc -->
 
-* Mit dem Inkrafttreten des Telekommunikations-Telemedien-Datenschutz-Gesetz (TTDSG) im Dezember 2021 wurde u.a. die Reguliergung von Cookies und anderen Tracking-Mechanismen noch einmal etwas verschärft. Bei Verstößen können zusätzlichen Bußgeldern (neben den GDPR-Bußgeldern) von bis zu 300.000 Euro verhängt werden.
+* With the implementation of the Telecommunications Telemedia Data Protection Act (TTDSG) in December 2021, the regulation of cookies and other tracking mechanisms, among other things, has once again been tightened. In the event of violations, additional fines (in addition to the GDPR fines) of up to 300,000 euros can be imposed.
 
 #### Implementation Advice <!-- omit in toc -->
 
-* Die beste Möglichkeit, in WordPress Cookie-Banner umzusetzen, 2-Klick-Lösungen einzustellen und Skripte vor dem Einverständnis zu blockieren, ist [Borlabs Cookie](https://de.borlpara.io/borlabs-cookie/) (kostenpflichtig).
+* The best way to implement cookie banners in WordPress, set 2-click solutions and block scripts before consent is [Borlabs Cookie](https://de.borlpara.io/borlabs-cookie/) (paid).
 
-### Impressum
+### Imprint
 
-*Legal basis*: [§5 TMG](https://dejure.org/gesetze/TMG/5.html), [EU-VO no. 524/2013](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2013:165:FULL:DE:PDF), [§2 DL-InfoV](https://www.gesetze-im-internet.de/dlinfov/__2.html), [§18 para. 2 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Legal basisn/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf)<br>
+**Valid only under German law!**
+*Legal basis*: [§5 TMG](https://dejure.org/gesetze/TMG/5.html), [EU-VO no. 524/2013](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2013:165:FULL:DE:PDF), [§2 DL-InfoV](https://www.gesetze-im-internet.de/dlinfov/__2.html), [§18 para. 2 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Rechtsgrundlagen/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf)<br>
 *Verdicts*: [OLG München, Az. 29 U 2681/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20M%FCnchen&Datum=11.09.2003&Aktenzeichen=29%20U%202681%2F03), [BGH, Az. I ZR 228/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=BGH&Datum=20.07.2006&Aktenzeichen=I%20ZR%20228%2F03), [EuGH, Az. C-298/07](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=16.10.2008&Aktenzeichen=C-298/07)
 
-* [ ] Das Impressum sollte von jeder Unterseite der Webseite aus über maximal 2 Klicks (z.B. »Kontakt« - »Impressum«) erreichbar sein.
-* [ ] Das Impressum sollte alle Pflichtangaben gemäß §5 TMG enthalten, dazu gehören:
-  * Vor- und Zuname oder Firmenname und Geschäftsform sowie ggf. Inhaber
-  * Ladungsfähige Anschrift bzw. Adresse der Niederlassung
-  * Telefonnummer (oder Kontaktformular, wenn Reaktionszeit binnen 30 - 60 min.)
-  * E-Mail-Adresse
-  * USt-ID (oder Hinweis auf Befreiung) oder Wirtschafts-ID (**keine Steuernummer!**)
-  * Eintrag des Handelsregisters, Vereinsregisters, Genossenschaftsregisters oder Partnerschaftsregisters (wenn vorhanden)
-  * Behördliche Zulassung mit Angaben zur Aufsichtsbehörde, sofern der Beruf zulassungspflichtig ist
-  * Zuständige Kammer (Anschrift, Telefonnummer, Webseite) bei kammergebundenen Berufen (z.B. Rechtsanwälte, Steuerberater, Ärzte)
-  * Entsprechende Kennzeichnung, wenn sich die Gesellschaft in Abwicklung oder Liquidation befindet (nur AG, KGaA und GmbH)
-  * Wenn das Stamm- oder Grundkapital (GmbH, freiwillig) angegeben wird, muss dies korrekt erfolgen.
-* [ ] Sofern auf der Webseite Dienstleistungen angeboten werden, gelten Informationspflichten gemäß §2 para. 1 DL-InfoV vor Vertragsschluss oder Erbringung der Leistungen. Diese **können** auch an zentraler Stelle ins Impressum geschrieben werden. Zusätzlich zu den obigen Angaben wären dann noch folgende Punkte notwendig:
-  * Angaben zur Berufshaftpflichtversicherung (wenn vorhanden)
-  * Geltende Allgemeine Geschäftsbedingungen (AGB)
-  * Anwendbares Recht und Gerichtsstand
-  * Bestehende Garantien (sofern vorhanden)
-* [ ] Sollte die Webseite journalistisch-redaktionelle Inhalte enthalten (z.B. bei einem Blog), muss auch nach **§18 para. 2 MStV** ein inhaltlich Veranwortlicher mit Name und Adresse angegeben werden (Achtung, siehe Anmerkungen!).
-* [ ] Online-Händler, die Waren an Verbraucher verkaufen, müssen zwingend einen Link zur Streitschlichtungsstelle der EU setzen
-* [ ] Das Impressum muss barrierefrei sein! Anschrift, Telefonnummer oder Mail-Adresse als Bild oder in kodierter Form sind **nicht** zulässig!
-* [ ] Haftungsausschlüsse/ Disclaimer zu Links und Inhalt gehören **nicht** (in verallgemeinerter Form) ins Impressum!
-* [ ] Wer es noch nicht verstanden hat: »Das LG Hamburg hat 1998 entschieden...« ist Blödsinn und kann sogar zu Abmahnungen führen!
-* [ ] »Keine Abmahnung ohne vorherigen Kontakt« entfaltet keine Wirkung!
-* [ ] Ein Hinweis auf das eigene Urheberrecht kann gemacht werden, ist aber in Deutschland nicht zwingend notwendig.
-* [ ] Das Impressum ist auch ein schöner Ort, um auf Miturheber wie den Designer, Webentwickler, Font-Ersteller usw. hinzuweisen.
-* [ ] Bildnachweise gehören nur dann ins Impressum, wenn sie allgemeingültig für die ganze Webseite sind! (»Sofern nicht anders angegeben...«)
+* [ ] The imprint should be accessible from every subpage of the website via a maximum of 2 clicks (e.g. "Contact" - "Imprint").
+* [ ] The imprint should contain all mandatory information according to §5 TMG, including:
+  * First name and surname or company name and business form as well as owner, if applicable.
+  * Chargeable address or address of the branch office
+  * Telephone number (or contact form, if response time within 30 - 60 min.)
+  * E-mail address
+  * VAT ID (or reference to exemption) or business ID (**not a tax number!**)
+  * Entry in the Commercial Register, Register of Associations, Register of Cooperatives or Register of Partnerships (if available)
+  * Official license with details of the supervisory authority, if the profession is subject to mandatory licensing
+  * Competent chamber (address, telephone number, website) in the case of chamber-based professions (e.g. lawyers, tax consultants, doctors)
+  * Corresponding marking if the company is in liquidation or being wound up (only AG, KGaA and GmbH)
+  * If the share or nominal capital (GmbH, voluntary) is indicated, this must be done correctly.
+* [ ] If services are offered on the website, information obligations pursuant to §2 para. 1 DL-InfoV apply prior to conclusion of the contract or provision of the services. These **can** also be written in a central place in the imprint. In addition to the above information, the following points would then be necessary:
+  * Details of professional liability insurance (if available).
+  * Applicable general terms and conditions (AGB)
+  * Applicable law and place of jurisdiction
+  * Existing guarantees (if any)
+* [ ] If the website contains journalistic-editorial content (e.g. in the case of a blog), a person responsible for the content with name and address must also be specified in accordance with **§18 para. 2 MStV** (Attention, see Notes!).
+* Online merchants who sell goods to consumers must provide a link to the EU dispute resolution body.
+* [ ] The imprint must be accessible! Address, phone number or mail address as an image or in coded form are **not** allowed!
+* [ ] Disclaimers about links and content do **not** belong (in generalized form) in the imprint!
+* [ ] Who has not understood it yet: "The LG Hamburg has decided in 1998..." is nonsense and can even lead to legal consequences!
+* [ ] "No final warning without prior contact" has no effect!
+* [ ] A reference to the own copyright can be made, but is not mandatory in Germany.
+* [ ] The imprint is also a nice place to refer to co-authors as well as the designer, web developer, font creator, etc..
+* [ ] Image credits only belong in the imprint if they are generally valid for the whole website! ("Unless otherwise stated...")
 
-#### Anmerkungen <!-- omit in toc -->
+#### Notes <!-- omit in toc -->
 
-* Seit November 2020 hat der Medienstaatsvertrag (MStV) den Rundfunkstaatsvertrag (RStV) abgelöst. Dementsprechend ändern sich die Angaben zum inhaltlichen Verantwortlichen von §55 para. 2 RStV zu [§18 para. 2 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Legal basisn/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf). Nicht vergessen, diese Pflichtangaben bei journalistisch-redaktionellen Inhalten (z.B. bei einem Blog) umzustellen!
-* Des weiteren könnten in zukünftigen Rechtssprechungen Angaben zur (freiwilligen) Selbstkontrolle zwecks Qualitätssicherung sowie zur entsprechenden Beschwerdestelle (vgl. §19 MStV) notwendig werden.
-
-#### Implementation Advice <!-- omit in toc -->
-
-* Für die Erstellung der Rechtsdokumente empfiehlt es sich, eine Mitgliedschaft mit [e-recht24.de](https://www.e-recht24.de/mitglieder/) abzuschließen und deren Generatoren zu nutzen.
-
-### Datenschutzerklärung
-
-*Legal basis*: [Art. 12 GDPR](https://GDPR-gesetz.de/art-12-GDPR/), [Art. 13 GDPR](https://GDPR-gesetz.de/art-13-GDPR/), [Art. 14 GDPR](https://GDPR-gesetz.de/art-14-GDPR/), [Art. 85 GDPR](https://GDPR-gesetz.de/art-85-GDPR/), [§13 TMG](https://dejure.org/gesetze/TMG/13.html), [§23 para. 2 & 3 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Legal basisn/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf)<br>
-*Verdicts*: evtl. Erreichbarkeit im Einklang mit [OLG München, Az. 29 U 2681/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20M%FCnchen&Datum=11.09.2003&Aktenzeichen=29%20U%202681%2F03)
-
-* [ ] Die Datenschutzerklärung (DSE) sollte von jeder Unterseite aus in einem Klick (evtl. auch in 2 Klicks, vgl. Impressum) erreichbar sein.
-* [ ] Die DSE sollte ausführlich, aber verständlich und durch Legal basisn der GDPR und des BDSG-neu belegt sein.
-* [ ] Doppelte DSEs (einmal kurz & verständlich, einmal lang & ausführlich) werden i.d.R. anerkannt (nicht mehr als 2 Klicks!)
-* [ ] Die DSE sollte einen Gültigkeitsbereich (z.B. auch andere benannte Webseiten und soziale Medien) sowie ein Aktualisierungdatum enthalten.
-* [ ] Die DSE kann durch einen (kostenlosen oder kostenpflichtigen) Generator oder direkt durch einen Anwalt oder Datenschutzbeauftragten erstellt werden.
-* [ ] Für Presseerzeugnisse/ journalistische Zwecke weichen die Vorgaben zur Datenverarbeitung sowie die Informationspflichten nach §23 para. 2 & 3 MStV (des Bundeslandes) im Einklang mit Art. 85 GDPR ab (»Medienprivileg«).
-
-#### Anmerkungen <!-- omit in toc -->
-
-* Seit dem Inkrafttreten des Medienstaatsvertrags (MStV) im November 2020 haben sich die datenschutzrechtlichen Vorgaben zum »Medienprivileg« bei journalistisch redaktionellen Inhalten geändert, siehe [§23 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Legal basisn/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf).
+* Since November 2020, the Interstate Media Treaty (MStV) has replaced the Interstate Broadcasting Treaty (RStV). Accordingly, the information on the person responsible for the content changes from §55 para. 2 RStV to [§18 para. 2 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Rechtsgrundlagen/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf)). Don't forget to switch these mandatory details for journalistic-editorial content (e.g. a blog)!
+* Furthermore, information on (voluntary) self-regulation for the purpose of quality assurance as well as on the corresponding complaints office (cf. §19 MStV) could become necessary in future jurisdictions.
 
 #### Implementation Advice <!-- omit in toc -->
 
-* Für die Erstellung der Rechtsdokumente empfiehlt es sich, eine Mitgliedschaft mit [e-recht24.de](https://www.e-recht24.de/mitglieder/) abzuschließen und deren Generatoren zu nutzen.
+* For the creation of legal documents, it is recommended to take out a membership with [e-recht24.de](https://www.e-recht24.de/mitglieder/) and use their generators.
 
-### Impressum & Datenschutzerklärung bei sozialen Medien
+### Privacy Policy
 
-*Legal basis*: siehe [Impressum](#impressum) & [Datenschutzerklärung](#datenschutzerklärung)<br>
+*Legal basis*: [Art. 12 GDPR](https://GDPR-gesetz.de/art-12-GDPR/), [Art. 13 GDPR](https://GDPR-gesetz.de/art-13-GDPR/), [Art. 14 GDPR](https://GDPR-gesetz.de/art-14-GDPR/), [Art. 85 GDPR](https://GDPR-gesetz.de/art-85-GDPR/), [§13 TMG](https://dejure.org/gesetze/TMG/13.html), [§23 para. 2 & 3 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Rechtsgrundlagen/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf)<br>
+*Verdicts*: poss. accessibility in accordance with [OLG München, Az. 29 U 2681/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20M%FCnchen&Datum=11.09.2003&Aktenzeichen=29%20U%202681%2F03)
+
+* [ ] The privacy policy should be accessible from every subpage in one click (possibly also in 2 clicks, cf. imprint).
+* [ ] The privacy policy should be detailed, but understandable and supported by legal basisn of the GDPR and the BDSG-neu.
+* [ ] Double privacy policies (once short & understandable, once long & detailed) are usually accepted (not more than 2 clicks!).
+* [ ] The privacy policy should include a scope of validity (e.g. also other named websites and social media) and an update date.
+* [ ] The privacy policy can be created by a generator (free or paid) or directly by a lawyer or data protection officer.
+* [ ] For press products/ journalistic purposes, the specifications for data processing as well as the information requirements according to §23 para. 2 & 3 MStV (of the federal state) deviate in accordance with Art. 85 GDPR ("media privilege").
+
+#### Notes <!-- omit in toc -->
+
+* Since the entry into force of the State Media Treaty (MStV) in November 2020, the data protection requirements regarding "media privilege" for journalistic editorial content have changed, see [§23 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Rechtsgrundlagen/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf).
+
+#### Implementation Advice <!-- omit in toc -->
+
+* For the creation of legal documents, it is recommended to take out a membership with [e-recht24.de](https://www.e-recht24.de/mitglieder/) and use their generators.
+
+### Imprint & Privacy Policy on Social Media
+
+**Valid only under German law!**
+*Legal basis*: see [Impressum](#impressum) & [Datenschutzerklärung](#datenschutzerklärung)<br>
 *Verdicts*: [LG Aschaffenburg, Az. 2 HK O 54/11](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20Aschaffenburg&Datum=19.08.2011&Aktenzeichen=2%20HKO%2054/11), [OLG Düsseldorf, Az. I-20 U 17/07](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20Düsseldorf&Datum=18.12.2007&Aktenzeichen=20%20U%2017%2F07), [EuGH, Az. C-210/16](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=2222-12-31&Aktenzeichen=C-210%2F16)
 
-* [ ] Auch in den sozialen Medien ist Impressum & Datenschutzerklärung anzugeben.
-* [ ] Zudem ist in der DSE die DSE des Drittanbieters zu nennen.
-* [ ] Bei Facebook-Seiten gibt  mittlerweise zwei Einträge, die man mit Links zum Impressum & der DSE der eigenen Webseite füllen kann.
-* [ ] Wo keine direkte Möglichkeit ist, die entsprechenden Links einzutragen, kann mit Short-URLs (**ohne Tracking!**) in den jeweiligen Beschreibungen gearbeitet werden.
+* [ ] Imprint & privacy policy must also be stated on social media profiles.
+* [ ] In addition, the privacy policy of the third-party provider must be mentioned in the privacy policy.
+* [ ] For Facebook pages, there are now two entries that you can fill with links to the imprint & the privacy policy of your own website.
+* [ ] Where there is no direct possibility to enter the corresponding links, you can work with short URLs (**without tracking!**) in the respective descriptions.
 
-#### Anmerkungen <!-- omit in toc -->
+#### Notes <!-- omit in toc -->
 
-* Seit dem Inkrafttreten des neuen Medienstaatsvertrags (MStV) im November 2020 müssen automatisiert veröffentlichte journalistisch redaktionelle Inhalte (z.B. durch einen Bot) als solche gekennzeichnet werden. Je nach Auslegung könnte dies auch automatische Crosspostings betreffen. Grundlage dafür ist [§18 para. 3 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Legal basisn/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf).
+* Since the new State Media Treaty (MStV) came into force in November 2020, automatically published journalistic editorial content (e.g. by a bot) must be marked as such. Depending on the interpretation, this could also affect automated cross-postings. The basis for this is [§18 para. 3 MStV](https://www.die-medienanstalten.de/fileadmin/user_upload/Rechtsgrundlagen/Gesetze_Staatsvertraege/Medienstaatsvertrag_MStV.pdf).
 
-### Urheberrecht / Bildnachweise
+### Copyright / Image Credits
 
+**Valid only under German law!**
 *Legal basis*: [§§ 12, 13, 19a, 23, 31, 32, 39, 51, 57 uvm. UrhG](https://dejure.org/gesetze/UrhG)<br>
 *Verdicts*: [LG Köln Az. 6 U 25/14](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20K%F6ln&Datum=31.12.1111&Aktenzeichen=6%20U%2025/14), [LG Bochum, Az. 9 S 17/16](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20Bochum&Datum=16.08.2016&Aktenzeichen=9%20S%2017/16), [BGH, Az. I ZR 69/08](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=BGH&Datum=29.04.2010&Aktenzeichen=I%20ZR%2069/08)
 
-* [ ] Beim Verwenden fremder Werke (Bilder, Grafiken, Musik, Videos, Texte, Software, Code) **immer** die dazu gehörigen Lizenzbestimmungen lesen und ggf. laut Vorgaben entsprechende Angaben zum Urheber machen!
-* [ ] Egal ob Groß- oder Kleinzitat: Werke sind nur dann Zitate, wenn man sie damit auch inhaltlich detailliert auseinander setzt. Für schmückende Beigaben nur Werke mit einer entsprechenden Lizenz (z.B. Creative Commons oder CC0/ Public Domain) nutzen!
-* [ ] Der Bildnachweis gehört **immer** direkt unter das Bild! Manche Stock-Agenturen verlagen sogar, den Bildnachweis **im** Bild anzubringen. Einzige Ausnahme (weil gängige Praxis): Bilder, die unter der entsprechenden freien Lizenz (z.B. CC0) **ohne Namensnennung** auskommen und sich über die gesamte Webseite erstrecken, können auch einmalig im Impressum benannt werden.
-* [ ] Es ist allerdings umstritten, ob der **Verzicht auf Namensnennung des Urhebers** überhaupt möglich ist, deshalb am besten zur Sicherheit **immer** den Namen des Urhebers angeben!
-* [ ] Webdesigner/ -entwickler sollten das vom Kunden zur Verfügung gestellte Bildmaterial auf Urheberrechtsverstöße überprüfen (vgl. LG Bochum, Az. 9 S 17/16)
-* [ ] Bilder (und andere fremde Werke) dürfen ohne entsprechenden Verwertungsrechten auch nicht bearbeitet werden!
-* [ ] Metadaten (EXIF, IPTC, Wasserzeichen) dürfen aus **fremden** Bildern ohne entsprechende Einwilligung des Urhebers **nicht** entfernt werden (Bildbearbeitung & Aberkennung der Urheberschaft)!
+* [ ] When using external works (images, graphics, music, videos, texts, software, code) **always** read the corresponding license terms and, if necessary, provide the appropriate information about the author according to the specifications!
+* [ ] No matter if large or small quotation: Works are only citations if you deal with them in detail. For decorative additions use only works with an appropriate license (eg Creative Commons or CC0 / Public Domain)!
+* [ ] The picture credit belongs **always** directly under the picture! Some stock agencies even require the image credit to be **in** the image. The only exception (because it is common practice): images that are used under the corresponding free license (e.g. CC0) **without attribution** and extend over the entire website can also be named once in the imprint.
+* [ ] However, it is controversial whether the **waiver of attribution of the author** is possible at all, so it is best to **always** indicate the name of the author to be on the safe side!
+* [ ] Web designers/developers should check the image material provided by the customer for copyright infringements (cf. LG Bochum, Az. 9 S 17/16).
+* [ ] Images (and other foreign works) may not be edited without appropriate exploitation rights!
+* [ ] Metadata (EXIF, IPTC, watermarks) may **not** be removed from **foreign** images without the corresponding consent of the author (image editing & deprivation of authorship)!
