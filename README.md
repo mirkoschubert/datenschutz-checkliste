@@ -10,7 +10,7 @@
 
 <p align="center">Open source cheat sheet for web designers and developers to implement data protection relevant tasks according to current law (GDPR).</p>
 
-<p><a href="https://www.buymeacoffee.com/musikuss" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a></p>
+<p align="center"><a href="https://www.buymeacoffee.com/musikuss" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a></p>
 
 <p align="center"><em>Initiated by Peter Haurand and Mirko Schubert</em></p>
 
