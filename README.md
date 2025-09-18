@@ -1,10 +1,12 @@
 <h1 align="center">Data Protection Cheat Sheet (GDPR)</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Hacktoberfest-2025-blueviolet?style=for-the-badge&logo=hacktoberfest" alt="Hacktoberfest 2025" />
+  <a href="https://hacktoberfest.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Hacktoberfest-2025-blueviolet?style=for-the-badge&logo=hacktoberfest" alt="Hacktoberfest 2025" />
+  </a>
   <br>
   <a href="https://mirkoschubert.github.io/datenschutz-checkliste/">
-    <img src="https://img.shields.io/badge/📖_Documentation-Live-brightgreen?style=flat-square" alt="Documentation" />
+    <img src="https://img.shields.io/badge/Documentation-Live-brightgreen?style=flat-square" alt="Documentation" />
   </a>
   <img src="https://img.shields.io/github/deployments/mirkoschubert/datenschutz-checkliste/github-pages?style=flat-square&label=Deploy" alt="Deploy Status" />
   <img src="https://img.shields.io/badge/Languages-DE_|_EN-blue?style=flat-square" alt="Languages" />
@@ -18,13 +20,13 @@
 
 <p align="center">Open source cheat sheet for web designers and developers to implement data protection relevant tasks according to current law (GDPR).</p>
 
-## 🚀 TL;DR
+## TL;DR
 
-**Quick Start**: Ready-to-use GDPR checklists for developers. <a href="https://mirkoschubert.github.io/datenschutz-checkliste/" target="_blank">📖 **View Interactive Documentation**</a> • [🇩🇪 Deutsche Checkliste](checkliste.md) • [🇺🇸 English Cheat Sheet](cheat-sheet.md)
+**Quick Start**: Ready-to-use GDPR checklists for developers. <a href="https://mirkoschubert.github.io/datenschutz-checkliste/" target="_blank">**View Interactive Documentation**</a> • [🇩🇪 Deutsche Checkliste](checkliste.md) • [🇺🇸 English Cheat Sheet](cheat-sheet.md)
 
 <p align="center">
   <a href="https://mirkoschubert.github.io/datenschutz-checkliste/" target="_blank">
-    <img src="https://img.shields.io/badge/📖_Interactive_Documentation-Visit_Website-brightgreen?style=for-the-badge" alt="Visit Documentation Website" />
+    <img src="https://img.shields.io/badge/Interactive_Documentation-Visit_Website-brightgreen?style=for-the-badge" alt="Visit Documentation Website" />
   </a>
 </p>
 
@@ -32,14 +34,14 @@
 
 **We're participating in Hacktoberfest 2025!** 🎉 Help us improve data protection resources for developers worldwide.
 
-- 🌟 **Contribute**: Legal updates, translations, technical improvements
-- 📝 **Get Started**: Check our [Contributing Guidelines](CONTRIBUTING.md)
-- 🏷️ **Find Issues**: Look for `good-first-issue` and `hacktoberfest` labels
-- 🤝 **All Levels Welcome**: From beginners to experts
+- **Contribute**: Legal updates, translations, technical improvements
+- **Get Started**: Check our [Contributing Guidelines](CONTRIBUTING.md)
+- **Find Issues**: Look for `good-first-issue` and `hacktoberfest` labels
+- **All Levels Welcome**: From beginners to experts
 
 <p align="center">
   <a href="CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/🤝_Join_Hacktoberfest-Contribute_Now-blueviolet?style=for-the-badge" alt="Join Hacktoberfest" />
+    <img src="https://img.shields.io/badge/Join_Hacktoberfest-Contribute_Now-blueviolet?style=for-the-badge" alt="Join Hacktoberfest" />
   </a>
 </p>
 
@@ -57,26 +59,26 @@ Peter and I have taken the knowledge we have gathered over the past few months o
 
 The **Data Protection Checklist** cannot address individual cases and does **not constitute legal advice**, but is merely a collection of knowledge that has been compiled from extensive research, our own experience and "best practices" of various developers and is constantly being further developed. We assume **no liability** and recommend to consult a lawyer for legal questions in any case.
 
-## 🤝 How to Contribute
+## How to Contribute
 
 This repository thrives on community contributions! We welcome developers, legal experts, and privacy enthusiasts to help improve these resources.
 
-### 🚀 Quick Contribution Options
+### Quick Contribution Options
 
-* **📝 Content**: Update legal requirements, add implementation tips, fix typos
-* **🌍 Translation**: Help translate checklists to new languages
-* **🔧 Technical**: Improve website, accessibility, or documentation structure
-* **🐛 Issues**: Report bugs or suggest new features via [Issues](https://github.com/mirkoschubert/datenschutz-checkliste/issues)
-* **💡 Pull Requests**: Submit changes directly through [Pull Requests](https://help.github.com/articles/about-pull-requests/)
+* **Content**: Update legal requirements, add implementation tips, fix typos
+* **Translation**: Help translate checklists to new languages
+* **Technical**: Improve website, accessibility, or documentation structure
+* **Issues**: Report bugs or suggest new features via [Issues](https://github.com/mirkoschubert/datenschutz-checkliste/issues)
+* **Pull Requests**: Submit changes directly through [Pull Requests](https://help.github.com/articles/about-pull-requests/)
 
-📖 **New to contributing?** Check our [Contributing Guidelines](CONTRIBUTING.md) for detailed instructions.
+**New to contributing?** Check our [Contributing Guidelines](CONTRIBUTING.md) for detailed instructions.
 
-## 💬 Get in Touch
+## Get in Touch
 
-- 🐛 **Bug Reports & Feature Requests**: [GitHub Issues](https://github.com/mirkoschubert/datenschutz-checkliste/issues)
-- 💬 **Community Chat**: <a href="https://matrix.to/#/@musikuss:matrix.org" target="_blank">Matrix @musikuss:matrix.org</a>
-- 🗨️ **Discussions**: [GitHub Discussions](https://github.com/mirkoschubert/datenschutz-checkliste/discussions)
-- ☕ **Support the Project**: <a href="https://www.buymeacoffee.com/musikuss" target="_blank">Buy me a coffee</a>
+- **Bug Reports & Feature Requests**: [GitHub Issues](https://github.com/mirkoschubert/datenschutz-checkliste/issues)
+- **Community Chat**: <a href="https://matrix.to/#/@musikuss:matrix.org" target="_blank">Matrix @musikuss:matrix.org</a>
+- **Discussions**: [GitHub Discussions](https://github.com/mirkoschubert/datenschutz-checkliste/discussions)
+- **Support the Project**: <a href="https://www.buymeacoffee.com/musikuss" target="_blank">Buy me a coffee</a>
 
 ### Contributors
 
