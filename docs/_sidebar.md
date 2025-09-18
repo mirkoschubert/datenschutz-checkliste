@@ -1,9 +1,8 @@
-- Cheat Sheet
-  - [Security](security.md)
-  - [Webhosts](webhosts.md)
-  - [External Services](external.md)
-  - [Other Aspects](other.md)
-  - [Legal Documents](legal.md)
-- Other Projects
-  - [Showcase](showcase.md)
-  - [Changelog](changelog.md)
+- [🏠 Home](/)
+- [🇩🇪 Deutsch](de/)
+- [📋 Full Cheat Sheet](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/cheat-sheet.md)
+- Sections
+  - [🔒 Security](security.md)
+- Links
+  - [📖 GitHub Repository](https://github.com/mirkoschubert/datenschutz-checkliste)
+  - [🐛 Issues & Contributions](https://github.com/mirkoschubert/datenschutz-checkliste/issues)
