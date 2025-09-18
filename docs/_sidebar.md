@@ -1,8 +1,0 @@
-- [🏠 Home](/)
-- [🇩🇪 Deutsch](de/)
-- [📋 Full Cheat Sheet](https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/cheat-sheet.md)
-- Sections
-  - [🔒 Security](security.md)
-- Links
-  - [📖 GitHub Repository](https://github.com/mirkoschubert/datenschutz-checkliste)
-  - [🐛 Issues & Contributions](https://github.com/mirkoschubert/datenschutz-checkliste/issues)
