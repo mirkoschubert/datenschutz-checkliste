@@ -73,7 +73,7 @@ This repository thrives on community contributions! We welcome developers, legal
 ## Get in Touch
 
 - **Bug Reports & Feature Requests**: [GitHub Issues](https://github.com/mirkoschubert/datenschutz-checkliste/issues)
-- **Community Chat**: <a href="https://matrix.to/#/@musikuss:matrix.org" target="_blank">Matrix @musikuss:matrix.org</a>
+- **Community Chat**: <a href="https://matrix.to/#/#privacy-cheat-sheet:matrix.org" target="_blank">Matrix #privacy-cheat-sheet:matrix.org</a>
 - **Discussions**: [GitHub Discussions](https://github.com/mirkoschubert/datenschutz-checkliste/discussions)
 - **Support the Project**: <a href="https://www.buymeacoffee.com/musikuss" target="_blank">Buy me a coffee</a>
 
