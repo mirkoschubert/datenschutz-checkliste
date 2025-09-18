@@ -13,10 +13,10 @@
   <nav class="app-nav">
     <ul>
       <li>
-        <a href="/"><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ec-1f1e7.png?v8.png" alt="uk" class="emoji" loading="lazy"> English</a>
+        <a href="#/"><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ec-1f1e7.png?v8.png" alt="uk" class="emoji" loading="lazy"> English</a>
       </li>
       <li>
-        <a href="/de/"><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f1e9-1f1ea.png?v8.png" alt="de" class="emoji" loading="lazy"> Deutsch</a>
+        <a href="#/de/"><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f1e9-1f1ea.png?v8.png" alt="de" class="emoji" loading="lazy"> Deutsch</a>
       </li>
     </ul>
   </nav>
@@ -30,7 +30,6 @@
     window.$docsify = {
       name: 'Datenschutz Checkliste',
       repo: 'mirkoschubert/datenschutz-checkliste',
-      basePath: '/datenschutz-checkliste/',
       //homepage: 'https://raw.githubusercontent.com/mirkoschubert/datenschutz-checkliste/master/cheat-sheet.md',
       /* alias: {
         '/(.*)': '/$1',
@@ -41,7 +40,7 @@
       auto2top: true,
       autoHeader: true,
       executeScript: true,
-      routerMode: 'history',
+      routerMode: 'hash',
       loadSidebar: true,
       //fallbackLanguages: ['de'],
       /* namespaces: [
@@ -75,16 +74,7 @@
       
     }
 
-  // #abc -> ?id=abc
-  // %23abc -> ?id=abc
-    if (/(?:#|%23)([^\/]+)/.test(location.href)) {
-      location.href = location.href.replace(/(?:#|%23)([^\/]+)/, '?id=$1')
-    }
-
-  // /#/ -> /
-    if (/\/#\//.test(location.href)) {
-      location.href = location.href.replace('/#/', '/')
-    }
+  // Removed conflicting URL redirects for GitHub Pages compatibility
   </script>
   <!-- Docsify v4.13.1 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4.13.1/lib/docsify.min.js"></script>
