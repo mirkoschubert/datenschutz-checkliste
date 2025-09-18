@@ -5,9 +5,6 @@
     <img src="https://img.shields.io/badge/Hacktoberfest-2025-blueviolet?style=for-the-badge&logo=hacktoberfest" alt="Hacktoberfest 2025" />
   </a>
   <br>
-  <a href="https://mirkoschubert.github.io/datenschutz-checkliste/">
-    <img src="https://img.shields.io/badge/Documentation-Live-brightgreen?style=flat-square" alt="Documentation" />
-  </a>
   <img src="https://img.shields.io/github/deployments/mirkoschubert/datenschutz-checkliste/github-pages?style=flat-square&label=Deploy" alt="Deploy Status" />
   <img src="https://img.shields.io/badge/Languages-DE_|_EN-blue?style=flat-square" alt="Languages" />
   <a href="https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/LICENSE">
@@ -19,6 +16,10 @@
 </p>
 
 <p align="center">Open source cheat sheet for web designers and developers to implement data protection relevant tasks according to current law (GDPR).</p>
+
+<p align="center"><a href="https://www.buymeacoffee.com/musikuss" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a></p>
+
+<p align="center"><em>Initiated by Peter Haurand and Mirko Schubert</em></p>
 
 ## TL;DR
 
@@ -46,10 +47,6 @@
 </p>
 
 ---
-
-<p align="center"><a href="https://www.buymeacoffee.com/musikuss" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a></p>
-
-<p align="center"><em>Initiated by Peter Haurand and Mirko Schubert</em></p>
 
 This **Data Protection Cheat Sheet** is intended to serve as a general orientation for web designers and developers as well as, of course, for every interested website operator in order to prepare websites and commissioned works in accordance with currently valid German and European law.
 
