@@ -1,24 +1,53 @@
 <h1 align="center">Data Protection Cheat Sheet (GDPR)</h1>
 
 <p align="center">
-  <a href="https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/LICENSE.md">
-    <img src="https://img.shields.io/github/license/mirkoschubert/datenschutz-checkliste.svg" />
+  <img src="https://img.shields.io/badge/Hacktoberfest-2025-blueviolet?style=for-the-badge&logo=hacktoberfest" alt="Hacktoberfest 2025" />
+  <br>
+  <a href="https://mirkoschubert.github.io/datenschutz-checkliste/">
+    <img src="https://img.shields.io/badge/📖_Documentation-Live-brightgreen?style=flat-square" alt="Documentation" />
   </a>
-  <img src="https://img.shields.io/github/stars/mirkoschubert/datenschutz-checkliste" />
-  <img src="https://img.shields.io/github/forks/mirkoschubert/datenschutz-checkliste" />
+  <img src="https://img.shields.io/github/deployments/mirkoschubert/datenschutz-checkliste/github-pages?style=flat-square&label=Deploy" alt="Deploy Status" />
+  <img src="https://img.shields.io/badge/Languages-DE_|_EN-blue?style=flat-square" alt="Languages" />
+  <a href="https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/mirkoschubert/datenschutz-checkliste.svg?style=flat-square" alt="License" />
+  </a>
+  <img src="https://img.shields.io/github/stars/mirkoschubert/datenschutz-checkliste?style=flat-square" alt="Stars" />
+  <img src="https://img.shields.io/github/forks/mirkoschubert/datenschutz-checkliste?style=flat-square" alt="Forks" />
+  <img src="https://img.shields.io/github/contributors/mirkoschubert/datenschutz-checkliste?style=flat-square" alt="Contributors" />
 </p>
 
 <p align="center">Open source cheat sheet for web designers and developers to implement data protection relevant tasks according to current law (GDPR).</p>
 
-<p align="center"><a href="https://www.buymeacoffee.com/musikuss" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a></p>
+## 🚀 TL;DR
 
-<p align="center"><em>Initiated by Peter Haurand and Mirko Schubert</em></p>
+**Quick Start**: Ready-to-use GDPR checklists for developers. [📖 **View Interactive Documentation**](https://mirkoschubert.github.io/datenschutz-checkliste/) • [🇩🇪 Deutsche Checkliste](checkliste.md) • [🇺🇸 English Cheat Sheet](cheat-sheet.md)
+
+<p align="center">
+  <a href="https://mirkoschubert.github.io/datenschutz-checkliste/" target="_blank">
+    <img src="https://img.shields.io/badge/📖_Interactive_Documentation-Visit_Website-brightgreen?style=for-the-badge" alt="Visit Documentation Website" />
+  </a>
+</p>
+
+## 🎃 Hacktoberfest 2025
+
+**We're participating in Hacktoberfest 2025!** 🎉 Help us improve data protection resources for developers worldwide.
+
+- 🌟 **Contribute**: Legal updates, translations, technical improvements
+- 📝 **Get Started**: Check our [Contributing Guidelines](CONTRIBUTING.md)
+- 🏷️ **Find Issues**: Look for `good-first-issue` and `hacktoberfest` labels
+- 🤝 **All Levels Welcome**: From beginners to experts
+
+<p align="center">
+  <a href="CONTRIBUTING.md">
+    <img src="https://img.shields.io/badge/🤝_Join_Hacktoberfest-Contribute_Now-blueviolet?style=for-the-badge" alt="Join Hacktoberfest" />
+  </a>
+</p>
 
 ---
 
-<p align="center"><strong>Deutsch:</strong> <a href="https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/checkliste.md">Hier geht es direkt zur Checkliste!</a></p>
+<p align="center"><a href="https://www.buymeacoffee.com/musikuss" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a></p>
 
-<p align="center"><strong>English:</strong> <a href="https://github.com/mirkoschubert/datenschutz-checkliste/blob/master/cheat-sheet.md">Click here to go directly to the cheat sheet!</a></p>
+<p align="center"><em>Initiated by Peter Haurand and Mirko Schubert</em></p>
 
 This **Data Protection Cheat Sheet** is intended to serve as a general orientation for web designers and developers as well as, of course, for every interested website operator in order to prepare websites and commissioned works in accordance with currently valid German and European law.
 
@@ -28,15 +57,26 @@ Peter and I have taken the knowledge we have gathered over the past few months o
 
 The **Data Protection Checklist** cannot address individual cases and does **not constitute legal advice**, but is merely a collection of knowledge that has been compiled from extensive research, our own experience and "best practices" of various developers and is constantly being further developed. We assume **no liability** and recommend to consult a lawyer for legal questions in any case.
 
-### Would you like to get involved?
+## 🤝 How to Contribute
 
-This repository lives on being corrected and supplemented - therefore we would be happy if you would like to add your knowledge to our cheat sheet. Depending on your level of experience and technical knowledge, there are several possibilities:
+This repository thrives on community contributions! We welcome developers, legal experts, and privacy enthusiasts to help improve these resources.
 
-* You can leave a ticket at [Issues](https://github.com/mirkoschubert/datenschutz-checkliste/issues) to discuss bugs, additions or make suggestions for new features.
-* You can download this repository to your own machine, make changes yourself, and then submit those changes to our list via pull request.
-* If you are not so familiar with Github, you can of course also submit [Pull Requests](https://help.github.com/articles/about-pull-requests/) directly through this website.
+### 🚀 Quick Contribution Options
 
-We are looking forward to your participation! If you submit your own changes and additions, you will of course be named as a contributor in this readme.
+* **📝 Content**: Update legal requirements, add implementation tips, fix typos
+* **🌍 Translation**: Help translate checklists to new languages
+* **🔧 Technical**: Improve website, accessibility, or documentation structure
+* **🐛 Issues**: Report bugs or suggest new features via [Issues](https://github.com/mirkoschubert/datenschutz-checkliste/issues)
+* **💡 Pull Requests**: Submit changes directly through [Pull Requests](https://help.github.com/articles/about-pull-requests/)
+
+📖 **New to contributing?** Check our [Contributing Guidelines](CONTRIBUTING.md) for detailed instructions.
+
+## 💬 Get in Touch
+
+- 🐛 **Bug Reports & Feature Requests**: [GitHub Issues](https://github.com/mirkoschubert/datenschutz-checkliste/issues)
+- 💬 **Community Chat**: [Matrix @musikuss:matrix.org](https://matrix.to/#/@musikuss:matrix.org)
+- 🗨️ **Discussions**: [GitHub Discussions](https://github.com/mirkoschubert/datenschutz-checkliste/discussions)
+- ☕ **Support the Project**: [Buy me a coffee](https://www.buymeacoffee.com/musikuss)
 
 ### Contributors
 
