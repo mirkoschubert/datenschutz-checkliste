@@ -20,7 +20,7 @@
 
 ## 🚀 TL;DR
 
-**Quick Start**: Ready-to-use GDPR checklists for developers. [📖 **View Interactive Documentation**](https://mirkoschubert.github.io/datenschutz-checkliste/) • [🇩🇪 Deutsche Checkliste](checkliste.md) • [🇺🇸 English Cheat Sheet](cheat-sheet.md)
+**Quick Start**: Ready-to-use GDPR checklists for developers. [📖 **View Interactive Documentation**](https://mirkoschubert.github.io/datenschutz-checkliste/){:target="_blank"} • [🇩🇪 Deutsche Checkliste](checkliste.md) • [🇺🇸 English Cheat Sheet](cheat-sheet.md)
 
 <p align="center">
   <a href="https://mirkoschubert.github.io/datenschutz-checkliste/" target="_blank">
@@ -74,9 +74,9 @@ This repository thrives on community contributions! We welcome developers, legal
 ## 💬 Get in Touch
 
 - 🐛 **Bug Reports & Feature Requests**: [GitHub Issues](https://github.com/mirkoschubert/datenschutz-checkliste/issues)
-- 💬 **Community Chat**: [Matrix @musikuss:matrix.org](https://matrix.to/#/@musikuss:matrix.org)
-- 🗨️ **Discussions**: [GitHub Discussions](https://github.com/mirkoschubert/datenschutz-checkliste/discussions)
-- ☕ **Support the Project**: [Buy me a coffee](https://www.buymeacoffee.com/musikuss)
+- 💬 **Community Chat**: [Matrix @musikuss:matrix.org](https://matrix.to/#/@musikuss:matrix.org){:target="_blank"}
+- 🗨️ **Discussions**: [GitHub Discussions](https://github.com/mirkoschubert/datenschutz-checkliste/discussions){:target="_blank"}
+- ☕ **Support the Project**: [Buy me a coffee](https://www.buymeacoffee.com/musikuss){:target="_blank"}
 
 ### Contributors
 
