@@ -14,7 +14,7 @@
     .app-nav {
       margin: 0;
       position: absolute;
-      right: 15px;
+      right: 80px;
       top: 15px;
       z-index: 10;
     }
@@ -55,7 +55,7 @@
     /* Responsive design for mobile */
     @media (max-width: 768px) {
       .app-nav {
-        right: 10px;
+        right: 70px;
         top: 10px;
       }
       .app-nav a {
@@ -83,39 +83,34 @@
   </nav>
   <div id="app"></div>
   <script>
-    /* var lang = location.hash.match(/#\/(de)\//)
-    console.log(lang)
-    if (lang) {
-      document.documentElement.setAttribute('lang', lang[1])
-    } */
     window.$docsify = {
+      // Basic configuration
       name: 'Data Protection Checklist',
       repo: 'mirkoschubert/datenschutz-checkliste',
+
+      // Direct GitHub markdown integration
       homepage: 'https://raw.githubusercontent.com/mirkoschubert/datenschutz-checkliste/master/cheat-sheet.md',
       alias: {
         '/de/': 'https://raw.githubusercontent.com/mirkoschubert/datenschutz-checkliste/master/checkliste.md'
       },
+
+      // Navigation and sidebar
       maxLevel: 3,
       subMaxLevel: 3,
+      loadSidebar: false,
       auto2top: true,
       autoHeader: true,
-      executeScript: true,
       routerMode: 'hash',
-      loadSidebar: false,
-      //fallbackLanguages: ['de'],
-      /* namespaces: [
-        {
-          id: "lang",
-          values: ["de"],
-          optional: true,
-          selector: "#lang-selector",
-        },
-      ], */
+      executeScript: true,
+
+      // Progress bar
       progress: {
         position: "top",
         color: "var(--theme-color,#42b983)",
-        height: "3px",
+        height: "3px"
       },
+
+      // Search functionality
       search: {
         paths: 'auto',
         placeholder: {
@@ -129,12 +124,9 @@
         formatUpdated: '{MM}/{DD} {HH}:{mm}',
         depth: 3,
         hideOtherSidebarContent: true,
-        pathNamespaces: ['/de'],
-      },
-      
+        pathNamespaces: ['/de']
+      }
     }
-
-  // Removed conflicting URL redirects for GitHub Pages compatibility
   </script>
   <!-- Docsify v4.13.1 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4.13.1/lib/docsify.min.js"></script>
