@@ -1,0 +1,9 @@
+- Cheat Sheet
+  - [Security](security.md)
+  - [Webhosts](webhosts.md)
+  - [External Services](external.md)
+  - [Other Aspects](other.md)
+  - [Legal Documents](legal.md)
+- Other Projects
+  - [Showcase](showcase.md)
+  - [Changelog](changelog.md)
