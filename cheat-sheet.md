@@ -92,7 +92,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 * [ ] For protection against brute force and dictionary attacks, a simple protection that limits the number of incorrect entries is sufficient.
 * [ ] For protection against comment SPAM a simple protection is enough, preferably via honeypot method (reCaptcha is not GDPR compliant!).
 * [ ] Do not use all-in-one security plugins like *iThemes Security* or *WordFence* (security holes!).
-* [ ] For protection against security vulnerabilities CMS installation, plugins, modules and themes (even not activated) **always** keep up to date!
+* [ ] For protection against security vulnerabilities, CMS installation, plugins, modules, and themes (even inactive ones) should **always** be kept up to date!
 * [ ] For protection against security gaps **install as few** plugins/ themes as possible!
 
 #### Implementation Advice <!-- omit in toc -->
@@ -124,7 +124,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 * PGP/ GPG should always be given preference!
 * Free S/MIME email certificates are available from [Comodo](https://www.comodo.com/home/email-security/free-email-certificate.php) for one year each.
 * For the free GPG there are several solutions available on the official [website](https://gnupg.org).
-* For the signature only the sender needs the setup, for the encryption both sender and recipient.
+* For a signature, only the sender needs the setup. For encryption, both the sender and recipient need to be set up.
 
 ## Web Hosts
 
@@ -272,7 +272,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 
 * [ ] Consent is **always** required for the use of web fonts!
 * [ ] Alternatively Google Fonts, Adobe Typekit and Fontaweome Fonts (BootstrapCDN) can be localized (see CDNs)!
-* [ ] Fonts could possibly also be replaced against other local open source fonts or even the CSS Font Stack.
+* [ ] Fonts could possibly also be replaced **with** other local open source fonts or even the CSS Font Stack.
 
 #### Implementation Advice <!-- omit in toc -->
 
@@ -371,7 +371,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 #### Implementation Advice <!-- omit in toc -->
 
 * **Simplest solution**: Manually embed map section as an image and link to the respective platform.
-* When embedding as an image, copyright information should be placed directly below the image. Screenshots from Google Mags can **not** be used for copyright reasons!
+* When embedding as an image, copyright information should be placed directly below the image. Screenshots from Google **Maps** can **not** be used for copyright reasons!
 * 2-click solution for **all** services with [Borlabs Cookie](https://de.borlpara.io/borlabs-cookie/) (paid)
 
 ## Other Aspects
@@ -495,7 +495,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 *Verdicts*: poss. accessibility in accordance with [OLG München, Az. 29 U 2681/03](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20M%FCnchen&Datum=11.09.2003&Aktenzeichen=29%20U%202681%2F03)
 
 * [ ] The privacy policy should be accessible from every subpage in one click (possibly also in 2 clicks, cf. imprint).
-* [ ] The privacy policy should be detailed, but understandable and supported by legal basisn of the GDPR and the BDSG-neu.
+* [ ] The privacy policy should be detailed, but understandable and supported by the legal **bases** of the GDPR and the BDSG-neu.
 * [ ] Double privacy policies (once short & understandable, once long & detailed) are usually accepted (not more than 2 clicks!).
 * [ ] The privacy policy should include a scope of validity (e.g. also other named websites and social media) and an update date.
 * [ ] The privacy policy can be created by a generator (free or paid) or directly by a lawyer or data protection officer.
@@ -531,7 +531,7 @@ This **Data Protection Cheat Sheet** cannot address individual cases and does **
 *Verdicts*: [LG Köln Az. 6 U 25/14](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=OLG%20K%F6ln&Datum=31.12.1111&Aktenzeichen=6%20U%2025/14), [LG Bochum, Az. 9 S 17/16](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=LG%20Bochum&Datum=16.08.2016&Aktenzeichen=9%20S%2017/16), [BGH, Az. I ZR 69/08](https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=BGH&Datum=29.04.2010&Aktenzeichen=I%20ZR%2069/08)
 
 * [ ] When using external works (images, graphics, music, videos, texts, software, code) **always** read the corresponding license terms and, if necessary, provide the appropriate information about the author according to the specifications!
-* [ ] No matter if large or small quotation: Works are only citations if you deal with them in detail. For decorative additions use only works with an appropriate license (eg Creative Commons or CC0 / Public Domain)!
+* [ ] No matter if large or small quotation: Works are only citations if you deal with them in detail. For decorative additions use only works with an appropriate license (**e.g.**, Creative Commons or CC0 / Public Domain)!
 * [ ] The picture credit belongs **always** directly under the picture! Some stock agencies even require the image credit to be **in** the image. The only exception (because it is common practice): images that are used under the corresponding free license (e.g. CC0) **without attribution** and extend over the entire website can also be named once in the imprint.
 * [ ] However, it is controversial whether the **waiver of attribution of the author** is possible at all, so it is best to **always** indicate the name of the author to be on the safe side!
 * [ ] Web designers/developers should check the image material provided by the customer for copyright infringements (cf. LG Bochum, Az. 9 S 17/16).
