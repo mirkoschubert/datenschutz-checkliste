@@ -21,13 +21,33 @@
 
 <p align="center"><em>Initiated by Peter Haurand and Mirko Schubert</em></p>
 
+## 🚀 Interactive Web App Available!
+
+**Experience GDPR compliance assessment like never before:**
+
+<p align="center">
+  <a href="webapp/index.html" target="_blank">
+    <img src="https://img.shields.io/badge/🚀_Interactive_GDPR_Checker-Launch_Now-brightgreen?style=for-the-badge" alt="Launch Interactive Tool" />
+  </a>
+</p>
+
+### ✨ Features
+- **⚡ Real-time Assessment** - Interactive checklists with instant scoring
+- **📊 Visual Reports** - Professional compliance reports with category breakdowns  
+- **💾 Export & Share** - Save assessments as JSON or generate PDF reports
+- **🌍 Multilingual** - Complete support for English and German
+- **📱 Responsive Design** - Works perfectly on all devices
+- **🎯 Extensible** - Ready for AI Act, accessibility, and copyright compliance
+
+---
+
 ## TL;DR
 
 **Quick Start**: Ready-to-use GDPR checklists for developers. <a href="https://mirkoschubert.github.io/datenschutz-checkliste/" target="_blank">**View Interactive Documentation**</a> • [🇩🇪 Deutsche Checkliste](checkliste.md) • [🇺🇸 English Cheat Sheet](cheat-sheet.md)
 
 <p align="center">
   <a href="https://mirkoschubert.github.io/datenschutz-checkliste/" target="_blank">
-    <img src="https://img.shields.io/badge/Interactive_Documentation-Visit_Website-brightgreen?style=for-the-badge" alt="Visit Documentation Website" />
+    <img src="https://img.shields.io/badge/Interactive_Documentation-Visit_Website-blue?style=for-the-badge" alt="Visit Documentation Website" />
   </a>
 </p>
 

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDPR Compliance Checker - Interactive Assessment</title>
+    <meta name="description" content="Interactive GDPR compliance assessment tool for web developers and designers">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🔒%3C/text%3E%3C/svg%3E">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>GDPR Compliance Checker</span>
+                </div>
+                
+                <nav class="nav">
+                    <button class="nav-toggle" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-list">
+                        <li><a href="#assessment" class="nav-link active">Assessment</a></li>
+                        <li><a href="#overview" class="nav-link">Overview</a></li>
+                        <li><a href="#export" class="nav-link">Export</a></li>
+                        <li class="language-switcher">
+                            <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+                            <button class="lang-btn" data-lang="de">🇩🇪 DE</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Assessment Section -->
+            <section id="assessment" class="section">
+                <div class="assessment-header">
+                    <h1 class="section-title">GDPR Compliance Assessment</h1>
+                    <p class="section-subtitle">
+                        Interactive checklist to evaluate your website's GDPR compliance.
+                        Complete all sections to get your compliance score.
+                    </p>
+                    
+                    <!-- Progress Bar -->
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="progress-info">
+                            <span class="progress-text" id="progressText">0% Complete</span>
+                            <span class="progress-score" id="progressScore">Score: 0/100</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="categories" id="categoriesContainer">
+                    <!-- Categories will be dynamically loaded -->
+                </div>
+            </section>
+
+            <!-- Overview Section -->
+            <section id="overview" class="section hidden">
+                <div class="overview-header">
+                    <h2 class="section-title">Compliance Overview</h2>
+                    <p class="section-subtitle">
+                        Summary of your GDPR compliance assessment results
+                    </p>
+                </div>
+
+                <div class="overview-content">
+                    <!-- Compliance Score Card -->
+                    <div class="score-card">
+                        <div class="score-circle">
+                            <svg class="score-svg" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" class="score-bg"></circle>
+                                <circle cx="50" cy="50" r="45" class="score-progress" id="scoreCircle"></circle>
+                            </svg>
+                            <div class="score-text">
+                                <span class="score-number" id="overallScore">0</span>
+                                <span class="score-label">Score</span>
+                            </div>
+                        </div>
+                        <div class="score-info">
+                            <h3 class="score-title" id="scoreTitle">Getting Started</h3>
+                            <p class="score-description" id="scoreDescription">
+                                Complete the assessment to see your compliance level
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Category Breakdown -->
+                    <div class="category-breakdown">
+                        <h3>Category Breakdown</h3>
+                        <div class="breakdown-list" id="breakdownList">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="recommendations">
+                        <h3>Priority Recommendations</h3>
+                        <div class="recommendations-list" id="recommendationsList">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Export Section -->
+            <section id="export" class="section hidden">
+                <div class="export-header">
+                    <h2 class="section-title">Export & Import</h2>
+                    <p class="section-subtitle">
+                        Save your assessment results or import previous assessments
+                    </p>
+                </div>
+
+                <div class="export-content">
+                    <div class="export-actions">
+                        <div class="action-card">
+                            <div class="action-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <h3>Export Results</h3>
+                            <p>Download your compliance assessment as JSON or PDF report</p>
+                            <div class="action-buttons">
+                                <button class="btn btn-primary" id="exportJson">
+                                    <i class="fas fa-file-code"></i> Export JSON
+                                </button>
+                                <button class="btn btn-secondary" id="exportPdf">
+                                    <i class="fas fa-file-pdf"></i> Export PDF
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-icon">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <h3>Import Assessment</h3>
+                            <p>Load a previous assessment from JSON file</p>
+                            <div class="action-buttons">
+                                <input type="file" id="importFile" accept=".json" style="display: none;">
+                                <button class="btn btn-primary" id="importBtn">
+                                    <i class="fas fa-file-upload"></i> Import JSON
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-icon">
+                                <i class="fas fa-trash"></i>
+                            </div>
+                            <h3>Reset Assessment</h3>
+                            <p>Clear all responses and start fresh</p>
+                            <div class="action-buttons">
+                                <button class="btn btn-danger" id="resetBtn">
+                                    <i class="fas fa-undo"></i> Reset All
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2025 GDPR Compliance Checker. Open Source Project.</p>
+                    <p>
+                        <strong>Disclaimer:</strong> This tool provides general guidance and does not constitute legal advice.
+                        Always consult with a qualified lawyer for legal matters.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/mirkoschubert/datenschutz-checkliste" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#" onclick="showAbout()">About</a>
+                    <a href="#" onclick="showLegal()">Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="itemModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle"></h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-description" id="modalDescription"></div>
+                <div class="modal-legal" id="modalLegal"></div>
+                <div class="modal-implementation" id="modalImplementation"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/assessment.js"></script>
+    <script src="js/overview.js"></script>
+    <script src="js/export.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
