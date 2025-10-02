@@ -891,4 +891,8 @@ const scoringConfig = {
 // Export data for use in other modules
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { gdprData, scoringConfig };
+} else if (typeof window !== 'undefined') {
+    // Make data available globally in browser
+    window.gdprData = gdprData;
+    window.scoringConfig = scoringConfig;
 }

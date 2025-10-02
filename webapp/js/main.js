@@ -25,15 +25,20 @@ class GDPRApp {
             this.exportManager = new ExportManager(this.assessmentManager, this.overviewManager);
 
             // Make managers globally available for event handlers
-            window.assessmentManager = this.assessmentManager;
+            window.gdprAssessment = this.assessmentManager;
             window.overviewManager = this.overviewManager;
             window.exportManager = this.exportManager;
+            
+            // Backwards compatibility
+            window.assessmentManager = this.assessmentManager;
 
             // Setup global event listeners
             this.setupEventListeners();
 
             // Check for shared data in URL
-            this.exportManager.checkForSharedData();
+            if (this.exportManager.checkForSharedData) {
+                this.exportManager.checkForSharedData();
+            }
 
             console.log('GDPR Compliance Checker initialized successfully');
         } catch (error) {
@@ -76,23 +81,8 @@ class GDPRApp {
     }
 
     setupLanguageSwitching() {
-        const langButtons = document.querySelectorAll('.lang-btn');
-        
-        langButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const lang = button.dataset.lang;
-                this.assessmentManager.setLanguage(lang);
-                
-                // Update active button
-                langButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                
-                // Update overview if visible
-                if (this.overviewManager) {
-                    this.overviewManager.updateOverview();
-                }
-            });
-        });
+        // Language switching is now handled by the assessment manager
+        // This method is kept for backwards compatibility
     }
 
     setupMobileNavigation() {
@@ -380,3 +370,48 @@ const app = new GDPRApp();
 
 // Make app globally available for debugging
 window.gdprApp = app;
+
+// Global functions for backwards compatibility and event handlers
+function toggleCategory(categoryId) {
+    if (window.gdprAssessment && window.gdprAssessment.toggleCategory) {
+        window.gdprAssessment.toggleCategory(categoryId);
+    }
+}
+
+function handleItemCheckboxClick(itemId, event) {
+    if (event && event.target.tagName === 'INPUT') {
+        // If clicking directly on checkbox, let the onchange handle it
+        return;
+    }
+    if (window.gdprAssessment && window.gdprAssessment.handleCheckboxClick) {
+        window.gdprAssessment.handleCheckboxClick(itemId);
+    }
+}
+
+function handleItemCheckboxChange(itemId) {
+    if (window.gdprAssessment && window.gdprAssessment.handleCheckboxChange) {
+        window.gdprAssessment.handleCheckboxChange(itemId);
+    }
+}
+
+function handleItemCheckbox(itemId) {
+    // Backwards compatibility
+    handleItemCheckboxClick(itemId);
+}
+
+function handleCheckboxChange(itemId, isChecked) {
+    // Backwards compatibility
+    handleItemCheckboxChange(itemId);
+}
+
+function showItemDetails(itemId) {
+    if (window.gdprAssessment && window.gdprAssessment.showItemDetails) {
+        window.gdprAssessment.showItemDetails(itemId);
+    }
+}
+
+function handleItemIgnore(itemId) {
+    if (window.gdprAssessment && window.gdprAssessment.toggleIgnoreItem) {
+        window.gdprAssessment.toggleIgnoreItem(itemId);
+    }
+}

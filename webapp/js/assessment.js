@@ -3,6 +3,7 @@ class GDPRAssessment {
     constructor() {
         this.currentLang = 'en';
         this.responses = {};
+        this.ignoredItems = new Set();
         this.totalItems = 0;
         this.completedItems = 0;
         this.currentScore = 0;
@@ -12,17 +13,76 @@ class GDPRAssessment {
     }
 
     init() {
-        this.loadLanguage();
+        this.loadSavedData();
         this.renderCategories();
         this.updateProgress();
-        this.loadSavedResponses();
+        this.setupLanguageDropdown();
     }
 
-    loadLanguage() {
+    loadSavedData() {
         // Get language from localStorage or default to English
         this.currentLang = localStorage.getItem('gdpr_language') || 'en';
         
-        // Update language buttons
+        // Load saved responses and ignored items
+        const savedResponses = localStorage.getItem('gdpr_responses');
+        if (savedResponses) {
+            this.responses = JSON.parse(savedResponses);
+        }
+        
+        const savedIgnored = localStorage.getItem('gdpr_ignored');
+        if (savedIgnored) {
+            this.ignoredItems = new Set(JSON.parse(savedIgnored));
+        }
+        
+        this.updateLanguageDisplay();
+    }
+
+    saveData() {
+        localStorage.setItem('gdpr_language', this.currentLang);
+        localStorage.setItem('gdpr_responses', JSON.stringify(this.responses));
+        localStorage.setItem('gdpr_ignored', JSON.stringify([...this.ignoredItems]));
+    }
+
+    setupLanguageDropdown() {
+        const dropdown = document.getElementById('languageToggle');
+        const menu = document.getElementById('languageMenu');
+        
+        if (!dropdown || !menu) return;
+
+        dropdown.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', () => {
+            dropdown.classList.remove('active');
+            menu.classList.remove('active');
+        });
+
+        // Language selection
+        menu.addEventListener('click', (e) => {
+            if (e.target.classList.contains('lang-btn')) {
+                const lang = e.target.dataset.lang;
+                this.setLanguage(lang);
+                dropdown.classList.remove('active');
+                menu.classList.remove('active');
+            }
+        });
+    }
+
+    updateLanguageDisplay() {
+        const currentLangSpan = document.querySelector('.current-lang');
+        if (currentLangSpan) {
+            const langMap = {
+                'en': '🇬🇧 English',
+                'de': '🇩🇪 Deutsch'
+            };
+            currentLangSpan.textContent = langMap[this.currentLang] || '🇬🇧 English';
+        }
+
+        // Update active state in dropdown
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === this.currentLang);
         });
@@ -30,10 +90,10 @@ class GDPRAssessment {
 
     setLanguage(lang) {
         this.currentLang = lang;
-        localStorage.setItem('gdpr_language', lang);
-        this.loadLanguage();
+        this.updateLanguageDisplay();
         this.renderCategories();
         this.updateProgress();
+        this.saveData();
     }
 
     renderCategories() {
@@ -87,19 +147,28 @@ class GDPRAssessment {
 
     createCategoryItems(items) {
         return items.map(item => `
-            <div class="checklist-item ${this.responses[item.id] ? 'completed' : ''}" 
-                 data-item-id="${item.id}" onclick="showItemDetails('${item.id}')">
-                <input type="checkbox" 
-                       class="item-checkbox" 
-                       id="checkbox-${item.id}"
-                       ${this.responses[item.id] ? 'checked' : ''}
-                       onclick="event.stopPropagation(); handleCheckboxChange('${item.id}', this.checked)">
+            <div class="checklist-item ${this.responses[item.id] ? 'completed' : ''} ${this.ignoredItems.has(item.id) ? 'ignored' : ''}" 
+                 data-item-id="${item.id}">
+                <div class="item-checkbox-area" onclick="handleItemCheckboxClick('${item.id}', event)">
+                    <input type="checkbox" 
+                           class="item-checkbox" 
+                           id="checkbox-${item.id}"
+                           ${this.responses[item.id] ? 'checked' : ''}
+                           ${this.ignoredItems.has(item.id) ? 'disabled' : ''}
+                           onchange="handleItemCheckboxChange('${item.id}')"
+                           onclick="event.stopPropagation()">
+                </div>
                 <div class="item-content">
                     <div class="item-title">${item.title}</div>
                     <div class="item-description">${item.description}</div>
                     <div class="item-actions">
-                        <button class="item-info-btn" onclick="event.stopPropagation(); showItemDetails('${item.id}')">
+                        <button class="item-info-btn" onclick="showItemDetails('${item.id}')">
                             <i class="fas fa-info-circle"></i> Details
+                        </button>
+                        <button class="item-ignore-btn ${this.ignoredItems.has(item.id) ? 'active' : ''}" 
+                                onclick="handleItemIgnore('${item.id}')">
+                            <i class="fas fa-eye-slash"></i> 
+                            ${this.ignoredItems.has(item.id) ? 'Unignore' : 'Ignore'}
                         </button>
                         ${item.required ? '<span class="item-required">Required</span>' : '<span class="item-optional">Optional</span>'}
                     </div>
@@ -121,7 +190,32 @@ class GDPRAssessment {
         }
     }
 
-    handleCheckboxChange(itemId, isChecked) {
+    handleCheckboxClick(itemId) {
+        // Don't allow checking if item is ignored
+        if (this.ignoredItems.has(itemId)) return;
+
+        const checkbox = document.getElementById(`checkbox-${itemId}`);
+        if (!checkbox) return;
+
+        // Toggle the checkbox state
+        checkbox.checked = !checkbox.checked;
+        
+        // Update the response state
+        this.updateItemResponse(itemId, checkbox.checked);
+    }
+
+    handleCheckboxChange(itemId) {
+        // Don't allow checking if item is ignored
+        if (this.ignoredItems.has(itemId)) return;
+
+        const checkbox = document.getElementById(`checkbox-${itemId}`);
+        if (!checkbox) return;
+
+        // Use the current checkbox state
+        this.updateItemResponse(itemId, checkbox.checked);
+    }
+
+    updateItemResponse(itemId, isChecked) {
         if (isChecked) {
             this.responses[itemId] = true;
         } else {
@@ -136,12 +230,103 @@ class GDPRAssessment {
 
         // Update progress and save
         this.updateProgress();
-        this.saveResponses();
-        
-        // Update overview if visible
-        if (window.overviewManager) {
-            window.overviewManager.updateOverview();
+        this.saveData();
+    }
+
+    toggleIgnoreItem(itemId) {
+        if (this.ignoredItems.has(itemId)) {
+            // Unignore item
+            this.ignoredItems.delete(itemId);
+        } else {
+            // Ignore item - also uncheck if checked
+            this.ignoredItems.add(itemId);
+            if (this.responses[itemId]) {
+                delete this.responses[itemId];
+            }
         }
+
+        // Re-render to update UI
+        this.renderCategories();
+        this.updateProgress();
+        this.saveData();
+    }
+
+    showItemDetails(itemId) {
+        // Find the item data
+        const data = gdprData[this.currentLang];
+        let itemData = null;
+        
+        for (const category of data.categories) {
+            const item = category.items.find(i => i.id === itemId);
+            if (item) {
+                itemData = item;
+                break;
+            }
+        }
+
+        if (!itemData) return;
+
+        // Create modal content
+        const modal = this.createItemModal(itemData);
+        document.body.appendChild(modal);
+        
+        // Show modal
+        setTimeout(() => modal.classList.add('active'), 10);
+    }
+
+    createItemModal(item) {
+        const modal = document.createElement('div');
+        modal.className = 'modal-overlay';
+        modal.onclick = (e) => {
+            if (e.target === modal) this.closeModal(modal);
+        };
+
+        const legalBasisHtml = item.legalBasis ? `
+            <div class="modal-section">
+                <h4>Legal Basis:</h4>
+                <ul>
+                    ${item.legalBasis.map(basis => `<li>${basis}</li>`).join('')}
+                </ul>
+            </div>
+        ` : '';
+
+        const implementationHtml = item.implementation ? `
+            <div class="modal-section">
+                <h4>Implementation Tips:</h4>
+                <ul>
+                    ${item.implementation.map(tip => `<li>${tip}</li>`).join('')}
+                </ul>
+            </div>
+        ` : '';
+
+        modal.innerHTML = `
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>${item.title}</h3>
+                    <button class="modal-close" onclick="gdprAssessment.closeModal(this.closest('.modal-overlay'))">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-description">${item.description}</p>
+                    ${legalBasisHtml}
+                    ${implementationHtml}
+                    <div class="modal-meta">
+                        <span class="item-type ${item.required ? 'required' : 'optional'}">
+                            ${item.required ? 'Required' : 'Optional'}
+                        </span>
+                        <span class="item-weight">Weight: ${item.weight}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        return modal;
+    }
+
+    closeModal(modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
     }
 
     showItemDetails(itemId) {
@@ -204,15 +389,21 @@ class GDPRAssessment {
 
         data.categories.forEach(category => {
             category.items.forEach(item => {
-                this.totalItems++;
-                const weight = item.required ? item.weight * scoringConfig.weights.required : item.weight * scoringConfig.weights.optional;
-                this.maxScore += weight;
+                // Only count non-ignored items
+                if (!this.ignoredItems.has(item.id)) {
+                    this.totalItems++;
+                    const weight = item.required ? item.weight * scoringConfig.weights.required : item.weight * scoringConfig.weights.optional;
+                    this.maxScore += weight;
+                }
             });
         });
     }
 
     updateProgress() {
-        this.completedItems = Object.keys(this.responses).length;
+        // Recalculate totals to account for ignored items
+        this.calculateTotalItems();
+        
+        this.completedItems = Object.keys(this.responses).filter(id => !this.ignoredItems.has(id)).length;
         const progressPercentage = this.totalItems > 0 ? (this.completedItems / this.totalItems) * 100 : 0;
         
         // Calculate weighted score

@@ -37,8 +37,16 @@
                         <li><a href="#overview" class="nav-link">Overview</a></li>
                         <li><a href="#export" class="nav-link">Export</a></li>
                         <li class="language-switcher">
-                            <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
-                            <button class="lang-btn" data-lang="de">🇩🇪 DE</button>
+                            <div class="language-dropdown">
+                                <button class="dropdown-toggle" id="languageToggle">
+                                    <span class="current-lang">🇬🇧 EN</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu" id="languageMenu">
+                                    <li><button class="lang-btn" data-lang="en">🇬🇧 English</button></li>
+                                    <li><button class="lang-btn" data-lang="de">🇩🇪 Deutsch</button></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </nav>
@@ -224,6 +232,10 @@
     </div>
 
     <!-- Scripts -->
+    <!-- PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- Application Scripts -->
     <script src="js/data.js"></script>
     <script src="js/assessment.js"></script>
     <script src="js/overview.js"></script>

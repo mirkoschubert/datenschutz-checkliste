@@ -20,8 +20,11 @@ class ExportManager {
         // Export PDF button  
         const exportPdfBtn = document.getElementById('exportPdf');
         if (exportPdfBtn) {
-            exportPdfBtn.addEventListener('click', () => this.exportPDF());
+            exportPdfBtn.addEventListener('click', () => this.exportDirectPDF());
         }
+        
+        // Check PDF library availability
+        this.checkPDFLibrary();
 
         // Import button
         const importBtn = document.getElementById('importBtn');
@@ -36,6 +39,33 @@ class ExportManager {
         const resetBtn = document.getElementById('resetBtn');
         if (resetBtn) {
             resetBtn.addEventListener('click', () => this.resetAssessment());
+        }
+    }
+
+    checkPDFLibrary() {
+        // Check if jsPDF is loaded, if not try to load it dynamically
+        if (!window.jsPDF && !window.jspdf) {
+            console.log('jsPDF not found, checking if script is loaded...');
+            
+            // Wait a bit for scripts to load, then check again
+            setTimeout(() => {
+                if (!window.jsPDF && !window.jspdf) {
+                    console.warn('jsPDF library not loaded. PDF export may not work.');
+                    
+                    // Try to load jsPDF dynamically as fallback
+                    const script = document.createElement('script');
+                    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+                    script.onload = () => {
+                        console.log('jsPDF loaded dynamically');
+                    };
+                    script.onerror = () => {
+                        console.error('Failed to load jsPDF dynamically');
+                    };
+                    document.head.appendChild(script);
+                }
+            }, 1000);
+        } else {
+            console.log('jsPDF library is available');
         }
     }
 
@@ -65,7 +95,170 @@ class ExportManager {
         }
     }
 
+    exportDirectPDF() {
+        console.log('Starting direct PDF export...');
+
+        // Check if jsPDF is available
+        if (!window.jsPDF && !window.jspdf) {
+            this.showNotification('PDF library not loaded. Please refresh the page.', 'error');
+            console.error('jsPDF library not found. Make sure the script is loaded.');
+            return;
+        }
+
+        try {
+            // Try different possible jsPDF references
+            let jsPDF;
+            
+            if (window.jspdf && window.jspdf.jsPDF) {
+                jsPDF = window.jspdf.jsPDF;
+                console.log('Using window.jspdf.jsPDF');
+            } else if (window.jsPDF) {
+                jsPDF = window.jsPDF;
+                console.log('Using window.jsPDF');
+            } else {
+                throw new Error('jsPDF library not found');
+            }
+            
+            const doc = new jsPDF();
+            
+            // Get assessment data from localStorage and checklist structure
+            const assessmentData = this.getAssessmentData();
+            const currentLang = localStorage.getItem('gdpr_language') || 'en';
+            
+            console.log('Assessment data loaded:', assessmentData.length, 'items');
+            
+            // Calculate statistics
+            const totalItems = assessmentData.length;
+            const completedItems = assessmentData.filter(item => item.completed).length;
+            const ignoredItems = assessmentData.filter(item => item.ignored).length;
+            const pendingItems = assessmentData.filter(item => !item.completed && !item.ignored).length;
+            const score = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0;
+            
+            // Set up document header
+            doc.setFontSize(20);
+            doc.text('GDPR Compliance Assessment Report', 20, 30);
+            
+            doc.setFontSize(12);
+            doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 20, 45);
+            doc.text(`Language: ${currentLang.toUpperCase()}`, 20, 55);
+            
+            // Overall Score
+            doc.setFontSize(16);
+            doc.text('Overall Compliance Score', 20, 75);
+            doc.setFontSize(24);
+            
+            // Color based on score
+            if (score >= 80) {
+                doc.setTextColor(40, 167, 69); // Green
+            } else if (score >= 60) {
+                doc.setTextColor(255, 193, 7); // Yellow
+            } else {
+                doc.setTextColor(220, 53, 69); // Red
+            }
+            doc.text(`${score}%`, 20, 95);
+            doc.setTextColor(0, 0, 0); // Reset to black
+            
+            // Summary statistics
+            let yPos = 115;
+            doc.setFontSize(14);
+            doc.text('Summary Statistics:', 20, yPos);
+            yPos += 15;
+            
+            doc.setFontSize(11);
+            doc.text(`Total Items: ${totalItems}`, 25, yPos);
+            yPos += 8;
+            doc.text(`Completed: ${completedItems}`, 25, yPos);
+            yPos += 8;
+            doc.text(`Ignored: ${ignoredItems}`, 25, yPos);
+            yPos += 8;
+            doc.text(`Pending: ${pendingItems}`, 25, yPos);
+            yPos += 20;
+            
+            // Group items by category for breakdown
+            const categoryMap = new Map();
+            assessmentData.forEach(item => {
+                if (!categoryMap.has(item.category)) {
+                    categoryMap.set(item.category, {
+                        total: 0,
+                        completed: 0,
+                        ignored: 0
+                    });
+                }
+                const cat = categoryMap.get(item.category);
+                cat.total++;
+                if (item.completed) cat.completed++;
+                if (item.ignored) cat.ignored++;
+            });
+            
+            // Category Breakdown
+            doc.setFontSize(14);
+            doc.text('Category Breakdown:', 20, yPos);
+            yPos += 15;
+            
+            doc.setFontSize(11);
+            for (const [categoryName, stats] of categoryMap) {
+                if (yPos > 250) {
+                    doc.addPage();
+                    yPos = 20;
+                }
+                const categoryScore = stats.total > 0 ? Math.round((stats.completed / stats.total) * 100) : 0;
+                doc.text(`${categoryName}: ${categoryScore}% (${stats.completed}/${stats.total} completed)`, 25, yPos);
+                yPos += 10;
+            }
+            
+            // Pending Items (recommendations)
+            const pendingItemsList = assessmentData.filter(item => !item.completed && !item.ignored);
+            if (pendingItemsList.length > 0) {
+                yPos += 10;
+                if (yPos > 240) {
+                    doc.addPage();
+                    yPos = 20;
+                }
+                
+                doc.setFontSize(14);
+                doc.text('Priority Recommendations:', 20, yPos);
+                yPos += 15;
+                
+                doc.setFontSize(11);
+                // Show top 10 pending items, prioritize required ones
+                const prioritizedPending = pendingItemsList
+                    .sort((a, b) => (b.required ? 1 : 0) - (a.required ? 1 : 0))
+                    .slice(0, 10);
+                
+                prioritizedPending.forEach((item, index) => {
+                    if (yPos > 250) {
+                        doc.addPage();
+                        yPos = 20;
+                    }
+                    
+                    const prefix = item.required ? '[Required]' : '[Optional]';
+                    const title = `${prefix} ${item.title}`;
+                    const lines = doc.splitTextToSize(`${index + 1}. ${title}`, 170);
+                    doc.text(lines, 25, yPos);
+                    yPos += lines.length * 6 + 3;
+                });
+            }
+            
+            // Save the PDF
+            const timestamp = new Date().toISOString().split('T')[0];
+            doc.save(`gdpr-assessment-${timestamp}.pdf`);
+            
+            this.showNotification('PDF report generated successfully!', 'success');
+            console.log('PDF export completed successfully');
+        } catch (error) {
+            console.error('Direct PDF export error:', error);
+            
+            // Fallback to browser print dialog
+            if (confirm('PDF generation failed. Would you like to use your browser\'s print function instead?\n\nClick OK to open print dialog, or Cancel to try again later.')) {
+                this.fallbackToPrint();
+            } else {
+                this.showNotification('PDF export failed. Try refreshing the page.', 'error');
+            }
+        }
+    }
+
     exportPDF() {
+        // Fallback method for browser printing
         if (!this.overviewManager) return;
 
         try {
@@ -351,6 +544,132 @@ class ExportManager {
                 }
             }
         }
+    }
+
+    getAssessmentData() {
+        // Get current language
+        const currentLang = localStorage.getItem('gdpr_language') || 'en';
+        
+        // Get saved responses and ignored items from localStorage
+        const savedResponses = JSON.parse(localStorage.getItem('gdpr_responses') || '{}');
+        const savedIgnored = JSON.parse(localStorage.getItem('gdpr_ignored') || '[]');
+        const ignoredSet = new Set(savedIgnored);
+        
+        // Get the data for current language from gdprData
+        const data = window.gdprData[currentLang];
+        if (!data) {
+            console.error('No data found for language:', currentLang);
+            return [];
+        }
+        
+        // Create flat array of all items with their status
+        const assessmentData = [];
+        
+        data.categories.forEach(category => {
+            category.items.forEach(item => {
+                assessmentData.push({
+                    id: item.id,
+                    title: item.title,
+                    description: item.description,
+                    category: category.title,
+                    required: item.required,
+                    completed: !!savedResponses[item.id],
+                    ignored: ignoredSet.has(item.id),
+                    weight: item.weight || 1
+                });
+            });
+        });
+        
+        return assessmentData;
+    }
+
+    fallbackToPrint() {
+        console.log('Using browser print fallback...');
+        
+        // Create a printable version of the assessment
+        const printWindow = window.open('', '_blank');
+        const assessmentData = this.getAssessmentData();
+        
+        const printContent = `
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GDPR Assessment Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        .header { text-align: center; margin-bottom: 30px; border-bottom: 2px solid #333; padding-bottom: 20px; }
+        .section { margin-bottom: 30px; }
+        .section h2 { color: #333; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        .item { margin: 15px 0; padding: 10px; border-left: 3px solid #007bff; }
+        .item-completed { border-left-color: #28a745; background: #f8fff9; }
+        .item-ignored { border-left-color: #ffc107; background: #fffbf0; }
+        .item-pending { border-left-color: #dc3545; background: #fff5f5; }
+        .status { font-weight: bold; padding: 2px 8px; border-radius: 3px; font-size: 0.9em; }
+        .status-completed { background: #d4edda; color: #155724; }
+        .status-ignored { background: #fff3cd; color: #856404; }
+        .status-pending { background: #f8d7da; color: #721c24; }
+        .summary { background: #f8f9fa; padding: 20px; border-radius: 5px; margin: 20px 0; }
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>GDPR Compliance Assessment Report</h1>
+        <p>Generated on: ${new Date().toLocaleDateString()}</p>
+    </div>
+    
+    <div class="summary">
+        <h2>Summary</h2>
+        <p><strong>Total Items:</strong> ${assessmentData.length}</p>
+        <p><strong>Completed:</strong> ${assessmentData.filter(item => item.completed).length}</p>
+        <p><strong>Ignored:</strong> ${assessmentData.filter(item => item.ignored).length}</p>
+        <p><strong>Pending:</strong> ${assessmentData.filter(item => !item.completed && !item.ignored).length}</p>
+    </div>
+    
+    <div class="section">
+        <h2>Assessment Details</h2>
+        ${assessmentData.map((item, index) => {
+            let statusClass = 'pending';
+            let statusText = 'Pending';
+            
+            if (item.completed) {
+                statusClass = 'completed';
+                statusText = 'Completed';
+            } else if (item.ignored) {
+                statusClass = 'ignored';
+                statusText = 'Ignored';
+            }
+            
+            return `
+                <div class="item item-${statusClass}">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div style="flex: 1;">
+                            <strong>${index + 1}. ${item.text}</strong>
+                        </div>
+                        <span class="status status-${statusClass}">${statusText}</span>
+                    </div>
+                </div>
+            `;
+        }).join('')}
+    </div>
+    
+    <div class="no-print" style="text-align: center; margin-top: 30px;">
+        <button onclick="window.print()" style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Print Report</button>
+        <button onclick="window.close()" style="padding: 10px 20px; background: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">Close</button>
+    </div>
+</body>
+</html>`;
+        
+        printWindow.document.write(printContent);
+        printWindow.document.close();
+        
+        // Auto-trigger print dialog after a short delay
+        setTimeout(() => {
+            printWindow.print();
+        }, 500);
     }
 }
 
