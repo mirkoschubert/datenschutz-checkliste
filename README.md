@@ -97,7 +97,8 @@ This repository thrives on community contributions! We welcome developers, legal
 - **Discussions**: [GitHub Discussions](https://github.com/mirkoschubert/datenschutz-checkliste/discussions)
 - **Support the Project**: <a href="https://www.buymeacoffee.com/musikuss" target="_blank">Buy me a coffee</a>
 
-### Contributors
+## Contributors
 
-* [Peter Haurand](https://github.com/peterhaurand)
-* [Mirko Schubert](https://github.com/mirkoschubert)
+<a href="https://github.com/mirkoschubert/datenschutz-checkliste/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=mirkoschubert/datenschutz-checkliste&anon=1" />
+</a>
