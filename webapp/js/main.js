@@ -54,6 +54,9 @@ class GDPRApp {
         // Language switching
         this.setupLanguageSwitching();
         
+        // Theme switching
+        this.setupThemeSwitching();
+        
         // Mobile navigation
         this.setupMobileNavigation();
 
@@ -83,6 +86,52 @@ class GDPRApp {
     setupLanguageSwitching() {
         // Language switching is now handled by the assessment manager
         // This method is kept for backwards compatibility
+    }
+    
+    setupThemeSwitching() {
+        const themeToggle = document.getElementById('themeToggle');
+        if (!themeToggle) return;
+        
+        // Initialize theme from localStorage or system preference
+        this.initializeTheme();
+        
+        // Setup theme toggle button
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            this.setTheme(newTheme);
+        });
+    }
+    
+    initializeTheme() {
+        // Check if user previously set a theme preference
+        const savedTheme = localStorage.getItem('gdpr_theme');
+        
+        if (savedTheme) {
+            // Use saved preference
+            this.setTheme(savedTheme);
+        } else {
+            // Check system preference
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                this.setTheme('dark');
+            } else {
+                this.setTheme('light');
+            }
+            
+            // Listen for system preference changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                const newTheme = e.matches ? 'dark' : 'light';
+                this.setTheme(newTheme);
+            });
+        }
+    }
+    
+    setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('gdpr_theme', theme);
+        
+        // Update icon visibility is handled by CSS
+        console.log(`Theme set to: ${theme}`);
     }
 
     setupMobileNavigation() {

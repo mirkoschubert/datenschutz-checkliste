@@ -6,7 +6,10 @@
 }
 
 :root {
-    /* Colors */
+    /* Theme Modes */
+    --theme-transition: 0.3s ease-in-out;
+    
+    /* Light Theme Colors (Default) */
     --primary-color: #2c3e50;
     --primary-light: #34495e;
     --accent-color: #42b983;
@@ -16,7 +19,16 @@
     --danger-color: #e74c3c;
     --info-color: #3498db;
     
-    /* Neutral Colors */
+    /* Neutral Colors - Light Theme */
+    --bg-color: #ffffff;
+    --bg-alt-color: #f8f9fa;
+    --bg-card-color: #ffffff;
+    --text-color: #343a40;
+    --text-muted-color: #6c757d;
+    --border-color: #e9ecef;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    
+    /* Neutral Colors (preserved for backward compatibility) */
     --white: #ffffff;
     --gray-50: #f8f9fa;
     --gray-100: #f1f3f4;
@@ -71,12 +83,47 @@
     --transition-slow: 350ms ease-in-out;
 }
 
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    /* Theme-specific Colors */
+    --primary-color: #4a78a9;
+    --primary-light: #5b8abe;
+    --accent-color: #42b983;
+    --accent-light: #5ecd9b;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --info-color: #3498db;
+    
+    /* Neutral Colors - Dark Theme */
+    --bg-color: #121212;
+    --bg-alt-color: #1e1e1e;
+    --bg-card-color: #2d2d2d;
+    --text-color: #e4e4e4;
+    --text-muted-color: #9e9e9e;
+    --border-color: #444444;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    
+    /* Override neutral colors for backward compatibility */
+    --gray-50: #1e1e1e;
+    --gray-100: #2d2d2d;
+    --gray-200: #444444;
+    --gray-300: #555555;
+    --gray-400: #666666;
+    --gray-500: #9e9e9e;
+    --gray-600: #bbbbbb;
+    --gray-700: #cccccc;
+    --gray-800: #e4e4e4;
+    --gray-900: #f5f5f5;
+}
+
 /* ===== BASE STYLES ===== */
 body {
     font-family: var(--font-family);
     line-height: 1.6;
-    color: var(--gray-800);
-    background-color: var(--gray-50);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color var(--theme-transition), color var(--theme-transition);
     overflow-x: hidden;
 }
 
@@ -113,6 +160,7 @@ body {
 /* ===== HEADER ===== */
 .header {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    transition: background var(--theme-transition);
     color: var(--white);
     padding: var(--spacing-4) 0;
     position: sticky;
@@ -169,6 +217,47 @@ body {
 .nav-link.active {
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-1px);
+}
+
+.theme-switcher {
+    margin-right: var(--spacing-2);
+}
+
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    font-size: var(--font-size-lg);
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.theme-toggle #lightIcon {
+    display: none;
+}
+
+.theme-toggle #darkIcon {
+    display: block;
+}
+
+/* Dark mode icon states */
+[data-theme="dark"] .theme-toggle #lightIcon {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle #darkIcon {
+    display: none;
 }
 
 .language-switcher {
@@ -260,7 +349,8 @@ body {
 
 /* ===== PROGRESS BAR ===== */
 .progress-container {
-    background: var(--white);
+    background: var(--bg-card-color);
+    transition: background-color var(--theme-transition), box-shadow var(--theme-transition);
     padding: var(--spacing-6);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
@@ -270,7 +360,8 @@ body {
 .progress-bar {
     width: 100%;
     height: 12px;
-    background: var(--gray-200);
+    background: var(--border-color);
+    transition: background-color var(--theme-transition);
     border-radius: var(--radius-lg);
     overflow: hidden;
     margin-bottom: var(--spacing-4);
@@ -310,11 +401,11 @@ body {
 }
 
 .category {
-    background: var(--white);
+    background: var(--bg-card-color);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
     overflow: hidden;
-    transition: var(--transition-normal);
+    transition: background-color var(--theme-transition), box-shadow var(--theme-transition), transform var(--transition-normal);
 }
 
 .category:hover {
@@ -327,13 +418,15 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-6);
-    background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
-    border-bottom: 1px solid var(--gray-200);
+    background: linear-gradient(135deg, var(--bg-alt-color) 0%, var(--bg-card-color) 100%);
+    border-bottom: 1px solid var(--border-color);
+    transition: background var(--theme-transition), border-color var(--theme-transition);
     cursor: pointer;
 }
 
 .category-header:hover {
-    background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-50) 100%);
+    background: linear-gradient(135deg, var(--gray-100) 0%, var(--bg-alt-color) 100%);
+    transition: background var(--theme-transition);
 }
 
 .category-title {
@@ -405,10 +498,10 @@ body {
     align-items: flex-start;
     gap: var(--spacing-4);
     padding: var(--spacing-4);
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
     margin-bottom: var(--spacing-3);
-    transition: var(--transition-normal);
+    transition: var(--transition-normal), border-color var(--theme-transition), background var(--theme-transition);
     cursor: pointer;
 }
 
@@ -532,7 +625,8 @@ body {
 }
 
 .score-card {
-    background: var(--white);
+    background: var(--bg-card-color);
+    transition: background-color var(--theme-transition), box-shadow var(--theme-transition);
     border-radius: var(--radius-xl);
     padding: var(--spacing-8);
     box-shadow: var(--shadow-md);
@@ -556,7 +650,8 @@ body {
 
 .score-bg {
     fill: none;
-    stroke: var(--gray-200);
+    stroke: var(--border-color);
+    transition: stroke var(--theme-transition);
     stroke-width: 8;
 }
 
@@ -610,7 +705,8 @@ body {
 
 .category-breakdown,
 .recommendations {
-    background: var(--white);
+    background: var(--bg-card-color);
+    transition: background-color var(--theme-transition), box-shadow var(--theme-transition);
     border-radius: var(--radius-xl);
     padding: var(--spacing-6);
     box-shadow: var(--shadow-md);
@@ -630,7 +726,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-3);
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--border-color);
+    transition: border-color var(--theme-transition);
 }
 
 .breakdown-item:last-child,
@@ -693,14 +790,14 @@ body {
 }
 
 .modal-content {
-    background: var(--white);
+    background: var(--bg-card-color);
     border-radius: var(--radius-xl);
     max-width: 600px;
     max-height: 80vh;
     overflow-y: auto;
     box-shadow: var(--shadow-xl);
     transform: translateY(-20px);
-    transition: var(--transition-normal);
+    transition: var(--transition-normal), background-color var(--theme-transition), box-shadow var(--theme-transition);
 }
 
 .modal-overlay.active .modal-content {
@@ -712,7 +809,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-6);
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--border-color);
+    transition: border-color var(--theme-transition);
 }
 
 .modal-header h3 {
@@ -962,7 +1060,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-6);
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--border-color);
+    transition: border-color var(--theme-transition);
 }
 
 .modal-title {
@@ -997,7 +1096,8 @@ body {
 
 .modal-legal,
 .modal-implementation {
-    background: var(--gray-50);
+    background: var(--bg-alt-color);
+    transition: background-color var(--theme-transition);
     padding: var(--spacing-4);
     border-radius: var(--radius-lg);
     margin-bottom: var(--spacing-4);
@@ -1020,7 +1120,8 @@ body {
 
 .modal-footer {
     padding: var(--spacing-6);
-    border-top: 1px solid var(--gray-200);
+    border-top: 1px solid var(--border-color);
+    transition: border-color var(--theme-transition);
     display: flex;
     justify-content: flex-end;
 }
