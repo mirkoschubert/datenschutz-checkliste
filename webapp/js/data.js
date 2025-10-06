@@ -369,13 +369,13 @@ const gdprData = {
         subtitle: "Interaktive Checkliste zur Bewertung der DSGVO-Konformität Ihrer Website",
         categories: [
             {
-                id: "sicherheit",
+                id: "security",
                 title: "Sicherheit",
                 icon: "fas fa-shield-alt",
                 description: "Technische und organisatorische Maßnahmen zum Schutz personenbezogener Daten",
                 items: [
                     {
-                        id: "ssl-webseite",
+                        id: "ssl-website",
                         title: "SSL/TLS-Transportverschlüsselung Webseite",
                         description: "Transportverschlüsselung sollte immer dann verwendet werden, wenn personenbezogene Daten übertragen werden, insbesondere bei sämtlichen Formulardaten.",
                         required: true,
@@ -404,7 +404,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "cms-sicherheit",
+                        id: "cms-security",
                         title: "Sicherheitskonzept des CMS (z.B. WordPress)",
                         description: "Schutz vor Brute-Force-Attacken, Kommentar-SPAM und Sicherheitslücken in CMS, Plugins und Themes.",
                         required: true,
@@ -419,7 +419,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "server-sicherheit",
+                        id: "server-security",
                         title: "Sicherheitskonzept des Servers",
                         description: "Serververantwortung variiert je nach Hosting-Typ (Shared, VPS, Dedicated Server).",
                         required: true,
@@ -431,7 +431,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "email-verschluesselung",
+                        id: "email-encryption",
                         title: "Signatur und/oder Inhaltsverschlüsselung bei E-Mails (Optional)",
                         description: "Elektronische Signaturen und Inhaltsverschlüsselung fördern die E-Mail-Sicherheit und rechtliche Nachweisbarkeit.",
                         required: false,
@@ -448,7 +448,7 @@ const gdprData = {
                 ]
             },
             {
-                id: "webhoster",
+                id: "hosting",
                 title: "Webhoster",
                 icon: "fas fa-server",
                 description: "Auftragsverarbeitungsverträge und Log-Management mit Webhostern",
@@ -467,7 +467,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "weitere-server-logs",
+                        id: "server-logs",
                         title: "Weitere Server Logs",
                         description: "Webhoster sind verpflichtet, weitere Server Logs zur Sicherheitsüberwachung zu führen, die ebenfalls IP-Adressen speichern.",
                         required: true,
@@ -479,7 +479,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "webseiten-installation",
+                        id: "dpa-hosting",
                         title: "Auftragsverarbeitungsvertrag mit Webhoster",
                         description: "Alle auf Servern gespeicherten personenbezogenen Daten stellen 'Verarbeitung' dar und erfordern AVV mit dem Webhoster.",
                         required: true,
@@ -494,13 +494,13 @@ const gdprData = {
                 ]
             },
             {
-                id: "externe-dienste",
+                id: "external-services",
                 title: "Externe Dienste",
                 icon: "fas fa-plug",
                 description: "Drittanbieter-Services und Tools, die personenbezogene Daten verarbeiten können",
                 items: [
                     {
-                        id: "analyse-tools",
+                        id: "analytics-tools",
                         title: "Analyse-Tools (Google Analytics, Matomo, etc.)",
                         description: "Analyse-Tools mit Datenspeicherung in den USA sind seit dem Schrems II-Urteil (2020) nicht DSGVO-konform.",
                         required: true,
@@ -556,7 +556,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "verwertungsgesellschaften",
+                        id: "royalty-collecting-societies",
                         title: "Verwertungsgesellschaften (VG-Wort)",
                         description: "Zählpixel von Verwertungsgesellschaften übertragen IP-Adressen und erfordern Einwilligung.",
                         required: true,
@@ -569,7 +569,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "webfonts",
+                        id: "web-fonts",
                         title: "Webfonts (Google Fonts, Adobe Typekit, etc.)",
                         description: "Web-Schriften erfordern Einwilligung und sollten lokalisiert werden, um Datenübertragung an Dritte zu vermeiden.",
                         required: true,
@@ -583,7 +583,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "profile-bilder",
+                        id: "profile-pictures",
                         title: "Profile bzw. Profilbilder (Gravatar, About.me)",
                         description: "Externe Profilbild-Services übertragen E-Mail-Hashes und IP-Adressen an Drittanbieter.",
                         required: true,
@@ -649,7 +649,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "video-musik-dienste",
+                        id: "video-music-services",
                         title: "Video- und Musikdienste (YouTube, Vimeo, Spotify, SoundCloud)",
                         description: "Eingebettete Videos und Musik von YouTube, Vimeo, Spotify, SoundCloud übertragen personenbezogene Daten und erfordern 2-Klick-Lösungen.",
                         required: true,
@@ -663,7 +663,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "kartendienste",
+                        id: "map-services",
                         title: "Kartendienste (Google Maps, Open Street Maps, etc.)",
                         description: "Kartendienste wie Google Maps sammeln personenbezogene Daten beim Seitenladen und speichern meist Daten in den USA.",
                         required: true,
@@ -679,13 +679,13 @@ const gdprData = {
                 ]
             },
             {
-                id: "weitere-aspekte",
+                id: "content-features",
                 title: "Weitere Aspekte",
                 icon: "fas fa-cogs",
                 description: "Website-Features, die personenbezogene Daten sammeln oder verarbeiten können",
                 items: [
                     {
-                        id: "kommentarfunktion",
+                        id: "comments",
                         title: "Kommentarfunktion",
                         description: "Kommentarsysteme sollten IP-Adress-Speicherung begrenzen und Nutzer über Datensammlung informieren.",
                         required: true,
@@ -699,7 +699,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "weblinks",
+                        id: "external-links",
                         title: "Weblinks",
                         description: "Externe Links sollten mit geeigneten Attributen versehen und in der Datenschutzerklärung erwähnt werden.",
                         required: false,
@@ -712,7 +712,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "plugins-erweiterungen",
+                        id: "plugins-extensions",
                         title: "Plugins/Erweiterungen/Module",
                         description: "Alle Plugins und Erweiterungen auf Datenschutz-Konformität prüfen und regelmäßig aktualisieren.",
                         required: true,
@@ -743,13 +743,13 @@ const gdprData = {
                 ]
             },
             {
-                id: "rechtsdokumente",
+                id: "legal-documents",
                 title: "Rechtsdokumente",
                 icon: "fas fa-file-contract",
                 description: "Erforderliche rechtliche Seiten und Compliance-Dokumentation",
                 items: [
                     {
-                        id: "allgemein-rechtskonformitaet",
+                        id: "general-compliance",
                         title: "Allgemeine Rechtskonformität",
                         description: "Grundlegende rechtliche Anforderungen für alle Websites in Deutschland.",
                         required: true,
@@ -778,7 +778,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "datenschutzerklaerung",
+                        id: "privacy-policy",
                         title: "Datenschutzerklärung",
                         description: "Umfassende Datenschutzerklärung von jeder Seite aus zugänglich, die alle Datenverarbeitungsaktivitäten detailliert.",
                         required: true,
@@ -793,7 +793,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "impressum",
+                        id: "imprint",
                         title: "Impressum",
                         description: "Erforderliche rechtliche Angaben einschließlich Kontaktdaten und Geschäftsinformationen (deutsches/EU-Recht).",
                         required: true,
@@ -822,7 +822,7 @@ const gdprData = {
                         ]
                     },
                     {
-                        id: "urheberrecht-bildnachweise",
+                        id: "copyright-credits",
                         title: "Urheberrecht/Bildnachweise",
                         description: "Ordnungsgemäße Quellenangaben für alle externen Werke (Bilder, Grafiken, Musik, Videos, Texte, Software).",
                         required: true,
