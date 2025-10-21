@@ -175,12 +175,6 @@ class GDPRApp {
                 e.preventDefault();
                 document.getElementById('importFile').click();
             }
-            
-            // Ctrl/Cmd + R to reset (with confirmation)
-            if ((e.ctrlKey || e.metaKey) && e.key === 'r') {
-                e.preventDefault();
-                this.assessmentManager.resetAssessment();
-            }
         });
     }
 
