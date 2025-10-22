@@ -189,9 +189,9 @@
         {
           "id": "analytics-tools",
           "title": "Analytics Tools (e.g. Google Analytics, Matomo/Piwik, WordPress Stats/Jetpack)",
-          "description": "Analytics tools that store personal data in the USA are not GDPR compliant since 2020 after the Schrems II ruling!",
+          "description": "Analytics tools that store personal data in the USA must comply with the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025.",
           "explanation": [
-            "Important: Analytics tools that store personal data in the USA are not GDPR compliant since 2020 after the Schrems II ruling! This includes, among others, Google Analytics and Jetpack.",
+            "Important: Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025, confirming that organizations certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. This includes analytics tools such as Google Analytics and Jetpack, provided they are DPF-certified. However, it should be noted that privacy activist Max Schrems, through his organization NOYB (None Of Your Business), has indicated plans to challenge the Data Privacy Framework, potentially leading to what some are calling 'Schrems III.' While the framework currently provides legal certainty, future legal challenges remain possible.",
             "Weigh up which analytics tool appears suitable in consideration of the data economy principle.",
             "Weigh up whether there is a processing reason according to Art. 6 para. 1 lit. b - f GDPR or whether prior consent should be obtained according to Art. 6 para. 1 lit. a.",
             "If cookies are stored, inform about it via a cookie banner and provide opt-out function.",
@@ -218,9 +218,9 @@
         {
           "id": "marketing-tools",
           "title": "Marketing Tools (e.g. Google Ads, Affiliate Networks)",
-          "description": "Marketing tools that store personal data in the USA are not GDPR-compliant since 2020 after the Schrems II ruling!",
+          "description": "Marketing tools that store personal data in the USA must comply with the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025.",
           "explanation": [
-            "Important: Marketing tools that store personal data in the USA are not GDPR-compliant since 2020 after the Schrems II ruling! This includes Google Ads (esp. the remarketing function) and various affiliate networks.",
+            "Important: Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025, confirming that organizations certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. This includes marketing tools such as Google Ads and various affiliate networks, provided they are DPF-certified. However, it should be noted that privacy activist Max Schrems, through his organization NOYB (None Of Your Business), has indicated plans to challenge the Data Privacy Framework, potentially leading to what some are calling 'Schrems III.' While the framework currently provides legal certainty, future legal challenges remain possible.",
             "Google Ads currently requires prior consent (opt-in) according to program guidelines, not only for cookies and beacons (tracking pixels), but also for the transmission of any personal data.",
             "Functions such as remarketing or the delivery of personal advertising are currently questionable and should - at least temporarily - be disabled.",
             "Observe the guidelines and terms and conditions of all affiliate networks!",
@@ -241,9 +241,9 @@
         {
           "id": "newsletter-tools",
           "title": "Newsletter Tools (e.g. Mailchimp, Clicktipp, Newsletter2Go/Sendinblue, Jetpack Subscription)",
-          "description": "Newsletter tools that store personal data in the USA are not GDPR-compliant since 2020 after the Schrems II ruling!",
+          "description": "Newsletter tools that store personal data in the USA must comply with the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025.",
           "explanation": [
-            "Important: Newsletter tools that store personal data in the USA are not GDPR-compliant since 2020 after the Schrems II ruling! This includes Mailchimp and Jetpack, among others.",
+            "Important: Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025, confirming that organizations certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. This includes newsletter tools such as Mailchimp and Jetpack, provided they are DPF-certified. However, it should be noted that privacy activist Max Schrems, through his organization NOYB (None Of Your Business), has indicated plans to challenge the Data Privacy Framework, potentially leading to what some are calling 'Schrems III.' While the framework currently provides legal certainty, future legal challenges remain possible.",
             "Newsletter forms should be provided with an adequate notice text and repeated in the email during the double opt-in process.",
             "A newsletter entry should not be linked to a (free or paid) service ('tie-in ban').",
             "The consent for newsletter entries must be documented (notice text, time) and an opt-out must be provided."
@@ -263,9 +263,9 @@
         {
           "id": "social-plugins",
           "title": "Social Plugins (e.g. Facebook, Instagram, Twitter)",
-          "description": "Social plugins that store personal data in the USA are not GDPR-compliant since 2020 after the Schrems II ruling!",
+          "description": "Social plugins that store personal data in the USA must comply with the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025.",
           "explanation": [
-            "Important: Social plugins that store personal data in the USA are not GDPR-compliant since 2020 after the Schrems II ruling! This affects, among others, Facebook, Instagram and Twitter.",
+            "Important: Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025, confirming that organizations certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. This includes social plugins from platforms such as Facebook, Instagram, and Twitter/X, provided they are DPF-certified. However, it should be noted that privacy activist Max Schrems, through his organization NOYB (None Of Your Business), has indicated plans to challenge the Data Privacy Framework, potentially leading to what some are calling 'Schrems III.' While the framework currently provides legal certainty, future legal challenges remain possible.",
             "All integrated social plugins already load personal data when visiting the website. Provided that the user is logged into the social network, an exact allocation as well as a kind of 'movement profile' takes place via all websites provided with social plugins.",
             "Login procedures (e.g. Facebook Connect) and comment functions with links to social networks are handled in the same way.",
             "Sharing buttons that display the number of shares have the same problem.",
@@ -304,10 +304,10 @@
         {
           "id": "cdn-services",
           "title": "Content Delivery Networks (CDN)",
-          "description": "CDNs distribute content globally and may store IP addresses, potentially violating GDPR since 2020.",
+          "description": "CDNs distribute content globally and may store IP addresses. Following the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025, DPF-certified CDNs can legally transfer data between the EU and US.",
           "explanation": [
             "CDNs (e.g. Google Fonts, Adobe Typekit, Bootstrap/Fontawesome, CDNJS/Cloudflare, Jetpack, etc.) may well be considered critical, as the content is distributed to servers all over the world and potentially at least the IP address is stored upon retrieval.",
-            "Since CDNs also store data in the USA, the storage of personal data (e.g. IP & images) could possibly also no longer be GDPR compliant since 2020.",
+            "Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025. CDNs certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. However, privacy activist Max Schrems has indicated plans to challenge the Data Privacy Framework ('Schrems III'), so future legal challenges remain possible.",
             "In the case of CDNs, it should be weighed up whether they are necessary at all (e.g. target group exclusively D-A-CH).",
             "Contents of CDNs (e.g. images, fonts, CSS or JS files) should be localized if possible."
           ],
@@ -348,9 +348,9 @@
         {
           "id": "profile-pictures",
           "title": "Profiles & Profile Pictures (e.g. Gravatar, About.me)",
-          "description": "Profiles that store personal data (e.g. images) in the USA are not GDPR-compliant since 2020 after the Schrems II ruling!",
+          "description": "Profile services that store personal data in the USA must comply with the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025.",
           "explanation": [
-            "Important: Profiles that store personal data (e.g. images) in the USA are not GDPR-compliant since 2020 after the Schrems II ruling! This concerns Gravatar and About.me, among others.",
+            "Important: Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025, confirming that organizations certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. This includes profile services such as Gravatar and About.me, provided they are DPF-certified. However, it should be noted that privacy activist Max Schrems, through his organization NOYB (None Of Your Business), has indicated plans to challenge the Data Privacy Framework, potentially leading to what some are calling 'Schrems III.' While the framework currently provides legal certainty, future legal challenges remain possible.",
             "Profiles and/or avatar images should be localized or disabled if possible, as they certainly contain personal data.",
             "The Gravatar functionality is permanently integrated in WordPress and should be completely disabled not only because of the images but also in the email addresses stored as hash in the image link."
           ],
@@ -370,7 +370,7 @@
           "description": "If emojis are loaded externally from a CDN, IP addresses are usually saved on retrieval.",
           "explanation": [
             "If emojis are loaded externally from a CDN, IP addresses are usually saved on retrieval.",
-            "Especially for WP emojis, additional Canvas Fingerprinting is used, which allows an assignment of the computer without storing cookies (even if no emojis are displayed). Since this data is stored in the USA, such emojis are basically not GDPR compliant since 2020.",
+            "Especially for WP emojis, additional Canvas Fingerprinting is used, which allows an assignment of the computer without storing cookies (even if no emojis are displayed). Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025. Since this data is typically stored in the USA, emoji services certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. However, privacy activist Max Schrems has indicated plans to challenge the Data Privacy Framework ('Schrems III'), so future legal challenges remain possible.",
             "WP Emojis should therefore always be turned off! Any modern browser will nevertheless continue to display emojis and emoticons."
           ],
           "required": true,
@@ -408,9 +408,9 @@
         {
           "id": "wp-embeds",
           "title": "WP Embeds/oEmbeds",
-          "description": "Most oEmbeds store personal data in the USA and are not GDPR compliant since 2020 after the Schrems II ruling!",
+          "description": "Most oEmbeds store personal data in the USA. Following the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025, DPF-certified services can legally transfer data between the EU and US.",
           "explanation": [
-            "Important: Most oEmbeds store personal data in the USA and are not GDPR compliant since 2020 after the Schrems II ruling!",
+            "Important: Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025, confirming that organizations certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. However, privacy activist Max Schrems has indicated plans to challenge the Data Privacy Framework ('Schrems III'), so future legal challenges remain possible.",
             "If you paste certain links from currently 34 sources (e.g. WordPress blogs, YouTube videos, etc.) into the visual editor in WordPress, they are automatically converted into so-called oEmbeds. In doing so, parts of the target website are loaded into the website graphically via iframe. When loading the website, all contents of the iFrame are automatically loaded (e.g. analytics tools, tracking pixels).",
             "If such oEmbeds appear in posts, pages or comments, the function should be completely disabled.",
             "Old entries will be not completely removed and must be deleted manually."
@@ -432,9 +432,9 @@
         {
           "id": "video-music-services",
           "title": "Video and Music Services (e.g. YouTube, Vimeo, Spotify, Soundcloud)",
-          "description": "Video and music services that store personal data in the USA are not GDPR compliant since 2020 after the Schrems II ruling!",
+          "description": "Video and music services that store personal data in the USA must comply with the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025.",
           "explanation": [
-            "Important: Video and music services that store personal data in the USA are not GDPR compliant since 2020 after the Schrems II ruling! This affects YouTube, Vimeo, Spotify and Soundcloud, among others.",
+            "Important: Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025, confirming that organizations certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. This includes video and music services such as YouTube, Vimeo, Spotify, and SoundCloud, provided they are DPF-certified. However, it should be noted that privacy activist Max Schrems, through his organization NOYB (None Of Your Business), has indicated plans to challenge the Data Privacy Framework, potentially leading to what some are calling 'Schrems III.' While the framework currently provides legal certainty, future legal challenges remain possible.",
             "Embeddings of all video and music services already transfer personal data when loading the website and must therefore have a 2-click solution. In addition, cookies are also often stored.",
             "YouTube videos can be switched to an 'Enhanced Privacy Mode', but this only prevents cookies from being stored.",
             "SoundCloud has improved their privacy settings, but still requires a 2-click solution."
