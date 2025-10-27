@@ -1,0 +1,694 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-10-06",
+  "categories": [
+    {
+      "id": "security",
+      "title": "Sicherheit",
+      "icon": "fas fa-shield-alt",
+      "description": "Technische und organisatorische Maßnahmen zum Schutz personenbezogener Daten",
+      "items": [
+        {
+          "id": "ssl-website",
+          "title": "SSL/TLS-Transportverschlüsselung Webseite",
+          "description": "Transportverschlüsselung sollte immer dann verwendet werden, wenn personenbezogene Daten übertragen werden, insbesondere bei sämtlichen Formulardaten.",
+          "explanation": [
+            "Transportverschlüsselung sollte immer dann verwendet werden, wenn personenbezogene Daten übertragen werden, insbesondere bei sämtlichen Formulardaten.",
+            "Viele Browser warnen bei unverschlüsselten Verbindungen - besser wäre also eine durchgängige Transportverschlüsselung, egal, ob Formulare verwendet werden oder nicht.",
+            "Es sollte die gesamte Webseite auf interne HTTP-Links überprüft werden, damit nicht vor 'Mixed Content' gewarnt wird.",
+            "Es sollten auch externe Links auf Erreichbarkeit überprüft werden (Broken Link Checker), da gerade viele auf HTTPS umstellen.",
+            "Es sollte eine 301-Weiterleitung eingerichtet werden, damit die Webseite nicht über eine verschlüsselte und unverschlüsselte Verbindung erreichbar ist.",
+            "OPTIONAL: Es kann HSTS ('HTTP Strict Transport Security') eingesetzt werden, um Angreifern die Möglichkeit zum 'HTTP Downgrading' zu nehmen. Allerdings sollte man darauf hinweisen, dass dies eine dauerhafte Einstellung ist und es beim Abschalten dieser Funktion zu massiven Einschränkungen in der Erreichbarkeit führt."
+          ],
+          "required": true,
+          "weight": 10,
+          "legalBasis": ["Art. 32 Abs. 1 Lit. a DSGVO", "§64 Abs. 2, Abs. 3 Nr. 8 BDSG"],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": [
+            "Sofern es der Webhoster (mit automatischer Verlängerung) zulässt, auf 'Let's Encrypt'-Zertifikate setzen (kostenlos).",
+            "Für große Firmen mit vielen Subdomains: Lieber kostenpflichtig auf Zertifikate für Wildcard-Domains setzen.",
+            "WP-Plugin: Für die Überprüfung und Umstellung der internen Links 'Better Search Replace' verwenden.",
+            "Für die (regelmäßige) Überprüfung externer Links (Broken Link Checker) kein WP-Plugin verwenden, weil es die Performance stark belastet.",
+            "Weiterleitungen von HTTP auf HTTPS wahlweise per 'Force SSL'-Funktion des Hosters (wenn angeboten) oder per .htaccess konfigurieren."
+          ]
+        },
+        {
+          "id": "ssl-email",
+          "title": "SSL/TLS-Transportverschlüsselung E-Mail",
+          "description": "Auch beim Versand von E-Mails (auch über ein Kontaktformular) sollte Transportverschlüsselung eingesetzt werden. Geschäftlichen E-Mail-Verkehr über private Drittanbieter-Konten vermeiden.",
+          "explanation": [
+            "Auch beim Versand von E-Mails (auch über ein Kontaktformular) sollte Transportverschlüsselung eingesetzt werden. Sie ist dreigeteilt: SSL/TLS-Verschlüsselung der Webseite (siehe oben), SSL/TLS-Verschlüsselung des E-Mail-Postausgangs (SMTP) vom Absender (im Falle eines Formulars ist der Absender auch der Empfänger), SSL/TLS-Verschlüsselung des E-Mail-Posteingangs (POP3/IMAP4) vom Empfänger.",
+            "Geschäftlichen E-Mail-Verkehr über private Drittanbieter-Konten (z.B. Gmail, GMX, Web.de usw.) vermeiden (da meistens kein AVV möglich)!"
+          ],
+          "required": true,
+          "weight": 8,
+          "legalBasis": ["Art. 32 Abs. 1 Lit. a DSGVO", "§64 Abs. 2, Abs. 3 Nr. 8 BDSG"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. b & f DSGVO"],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": [
+            "Darauf achten, dass E-Mails beim Formular-Versand nicht mit der mail()-Funktion von PHP versendet werden!",
+            "Darauf achten, dass ein mgl. Plugin die SMTP-Verschlüsselung überhaupt vorsieht.",
+            "OPTIONAL: Auch für einen geeigneten SPAM-Schutz (vorzugsweise Honeypot-Methode, reCaptchas sind nicht DSGVO-konform!) sorgen.",
+            "WP-Plugin: Wenn es nur um ein einzelnes Kontaktformular geht, nicht große Formbuilder wie CF7 einsetzen (Performance). Hier empfehle ich mein eigenes: Minimal Contact Form (SSL-Verschlüsselung noch in Arbeit)",
+            "Ggf. E-Mail-Konto auf eigenen Hoster legen."
+          ]
+        },
+        {
+          "id": "cms-security",
+          "title": "Sicherheitskonzept des CMS (z.B. WordPress)",
+          "description": "Schutz vor Brute-Force-Attacken, Kommentar-SPAM und Sicherheitslücken in CMS, Plugins und Themes.",
+          "explanation": [
+            "Für den Schutz vor Brute-Force- und Wörterbuch-Attacken reicht ein einfacher Schutz, der die Anzahl der falschen Eingaben begrenzt.",
+            "Für den Schutz vor Kommentar-SPAM reicht ein einfacher Schutz, vorzugsweise per Honeypot-Methode (reCaptcha nicht DSGVO-konform!).",
+            "Auf All-In-One Sicherheits-Plugins wie iThemes Security oder WordFence verzichten (Sicherheitslücken!).",
+            "Für den Schutz vor Sicherheitslücken CMS-Installation, Plugins, Module und Themes (auch nicht aktivierte) immer aktuell halten!",
+            "Für den Schutz vor Sicherheitslücken so wenig Plugins/Themes wie nur möglich installieren!"
+          ],
+          "required": true,
+          "weight": 7,
+          "legalBasis": ["Art. 32 DSGVO"],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": [
+            "WP-Plugin: Brute-Force-Attacken - Limit Login Attempts Reloaded",
+            "WP-Plugin: Kommentar-SPAM - Antispam Bee",
+            "WP-spezifisch: Infos zu Sicherheitslücken im WordPress Core, Plugins und Themes gibt es unter wpvulndb.com"
+          ]
+        },
+        {
+          "id": "server-security",
+          "title": "Sicherheitskonzept des Servers",
+          "description": "Serververantwortung variiert je nach Hosting-Typ (Shared, VPS, Dedicated Server).",
+          "explanation": [
+            "Bei Shared Hosting oder Managed Servern liegt die Verantwortung voll beim Webhoster (Auskunft anfordern/AVV lesen).",
+            "Bei VPS und dedizierten Servern liegt die Verantwortung teilweise auch beim Inhaber (Auskunft anfordern)."
+          ],
+          "required": true,
+          "weight": 6,
+          "legalBasis": ["Art. 28 Abs. 3 Lit. c DSGVO", "Art. 29 DSGVO", "Art. 32 DSGVO"],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": []
+        },
+        {
+          "id": "email-encryption",
+          "title": "Signatur und/oder Inhaltsverschlüsselung bei E-Mails (Optional)",
+          "description": "Elektronische Signaturen und Inhaltsverschlüsselung fördern die E-Mail-Sicherheit und rechtliche Nachweisbarkeit.",
+          "explanation": [
+            "Eine elektronische Signatur fördert die Nachweisbarkeit des Absenders.",
+            "Eine Inhaltsverschlüsselung verhindert das Lesen des Inhalts der E-Mail bei einer MitM-Attacke ('Man in the Middle').",
+            "Tipp: Die gängigen Signaturen S/MIME und PGP gelten als 'fortgeschrittene elektronische Signatur' und können somit auch für Rechtsgeschäfte genutzt werden (siehe Bundesnotarkammer)."
+          ],
+          "required": false,
+          "weight": 3,
+          "legalBasis": ["Art. 32 DSGVO", "eIDAS/EU 910/2014", "§2 Nr. 2 SigG"],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": ["DE"],
+          "implementation": [
+            "Im wesentlichen gibt es zwei populäre Signatur- und Verschlüsselungsverfahren: S/MIME - über ein E-Mail-Zertifikat, PGP (kostenplichtig) bzw. GnuPGP (Open Source) - über ein Schlüsselpaar",
+            "PGP/GPG ist immer den Vorzug zu geben!",
+            "Kostenlose S/MIME-E-Mail-Zertifikate gibt es bei Comodo für jeweils ein Jahr.",
+            "Für das kostenlose GPG gibt es verschiedene Lösungen, die auf der offiziellen Webseite (gnupg.org) erhältlich sind.",
+            "Für die Signatur braucht nur der Absender die Einrichtung, für die Verschlüsselung sowohl Absender als auch Empfänger."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hosting",
+      "title": "Webhoster",
+      "icon": "fas fa-server",
+      "description": "Auftragsverarbeitungsverträge und Log-Management mit Webhostern",
+      "items": [
+        {
+          "id": "access-logs",
+          "title": "Access Logs",
+          "description": "Personenbezogene Daten in Server Access Logs (insbes. IP-Adressen) sollten pseudonymisiert und Speicherdauer begrenzt werden.",
+          "explanation": [
+            "In den Access Logs des Servers gespeicherte personenbezogene Daten (insbes. die IP-Adresse) sollten nach Möglichkeit pseudonymisiert werden.",
+            "Alternativ kann natürlich im Zuge der Datensparsamkeit komplett auf die Speicherung der IP-Adresse (sofern vom Webhoster zugelassen) verzichtet werden.",
+            "Auch die Speicherdauer sollte wenn möglich auf 7 - 14 Tage verkürzt werden."
+          ],
+          "required": true,
+          "weight": 6,
+          "legalBasis": ["Art. 28 DSGVO", "Art. 29 DSGVO", "Art. 32 Abs. 1 Lit. a DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. f DSGVO"],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": [
+            "Fast jeder Hoster bietet inzwischen die Pseudonymisierung von IP-Adressen (Kürzung des letzten Bytes, z.B. 192.168.10.X) an.",
+            "Bei vielen Hostern ist auch die Speicherdauer einzuschränken - oder sie wurde zur DSGVO-Umstellung automatisch verkürzt (im Zweifelsfall beim Webhoster anfragen)."
+          ]
+        },
+        {
+          "id": "server-logs",
+          "title": "Weitere Server Logs",
+          "description": "Webhoster sind verpflichtet, weitere Server Logs zur Sicherheitsüberwachung zu führen, die ebenfalls IP-Adressen speichern.",
+          "explanation": [
+            "Der Webhoster ist auch immer dazu verpflichtet, weitere Server Logs zu (insbes. zur Früherkennung von nicht authorisierten Zugriffen, Schadcode und allgemeinen Fehlermeldungen) führen, die ebenfalls IP-Adressen speichern. Hier ist eine Kürzung nicht vorgesehen."
+          ],
+          "required": true,
+          "weight": 4,
+          "legalBasis": ["Art. 28 DSGVO", "Art. 29 DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. c DSGVO"],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": [
+            "Auskunft über die Speicherung und Speicherdauer beim Hoster einholen (oder im AVV nachschlagen)."
+          ]
+        },
+        {
+          "id": "dpa-hosting",
+          "title": "Auftragsverarbeitungsvertrag mit Webhoster",
+          "description": "Alle auf dem Server gespeicherten personenbezogenen Daten gelten auch als 'Verarbeitung' - Auftragsverarbeitungsvertrag (AVV) mit Webhoster abschließen!",
+          "explanation": [
+            "Alle auf dem Server gespeicherten personenbezogenen Daten gelten auch als 'Verarbeitung' - Auftragsverarbeitungsvertrag (AVV) mit Webhoster abschließen!"
+          ],
+          "required": true,
+          "weight": 9,
+          "legalBasis": ["Art. 28 DSGVO"],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "external-services",
+      "title": "Externe Dienste",
+      "icon": "fas fa-plug",
+      "description": "Drittanbieter-Services und Tools, die personenbezogene Daten verarbeiten können",
+      "items": [
+        {
+          "id": "analytics-tools",
+          "title": "Analyse-Tools (z.B. Google Analytics, Matomo/Piwik, WordPress Stats/Jetpack)",
+          "description": "Analyse-Tools mit Datenspeicherung in den USA müssen dem EU-US Data Privacy Framework (DPF) entsprechen, das im Juli 2023 eingeführt und im September 2025 bestätigt wurde.",
+          "explanation": [
+            "Wichtig: Nach dem Schrems-II-Urteil von 2020, das den Privacy Shield für ungültig erklärte, wurde im Juli 2023 das EU-US Data Privacy Framework (DPF) verabschiedet, um Rechtssicherheit für transatlantische Datentransfers zu schaffen. Das DPF wurde am 3. September 2025 vom Europäischen Gericht bestätigt, wodurch Organisationen, die unter dem Rahmenwerk zertifiziert sind, rechtmäßig personenbezogene Daten zwischen der EU und den USA übertragen können, während sie die DSGVO-Konformität wahren. Dies umfasst Analyse-Tools wie Google Analytics und Jetpack, sofern sie DPF-zertifiziert sind. Es ist jedoch zu beachten, dass der Datenschutzaktivist Max Schrems über seine Organisation NOYB (None Of Your Business) angekündigt hat, das Data Privacy Framework anzufechten, was möglicherweise zu einem sogenannten 'Schrems III' führen könnte. Während das Rahmenwerk derzeit Rechtssicherheit bietet, bleiben zukünftige rechtliche Anfechtungen möglich.",
+            "Abwägen, welches Analysetool unter der Berücksichtigung des Datensparsamkeits-Prinzips geeignet erscheint.",
+            "Abwägen, ob ein Verarbeitungsgrund nach Art. 6 Abs. 1 lit. b) - f) DSGVO vorliegt oder nach Art. 6 Abs. 1 lit. a) ein vorheriges Einverständnis eingeholt werden sollte.",
+            "Sofern Cookies gespeichert werden, über einen Cookie-Banner darüber informieren und Opt-Out-Funktion bereit stellen.",
+            "Altdaten, die die maximale Verarbeitungszeit überschreiten, müssen händisch gelöscht werden.",
+            "Google Analytics: AVV abschließen, minimale Verarbeitungszeit (14 Monate) einstellen, Targeting-Funktionen ausstellen, IP-Adressen pseudonymisieren",
+            "Matomo/Piwik: AVV mit Webhoster abschließen, IP-Adressen pseudonymisieren, Speicherdauer einstellen",
+            "Webalizer: AVV mit Webhoster abschließen, IP-Adressen in den Server Logs pseudonymisieren",
+            "WP Stats/Jetpack: Da es derzeit keinen AVV für Jetpack gibt, das Plugin vollkommen abschalten!"
+          ],
+          "required": true,
+          "weight": 8,
+          "legalBasis": ["Art. 7 DSGVO", "Art. 28 DSGVO", "Art. 44 ff. DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. a oder f DSGVO"],
+          "verdicts": ["LG Dresden, Az. 1 a O 1582/18", "EuGH, Az. C-311/18"],
+          "countries": ["EU"],
+          "implementation": [
+            "Datenschutz-konforme Alternativen sind u.a. Fathom und Plausible (beide kostenpflichtig, kostenlos zum selbst Hosten). Beide speichern gar keine personenbezogene Daten und setzen auch keine Cookies. Plausible bietet für die Einbindung auch ein WordPress-Plugin.",
+            "AVV bei Google Analytics braucht nicht mehr schriftlich erfolgen - mit wenigen Klicks abschließbar",
+            "Einbindung von GA oder Matomo nach Möglichkeit per Plugin, um Fehler zu vermeiden",
+            "Beim Cookie-Banner reicht derzeit die Opt-Out-Methode, da die DSGVO nicht explizit Cookies regelt. Das Opt-In wird derzeit im Allgemeinen recht kritisch betrachtet.",
+            "WP-Plugin: Borlabs Cookie (Cookie-Banner & 2-Klick-Lösungen, kostenpflichtig)"
+          ]
+        },
+        {
+          "id": "marketing-tools",
+          "title": "Marketing-Tools (z.B. Google Ads, Affiliate-Netzwerke)",
+          "description": "Marketing-Tools mit Datenspeicherung in den USA müssen dem EU-US Data Privacy Framework (DPF) entsprechen, das im Juli 2023 eingeführt und im September 2025 bestätigt wurde.",
+          "explanation": [
+            "Wichtig: Nach dem Schrems-II-Urteil von 2020, das den Privacy Shield für ungültig erklärte, wurde im Juli 2023 das EU-US Data Privacy Framework (DPF) verabschiedet, um Rechtssicherheit für transatlantische Datentransfers zu schaffen. Das DPF wurde am 3. September 2025 vom Europäischen Gericht bestätigt, wodurch Organisationen, die unter dem Rahmenwerk zertifiziert sind, rechtmäßig personenbezogene Daten zwischen der EU und den USA übertragen können, während sie die DSGVO-Konformität wahren. Dies umfasst Marketing-Tools wie Google Ads und diverse Affiliate-Netzwerke, sofern sie DPF-zertifiziert sind. Es ist jedoch zu beachten, dass der Datenschutzaktivist Max Schrems über seine Organisation NOYB (None Of Your Business) angekündigt hat, das Data Privacy Framework anzufechten, was möglicherweise zu einem sogenannten 'Schrems III' führen könnte. Während das Rahmenwerk derzeit Rechtssicherheit bietet, bleiben zukünftige rechtliche Anfechtungen möglich.",
+            "Google Ads verlangt derzeit das vorherige Einverständnis (Opt-In) lt. Programmrichtlinien, nicht nur für die Cookies und Beacons (Zählpixel), sondern auch für die Übertragung jeglicher personenbezogenen Daten.",
+            "Funktionen wie Remarketing oder die Auslieferung von personenbezogener Werbung sind derzeit fraglich und sollten - zumindest vorübergehend - abgeschaltet werden.",
+            "Richtlinien bzw. AGBs bei sämtlichen Affiliate-Netzwerken beachten!",
+            "Widgets, grafische Einbettungen oder JavaScript-Einbettungen von Werbemitteln von Affiliate-Netzwerken mindestens in der DSE erwähnen (sicherer: 2-Klick-Lösung)",
+            "Werbemittel in jeglicher Form sollten als 'Werbung' oder 'Anzeige' gekennzeichnet werden!"
+          ],
+          "required": true,
+          "weight": 7,
+          "legalBasis": ["Art. 7 DSGVO", "Art. 28 DSGVO", "Art. 44 ff. DSGVO", "§6 TMG", "§58 RStV"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. a oder f DSGVO"],
+          "verdicts": ["EuGH, Az. C-311/18"],
+          "countries": ["DE"],
+          "implementation": [
+            "WP-Plugin: Für Google AdSense Advanced Ads mit GDPR-Funktion (2-Klick-Lösung) einsetzen.",
+            "Bei Affiliate-Netzwerken vorübergehend nur auf (für die DSGVO nicht relevante) Text-Links setzen. Links am besten mit rel=\"noreferrer noopener\" versehen."
+          ]
+        },
+        {
+          "id": "newsletter-tools",
+          "title": "Newsletter-Tools (z.B. Mailchimp, Clicktipp, Newsletter2Go/Sendinblue, Jetpack Abonnement)",
+          "description": "Newsletter-Tools mit Datenspeicherung in den USA müssen dem EU-US Data Privacy Framework (DPF) entsprechen, das im Juli 2023 eingeführt und im September 2025 bestätigt wurde.",
+          "explanation": [
+            "Wichtig: Nach dem Schrems-II-Urteil von 2020, das den Privacy Shield für ungültig erklärte, wurde im Juli 2023 das EU-US Data Privacy Framework (DPF) verabschiedet, um Rechtssicherheit für transatlantische Datentransfers zu schaffen. Das DPF wurde am 3. September 2025 vom Europäischen Gericht bestätigt, wodurch Organisationen, die unter dem Rahmenwerk zertifiziert sind, rechtmäßig personenbezogene Daten zwischen der EU und den USA übertragen können, während sie die DSGVO-Konformität wahren. Dies umfasst Newsletter-Tools wie Mailchimp und Jetpack, sofern sie DPF-zertifiziert sind. Es ist jedoch zu beachten, dass der Datenschutzaktivist Max Schrems über seine Organisation NOYB (None Of Your Business) angekündigt hat, das Data Privacy Framework anzufechten, was möglicherweise zu einem sogenannten 'Schrems III' führen könnte. Während das Rahmenwerk derzeit Rechtssicherheit bietet, bleiben zukünftige rechtliche Anfechtungen möglich.",
+            "Newsletter-Formulare sollten mit einem adäquaten Hinweistext versehen und in der E-Mail beim Double-Opt-In-Verfahren wiederholt werden.",
+            "Ein Newsletter-Eintrag sollte nicht an eine (kostenlosen oder kostenpflichtigen) Dienstleistung gekoppelt werden ('Kopplungsverbot')",
+            "Das Einverständnis für Newsletter-Einträge muss dokumentiert (Hinweistext, Zeitpunkt) und es muss ein Opt-Out bereit gestellt werden."
+          ],
+          "required": true,
+          "weight": 8,
+          "legalBasis": ["Art. 7 DSGVO", "Art. 28 DSGVO", "Art. 44 ff. DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. a DSGVO"],
+          "verdicts": ["EuGH, Az. C-311/18"],
+          "countries": ["EU"],
+          "implementation": [
+            "Kopplungsverbot: Ein angebotenes Freebie darf nicht von der Zustimmung zur Erhebung personenbezogener Daten abhängig gemacht werden. 'Als Dankeschön erhalten Sie [...]' wäre aber machbar.",
+            "AVV mit dem Drittanbieter abschließen",
+            "Sicherste Methode: Auf Drittanbieter verzichten und auf stationäre Lösungen wie dem WP-Plugin Newsletter setzen."
+          ]
+        },
+        {
+          "id": "social-plugins",
+          "title": "Social Plugins (z.B. Facebook, Instagram, Twitter)",
+          "description": "Social Plugins mit Datenspeicherung in den USA müssen dem EU-US Data Privacy Framework (DPF) entsprechen, das im Juli 2023 eingeführt und im September 2025 bestätigt wurde.",
+          "explanation": [
+            "Wichtig: Nach dem Schrems-II-Urteil von 2020, das den Privacy Shield für ungültig erklärte, wurde im Juli 2023 das EU-US Data Privacy Framework (DPF) verabschiedet, um Rechtssicherheit für transatlantische Datentransfers zu schaffen. Das DPF wurde am 3. September 2025 vom Europäischen Gericht bestätigt, wodurch Organisationen, die unter dem Rahmenwerk zertifiziert sind, rechtmäßig personenbezogene Daten zwischen der EU und den USA übertragen können, während sie die DSGVO-Konformität wahren. Dies umfasst Social Plugins von Plattformen wie Facebook, Instagram und Twitter/X, sofern sie DPF-zertifiziert sind. Es ist jedoch zu beachten, dass der Datenschutzaktivist Max Schrems über seine Organisation NOYB (None Of Your Business) angekündigt hat, das Data Privacy Framework anzufechten, was möglicherweise zu einem sogenannten 'Schrems III' führen könnte. Während das Rahmenwerk derzeit Rechtssicherheit bietet, bleiben zukünftige rechtliche Anfechtungen möglich.",
+            "Sämtliche eingebundene Social Plugins laden personenbezogene Daten bereits beim Besuch der Webseite. Sofern der Nutzer im sozialen Netzwerk eingeloggt ist, erfolgt eine genaue Zuordnung sowie eine Art 'Bewegungsprofil' über alle mit Social Plugins versehenen Webseiten.",
+            "Bei Login-Verfahren (z.B. Facebook Connect) und Kommentarfunktionen mit Verknüpfung zu sozialen Netzen wird ebenso verfahren.",
+            "Sharing-Buttons, die die Anzahl der Shares anzeigen, haben das gleiche Problem.",
+            "Einzig reine Links (Text oder Grafik) sind DSGVO-konform.",
+            "Beacons (Zählpixel) für Statistik-Zwecke sind ebenfalls sehr kritisch zu bewerten."
+          ],
+          "required": true,
+          "weight": 7,
+          "legalBasis": ["Art. 7 DSGVO", "Art. 22 DSGVO", "Art. 44 ff. DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. a oder f DSGVO"],
+          "verdicts": ["LG Düsseldorf, Az. 12 O 151/15", "EuGH, Az. C-311/18"],
+          "countries": ["EU"],
+          "implementation": [
+            "Vor dem Laden des Social Plugins über die Datenverarbeitung informieren (2-Klick-Lösung) oder Social Plugins komplett abschalten.",
+            "Facebook Connect, Jetpack Kommentarfunktion (und ähnliche) komplett abschalten.",
+            "Sharing-Buttons entweder ohne Kennzahlen anzeigen oder das WP-Plugin Shariff verwenden.",
+            "Beacons (Zählpixel) komplett entfernen."
+          ]
+        },
+        {
+          "id": "royalty-collecting-societies",
+          "title": "Verwertungsgesellschaften (z.B. VG-Wort)",
+          "description": "Zählpixel von Verwertungsgesellschaften übertragen IP-Adressen und erfordern Einwilligung.",
+          "explanation": [
+            "Der Zählpixel der VG-Wort sollte auf HTTPS umgestellt werden, um 'mixed Content' zu vermeiden.",
+            "Der Zählpixel der VG-WOrt sollte in der Datenschutzerklärung erwähnt werden."
+          ],
+          "required": true,
+          "weight": 5,
+          "legalBasis": ["Art. 32 Abs. 1 Lit. a DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. b DSGVO", "Art. 6 Abs. 1 Lit. c DSGVO im Einklang mit §32 UrhG"],
+          "verdicts": [],
+          "countries": ["DE"],
+          "implementation": []
+        },
+        {
+          "id": "cdn-services",
+          "title": "Content Delivery Networks (CDN)",
+          "description": "CDNs verteilen Inhalte global und können IP-Adressen speichern. Nach dem EU-US Data Privacy Framework (DPF) von Juli 2023 (bestätigt im September 2025) können DPF-zertifizierte CDNs rechtmäßig Daten zwischen EU und USA übertragen.",
+          "explanation": [
+            "CDNs (z.B. Google Fonts, Adobe Typekit, Bootstrap/Fontawesome, CDNJS/Cloudflare, Jetpack usw.) können durchaus als kritisch betrachtet werden, da die Inhalte auf Server der ganzen Welt verteilt werden und potentiell beim Abruf mindestens die IP-Adresse gespeichert wird.",
+            "Nach dem Schrems-II-Urteil von 2020, das den Privacy Shield für ungültig erklärte, wurde im Juli 2023 das EU-US Data Privacy Framework (DPF) verabschiedet, um Rechtssicherheit für transatlantische Datentransfers zu schaffen. Das DPF wurde am 3. September 2025 vom Europäischen Gericht bestätigt. CDNs, die unter dem Rahmenwerk zertifiziert sind, können rechtmäßig personenbezogene Daten zwischen der EU und den USA übertragen, während sie die DSGVO-Konformität wahren. Der Datenschutzaktivist Max Schrems hat jedoch angekündigt, das Data Privacy Framework anzufechten ('Schrems III'), sodass zukünftige rechtliche Anfechtungen möglich bleiben.",
+            "Bei CDNs sollte abgewogen werden, ob diese überhaupt notwendig sind (z.B. Zielgruppe ausschließlich D-A-CH).",
+            "Inhalte von CDNs (z.B. Bilder, Fonts, CSS- oder JS- Dateien) sollten nach Möglichkeit lokalisiert werden."
+          ],
+          "required": true,
+          "weight": 5,
+          "legalBasis": ["Art. 44 ff. DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. a und f DSGVO"],
+          "verdicts": ["EuGH, Az. C-311/18"],
+          "countries": ["EU"],
+          "implementation": [
+            "Von CDNs geladene Dateien (Fonts, CSS, JS usw.) insbesondere bei rein deutschsprachigen Seiten immer lokalisieren. Diese können direkt im (Child-)Theme abgelegt werden.",
+            "Auch prüfen, ob es nicht WordPress-eigene Alternativen gibt (z.B. jQuery).",
+            "Auch Drittanbieter-Plugins auf CDNs prüfen.",
+            "Abwägung zwischen Notwendigkeit und Risiko im besonderen Fall (z.B. Instagram-Widget bei Fotografen)"
+          ]
+        },
+        {
+          "id": "web-fonts",
+          "title": "Webfonts (z.B. Google Fonts, Adobe Typekit, Fontawesome)",
+          "description": "Web-Schriften erfordern Einwilligung und sollten lokalisiert werden, um Datenübertragung an Dritte zu vermeiden.",
+          "explanation": [
+            "Für den Einsatz von Webfonts ist immer eine Einwilligung erforderlich!",
+            "Alternativ können Google Fonts, Adobe Typekit- und Fontaweome-Fonts (BootstrapCDN) lokalisiert werden (siehe CDNs)!",
+            "Fonts könnten unter Umständen auch gegen andere lokale Open-Source-Fonts oder sogar dem CSS Font Stack ersetzt werden."
+          ],
+          "required": true,
+          "weight": 6,
+          "legalBasis": ["Art. 44 ff. DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. a DSGVO"],
+          "verdicts": ["LG München, Az. 3 O 17493/20"],
+          "countries": ["EU"],
+          "implementation": [
+            "Google Fonts über den Google Webfonts Helper im (Child-)Theme lokalisieren.",
+            "Wenn nötig, CSS Font Stack einsetzen.",
+            "Wer das WP-Plugin Autoptimize einsetzt, kann auch dort Google Fonts abschalten (funktioniert allerdings nicht immer)."
+          ]
+        },
+        {
+          "id": "profile-pictures",
+          "title": "Profile bzw. Profilbilder (z.B. Gravatar, About.me)",
+          "description": "Profilbild-Services mit Datenspeicherung in den USA müssen dem EU-US Data Privacy Framework (DPF) entsprechen, das im Juli 2023 eingeführt und im September 2025 bestätigt wurde.",
+          "explanation": [
+            "Wichtig: Nach dem Schrems-II-Urteil von 2020, das den Privacy Shield für ungültig erklärte, wurde im Juli 2023 das EU-US Data Privacy Framework (DPF) verabschiedet, um Rechtssicherheit für transatlantische Datentransfers zu schaffen. Das DPF wurde am 3. September 2025 vom Europäischen Gericht bestätigt, wodurch Organisationen, die unter dem Rahmenwerk zertifiziert sind, rechtmäßig personenbezogene Daten zwischen der EU und den USA übertragen können, während sie die DSGVO-Konformität wahren. Dies umfasst Profilbild-Services wie Gravatar und About.me, sofern sie DPF-zertifiziert sind. Es ist jedoch zu beachten, dass der Datenschutzaktivist Max Schrems über seine Organisation NOYB (None Of Your Business) angekündigt hat, das Data Privacy Framework anzufechten, was möglicherweise zu einem sogenannten 'Schrems III' führen könnte. Während das Rahmenwerk derzeit Rechtssicherheit bietet, bleiben zukünftige rechtliche Anfechtungen möglich.",
+            "Profile und/oder Avatarbilder sollten nach Möglichkeit lokalisiert oder abgeschaltet werden, da sie mit Sicherheit personenbezogene Daten enthalten.",
+            "Die in WordPress fest integrierte Gravatar-Funktion sollte nicht nur wegen den Bildern, sondern auch in den im Bild-Link als Hash abgelegten E-Mail-Adressen komplett abgeschaltet werden."
+          ],
+          "required": true,
+          "weight": 4,
+          "legalBasis": ["Art. 44 ff. DSGVO", "§22 KunstUrhG"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. f DSGVO"],
+          "verdicts": ["EuGH, Az. C-311/18"],
+          "countries": ["EU"],
+          "implementation": [
+            "Die Gravatarfunktion lässt sich direkt in WordPress unter 'Einstellungen > Diskussion > Avatare anzeigen' abschalten."
+          ]
+        },
+        {
+          "id": "emojis",
+          "title": "Emojis/Emoticons (z.B. WP-Emojis)",
+          "description": "Externe Emoji-Services können IP-Adressen übertragen und sollten lokalisiert werden.",
+          "explanation": [
+            "Wenn Emojis extern von einem CDN geladen werden, werden für gewöhnlich IP-Adressen beim Abruf abgerufen.",
+            "Speziell bei den WP-Emojis wird zusätzlich Canvas Fingerprinting eingesetzt, was eine Zuordnung des Rechners ohne Speicherung von Cookies ermöglicht (auch, wenn keine Emojis angezeigt werden). Nach dem Schrems-II-Urteil von 2020, das den Privacy Shield für ungültig erklärte, wurde im Juli 2023 das EU-US Data Privacy Framework (DPF) verabschiedet, um Rechtssicherheit für transatlantische Datentransfers zu schaffen. Das DPF wurde am 3. September 2025 vom Europäischen Gericht bestätigt. Da diese Daten typischerweise in den USA gespeichert werden, können Emoji-Services, die unter dem Rahmenwerk zertifiziert sind, rechtmäßig personenbezogene Daten zwischen der EU und den USA übertragen, während sie die DSGVO-Konformität wahren. Der Datenschutzaktivist Max Schrems hat jedoch angekündigt, das Data Privacy Framework anzufechten ('Schrems III'), sodass zukünftige rechtliche Anfechtungen möglich bleiben.",
+            "WP-Emojis sollte daher immer abgeschaltet werden! Jeder moderne Browser zeigt trotzdem weiterhin Emojis und Emoticons an."
+          ],
+          "required": true,
+          "weight": 3,
+          "legalBasis": ["Art. 22 DSGVO", "Art. 44 ff. DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. f DSGVO"],
+          "verdicts": ["EuGH, Az. C-311/18"],
+          "countries": ["EU"],
+          "implementation": [
+            "Sofern der Webseitenbetreiber WordPress bereits vor Version 4.4 installiert hat, gibt es unter 'Einstellungen > Diskussion' die Möglichkeit, die WP-Emojis direkt abzuschalten.",
+            "Jüngere Webseiten haben diese Funktion nicht - hier sollten die Emojis (zzgl. DNS-Prefetching) über die functions.php des (Child-)Themes abgeschaltet werden.",
+            "Wer das WP-Plugin Autoptimize einsetzt, kann auch dort die Emojis abschalten (funktioniert allerdings nicht immer)."
+          ]
+        },
+        {
+          "id": "dns-prefetching",
+          "title": "DNS-Prefetching",
+          "description": "DNS-Prefetching kann ungewollt Verbindungen zu externen Servern herstellen.",
+          "explanation": [
+            "Beim DNS-Prefetching wird bereits beim Laden der Webseite der Browser angewiesen, beim Name Server weitere Domains aufzulösen. Dies zieht natürlich auch die Speicherung der IP-Adresse beim Name Server nach sich. Da diese Anfragen häufig nicht zwingend erforderlich sind, könnte auch hier ein Verstoß gegen die DSGVO vorliegen.",
+            "Bei WordPress werden die meisten Prefetching-Tags bereits mit dem Entfernen der entsprechenden Funktion (z.B. Google Fonts, WP-Emojis, Jetpack) entfernt.",
+            "Mindestens ein Eintrag (von WordPress selbst) bleibt aber erhalten und muss manuell entfernt werden."
+          ],
+          "required": true,
+          "weight": 2,
+          "legalBasis": ["Art. 44 ff. DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. f DSGVO"],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": [
+            "Darauf achten, dass beim Entfernen von WP-Emojis auch das Prefetching entfernt wird.",
+            "Den WordPress-eigenen Eintrag durch einfügen von add_filter( 'emoji_svg_url', '__return_false' ); in die functions.php des (Child-)Themes entfernen."
+          ]
+        },
+        {
+          "id": "wp-embeds",
+          "title": "WP-Embeds/oEmbeds",
+          "description": "Die meisten oEmbeds speichern personenbezogene Daten in den USA. Nach dem EU-US Data Privacy Framework (DPF) von Juli 2023 (bestätigt im September 2025) können DPF-zertifizierte Services rechtmäßig Daten zwischen EU und USA übertragen.",
+          "explanation": [
+            "Wichtig: Nach dem Schrems-II-Urteil von 2020, das den Privacy Shield für ungültig erklärte, wurde im Juli 2023 das EU-US Data Privacy Framework (DPF) verabschiedet, um Rechtssicherheit für transatlantische Datentransfers zu schaffen. Das DPF wurde am 3. September 2025 vom Europäischen Gericht bestätigt, wodurch Organisationen, die unter dem Rahmenwerk zertifiziert sind, rechtmäßig personenbezogene Daten zwischen der EU und den USA übertragen können, während sie die DSGVO-Konformität wahren. Der Datenschutzaktivist Max Schrems hat jedoch angekündigt, das Data Privacy Framework anzufechten ('Schrems III'), sodass zukünftige rechtliche Anfechtungen möglich bleiben.",
+            "Wenn man bestimmte Links aus derzeit 34 Quellen (z.B. WordPress-Blogs, YouTube-Videos usw.) in den visuellen Editor in WordPress einfügt, werden sie automatisch in so genannte oEmbeds umgewandelt. Dabei werden Teile der Zielwebseite per iframe in die Webseite grafisch aufgearbeitet geladen. Beim Laden der Webseite werden damit automatisch alle Inhalte des iFrames mitgeladen (z.B. Analytics-Tools, Zählpixel).",
+            "Sofern in den Posts, Seiten oder Kommentaren solche oEmbeds auftauchen, sollte die Funktion vollständig deaktiviert werden.",
+            "Alte Einträge werden nicht vollständig entfernt und müssen händisch gelöscht werden."
+          ],
+          "required": true,
+          "weight": 4,
+          "legalBasis": ["Art. 22 DSGVO", "Art. 44 ff. DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. f DSGVO"],
+          "verdicts": ["LG München, Az. 3 O 17493/20"],
+          "countries": ["EU"],
+          "implementation": [
+            "Nähere Informationen zu den WP-Embeds gibt es im WordPress Codex.",
+            "oEmbeds kann man vermeiden, indem man Links in den Text-Editor von WordPress eingibt oder eigene Shortcodes verwendet.",
+            "Die gesamte Webseite (jede Unterseite) sollte auf iFrames getestet werden.",
+            "Bei positiven Ergebnissen sollte die oEmbed-Funktion über die functions.php des Child Themes komplett entfernt werden.",
+            "Alte Einträge müssen danach noch händisch gelöscht bzw. wieder zu normalen Links konvertiert werden."
+          ]
+        },
+        {
+          "id": "video-music-services",
+          "title": "Video- und Musikdienste (z.B. YouTube, Vimeo, Spotify, SoundCloud)",
+          "description": "Video- und Musikdienste mit Datenspeicherung in den USA müssen dem EU-US Data Privacy Framework (DPF) entsprechen, das im Juli 2023 eingeführt und im September 2025 bestätigt wurde.",
+          "explanation": [
+            "Wichtig: Nach dem Schrems-II-Urteil von 2020, das den Privacy Shield für ungültig erklärte, wurde im Juli 2023 das EU-US Data Privacy Framework (DPF) verabschiedet, um Rechtssicherheit für transatlantische Datentransfers zu schaffen. Das DPF wurde am 3. September 2025 vom Europäischen Gericht bestätigt, wodurch Organisationen, die unter dem Rahmenwerk zertifiziert sind, rechtmäßig personenbezogene Daten zwischen der EU und den USA übertragen können, während sie die DSGVO-Konformität wahren. Dies umfasst Video- und Musikdienste wie YouTube, Vimeo, Spotify und SoundCloud, sofern sie DPF-zertifiziert sind. Es ist jedoch zu beachten, dass der Datenschutzaktivist Max Schrems über seine Organisation NOYB (None Of Your Business) angekündigt hat, das Data Privacy Framework anzufechten, was möglicherweise zu einem sogenannten 'Schrems III' führen könnte. Während das Rahmenwerk derzeit Rechtssicherheit bietet, bleiben zukünftige rechtliche Anfechtungen möglich.",
+            "Einbettungen von sämtlichen Video- und Musikdiensten übertragen bereits beim Laden der Webseite personenbezogene Daten und müssen deshalb über eine 2-Klick-Lösung verfügen. Zudem werden häufig auch Cookies gespeichert.",
+            "YouTube-Videos können in einen 'Erweiterten Datenschutzmodus' geschaltet werden, was aber nur die Speicherung von Cookies verhindert.",
+            "SoundCloud hat zwar ihre Datenschutz-Einstellungen verbessert, erfordert aber dennoch eine 2-Klick-Lösung."
+          ],
+          "required": true,
+          "weight": 6,
+          "legalBasis": ["Art. 22 DSGVO", "Art. 44 ff. DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. f DSGVO"],
+          "verdicts": ["LG München, Az. 3 O 17493/20"],
+          "countries": ["EU"],
+          "implementation": [
+            "YouTube-Videos sollten nur im 'Erweiterten Datenschutzmodus' erfolgen.",
+            "Einfachste Lösung: Video-Vorschauen manuell als Bild einbetten und auf die jeweiligen Plattformen verlinken",
+            "2-Klick-Lösung für alle Dienste mit Borlabs Cookie (kostenpflichtig)"
+          ]
+        },
+        {
+          "id": "map-services",
+          "title": "Kartendienste (z.B. Google Maps, Open Street Maps, Mapbox, Leaflet)",
+          "description": "Kartendienste wie Google Maps sammeln personenbezogene Daten beim Seitenladen und speichern meist Daten in den USA.",
+          "explanation": [
+            "Ebenso wie Video- und Musikdienste werden auch bei Kartendiensten bereits beim Laden der Webseite personenbezogene Daten erhoben und zumeist in den USA gespeichert. Auch hier bleibt derzeit nur eine 2-Klick-Lösung."
+          ],
+          "required": true,
+          "weight": 5,
+          "legalBasis": ["Art. 44 ff. DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. f DSGVO"],
+          "verdicts": ["LG München, Az. 3 O 17493/20"],
+          "countries": ["EU"],
+          "implementation": [
+            "Einfachste Lösung: Kartenausschnitt manuell als Bild einbetten und auf die jeweilige Plattform verlinken.",
+            "Bei der Einbettung als Bild sollten Urheberrechts-Angaben direkt unter dem Bild angebracht werden. Screenshots von Google Maps können aus urheberrechtlichen Gründen nicht verwendet werden!",
+            "2-Klick-Lösung für alle Dienste mit Borlabs Cookie (kostenpflichtig)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "content-features",
+      "title": "Weitere Aspekte",
+      "icon": "fas fa-cogs",
+      "description": "Website-Features, die personenbezogene Daten sammeln oder verarbeiten können",
+      "items": [
+        {
+          "id": "comments",
+          "title": "Kommentarfunktion",
+          "description": "Kommentarsysteme sollten IP-Adress-Speicherung begrenzen und Nutzer über Datensammlung informieren.",
+          "explanation": [
+            "Die Speicherung von IP-Adressen in der Kommentarfunktion sollte auf einen minimalen Zeitraum begrenzt (z.B. bis zur Freischaltung zur rechtlichen Absicherung) oder alternativ deaktiviert werden.",
+            "Vor dem Absenden eines Kommentars (oder jedes anderen Formulars) sollte auf die Speicherung personenbezogenen Daten hingewiesen werden (Opt-In kritisch!).",
+            "Die Option zum Speichern eines Cookies für das Merken von Name und E-Mail-Adresse sollte unter 'Einstellungen > Diskussion > Weitere Kommentareinstellungen > Das Opt-In-Kontrollkästchen...' abgeschaltet werden."
+          ],
+          "required": true,
+          "weight": 5,
+          "legalBasis": ["Art. 32 Abs. 1 Lit. a DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. 1 Lit. b oder f DSGVO"],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": [
+            "IP-Adressen vor Freischaltung händisch löschen oder die Speicherung im (Child-)Theme via functions.php ausschließen.",
+            "Hinweistext einfügen - am besten im (Child-)Theme in der comments.php oder als Option."
+          ]
+        },
+        {
+          "id": "external-links",
+          "title": "Weblinks",
+          "description": "Externe Links sollten mit geeigneten Attributen versehen und in der Datenschutzerklärung erwähnt werden.",
+          "explanation": [
+            "Weblinks zu externen Webseiten sind erst einmal unkritisch. Dennoch sollte in der Datenschutzerklärung darauf hingewiesen werden, dass beim Verlassen der Webseite über einen Link auf der Zielwebseite weitere personenbezogene Daten erhoben werden können.",
+            "Am besten alle Weblinks, sofern möglich, mit rel=\"noreferrer noopener\" kennzeichnen. WordPress macht das größtenteils automatisch, allerdings sollte dies bei Buildern von Drittanbietern überprüft werden."
+          ],
+          "required": false,
+          "weight": 2,
+          "legalBasis": [],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": [],
+          "implementation": []
+        },
+        {
+          "id": "plugins-extensions",
+          "title": "Plugins/Erweiterungen/Module",
+          "description": "Alle Plugins und Erweiterungen auf Datenschutz-Konformität prüfen und regelmäßig aktualisieren.",
+          "explanation": [
+            "Plugins sollte genaustens überprüft werden, ob und wie personenbezogene Daten erhoben werden (für WordPress vgl. auch Blogmojo)."
+          ],
+          "required": true,
+          "weight": 6,
+          "legalBasis": [],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": [],
+          "implementation": []
+        },
+        {
+          "id": "webshop",
+          "title": "Webshop",
+          "description": "Online-Shops verarbeiten besonders viele personenbezogene Daten und erfordern umfassende DSGVO-Maßnahmen.",
+          "explanation": [
+            "Bei Webshops macht es Sinn, sich das Einverständnis zur Datenerhebung bzw. -verarbeitung zu holen. Es dürfte aber ausreichen, wie bisher ein gemeinsames Häkchen für 'ich habe die Allgemeinen Geschäftsbedingungen, die Widerrufsbelehrung und die Datenschutzerklärung gelesen' inkl. entsprechender Verlinkung vor dem 'kostenpflichtig kaufen'-Button einzurichten.",
+            "Bei externen Shop-Lösungen und/oder externen Zahlungsanbietern sollte immer ein Auftragsverarbeitungsvertrag (AVV) abgeschlossen werden.",
+            "Auch die statistische Erhebung des Kaufverhaltens sollte vertraglich geregelt sein (vgl. Analysetools & Marketingtools)"
+          ],
+          "required": true,
+          "weight": 9,
+          "legalBasis": ["Art. 7 DSGVO", "Art. 22 DSGVO", "Art. 28 DSGVO", "Art. 32 DSGVO", "Art. 44 ff. DSGVO"],
+          "legitimationReason": ["Art. 6 Abs. a DSGVO"],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "legal-documents",
+      "title": "Rechtsdokumente/Pflichtangaben",
+      "icon": "fas fa-file-contract",
+      "description": "Erforderliche rechtliche Seiten und Compliance-Dokumentation",
+      "items": [
+        {
+          "id": "general-compliance",
+          "title": "Allgemein",
+          "description": "Grundlegende rechtliche Anforderungen für alle Websites in Deutschland.",
+          "explanation": [
+            "Impressum und Datenschutzerklärung sollten gut sichtbar von jeder Unterseite der Webseite erreichbar sein (gängige Praxis: im Footer-Menü)!",
+            "Impressum und Datenschutzerklärung sollten auf zwei Unterseiten getrennt zugänglich sein.",
+            "Sobald Pflichtangaben (z.B. durch einen Cookie-Banner) verdeckt werden, werden sie als 'nicht existent' behandelt, es sei denn, beide Links werden im Cookie-Banner zugänglich gemacht.",
+            "Auch eine 'weiße Seite' bzw. Baustellen-Seite erfordert in aller Regel diese Pflichtangaben!",
+            "Auch frei zugängliche Login- und Registrierungs-Seiten müssen diese Pflichtangaben enthalten."
+          ],
+          "required": true,
+          "weight": 8,
+          "legalBasis": [],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": ["DE"],
+          "implementation": []
+        },
+        {
+          "id": "cookies-tracking",
+          "title": "Cookies & Tracking-Dienste",
+          "description": "Alle nicht-essentiellen Cookies erfordern Nutzereinwilligung. Cookie-Banner müssen gleichwertige Akzeptieren/Ablehnen-Optionen bieten.",
+          "explanation": [
+            "Jedes Cookie, das auf einem Endgerät (z.B. dem Rechner) des Nutzers gespeichert wird, bedarf der Zustimmung des Nutzers!",
+            "Ausnahme: Nur technisch notwendige Cookies benötigen keinerlei Zustimmung.",
+            "Dies betrifft auch verwandte Technologien wie etwa Fingerprinting (und möglicherweise auch Local bzw. Session Storage), unabhängig davon, ob diese Informationen personenbezogene Daten enthalten oder nicht.",
+            "Daten, die von Minderjährigen erhoben wurden, dürfen nicht für kommerzielle Zwecke eingesetzt werden!",
+            "Cookies dürfen nicht vor der Einwilligung gespeichert werden (ausgenommen technisch notwendige).",
+            "Der Nutzer muss die Einwilligung aktiv setzen, Checkboxen dürfen nicht vorausgewählt sein.",
+            "Es muss einen 'Zustimmen'- und 'Ablehnen'-Button geben, die gleichwertig dargestellt werden müssen. Der 'Zustimmen'-Button darf nicht grafisch hervorgehoben werden!",
+            "Der Nutzer muss vor der Zustimmung umfangreich über folgende Punkte informiert werden: Zwecke der einzelnen Cookies, Anzahl der Anbieter und Cookies, Sitz des Anbieters, sofern er außerhalb der EU liegt",
+            "Cookie-Banner dürfen auch mehrschichtig inklusive der Informationspflichten gestaltet sein.",
+            "Zukünftig sollen webseiten-übergreifende Single-Sign-On-Lösungen zertifiziert werden."
+          ],
+          "required": true,
+          "weight": 9,
+          "legalBasis": ["§20, 25, 26 TTDSG"],
+          "legitimationReason": ["Art. 7 DSGVO"],
+          "verdicts": ["BGH, I ZR 7/16"],
+          "countries": ["DE"],
+          "implementation": [
+            "Die beste Möglichkeit, in WordPress Cookie-Banner umzusetzen, 2-Klick-Lösungen einzustellen und Skripte vor dem Einverständnis zu blockieren, ist Borlabs Cookie (kostenpflichtig)."
+          ]
+        },
+        {
+          "id": "privacy-policy",
+          "title": "Datenschutzerklärung",
+          "description": "Umfassende Datenschutzerklärung von jeder Seite aus zugänglich, die alle Datenverarbeitungsaktivitäten detailliert.",
+          "explanation": [
+            "Die Datenschutzerklärung (DSE) sollte von jeder Unterseite aus in einem Klick (evtl. auch in 2 Klicks, vgl. Impressum) erreichbar sein.",
+            "Die DSE sollte ausführlich, aber verständlich und durch Rechtsgrundlagen der DSGVO und des BDSG-neu belegt sein.",
+            "Doppelte DSEs (einmal kurz & verständlich, einmal lang & ausführlich) werden i.d.R. anerkannt (nicht mehr als 2 Klicks!)",
+            "Die DSE sollte einen Gültigkeitsbereich (z.B. auch andere benannte Webseiten und soziale Medien) sowie ein Aktualisierungdatum enthalten.",
+            "Die DSE kann durch einen (kostenlosen oder kostenpflichtigen) Generator oder direkt durch einen Anwalt oder Datenschutzbeauftragten erstellt werden.",
+            "Für Presseerzeugnisse/journalistische Zwecke weichen die Vorgaben zur Datenverarbeitung sowie die Informationspflichten nach §23 Abs. 2 & 3 MStV (des Bundeslandes) im Einklang mit Art. 85 DSGVO ab ('Medienprivileg')."
+          ],
+          "required": true,
+          "weight": 10,
+          "legalBasis": ["Art. 12 DSGVO", "Art. 13 DSGVO", "Art. 14 DSGVO", "Art. 85 DSGVO", "§13 TMG", "§23 Abs. 2 & 3 MStV"],
+          "legitimationReason": [],
+          "verdicts": ["OLG München, Az. 29 U 2681/03"],
+          "countries": ["DE"],
+          "implementation": [
+            "Für die Erstellung der Rechtsdokumente empfiehlt es sich, eine Mitgliedschaft mit e-recht24.de abzuschließen und deren Generatoren zu nutzen."
+          ]
+        },
+        {
+          "id": "imprint",
+          "title": "Impressum",
+          "description": "Erforderliche rechtliche Angaben einschließlich Kontaktdaten und Geschäftsinformationen (deutsches/EU-Recht).",
+          "explanation": [
+            "Das Impressum sollte von jeder Unterseite der Webseite aus über maximal 2 Klicks (z.B. 'Kontakt' - 'Impressum') erreichbar sein.",
+            "Das Impressum sollte alle Pflichtangaben gemäß §5 TMG enthalten: Vor- und Zuname oder Firmenname und Geschäftsform sowie ggf. Inhaber, Ladungsfähige Anschrift bzw. Adresse der Niederlassung, Telefonnummer (oder Kontaktformular, wenn Reaktionszeit binnen 30 - 60 min.), E-Mail-Adresse, USt-ID (oder Hinweis auf Befreiung) oder Wirtschafts-ID (keine Steuernummer!), Eintrag des Handelsregisters, Vereinsregisters, Genossenschaftsregisters oder Partnerschaftsregisters (wenn vorhanden), Behördliche Zulassung mit Angaben zur Aufsichtsbehörde, sofern der Beruf zulassungspflichtig ist, Zuständige Kammer (Anschrift, Telefonnummer, Webseite) bei kammergebundenen Berufen (z.B. Rechtsanwälte, Steuerberater, Ärzte), Entsprechende Kennzeichnung, wenn sich die Gesellschaft in Abwicklung oder Liquidation befindet (nur AG, KGaA und GmbH), Wenn das Stamm- oder Grundkapital (GmbH, freiwillig) angegeben wird, muss dies korrekt erfolgen.",
+            "Sofern auf der Webseite Dienstleistungen angeboten werden, gelten Informationspflichten gemäß §2 Abs. 1 DL-InfoV vor Vertragsschluss oder Erbringung der Leistungen. Diese können auch an zentraler Stelle ins Impressum geschrieben werden. Zusätzlich zu den obigen Angaben wären dann noch folgende Punkte notwendig: Angaben zur Berufshaftpflichtversicherung (wenn vorhanden), Geltende Allgemeine Geschäftsbedingungen (AGB), Anwendbares Recht und Gerichtsstand, Bestehende Garantien (sofern vorhanden)",
+            "Sollte die Webseite journalistisch-redaktionelle Inhalte enthalten (z.B. bei einem Blog), muss auch nach §18 Abs. 2 MStV ein inhaltlich Veranwortlicher mit Name und Adresse angegeben werden (Achtung, siehe Anmerkungen!).",
+            "Online-Händler, die Waren an Verbraucher verkaufen, müssen zwingend einen Link zur Streitschlichtungsstelle der EU setzen",
+            "Das Impressum muss barrierefrei sein! Anschrift, Telefonnummer oder Mail-Adresse als Bild oder in kodierter Form sind nicht zulässig!",
+            "Haftungsausschlüsse/Disclaimer zu Links und Inhalt gehören nicht (in verallgemeinerter Form) ins Impressum!",
+            "Wer es noch nicht verstanden hat: 'Das LG Hamburg hat 1998 entschieden...' ist Blödsinn und kann sogar zu Abmahnungen führen!",
+            "'Keine Abmahnung ohne vorherigen Kontakt' entfaltet keine Wirkung!",
+            "Ein Hinweis auf das eigene Urheberrecht kann gemacht werden, ist aber in Deutschland nicht zwingend notwendig.",
+            "Das Impressum ist auch ein schöner Ort, um auf Miturheber wie den Designer, Webentwickler, Font-Ersteller usw. hinzuweisen.",
+            "Bildnachweise gehören nur dann ins Impressum, wenn sie allgemeingültig für die ganze Webseite sind! ('Sofern nicht anders angegeben...')"
+          ],
+          "required": true,
+          "weight": 8,
+          "legalBasis": ["§5 TMG", "EU-VO Nr. 524/2013", "§2 DL-InfoV", "§18 Abs. 2 MStV"],
+          "legitimationReason": [],
+          "verdicts": ["OLG München, Az. 29 U 2681/03", "BGH, Az. I ZR 228/03", "EuGH, Az. C-298/07"],
+          "countries": ["DE"],
+          "implementation": [
+            "Für die Erstellung der Rechtsdokumente empfiehlt es sich, eine Mitgliedschaft mit e-recht24.de abzuschließen und deren Generatoren zu nutzen."
+          ]
+        },
+        {
+          "id": "social-media-compliance",
+          "title": "Impressum & Datenschutzerklärung bei sozialen Medien",
+          "description": "Impressum und Datenschutzerklärung müssen auch bei Social Media-Profilen bereitgestellt werden.",
+          "explanation": [
+            "Auch in den sozialen Medien ist Impressum & Datenschutzerklärung anzugeben.",
+            "Zudem ist in der DSE die DSE des Drittanbieters zu nennen.",
+            "Bei Facebook-Seiten gibt mittlerweise zwei Einträge, die man mit Links zum Impressum & der DSE der eigenen Webseite füllen kann.",
+            "Wo keine direkte Möglichkeit ist, die entsprechenden Links einzutragen, kann mit Short-URLs (ohne Tracking!) in den jeweiligen Beschreibungen gearbeitet werden."
+          ],
+          "required": true,
+          "weight": 6,
+          "legalBasis": ["§5 TMG"],
+          "legitimationReason": ["Art. 13 DSGVO"],
+          "verdicts": ["LG Aschaffenburg, Az. 2 HK O 54/11", "OLG Düsseldorf, Az. I-20 U 17/07", "EuGH, Az. C-210/16"],
+          "countries": ["DE"],
+          "implementation": []
+        },
+        {
+          "id": "copyright-credits",
+          "title": "Urheberrecht/Bildnachweise",
+          "description": "Ordnungsgemäße Quellenangaben für alle externen Werke (Bilder, Grafiken, Musik, Videos, Texte, Software).",
+          "explanation": [
+            "Beim Verwenden fremder Werke (Bilder, Grafiken, Musik, Videos, Texte, Software, Code) immer die dazu gehörigen Lizenzbestimmungen lesen und ggf. laut Vorgaben entsprechende Angaben zum Urheber machen!",
+            "Egal ob Groß- oder Kleinzitat: Werke sind nur dann Zitate, wenn man sie damit auch inhaltlich detailliert auseinander setzt. Für schmückende Beigaben nur Werke mit einer entsprechenden Lizenz (z.B. Creative Commons oder CC0/Public Domain) nutzen!",
+            "Der Bildnachweis gehört immer direkt unter das Bild! Manche Stock-Agenturen verlagen sogar, den Bildnachweis im Bild anzubringen. Einzige Ausnahme (weil gängige Praxis): Bilder, die unter der entsprechenden freien Lizenz (z.B. CC0) ohne Namensnennung auskommen und sich über die gesamte Webseite erstrecken, können auch einmalig im Impressum benannt werden.",
+            "Es ist allerdings umstritten, ob der Verzicht auf Namensnennung des Urhebers überhaupt möglich ist, deshalb am besten zur Sicherheit immer den Namen des Urhebers angeben!",
+            "Webdesigner/-entwickler sollten das vom Kunden zur Verfügung gestellte Bildmaterial auf Urheberrechtsverstöße überprüfen (vgl. LG Bochum, Az. 9 S 17/16)",
+            "Bilder (und andere fremde Werke) dürfen ohne entsprechenden Verwertungsrechten auch nicht bearbeitet werden!",
+            "Metadaten (EXIF, IPTC, Wasserzeichen) dürfen aus fremden Bildern ohne entsprechende Einwilligung des Urhebers nicht entfernt werden (Bildbearbeitung & Aberkennung der Urheberschaft)!"
+          ],
+          "required": true,
+          "weight": 7,
+          "legalBasis": ["§§ 12, 13, 19a, 23, 31, 32, 39, 51, 57 uvm. UrhG"],
+          "legitimationReason": [],
+          "verdicts": ["LG Köln Az. 6 U 25/14", "LG Bochum, Az. 9 S 17/16", "BGH, Az. I ZR 69/08"],
+          "countries": ["DE"],
+          "implementation": []
+        }
+      ]
+    }
+  ]
+}
