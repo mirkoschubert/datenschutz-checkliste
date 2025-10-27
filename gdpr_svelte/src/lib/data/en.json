@@ -1,0 +1,694 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-10-06",
+  "categories": [
+    {
+      "id": "security",
+      "title": "Security",
+      "icon": "fas fa-shield-alt",
+      "description": "Technical and organizational measures to protect personal data",
+      "items": [
+        {
+          "id": "ssl-website",
+          "title": "SSL/TLS Transport Encryption for Websites",
+          "description": "Transport encryption should always be used when personal data is transmitted, especially for all form data.",
+          "explanation": [
+            "Transport encryption should always be used when personal data is transmitted, especially for all form data.",
+            "Many browsers warn about unencrypted connections - so it would be better to use transport encryption all the way, regardless of whether forms are used or not.",
+            "The entire website should be checked for internal HTTP links, so that there are no warnings about 'mixed content'.",
+            "External links should also be checked for accessibility (Broken Link Checker), as many are currently switching to HTTPS.",
+            "A 301 redirect should be set up so that the website is not accessible via an encrypted and unencrypted connection.",
+            "OPTIONAL: HSTS ('HTTP Strict Transport Security') can be used to prevent attackers from 'HTTP downgrading'. However, it should be noted that this is a permanent setting and turning it off will result in massive accessibility limitations."
+          ],
+          "required": true,
+          "weight": 10,
+          "legalBasis": ["Art. 32 para. 1 lit. a GDPR", "§64 para. 2, para. 3 no. 8 BDSG"],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": [
+            "If the web hoster allows it (with automatic renewal), use 'Let's Encrypt' certificates (free of charge).",
+            "For large companies with many subdomains: It is better to use certificates for wildcard domains for a fee.",
+            "WP Plugin: For checking and changing internal links use 'Better Search Replace'.",
+            "For (regular) checking of external links (Broken Link Checker) don't use WP plugin, because it heavily burdens performance.",
+            "Configure redirects from HTTP to HTTPS either via 'Force SSL' function of the hoster (if offered) or via .htaccess."
+          ]
+        },
+        {
+          "id": "ssl-email",
+          "title": "SSL/TLS Transport Encryption for Emails",
+          "description": "Transport encryption should also be used when sending emails (even via a contact form). Avoid business e-mail traffic via private third-party accounts.",
+          "explanation": [
+            "Transport encryption should also be used when sending emails (even via a contact form). It is divided into three parts: SSL/TLS encryption of the website (see above), SSL/TLS encryption of the outgoing email (SMTP) from the sender (in the case of a form, the sender is also the recipient), SSL/TLS encryption of the e-mail inbox (POP3/IMAP4) from the recipient.",
+            "Avoid business e-mail traffic via private third-party accounts (e.g. Gmail, GMX, Web.de, etc.) (as AVV is usually not possible)!"
+          ],
+          "required": true,
+          "weight": 8,
+          "legalBasis": ["Art. 32 para. 1 lit. a GDPR", "§64 para. 2, para. 3 no. 8 BDSG"],
+          "legitimationReason": ["Art. 6 para. 1 lit. b & f GDPR"],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": [
+            "Make sure that emails are not sent with the mail() function of PHP when sending forms!",
+            "Make sure that a possible plugin provides SMTP encryption at all.",
+            "OPTIONAL: Also provide for a suitable SPAM protection (preferably honeypot method, reCaptchas are not GDPR compliant!).",
+            "WP Plugin: If it's just about a single contact form, not use big form builders like CF7 (performance). Here I recommend my own: Minimal Contact Form (SSL encryption still in the works).",
+            "If necessary, put email account on own host."
+          ]
+        },
+        {
+          "id": "cms-security",
+          "title": "Security Concept of the CMS (e.g. WordPress)",
+          "description": "Protection against brute force and dictionary attacks, comment spam, and security vulnerabilities in CMS, plugins, and themes.",
+          "explanation": [
+            "For protection against brute force and dictionary attacks, a simple protection that limits the number of incorrect entries is sufficient.",
+            "For protection against comment SPAM a simple protection is enough, preferably via honeypot method (reCaptcha is not GDPR compliant!).",
+            "Do not use all-in-one security plugins like iThemes Security or WordFence (security holes!).",
+            "For protection against security vulnerabilities, CMS installation, plugins, modules, and themes (even inactive ones) should always be kept up to date!",
+            "For protection against security gaps install as few plugins/themes as possible!"
+          ],
+          "required": true,
+          "weight": 7,
+          "legalBasis": ["Art. 32 GDPR"],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": [
+            "WP Plugin: Brute Force Attacks - Limit Login Attempts Reloaded",
+            "WP Plugin: Comment SPAM - Antispam Bee",
+            "WP specific: Info on security vulnerabilities in WordPress core, plugins and themes can be found at wpvulndb.com"
+          ]
+        },
+        {
+          "id": "server-security",
+          "title": "Security Concept of the Server",
+          "description": "Server security responsibilities vary by hosting type (shared, VPS, dedicated).",
+          "explanation": [
+            "For shared web hosts or managed servers, the responsibility lies fully with the web host (request information/read DPA).",
+            "For VPS and dedicated servers, the responsibility lies partly with the owner (request information)."
+          ],
+          "required": true,
+          "weight": 6,
+          "legalBasis": ["Art. 28 para. 3 lit. c GDPR", "Art. 29 GDPR", "Art. 32 GDPR"],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": []
+        },
+        {
+          "id": "email-encryption",
+          "title": "Signature and/or Content Encryption for Emails (Optional)",
+          "description": "Electronic signatures and content encryption enhance email security and legal compliance.",
+          "explanation": [
+            "An electronic signature promotes the verifiability of the sender.",
+            "Content encryption prevents the contents of the e-mail from being read in the event of a MitM attack ('Man in the Middle').",
+            "Advice: The common signatures S/MIME and PGP are considered 'advanced electronic signatures' and can therefore also be used for legal transactions (see Bundesnotarkammer)."
+          ],
+          "required": false,
+          "weight": 3,
+          "legalBasis": ["Art. 32 GDPR", "eIDAS/EU 910/2014", "§2 no. 2 SigG"],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": ["DE"],
+          "implementation": [
+            "There are essentially two popular signature and encryption methods: S/MIME - via an email certificate, PGP (paid) or GnuPGP (Open Source) - via a key pair",
+            "PGP/GPG should always be given preference!",
+            "Free S/MIME email certificates are available from Comodo for one year each.",
+            "For the free GPG there are several solutions available on the official website (gnupg.org).",
+            "For a signature, only the sender needs the setup. For encryption, both the sender and recipient need to be set up."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hosting",
+      "title": "Web Hosting",
+      "icon": "fas fa-server",
+      "description": "Data processing agreements and log management with web hosting providers",
+      "items": [
+        {
+          "id": "access-logs",
+          "title": "Access Logs",
+          "description": "Personal data stored in the server's access logs (especially the IP address) should be pseudonymized if possible.",
+          "explanation": [
+            "Personal data stored in the server's access logs (especially the IP address) should be pseudonymized if possible.",
+            "Alternatively, of course, in the course of data economy, the storage of the IP address (if permitted by the web host) can be dispensed with completely.",
+            "The storage period should also be reduced to 7 - 14 days if possible."
+          ],
+          "required": true,
+          "weight": 6,
+          "legalBasis": ["Art. 28 GDPR", "Art. 29 GDPR", "Art. 32 para. 1 lit. a GDPR"],
+          "legitimationReason": ["Art. 6 para. 1 lit. f GDPR"],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": [
+            "Almost every hoster now offers pseudonymization of IP addresses (shortening of the last byte, e.g. 192.168.10.X).",
+            "With many hosters, the storage period can also be limited - or it was automatically shortened for the GDPR conversion (if in doubt, ask the web hoster)."
+          ]
+        },
+        {
+          "id": "server-logs",
+          "title": "Other Server Logs",
+          "description": "The web host is also always obliged to keep additional server logs (especially for early detection of unauthorized access, malicious code and general error messages), which also store IP addresses.",
+          "explanation": [
+            "The web host is also always obliged to keep additional server logs (especially for early detection of unauthorized access, malicious code and general error messages), which also store IP addresses. Here a shortening is not provided."
+          ],
+          "required": true,
+          "weight": 4,
+          "legalBasis": ["Art. 28 GDPR", "Art. 29 GDPR"],
+          "legitimationReason": ["Art. 6 para. 1 lit. c GDPR"],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": [
+            "Obtain information about storage and storage duration from the hoster (or look it up in the DPA)."
+          ]
+        },
+        {
+          "id": "dpa-hosting",
+          "title": "Data Processing Agreement with Web Host",
+          "description": "All personal data stored on the server is also considered 'processing' - please conclude a data processing agreement (DPA) with your web host!",
+          "explanation": [
+            "All personal data stored on the server is also considered 'processing' - please conclude a data processing agreement (DPA) with your web host!"
+          ],
+          "required": true,
+          "weight": 9,
+          "legalBasis": ["Art. 28 GDPR"],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "external-services",
+      "title": "External Services",
+      "icon": "fas fa-plug",
+      "description": "Third-party services and tools that may process personal data",
+      "items": [
+        {
+          "id": "analytics-tools",
+          "title": "Analytics Tools (e.g. Google Analytics, Matomo/Piwik, WordPress Stats/Jetpack)",
+          "description": "Analytics tools that store personal data in the USA must comply with the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025.",
+          "explanation": [
+            "Important: Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025, confirming that organizations certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. This includes analytics tools such as Google Analytics and Jetpack, provided they are DPF-certified. However, it should be noted that privacy activist Max Schrems, through his organization NOYB (None Of Your Business), has indicated plans to challenge the Data Privacy Framework, potentially leading to what some are calling 'Schrems III.' While the framework currently provides legal certainty, future legal challenges remain possible.",
+            "Weigh up which analytics tool appears suitable in consideration of the data economy principle.",
+            "Weigh up whether there is a processing reason according to Art. 6 para. 1 lit. b - f GDPR or whether prior consent should be obtained according to Art. 6 para. 1 lit. a.",
+            "If cookies are stored, inform about it via a cookie banner and provide opt-out function.",
+            "Legacy data that exceeds the maximum processing time must be deleted manually.",
+            "Google Analytics: Complete DPA, set minimum processing time (14 months), turn off targeting features, pseudonymize IP addresses.",
+            "Matomo/Piwik: Conclude DPA with web hoster, pseudonymize IP addresses, set retention period.",
+            "Webalizer: Complete DPA with web hoster, pseudonymize IP addresses in server logs.",
+            "WP Stats/Jetpack: Since there is currently no DPA for Jetpack, disable the plugin completely!"
+          ],
+          "required": true,
+          "weight": 8,
+          "legalBasis": ["Art. 7 GDPR", "Art. 28 GDPR", "Art. 44 ff. GDPR"],
+          "legitimationReason": ["Art. 6 para. 1 lit. a or f GDPR"],
+          "verdicts": ["LG Dresden, Az. 1 a O 1582/18", "ECJ, Az. C-311/18"],
+          "countries": ["EU"],
+          "implementation": [
+            "Privacy-compliant alternatives include Fathom and Plausible (both paid, free for self-hosting). Both do not store any personal data and do not set any cookies. Plausible also offers a WordPress plugin for integration.",
+            "DPA with Google Analytics does no longer need to be in writing - can be concluded with a few clicks.",
+            "Integration of GA or Matomo if possible by plugin, to avoid errors.",
+            "For the cookie banner, the opt-out method is currently sufficient, as the GDPR does not explicitly regulate cookies. The opt-in is generally viewed quite critically at the moment.",
+            "WP Plugin: Borlabs Cookie (cookie banner & 2-click solutions, paid)."
+          ]
+        },
+        {
+          "id": "marketing-tools",
+          "title": "Marketing Tools (e.g. Google Ads, Affiliate Networks)",
+          "description": "Marketing tools that store personal data in the USA must comply with the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025.",
+          "explanation": [
+            "Important: Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025, confirming that organizations certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. This includes marketing tools such as Google Ads and various affiliate networks, provided they are DPF-certified. However, it should be noted that privacy activist Max Schrems, through his organization NOYB (None Of Your Business), has indicated plans to challenge the Data Privacy Framework, potentially leading to what some are calling 'Schrems III.' While the framework currently provides legal certainty, future legal challenges remain possible.",
+            "Google Ads currently requires prior consent (opt-in) according to program guidelines, not only for cookies and beacons (tracking pixels), but also for the transmission of any personal data.",
+            "Functions such as remarketing or the delivery of personal advertising are currently questionable and should - at least temporarily - be disabled.",
+            "Observe the guidelines and terms and conditions of all affiliate networks!",
+            "Mention widgets, graphical embeddings or JavaScript embeddings of advertising media of affiliate networks at least in the privacy policy (safer: 2-click solution).",
+            "Advertising media in any form should be marked as 'advertising' or 'advertisement'!"
+          ],
+          "required": true,
+          "weight": 7,
+          "legalBasis": ["Art. 7 GDPR", "Art. 28 GDPR", "Art. 44 ff. GDPR", "§6 TMG", "§58 RStV"],
+          "legitimationReason": ["Art. 6 para. 1 lit. a or f GDPR"],
+          "verdicts": ["ECJ, Az. C-311/18"],
+          "countries": ["DE"],
+          "implementation": [
+            "WP Plugin: Use for Google Ads Advanced Ads with GDPR function (2-click solution).",
+            "For affiliate networks temporarily set only to text links (not relevant for GDPR). Links best provided with rel=\"noreferrer noopener\"."
+          ]
+        },
+        {
+          "id": "newsletter-tools",
+          "title": "Newsletter Tools (e.g. Mailchimp, Clicktipp, Newsletter2Go/Sendinblue, Jetpack Subscription)",
+          "description": "Newsletter tools that store personal data in the USA must comply with the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025.",
+          "explanation": [
+            "Important: Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025, confirming that organizations certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. This includes newsletter tools such as Mailchimp and Jetpack, provided they are DPF-certified. However, it should be noted that privacy activist Max Schrems, through his organization NOYB (None Of Your Business), has indicated plans to challenge the Data Privacy Framework, potentially leading to what some are calling 'Schrems III.' While the framework currently provides legal certainty, future legal challenges remain possible.",
+            "Newsletter forms should be provided with an adequate notice text and repeated in the email during the double opt-in process.",
+            "A newsletter entry should not be linked to a (free or paid) service ('tie-in ban').",
+            "The consent for newsletter entries must be documented (notice text, time) and an opt-out must be provided."
+          ],
+          "required": true,
+          "weight": 8,
+          "legalBasis": ["Art. 7 GDPR", "Art. 28 GDPR", "Art. 44 ff. GDPR"],
+          "legitimationReason": ["Art. 6 para. 1 lit. a GDPR"],
+          "verdicts": ["ECJ, Az. C-311/18"],
+          "countries": ["EU"],
+          "implementation": [
+            "Tie-in ban: An offered freebie may not be made dependent on consent to the collection of personal data. However, 'As a thank you, you will receive [...]' would be feasible.",
+            "Enter into DPA with the third party provider.",
+            "Safest method: Do without third-party providers and rely on stationary solutions like the WP plugin Newsletter."
+          ]
+        },
+        {
+          "id": "social-plugins",
+          "title": "Social Plugins (e.g. Facebook, Instagram, Twitter)",
+          "description": "Social plugins that store personal data in the USA must comply with the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025.",
+          "explanation": [
+            "Important: Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025, confirming that organizations certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. This includes social plugins from platforms such as Facebook, Instagram, and Twitter/X, provided they are DPF-certified. However, it should be noted that privacy activist Max Schrems, through his organization NOYB (None Of Your Business), has indicated plans to challenge the Data Privacy Framework, potentially leading to what some are calling 'Schrems III.' While the framework currently provides legal certainty, future legal challenges remain possible.",
+            "All integrated social plugins already load personal data when visiting the website. Provided that the user is logged into the social network, an exact allocation as well as a kind of 'movement profile' takes place via all websites provided with social plugins.",
+            "Login procedures (e.g. Facebook Connect) and comment functions with links to social networks are handled in the same way.",
+            "Sharing buttons that display the number of shares have the same problem.",
+            "Only pure links (text or graphic) are GDPR compliant.",
+            "Beacons (tracking pixels) for statistical purposes are also very critical."
+          ],
+          "required": true,
+          "weight": 7,
+          "legalBasis": ["Art. 7 GDPR", "Art. 22 GDPR", "Art. 44 ff. GDPR"],
+          "legitimationReason": ["Art. 6 para. 1 lit. a or f GDPR"],
+          "verdicts": ["LG Düsseldorf, Az. 12 O 151/15", "ECJ, Az. C-311/18"],
+          "countries": ["EU"],
+          "implementation": [
+            "Inform about data processing before loading the social plugin (2-click solution) or disable social plugins completely.",
+            "Turn off Facebook Connect, Jetpack comment function (and similar) completely.",
+            "Show sharing buttons either without metrics or use the WP plugin Shariff.",
+            "Remove beacons (tracking pixels) completely."
+          ]
+        },
+        {
+          "id": "royalty-collecting-societies",
+          "title": "Collecting Societies (e.g. VG-Wort)",
+          "description": "The tracking pixel of collecting societies transfers IP addresses and requires consent.",
+          "explanation": [
+            "The tracking pixel of VG-Wort should be switched to HTTPS to avoid 'mixed content'.",
+            "The tracking pixel of VG-Wort should be mentioned in the privacy policy."
+          ],
+          "required": true,
+          "weight": 5,
+          "legalBasis": ["Art. 32 para. 1 lit. a GDPR"],
+          "legitimationReason": ["Art. 6 para. 1 lit. b GDPR", "Art. 6 para. 1 lit. c GDPR in accordance with §32 UrhG"],
+          "verdicts": [],
+          "countries": ["DE"],
+          "implementation": []
+        },
+        {
+          "id": "cdn-services",
+          "title": "Content Delivery Networks (CDN)",
+          "description": "CDNs distribute content globally and may store IP addresses. Following the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025, DPF-certified CDNs can legally transfer data between the EU and US.",
+          "explanation": [
+            "CDNs (e.g. Google Fonts, Adobe Typekit, Bootstrap/Fontawesome, CDNJS/Cloudflare, Jetpack, etc.) may well be considered critical, as the content is distributed to servers all over the world and potentially at least the IP address is stored upon retrieval.",
+            "Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025. CDNs certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. However, privacy activist Max Schrems has indicated plans to challenge the Data Privacy Framework ('Schrems III'), so future legal challenges remain possible.",
+            "In the case of CDNs, it should be weighed up whether they are necessary at all (e.g. target group exclusively D-A-CH).",
+            "Contents of CDNs (e.g. images, fonts, CSS or JS files) should be localized if possible."
+          ],
+          "required": true,
+          "weight": 5,
+          "legalBasis": ["Art. 44 ff. GDPR"],
+          "legitimationReason": ["Art. 6 para. 1 lit. a & f GDPR"],
+          "verdicts": ["ECJ, Az. C-311/18"],
+          "countries": ["EU"],
+          "implementation": [
+            "Always localize files (fonts, CSS, JS, etc.) loaded from CDNs, especially for purely German-language sites. These can be stored directly in the (child) theme.",
+            "Also check if there are alternatives inside WordPress (e.g. jQuery).",
+            "Also check third-party plugins on CDNs.",
+            "Weighing between necessity and risk in special cases (e.g. Instagram widget for photographers)."
+          ]
+        },
+        {
+          "id": "web-fonts",
+          "title": "Web Fonts (e.g. Google Fonts, Adobe Typekit, Fontawesome)",
+          "description": "Consent is always required for the use of web fonts!",
+          "explanation": [
+            "Consent is always required for the use of web fonts!",
+            "Alternatively Google Fonts, Adobe Typekit and Fontaweome Fonts (BootstrapCDN) can be localized (see CDNs)!",
+            "Fonts could possibly also be replaced with other local open source fonts or even the CSS Font Stack."
+          ],
+          "required": true,
+          "weight": 6,
+          "legalBasis": ["Art. 44 ff. GDPR"],
+          "legitimationReason": ["Art. 6 para. 1 lit. a GDPR"],
+          "verdicts": ["LG München, Az. 3 O 17493/20"],
+          "countries": ["EU"],
+          "implementation": [
+            "Localize Google Fonts via Google Webfonts Helper in the (child) theme.",
+            "If necessary, use the CSS Font Stack.",
+            "If you use the WP-Plugin Autoptimize, you can also disable Google Fonts there (but it does not always work)."
+          ]
+        },
+        {
+          "id": "profile-pictures",
+          "title": "Profiles & Profile Pictures (e.g. Gravatar, About.me)",
+          "description": "Profile services that store personal data in the USA must comply with the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025.",
+          "explanation": [
+            "Important: Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025, confirming that organizations certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. This includes profile services such as Gravatar and About.me, provided they are DPF-certified. However, it should be noted that privacy activist Max Schrems, through his organization NOYB (None Of Your Business), has indicated plans to challenge the Data Privacy Framework, potentially leading to what some are calling 'Schrems III.' While the framework currently provides legal certainty, future legal challenges remain possible.",
+            "Profiles and/or avatar images should be localized or disabled if possible, as they certainly contain personal data.",
+            "The Gravatar functionality is permanently integrated in WordPress and should be completely disabled not only because of the images but also in the email addresses stored as hash in the image link."
+          ],
+          "required": true,
+          "weight": 4,
+          "legalBasis": ["Art. 44 ff. GDPR", "§22 KunstUrhG"],
+          "legitimationReason": ["Art. 6 para. 1 lit. f GDPR"],
+          "verdicts": ["ECJ, Az. C-311/18"],
+          "countries": ["EU"],
+          "implementation": [
+            "The Gravatar functionality can be disabled directly in WordPress under 'Settings > Discussion > Show Avatars'."
+          ]
+        },
+        {
+          "id": "emojis",
+          "title": "Emojis/Emoticons (e.g. WP Emojis)",
+          "description": "If emojis are loaded externally from a CDN, IP addresses are usually saved on retrieval.",
+          "explanation": [
+            "If emojis are loaded externally from a CDN, IP addresses are usually saved on retrieval.",
+            "Especially for WP emojis, additional Canvas Fingerprinting is used, which allows an assignment of the computer without storing cookies (even if no emojis are displayed). Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025. Since this data is typically stored in the USA, emoji services certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. However, privacy activist Max Schrems has indicated plans to challenge the Data Privacy Framework ('Schrems III'), so future legal challenges remain possible.",
+            "WP Emojis should therefore always be turned off! Any modern browser will nevertheless continue to display emojis and emoticons."
+          ],
+          "required": true,
+          "weight": 3,
+          "legalBasis": ["Art. 22 GDPR", "Art. 44 ff. GDPR"],
+          "legitimationReason": ["Art. 6 para. 1 lit. f GDPR"],
+          "verdicts": ["ECJ, Az. C-311/18"],
+          "countries": ["EU"],
+          "implementation": [
+            "If the website owner has already installed WordPress before version 4.4, there is the possibility to disable the WP emojis directly under 'Settings > Discussion'.",
+            "Newer websites do not have this function - here the emojis (plus DNS prefetching) should be turned off via the functions.php of the (child) theme.",
+            "If you use the WP-Plugin Autoptimize, you can also disable the emojis there (but it does not always work)."
+          ]
+        },
+        {
+          "id": "dns-prefetching",
+          "title": "DNS Prefetching",
+          "description": "With DNS prefetching, the browser is instructed to resolve additional domains at the name server when the web page is loaded.",
+          "explanation": [
+            "With DNS prefetching, the browser is instructed to resolve additional domains at the name server when the web page is loaded. Of course, this also results in the storage of the IP address at the name server. Since these requests are often not mandatory, there could also be a violation of the GDPR here.",
+            "With WordPress, most prefetching tags are already removed with the removal of the corresponding function (e.g. Google Fonts, WP-Emojis, Jetpack).",
+            "However, at least one entry (from WordPress itself) remains and must be removed manually."
+          ],
+          "required": true,
+          "weight": 2,
+          "legalBasis": ["Art. 44 ff. GDPR"],
+          "legitimationReason": ["Art. 6 para. 1 lit. f GDPR"],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": [
+            "Make sure that when removing WP emojis, prefetching is also removed.",
+            "Remove the WordPress own entry by inserting add_filter( 'emoji_svg_url', '__return_false' ); into the functions.php of the (child-)theme."
+          ]
+        },
+        {
+          "id": "wp-embeds",
+          "title": "WP Embeds/oEmbeds",
+          "description": "Most oEmbeds store personal data in the USA. Following the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025, DPF-certified services can legally transfer data between the EU and US.",
+          "explanation": [
+            "Important: Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025, confirming that organizations certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. However, privacy activist Max Schrems has indicated plans to challenge the Data Privacy Framework ('Schrems III'), so future legal challenges remain possible.",
+            "If you paste certain links from currently 34 sources (e.g. WordPress blogs, YouTube videos, etc.) into the visual editor in WordPress, they are automatically converted into so-called oEmbeds. In doing so, parts of the target website are loaded into the website graphically via iframe. When loading the website, all contents of the iFrame are automatically loaded (e.g. analytics tools, tracking pixels).",
+            "If such oEmbeds appear in posts, pages or comments, the function should be completely disabled.",
+            "Old entries will be not completely removed and must be deleted manually."
+          ],
+          "required": true,
+          "weight": 4,
+          "legalBasis": ["Art. 22 GDPR", "Art. 44 ff. GDPR"],
+          "legitimationReason": ["Art. 6 para. 1 lit. f GDPR"],
+          "verdicts": ["LG München, Az. 3 O 17493/20"],
+          "countries": ["EU"],
+          "implementation": [
+            "More information about WP-Embeds can be found in the WordPress Codex.",
+            "oEmbeds can be avoided by entering links in the WordPress text editor or using your own shortcodes.",
+            "The entire website (each subpage) should be tested for iFrames.",
+            "If the results are positive, the oEmbed function should be removed completely via the functions.php of the child theme.",
+            "Old entries still have to be deleted manually afterwards or converted back to normal links."
+          ]
+        },
+        {
+          "id": "video-music-services",
+          "title": "Video and Music Services (e.g. YouTube, Vimeo, Spotify, Soundcloud)",
+          "description": "Video and music services that store personal data in the USA must comply with the EU-US Data Privacy Framework (DPF) established in July 2023 and upheld in September 2025.",
+          "explanation": [
+            "Important: Following the Schrems II ruling in 2020 which invalidated the Privacy Shield, the EU-US Data Privacy Framework (DPF) was adopted in July 2023 to provide legal certainty for transatlantic data transfers. The DPF was upheld by the European General Court on September 3, 2025, confirming that organizations certified under the framework can legally transfer personal data between the EU and US while maintaining GDPR compliance. This includes video and music services such as YouTube, Vimeo, Spotify, and SoundCloud, provided they are DPF-certified. However, it should be noted that privacy activist Max Schrems, through his organization NOYB (None Of Your Business), has indicated plans to challenge the Data Privacy Framework, potentially leading to what some are calling 'Schrems III.' While the framework currently provides legal certainty, future legal challenges remain possible.",
+            "Embeddings of all video and music services already transfer personal data when loading the website and must therefore have a 2-click solution. In addition, cookies are also often stored.",
+            "YouTube videos can be switched to an 'Enhanced Privacy Mode', but this only prevents cookies from being stored.",
+            "SoundCloud has improved their privacy settings, but still requires a 2-click solution."
+          ],
+          "required": true,
+          "weight": 6,
+          "legalBasis": ["Art. 22 GDPR", "Art. 44 ff. GDPR"],
+          "legitimationReason": ["Art. 6 para. 1 lit. f GDPR"],
+          "verdicts": ["LG München, Az. 3 O 17493/20"],
+          "countries": ["EU"],
+          "implementation": [
+            "YouTube videos should only be in 'Enhanced Privacy Mode'.",
+            "Easiest solution: Manually embed video previews as an image and link to the respective platforms.",
+            "2-click solution for all services with Borlabs Cookie (paid)."
+          ]
+        },
+        {
+          "id": "map-services",
+          "title": "Map Services (e.g. Google Maps, Open Street Maps, Mapbox, Leaflet)",
+          "description": "Like video and music services, map services also collect personal data when the website is loaded and mostly store this data in the USA.",
+          "explanation": [
+            "Like video and music services, map services also collect personal data when the website is loaded and mostly store this data in the USA. Currently, only a 2-click solution remains here as well."
+          ],
+          "required": true,
+          "weight": 5,
+          "legalBasis": ["Art. 44 ff. GDPR"],
+          "legitimationReason": ["Art. 6 para. 1 lit. f GDPR"],
+          "verdicts": ["LG München, Az. 3 O 17493/20"],
+          "countries": ["EU"],
+          "implementation": [
+            "Simplest solution: Manually embed map section as an image and link to the respective platform.",
+            "When embedding as an image, copyright information should be placed directly below the image. Screenshots from Google Maps can not be used for copyright reasons!",
+            "2-click solution for all services with Borlabs Cookie (paid)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "content-features",
+      "title": "Other Aspects",
+      "icon": "fas fa-cogs",
+      "description": "Website features that may collect or process personal data",
+      "items": [
+        {
+          "id": "comments",
+          "title": "Comments",
+          "description": "The storage of IP addresses in the comment function should be limited to a minimum period of time (e.g. until activation for legal protection) or alternatively deactivated.",
+          "explanation": [
+            "The storage of IP addresses in the comment function should be limited to a minimum period of time (e.g. until activation for legal protection) or alternatively deactivated.",
+            "Before submitting a comment (or any other form), the storage of personal data should be pointed out (opt-in critical!).",
+            "The option to save a cookie for remembering name and email address should be disabled at 'Settings > Discussion > Other comment settings > The opt-in checkbox...'."
+          ],
+          "required": true,
+          "weight": 5,
+          "legalBasis": ["Art. 32 para. 1 lit. a GDPR"],
+          "legitimationReason": ["Art. 6 para. 1 lit. b or f GDPR"],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": [
+            "Delete IP addresses manually before activation or exclude storage in the (child) theme via functions.php.",
+            "Insert notice text - best in the (child) theme in comments.php or as an option."
+          ]
+        },
+        {
+          "id": "external-links",
+          "title": "Web Links",
+          "description": "Web links to external websites are not critical for the time being. Nevertheless, it should be pointed out in the privacy policy that further personal data may be collected when leaving the website via a link on the target website.",
+          "explanation": [
+            "Web links to external websites are not critical for the time being. Nevertheless, it should be pointed out in the privacy policy that further personal data may be collected when leaving the website via a link on the target website.",
+            "It is best to mark all web links with rel=\"noreferrer noopener\" if possible. WordPress does this automatically for the most part, however this should be checked with third party builders."
+          ],
+          "required": false,
+          "weight": 2,
+          "legalBasis": [],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": [],
+          "implementation": []
+        },
+        {
+          "id": "plugins-extensions",
+          "title": "Plugins/Extensions/Modules",
+          "description": "Plugins should be carefully checked whether and how personal data is collected (for WordPress see also Blogmojo).",
+          "explanation": [
+            "Plugins should be carefully checked whether and how personal data is collected (for WordPress see also Blogmojo)."
+          ],
+          "required": true,
+          "weight": 6,
+          "legalBasis": [],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": [],
+          "implementation": []
+        },
+        {
+          "id": "webshop",
+          "title": "Web Shop",
+          "description": "For web shops, it makes sense to obtain consent for data collection or processing.",
+          "explanation": [
+            "For web shops, it makes sense to obtain consent for data collection or processing. However, it should be sufficient to set up a common checkmark for 'I have read the General Terms and Conditions, the Cancellation Policy and the Privacy Policy' incl. the corresponding link before the 'Order with payment' button, as has been done so far.",
+            "In the case of external store solutions and/or external payment providers, an data processing agreement (DPA) should always be concluded.",
+            "The statistical collection of purchasing behavior should also be contractually regulated (cf. analytics & marketing tools)."
+          ],
+          "required": true,
+          "weight": 9,
+          "legalBasis": ["Art. 7 GDPR", "Art. 22 GDPR", "Art. 28 GDPR", "Art. 32 GDPR", "Art. 44 ff. GDPR"],
+          "legitimationReason": ["Art. 6 para. a GDPR"],
+          "verdicts": [],
+          "countries": ["EU"],
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "legal-documents",
+      "title": "Legal Documents/Mandatory Information",
+      "icon": "fas fa-file-contract",
+      "description": "Required legal pages and compliance documentation",
+      "items": [
+        {
+          "id": "general-compliance",
+          "title": "General",
+          "description": "Imprint and privacy policy should be easily accessible from every subpage of the website (common practice: in the footer menu)!",
+          "explanation": [
+            "Imprint and privacy policy should be easily accessible from every subpage of the website (common practice: in the footer menu)!",
+            "Imprint and privacy policy should be accessible separately on two subpages.",
+            "As soon as mandatory information is covered (e.g. by a cookie banner), it is treated as 'non-existent', unless both links are made accessible in the cookie banner.",
+            "Even a 'white page' or construction site page usually requires this mandatory information!",
+            "Even freely accessible login and registration pages must contain this mandatory information."
+          ],
+          "required": true,
+          "weight": 8,
+          "legalBasis": [],
+          "legitimationReason": [],
+          "verdicts": [],
+          "countries": ["DE"],
+          "implementation": []
+        },
+        {
+          "id": "cookies-tracking",
+          "title": "Cookies & Tracking Services",
+          "description": "Each cookie that is stored on a device (e.g. the computer) of the user requires the consent of the user!",
+          "explanation": [
+            "Each cookie that is stored on a device (e.g. the computer) of the user requires the consent of the user!",
+            "Exception: Only technically necessary cookies do not require any consent.",
+            "This also applies to related technologies such as fingerprinting (and possibly local or session storage as well), regardless of whether this information contains personal data or not.",
+            "Data collected from minors must not be used for commercial purposes!",
+            "Cookies may not be stored prior to consent (except technically necessary).",
+            "The user must set the consent active, checkboxes must not be preselected.",
+            "There must be an 'Agree' and 'Decline' button, which must be presented equally. The 'Agree' button must not be graphically highlighted!",
+            "The user must be informed extensively about the following points before consenting: Purposes of the individual cookies, Number of providers and cookies, Headquarters of the provider, if it is outside the EU",
+            "Cookie banners may also be designed in multiple layers including the information requirements.",
+            "In the future, cross-website single sign-on solutions are to be certified."
+          ],
+          "required": true,
+          "weight": 9,
+          "legalBasis": ["§20, 25, 26 TTDSG"],
+          "legitimationReason": ["Art. 7 GDPR"],
+          "verdicts": ["BGH, I ZR 7/16"],
+          "countries": ["DE"],
+          "implementation": [
+            "The best way to implement cookie banners in WordPress, set 2-click solutions and block scripts before consent is Borlabs Cookie (paid)."
+          ]
+        },
+        {
+          "id": "privacy-policy",
+          "title": "Privacy Policy",
+          "description": "The privacy policy should be accessible from every subpage in one click (possibly also in 2 clicks, cf. imprint).",
+          "explanation": [
+            "The privacy policy should be accessible from every subpage in one click (possibly also in 2 clicks, cf. imprint).",
+            "The privacy policy should be detailed, but understandable and supported by the legal bases of the GDPR and the BDSG-neu.",
+            "Double privacy policies (once short & understandable, once long & detailed) are usually accepted (not more than 2 clicks!).",
+            "The privacy policy should include a scope of validity (e.g. also other named websites and social media) and an update date.",
+            "The privacy policy can be created by a generator (free or paid) or directly by a lawyer or data protection officer.",
+            "For press products/journalistic purposes, the specifications for data processing as well as the information requirements according to §23 para. 2 & 3 MStV (of the federal state) deviate in accordance with Art. 85 GDPR ('media privilege')."
+          ],
+          "required": true,
+          "weight": 10,
+          "legalBasis": ["Art. 12 GDPR", "Art. 13 GDPR", "Art. 14 GDPR", "Art. 85 GDPR", "§13 TMG", "§23 para. 2 & 3 MStV"],
+          "legitimationReason": [],
+          "verdicts": ["OLG München, Az. 29 U 2681/03"],
+          "countries": ["DE"],
+          "implementation": [
+            "For the creation of legal documents, it is recommended to take out a membership with e-recht24.de and use their generators."
+          ]
+        },
+        {
+          "id": "imprint",
+          "title": "Imprint",
+          "description": "The imprint should be accessible from every subpage of the website via a maximum of 2 clicks (e.g. 'Contact' - 'Imprint').",
+          "explanation": [
+            "The imprint should be accessible from every subpage of the website via a maximum of 2 clicks (e.g. 'Contact' - 'Imprint').",
+            "The imprint should contain all mandatory information according to §5 TMG: First name and surname or company name and business form as well as owner, if applicable; Chargeable address or address of the branch office; Telephone number (or contact form, if response time within 30 - 60 min.); E-mail address; VAT ID (or reference to exemption) or business ID (not a tax number!); Entry in the Commercial Register, Register of Associations, Register of Cooperatives or Register of Partnerships (if available); Official license with details of the supervisory authority, if the profession is subject to mandatory licensing; Competent chamber (address, telephone number, website) in the case of chamber-based professions (e.g. lawyers, tax consultants, doctors); Corresponding marking if the company is in liquidation or being wound up (only AG, KGaA and GmbH); If the share or nominal capital (GmbH, voluntary) is indicated, this must be done correctly.",
+            "If services are offered on the website, information obligations pursuant to §2 para. 1 DL-InfoV apply prior to conclusion of the contract or provision of the services. These can also be written in a central place in the imprint. In addition to the above information, the following points would then be necessary: Details of professional liability insurance (if available); Applicable general terms and conditions (AGB); Applicable law and place of jurisdiction; Existing guarantees (if any).",
+            "If the website contains journalistic-editorial content (e.g. in the case of a blog), a person responsible for the content with name and address must also be specified in accordance with §18 para. 2 MStV (Attention, see Notes!).",
+            "Online merchants who sell goods to consumers must provide a link to the EU dispute resolution body.",
+            "The imprint must be accessible! Address, phone number or mail address as an image or in coded form are not allowed!",
+            "Disclaimers about links and content do not belong (in generalized form) in the imprint!",
+            "Who has not understood it yet: 'The LG Hamburg has decided in 1998...' is nonsense and can even lead to legal consequences!",
+            "'No final warning without prior contact' has no effect!",
+            "A reference to the own copyright can be made, but is not mandatory in Germany.",
+            "The imprint is also a nice place to refer to co-authors as well as the designer, web developer, font creator, etc.",
+            "Image credits only belong in the imprint if they are generally valid for the whole website! ('Unless otherwise stated...')"
+          ],
+          "required": true,
+          "weight": 8,
+          "legalBasis": ["§5 TMG", "EU-VO no. 524/2013", "§2 DL-InfoV", "§18 para. 2 MStV"],
+          "legitimationReason": [],
+          "verdicts": ["OLG München, Az. 29 U 2681/03", "BGH, Az. I ZR 228/03", "ECJ, Az. C-298/07"],
+          "countries": ["DE"],
+          "implementation": [
+            "For the creation of legal documents, it is recommended to take out a membership with e-recht24.de and use their generators."
+          ]
+        },
+        {
+          "id": "social-media-compliance",
+          "title": "Imprint & Privacy Policy on Social Media",
+          "description": "Imprint & privacy policy must also be stated on social media profiles.",
+          "explanation": [
+            "Imprint & privacy policy must also be stated on social media profiles.",
+            "In addition, the privacy policy of the third-party provider must be mentioned in the privacy policy.",
+            "For Facebook pages, there are now two entries that you can fill with links to the imprint & the privacy policy of your own website.",
+            "Where there is no direct possibility to enter the corresponding links, you can work with short URLs (without tracking!) in the respective descriptions."
+          ],
+          "required": true,
+          "weight": 6,
+          "legalBasis": ["§5 TMG"],
+          "legitimationReason": ["Art. 13 GDPR"],
+          "verdicts": ["LG Aschaffenburg, Az. 2 HK O 54/11", "OLG Düsseldorf, Az. I-20 U 17/07", "ECJ, Az. C-210/16"],
+          "countries": ["DE"],
+          "implementation": []
+        },
+        {
+          "id": "copyright-credits",
+          "title": "Copyright/Image Credits",
+          "description": "When using external works (images, graphics, music, videos, texts, software, code) always read the corresponding license terms!",
+          "explanation": [
+            "When using external works (images, graphics, music, videos, texts, software, code) always read the corresponding license terms and, if necessary, provide the appropriate information about the author according to the specifications!",
+            "No matter if large or small quotation: Works are only citations if you deal with them in detail. For decorative additions use only works with an appropriate license (e.g., Creative Commons or CC0/Public Domain)!",
+            "The picture credit belongs always directly under the picture! Some stock agencies even require the image credit to be in the image. The only exception (because it is common practice): images that are used under the corresponding free license (e.g. CC0) without attribution and extend over the entire website can also be named once in the imprint.",
+            "However, it is controversial whether the waiver of attribution of the author is possible at all, so it is best to always indicate the name of the author to be on the safe side!",
+            "Web designers/developers should check the image material provided by the customer for copyright infringements (cf. LG Bochum, Az. 9 S 17/16).",
+            "Images (and other foreign works) may not be edited without appropriate exploitation rights!",
+            "Metadata (EXIF, IPTC, watermarks) may not be removed from foreign images without the corresponding consent of the author (image editing & deprivation of authorship)!"
+          ],
+          "required": true,
+          "weight": 7,
+          "legalBasis": ["§§ 12, 13, 19a, 23, 31, 32, 39, 51, 57 etc. UrhG"],
+          "legitimationReason": [],
+          "verdicts": ["LG Köln Az. 6 U 25/14", "LG Bochum, Az. 9 S 17/16", "BGH, Az. I ZR 69/08"],
+          "countries": ["DE"],
+          "implementation": []
+        }
+      ]
+    }
+  ]
+}
