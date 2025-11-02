@@ -3,11 +3,6 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"esbuild"
-		]
-	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
