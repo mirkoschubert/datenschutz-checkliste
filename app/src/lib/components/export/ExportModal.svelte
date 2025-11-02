@@ -2,7 +2,6 @@
 	import { assessment } from '$lib/stores/assessment.svelte';
 	import Modal from '$lib/components/ui/Modal.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
-	import { jsPDF } from 'jspdf';
 
 	interface Props {
 		isOpen: boolean;
@@ -23,7 +22,9 @@
 		onClose();
 	}
 
-	function exportPDF() {
+	async function exportPDF() {
+		// Dynamic import - only load jsPDF when actually needed
+		const { jsPDF } = await import('jspdf');
 		const doc = new jsPDF();
 		const data = assessment.data;
 		let y = 20;

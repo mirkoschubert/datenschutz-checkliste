@@ -84,7 +84,18 @@
 			{#if recommendations.length > 0}
 				<section class="recommendations-section">
 					<Card padding="lg">
-						<div class="recommendations-header" onclick={() => (showRecommendations = !showRecommendations)}>
+						<div
+							class="recommendations-header"
+							role="button"
+							tabindex="0"
+							onclick={() => (showRecommendations = !showRecommendations)}
+							onkeydown={(e) => {
+								if (e.key === 'Enter' || e.key === ' ') {
+									e.preventDefault();
+									showRecommendations = !showRecommendations;
+								}
+							}}
+						>
 							<h2 class="section-title">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
 									<path
@@ -98,11 +109,15 @@
 								Priority Recommendations
 								<span class="rec-count">({recommendations.length})</span>
 							</h2>
-							<button class="expand-toggle" type="button">
-								<svg 
-									width="20" 
-									height="20" 
-									viewBox="0 0 20 20" 
+							<button
+								class="expand-toggle"
+								type="button"
+								aria-label={showRecommendations ? 'Collapse recommendations' : 'Expand recommendations'}
+							>
+								<svg
+									width="20"
+									height="20"
+									viewBox="0 0 20 20"
 									fill="none"
 									style="transform: rotate({showRecommendations ? 180 : 0}deg)"
 								>

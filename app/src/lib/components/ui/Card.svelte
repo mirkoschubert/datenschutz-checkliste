@@ -20,6 +20,7 @@
 	}: Props = $props();
 </script>
 
+<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 <div
 	class="card padding-{padding} {interactive ? 'interactive' : ''} {className}"
 	onclick={interactive ? onclick : undefined}
@@ -32,7 +33,7 @@
 			}
 		: undefined}
 	role={interactive ? 'button' : undefined}
-	tabindex={interactive ? '0' : undefined}
+	tabindex={interactive ? 0 : undefined}
 >
 	{#if title}
 		<h3 class="card-title">{title}</h3>

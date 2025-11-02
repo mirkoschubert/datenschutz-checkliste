@@ -6,6 +6,8 @@ export interface ChecklistItem {
 	weight: number;
 	legalBasis: string[];
 	implementation: string[];
+	explanation?: string[];
+	legitimationReason?: string[];
 }
 
 export interface Category {
