@@ -12,7 +12,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^6.1.0",
+		"@sveltejs/adapter-vercel": "^6.1.1",
 		"@sveltejs/kit": "^2.43.2",
 		"@sveltejs/vite-plugin-svelte": "^6.2.0",
 		"svelte": "^5.39.5",
@@ -22,7 +22,6 @@
 	},
 	"dependencies": {
 		"@fontsource/inter": "^5.2.8",
-		"@sveltejs/adapter-static": "^3.0.10",
 		"jspdf": "^3.0.3"
 	}
 }
